@@ -1,0 +1,25 @@
+.prefixorganization{
+    position: relative;
+    background: url('/image/company/organization_bg.png') ;
+    padding: 120px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &-title{
+        h3{
+            margin-bottom: 60px;
+                text-align: center;
+                font-size: 40px;
+                color: #ffffff;
+        }
+    }
+    &-img{
+        position: relative;
+            background: url('/image/company/organization_pc.png');
+            // width: 100%;
+            // height: 500px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 1125px;
+            height: 991px;
+    }
+}

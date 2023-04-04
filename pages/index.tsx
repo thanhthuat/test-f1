@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import Carosel from '@components/carosels/carosel'
+import HomeCompany from '@components/company/layout'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,7 +18,7 @@ export default function Home() {
            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
       </Head>
       <main >
-        <Carosel/>
+       <HomeCompany/>
      
       </main>
     </>
