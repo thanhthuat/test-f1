@@ -1,35 +1,35 @@
 import React, { ReactNode } from "react";
-import AcUnitIcon from "@mui/icons-material/AcUnit";
 import Stack from "@mui/material/Stack";
+import img from 'public/image/company/service_icon1.svg'
 import BoxService from "@components/common/box-service/box-service";
 interface Icon {
-  icon: string | ReactNode;
+  url: string;
   title: string;
   description: string;
 }
 const arr: Icon[] = [
   {
-    icon: <AcUnitIcon />,
+     url:img,
     title: "hdhdh",
     description: " Chosun Biz promotes professional domestic and international networking services",
   },
   {
-    icon: <AcUnitIcon />,
+     url:img,
     title: "hdhdh",
     description: " Chosun Biz promotes professional domestic and international networking services",
   },
   {
-    icon: <AcUnitIcon />,
+     url:img,
     title: "hdhdh",
     description: " Chosun Biz promotes professional domestic and international networking services",
   },
   {
-    icon: <AcUnitIcon />,
+     url:img,
     title: "hdhdh",
     description: " Chosun Biz promotes professional domestic and international networking services",
   },
   {
-    icon: <AcUnitIcon />,
+     url:img,
     title: "hdhdh",
     description: " Chosun Biz promotes professional domestic and international networking services",
   },
@@ -47,9 +47,14 @@ const CompanyService = () => {
             integrated services through various media channels.
           </p>
         </div>
-        <Stack direction="row" spacing={2} className="wapper">
-          {arr.map((item) => {
-            return <BoxService item={item} />;
+        <Stack
+          direction="row"
+          spacing={0}
+          className="wapper prefixservice-baner"
+          sx={{ flexWrap: "wrap" }}
+        >
+          {arr.map((item, index) => {
+            return <BoxService item={item} key={`${item.title}-${index}`} />;
           })}
         </Stack>
       </div>
