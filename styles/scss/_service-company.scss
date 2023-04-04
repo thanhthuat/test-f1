@@ -1,0 +1,20 @@
+.prefixservice {
+  &-title {
+    margin: 0 auto 40px;
+    max-width: 644px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.72;
+    h3 {
+      font-size: 40px;
+      font-weight: bold;
+    }
+    p {
+      text-align: center;
+
+      font-size: 18px;
+      font-weight: normal;
+    }
+  }
+}
