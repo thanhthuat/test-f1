@@ -1,0 +1,51 @@
+.banner{
+    height: auto;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+
+    &__figure{
+        min-width:  460px;
+        height: 260px;
+
+        &__img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: 100%;
+
+        &__title{
+            font-weight: 700;
+            font-size: 36px;
+            color: #222;
+            text-align: center;
+        }
+
+        &__desc {
+            word-break: break-all;
+            font-size: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #999;
+        }
+
+        &__link > a{
+            text-decoration: none;
+            color: #222;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

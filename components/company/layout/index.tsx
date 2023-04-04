@@ -1,20 +1,20 @@
-import React from 'react'
-import Header from './header'
-import CompanyProgramer from './company-programer'
-import CompanyAbout from './company-about'
-import CompanyOrganization from './company-organization'
+import React from "react";
+import Header from "./header";
+import CompanyProgramer from "./company-programer";
+import CompanyAbout from "./company-about";
+import CompanyOrganization from "./company-organization";
 
-interface IHomeCompanyProps  {}
+interface IHomeCompanyProps {}
 
-const HomeCompany:React.FC<IHomeCompanyProps> = (props) => {
+const HomeCompany: React.FC<IHomeCompanyProps> = (props) => {
   return (
     <div>
-        <Header/>
-        <CompanyProgramer/>
+      <Header />
+      <CompanyProgramer />
       <CompanyAbout />
-      <CompanyOrganization/>
+      <CompanyOrganization />
     </div>
-  )
-}
+  );
+};
 
-export default HomeCompany
+export default HomeCompany;
