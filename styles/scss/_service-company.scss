@@ -1,4 +1,5 @@
 .prefixservice {
+  padding: 120px 0px 60px;
   &-title {
     margin: 0 auto 40px;
     max-width: 644px;
@@ -20,4 +21,30 @@
   &-baner{
     justify-content: space-between;
   }
+     &-contact {
+      margin-top: 8px;
+       ul {
+         list-style: none;
+       }
+  
+       ul>li {
+  
+         font-size: 18px;
+  
+         font-weight: normal;
+         line-height: 1.5;
+         border-left: 2px solid #e82745;
+       }
+  
+       ul>li:first-child {
+         margin-bottom: 8px;
+       }
+  
+       ul>li>a {
+         color: #4271b8;
+       }
+                ul>li>strong {
+                  padding: 0px 8px;
+                }
+     }
 }

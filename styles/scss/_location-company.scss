@@ -1,0 +1,88 @@
+.prefixlocation {
+  padding: 120px 0;
+  &-title {
+    h3 {
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+    }
+    margin-bottom: 60px;
+  }
+  &-map {
+    &__img {
+      width: 1125px;
+      height: 600px;
+    }
+    margin-bottom: 24px;
+  }
+  &-vehicle {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+      &__title {
+        h3 {
+          padding-bottom: 12px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        border-bottom: 1px solid #999;
+        margin-bottom: 16px;
+      }
+      &__body {
+        ul > li {
+          display: flex;
+          margin-bottom: 12px;
+          align-items: center;
+        }
+      }
+      &__line {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 12px;
+        width: 55px;
+        height: 28px;
+        font-size: 15px;
+        font-weight: bold;
+        color: #fff;
+        padding: 3px 5px;
+      }
+      .line1 {
+        background: #263b96;
+      }
+      .line2 {
+        background: #59bd35;
+      }
+
+      .line3 {
+        background: #823fdb;
+      }
+    }
+    &-bus {
+      width: 739px;
+      &__title {
+        h3 {
+          padding-bottom: 12px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        border-bottom: 1px solid #999;
+        margin-bottom: 16px;
+      }
+      &__body {
+        display: flex;
+        gap: 0px 31px;
+        p {
+          font-size: 15px;
+          font-weight: normal;
+          line-height: 1.53;
+        }
+        h4 {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}

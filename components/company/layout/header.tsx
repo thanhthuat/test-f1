@@ -1,10 +1,11 @@
+import ScrollTop from '@components/common/scroll-top/scrolltop-button'
 import React from 'react'
 
 interface Iheader {}
 
 const Header = (props: Iheader) => {
   return (
-    <div className='prefixheader'>
+    <header className='prefixheader'>
         <div className='prefixheader-content'>
             <ul className='prefixheader-content'>
                 <li className='prefixheader-item' > About Chosun Biz</li>
@@ -16,8 +17,9 @@ const Header = (props: Iheader) => {
                 <li className='prefixheader-item'>way to come</li>
                
             </ul>
-        </div>
-    </div>
+      </div>
+      <ScrollTop/>
+    </header>
   )
 }
 export default Header

@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Stack from "@mui/material/Stack";
-import img from 'public/image/company/service_icon1.svg'
+import img from "public/image/company/service_icon1.svg";
 import BoxService from "@components/common/box-service/box-service";
 interface Icon {
   url: string;
@@ -9,27 +9,27 @@ interface Icon {
 }
 const arr: Icon[] = [
   {
-     url:img,
+    url: img,
     title: "hdhdh",
     description: " Chosun Biz promotes professional domestic and international networking services",
   },
   {
-     url:img,
+    url: img,
     title: "hdhdh",
     description: " Chosun Biz promotes professional domestic and international networking services",
   },
   {
-     url:img,
+    url: img,
     title: "hdhdh",
     description: " Chosun Biz promotes professional domestic and international networking services",
   },
   {
-     url:img,
+    url: img,
     title: "hdhdh",
     description: " Chosun Biz promotes professional domestic and international networking services",
   },
   {
-     url:img,
+    url: img,
     title: "hdhdh",
     description: " Chosun Biz promotes professional domestic and international networking services",
   },
@@ -57,6 +57,16 @@ const CompanyService = () => {
             return <BoxService item={item} key={`${item.title}-${index}`} />;
           })}
         </Stack>
+        <div className="wapper prefixservice-contact">
+          <ul>
+            <li>
+              <strong>Contact us </strong> <a href=""> help@chosunbiz.com</a>
+            </li>
+            <li>
+              <strong>Business and partnership inquiries</strong> <a href=""> help@chosunbiz.com</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   );

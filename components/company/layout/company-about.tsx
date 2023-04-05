@@ -5,7 +5,7 @@ interface ICompanyAboutProps {}
 
 const CompanyAbout: React.FC<ICompanyAboutProps> = (props) => {
   return (
-    <section className="prefixabout wapper">
+    <section className="prefixabout wapper animate">
       <h2 className="prefixabout-title"> About Chosun Biz</h2>
       <div className="prefixabout-content">
         <div className="prefixabout-img">

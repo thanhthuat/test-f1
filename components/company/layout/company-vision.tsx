@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import visiondiagram from 'public/image/company/vision_diagram.png'
+import CompanyService from "./company-service";
 
 const CompanyVison = () => {
   return (
@@ -20,6 +21,7 @@ const CompanyVison = () => {
           <Image src={visiondiagram} alt=" vison-diagram" className="prefixvison-img" />
         </div>
       </div>
+      <CompanyService/>
     </section>
   );
 };

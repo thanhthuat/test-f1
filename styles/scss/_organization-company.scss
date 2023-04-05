@@ -1,4 +1,10 @@
 .prefixorganization{
+      @include animation-fadeInUp-noTran(fadeInUpTra1, 0px,100px);
+       animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    animation-name: fadeInUpTra1;
+    -webkit-animation-name: fadeInUpTra1;
     position: relative;
     background: url('/image/company/organization_bg.png') ;
     padding: 120px 0px;
