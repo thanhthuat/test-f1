@@ -3,16 +3,17 @@ interface IBanner {}
 const Banner: React.FC<IBanner> = () => {
   return (
     <div className="banner">
-      <div className="banner__figure">
-        <img
-          className="banner__figure__img"
-          src="https://biz.chosun.com/resizer/ZtjPjVgOsKO93PA9AvavYHauE-M=/616x346/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosunbiz/WFSLHJY4K362FY5XAICXPBG4JU.jpg"
-          alt=""
-        />
+      <div className="banner__title">
+        <a href="#">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</a>
       </div>
+
       <div className="banner__content">
-        <div className="banner__content__title">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        <div className="banner__content__figure">
+          <img
+            className="banner__content__figure__img"
+            src="https://biz.chosun.com/resizer/ZtjPjVgOsKO93PA9AvavYHauE-M=/616x346/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosunbiz/WFSLHJY4K362FY5XAICXPBG4JU.jpg"
+            alt=""
+          />
         </div>
         <div className="banner__content__desc">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, reiciendis illo commodi
@@ -26,9 +27,9 @@ const Banner: React.FC<IBanner> = () => {
           tempora earum quam ducimus provident.
         </div>
 
-        <div className="banner__content__link">
+        {/* <div className="banner__content__link">
           <a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, placeat!</a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
