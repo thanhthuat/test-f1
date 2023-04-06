@@ -1,0 +1,101 @@
+.slickCarousel {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #222;
+
+  &__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__link {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+
+      &__title {
+        font-size: 18px;
+        color: #222;
+        font-weight: 700;
+      }
+    }
+
+    &__controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      color: #d7d7d7;
+
+      &__count {
+        display: inline-flex;
+        gap: 5px;
+
+        &__left {
+          color: #222;
+        }
+
+        &__midle,
+        right {
+          color: #d7d7d7;
+        }
+      }
+
+      &__button {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border: 1px solid #d7d7d7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &__icon {
+          font-size: 15px;
+          color: #d7d7d7;
+        }
+
+        &:hover {
+          border: 1px solid #222;
+        }
+
+        &:hover &__icon {
+          color: #222;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 0;
+
+    &__figure {
+      width: 100%;
+      height: auto;
+
+      a > &__img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__link {
+      font-size: 18px;
+      color: #222;
+
+      &:hover {
+        color: #707070;
+      }
+    }
+  }
+}

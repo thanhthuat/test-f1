@@ -1,0 +1,29 @@
+.prefixheaderdetailpage {
+  width: 100%;
+  padding: 0 116px;
+  &-content {
+  }
+  &-title {
+    padding-bottom: 32px;
+    .title {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 1.4;
+    }
+  }
+  &-desc {
+    margin-top: 24px;
+    p {
+      font-size: 20px;
+      color: #222;
+    }
+  }
+  &-author {
+    font-size: 15px;
+    color: #222;
+  }
+  &-action {
+    display: flex;
+    justify-content: space-between;
+  }
+}

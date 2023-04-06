@@ -1,6 +1,49 @@
-.home{
+.home {
+  width: 1280px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+
+  section {
+    width: 100%;
+    margin-top: 30px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: antiquewhite;
+    flex-direction: row;
+    gap: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d7d7d7;
+
+    article {
+      flex: 3;
+
+      .layout {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 30px;
+
+        &__left {
+          flex: 2;
+          border-right: 1px solid #d7d7d7;
+          padding-right: 10px;
+
+          &__listItem__top,
+          &__listItem__middle {
+            border-bottom: 1px solid #222;
+          }
+        }
+
+        &__right {
+          flex: 1;
+          padding-left: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    }
+
+    aside {
+      flex: 1;
+    }
+  }
 }

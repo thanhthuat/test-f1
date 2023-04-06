@@ -1,5 +1,6 @@
 @import "./reset";
 @import "./variables";
+@import "./style";
 @import "./home";
 @import "./header-company";
 @import "./programer-company";
@@ -13,3 +14,16 @@
 @import "./recruit-company";
 @import "./location-company";
 @import "./footer-company";
+@import "./header";
+// @import "./organization";
+@import "./banner";
+@import "./slide";
+@import "./listNews";
+@import "./slickCarousel";
+@import "./opinion";
+@import "./slick";
+@import "./mostViewsNews";
+@import "./stock";
+// page detail
+@import "../detailpage/index";
+@import "./itemview-common";

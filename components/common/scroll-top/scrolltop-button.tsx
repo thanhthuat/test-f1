@@ -20,7 +20,7 @@ const ScrollTop = () => {
       <Box
         role="presentation"
         sx={{
-          position: 'fixed',
+          position: "fixed",
           bottom: 32,
           right: 32,
           zIndex: 999,
@@ -28,13 +28,15 @@ const ScrollTop = () => {
       >
         <Fab
           onClick={scrollToTop}
-          color="primary"
+          // color="primary"
           size="small"
           sx={{
-            opacity: '0.6',
-            boxShadow: '0 0 14px -5px rgba(255, 255, 255)',
-            borderRadius: '100%',
-            ariaLabel: 'scroll back to top',
+            opacity: "0.6",
+            boxShadow: "0 0 14px -5px rgba(255, 255, 255)",
+            borderRadius: "100%",
+            ariaLabel: "scroll back to top",
+            color:'#fff',
+            backgroundColor: "rgb(0, 4, 3)",
             width: {
               xs: 36,
               md: 40,
@@ -43,9 +45,9 @@ const ScrollTop = () => {
               xs: 36,
               md: 40,
             },
-            transition: 'all 0.2s',
-            '&:hover': {
-              opacity: '1',
+            transition: "all 0.2s",
+            "&:hover": {
+              opacity: "1",
             },
           }}
         >
