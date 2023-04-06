@@ -79,8 +79,10 @@ export default function Home() {
             <Slick />
             <MostViewsNews />
             <ILiveNews />
-            <Slick />
-            <Slick />
+            <div className="row">
+              <Slick />
+              <Slick />
+            </div>
             <MostViewsNews />
           </aside>
         </section>

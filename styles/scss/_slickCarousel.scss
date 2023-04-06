@@ -2,6 +2,9 @@
   width: 100%;
   padding-bottom: 20px;
   border-bottom: 1px solid #222;
+  @include md {
+    margin-top: 20px;
+  }
 
   &__top {
     display: flex;
@@ -78,6 +81,15 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding: 10px 0;
+
+    @include md {
+      width: 50%;
+      gap: 20px;
+    }
+
+    @include sm {
+      width: 100%;
+    }
 
     &__figure {
       width: 100%;

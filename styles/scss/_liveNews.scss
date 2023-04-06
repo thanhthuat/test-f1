@@ -6,6 +6,10 @@
   gap: 20px;
   flex-direction: column;
 
+  @include md {
+    display: none;
+  }
+
   &__header h3 {
     font-size: 18px;
     font-weight: 500;

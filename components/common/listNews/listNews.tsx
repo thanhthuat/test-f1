@@ -19,7 +19,7 @@ const ListNews: React.FC<IListNew> = (props: Prop) => {
         <div className="listNews__content">
           <div className="listNews__content__figure">
             <img
-              src="https://biz.chosun.com/resizer/I_zKIdbjJxRGHNyqYgcsBuBOwSk=/184x104/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosunbiz/VCVHEWAVXUALGR25FGCDZIBB2Y.jpg"
+              src="https://biz.chosun.com/resizer/CDZYRxyp6lY2hX-eL7FuDFV438A=/184x104/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosunbiz/7EU56PRESVAOBD2E5GLKUEZ3YY.jpg"
               alt=""
               className="listNews__content__figure__img"
             />

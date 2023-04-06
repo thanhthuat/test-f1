@@ -6,6 +6,12 @@
   align-items: center;
   justify-content: space-around;
   height: 50px;
+  padding: 15px;
+
+  @include md {
+    margin-top: 20px;
+    justify-content: flex-start;
+  }
 
   &__logo {
     min-width: 50px;
@@ -32,6 +38,11 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    @include md {
+      display: none;
+      justify-content: flex-start;
     }
   }
 }
