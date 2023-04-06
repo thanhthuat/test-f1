@@ -11,6 +11,7 @@ import Opinion from "@components/opinion/opinion";
 import Slick from "@components/slick/slick";
 import MostViewsNews from "@components/common/mostViewsNews/mostViewsNews";
 import Stock from "@components/stock/stock";
+import ILiveNews from "@components/liveNews/liveNews";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -72,6 +73,11 @@ export default function Home() {
           </article>
 
           <aside>
+            <Slick />
+            <Slick />
+            <MostViewsNews />
+            <ILiveNews />
+            <Slick />
             <Slick />
             <MostViewsNews />
           </aside>

@@ -5,14 +5,14 @@ interface ISlick {}
 const Slick: React.FC<ISlick> = () => {
   return (
     <div className="slick">
-      <div className="slick__top">
+      {/* <div className="slick__top">
         <div className="slick__top__figure">
           <img
             src="https://biz.chosun.com/resizer/Ikr5x4W6Qnbr2cySwCrZCY9BC_g=/400x66/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosunbiz/RSPRTGXO7RGOZMUE6SW6F2VQJU.jpg"
             alt=""
           />
         </div>
-      </div>
+      </div> */}
       <div className="slick__item">
         <h3>inform</h3>
         <div className="card">
@@ -33,7 +33,7 @@ const Slick: React.FC<ISlick> = () => {
           </div>
         </div>
       </div>
-      <div className="slick__item">
+      {/* <div className="slick__item">
         <h3>Coin market in chaos</h3>
         <div className="card">
           <div className="list">
@@ -82,7 +82,7 @@ const Slick: React.FC<ISlick> = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
