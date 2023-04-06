@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import Stack from "@mui/material/Stack";
 import img from "public/image/company/service_icon1.svg";
 import BoxService from "@components/common/box-service/box-service";
+import { motion } from "framer-motion";
 interface Icon {
   url: string;
   title: string;
@@ -38,7 +39,13 @@ const CompanyService = () => {
   return (
     <section className="prefixservice">
       <div className="prefixservice-content">
-        <div className="prefixservice-title">
+        <motion.div
+          initial={{ opacity: 0, transform: "translate(0%, 20%)" }}
+          whileInView={{ opacity: 1, transform: "translate(0%, 0%)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2 }}
+          className="prefixservice-title"
+        >
           <h3>Service and business information</h3>
           <p>
             Chosun Biz promotes professional domestic and international networking services and
@@ -46,18 +53,28 @@ const CompanyService = () => {
             as content services, advertising and affiliate services, and provides customized
             integrated services through various media channels.
           </p>
-        </div>
-        <Stack
-          direction="row"
-          spacing={0}
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, transform: "translate(0%, 20%)" }}
+          whileInView={{ opacity: 1, transform: "translate(0%, 0%)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2  ,delay:0.2}}
           className="wapper prefixservice-baner"
-          sx={{ flexWrap: "wrap" }}
         >
-          {arr.map((item, index) => {
-            return <BoxService item={item} key={`${item.title}-${index}`} />;
-          })}
-        </Stack>
-        <div className="wapper prefixservice-contact">
+          <Stack direction="row" spacing={0} sx={{ flexWrap: "wrap" }}>
+            {arr.map((item, index) => {
+              return <BoxService item={item} key={`${item.title}-${index}`} />;
+            })}
+          </Stack>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, transform: "translate(0%, 20%)" }}
+          whileInView={{ opacity: 1, transform: "translate(0%, 0%)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2 ,delay:0.5 }}
+          className="wapper prefixservice-contact"
+        >
           <ul>
             <li>
               <strong>Contact us </strong> <a href=""> help@chosunbiz.com</a>
@@ -66,7 +83,7 @@ const CompanyService = () => {
               <strong>Business and partnership inquiries</strong> <a href=""> help@chosunbiz.com</a>
             </li>
           </ul>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

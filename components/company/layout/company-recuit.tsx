@@ -3,12 +3,19 @@ import React from "react";
 
 import recruitIcon from "public/image/company/recruit_icon.svg";
 import Box from "@mui/material/Box";
-import  Button  from "@mui/material/Button";
+import Button from "@mui/material/Button";
+import { motion } from "framer-motion";
 const CompanyRecuit = () => {
   return (
     <section className="prefixrecruit">
       <div className="prefixrecruit-content wapper">
-        <div className="prefixrecruit-title">
+        <motion.div
+          initial={{ opacity: 0, transform: "translate(0%, 20%)" }}
+          whileInView={{ opacity: 1, transform: "translate(0%, 0%)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2 }}
+          className="prefixrecruit-title"
+        >
           <h3> Recruitment</h3>
           <Image src={recruitIcon} alt="recruit-icon" />
           <h4>Chosun Biz Recruitment of Experienced Employees</h4>
@@ -16,8 +23,15 @@ const CompanyRecuit = () => {
             Chosun Biz, Korea's best digital-based general media, is looking for new talent. We are
             waiting for your passionate challenge to open a new era of digital media.
           </p>
-        </div>
-        <div className="prefixrecruit-body">
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, transform: "translate(0%, 20%)" }}
+          whileInView={{ opacity: 1, transform: "translate(0%, 0%)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2 }}
+          className="prefixrecruit-body"
+        >
           <div className="prefixrecruit-body__title">
             <h4>Application and recruitment process</h4>
           </div>
@@ -55,12 +69,22 @@ const CompanyRecuit = () => {
               </span>
             </li>
           </ul>
-        </div>
-        <Box className="prefixrecruit-footer" sx={{ textAlign: "center" }}>
-          <Button className="prefixrecruit-footer__button" sx={{ display: "flex", alignItems: "center" }}>
-            To apply
-          </Button>
-        </Box>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, transform: "translate(0%, 20%)" }}
+          whileInView={{ opacity: 1, transform: "translate(0%, 0%)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, delay: 0.4 }}
+        >
+          <Box className="prefixrecruit-footer" sx={{ textAlign: "center" }}>
+            <Button
+              className="prefixrecruit-footer__button"
+              sx={{ display: "flex", alignItems: "center" }}
+            >
+              To apply
+            </Button>
+          </Box>
+        </motion.div>
       </div>
     </section>
   );

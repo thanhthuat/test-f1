@@ -1,6 +1,6 @@
 .prefixabout{
     padding: 120px 0px ;
-      @include animation-fadeInUp-noTran(fadeInUpTra, 0px,100px);
+     width: 100%;
        animation-duration: 1s;
     animation-fill-mode: both;
     -webkit-animation-duration: 1s;

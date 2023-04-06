@@ -1,6 +1,7 @@
 import LineArea from "@components/common/line-area/line-area";
 import { it } from "node:test";
 import React from "react";
+import { motion } from 'framer-motion';
 interface ILineArea {
  
     title: string;
@@ -27,7 +28,7 @@ const arr: ILineArea[] = [
           },
           {
             title:
-              '"① If you do not disclose your identity as a reporter, you must not impersonate another professional. However, you may not reveal your identity in the process of appreciating works required for plays, music, and art criticism articles. Exceptionally, journalists responsible for restaurant reviews and travel articles are allowed to remain anonymous by using false names.",',
+              '① If you do not disclose your identity as a reporter, you must not impersonate another professional. However, you may not reveal your identity in the process of appreciating works required for plays, music, and art criticism articles. Exceptionally, journalists responsible for restaurant reviews and travel articles are allowed to remain anonymous by using false names.",',
           },
         ],
       },
@@ -52,7 +53,7 @@ const arr: ILineArea[] = [
           },
           {
             title:
-              '"① If you do not disclose your identity as a reporter, you must not impersonate another professional. However, you may not reveal your identity in the process of appreciating works required for plays, music, and art criticism articles. Exceptionally, journalists responsible for restaurant reviews and travel articles are allowed to remain anonymous by using false names.",',
+              '① If you do not disclose your identity as a reporter, you must not impersonate another professional. However, you may not reveal your identity in the process of appreciating works required for plays, music, and art criticism articles. Exceptionally, journalists responsible for restaurant reviews and travel articles are allowed to remain anonymous by using false names.",',
           },
         ],
       },
@@ -77,7 +78,7 @@ const arr: ILineArea[] = [
           },
           {
             title:
-              '"① If you do not disclose your identity as a reporter, you must not impersonate another professional. However, you may not reveal your identity in the process of appreciating works required for plays, music, and art criticism articles. Exceptionally, journalists responsible for restaurant reviews and travel articles are allowed to remain anonymous by using false names.",',
+              '① If you do not disclose your identity as a reporter, you must not impersonate another professional. However, you may not reveal your identity in the process of appreciating works required for plays, music, and art criticism articles. Exceptionally, journalists responsible for restaurant reviews and travel articles are allowed to remain anonymous by using false names.",',
           },
         ],
       },
@@ -88,14 +89,28 @@ const CompanyEthics = () => {
   return (
     <section className="prefixethics animate">
       <div className="prefixethics-content">
-        <div className="prefixethics-title">
+        <motion.div
+          initial={{ opacity: 0, transform: "translate(0%, 20%)" }}
+          whileInView={{ opacity: 1, transform: "translate(0%, 0%)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2 }}
+          className="prefixethics-title"
+        >
           <h3>Code of Ethics Guidelines </h3>
-        </div>
-        <div className="prefixethics-contentarea">
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, transform: "translate(0%, 20%)" }}
+          whileInView={{ opacity: 1, transform: "translate(0%, 0%)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2 ,delay:0.3 }}
+         className="prefixethics-contentarea"
+        >
           {arr.map((item) => (
             <LineArea item={item} key={item.title} />
           ))}
-        </div>
+        </motion.div>
+       
       </div>
     </section>
   );

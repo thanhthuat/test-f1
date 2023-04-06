@@ -14,25 +14,7 @@ interface IHomeCompanyProps {}
 
 const HomeCompany: React.FC<IHomeCompanyProps> = (props) => {
  
-  if (typeof window !== "undefined") {
-     const square: Element | null = document?.querySelector("animate");
-square?.classList.remove('square-transition');
-
-// Create the observer, same as before:
-const observer = new IntersectionObserver(entries => {
-  console.log("🚀 ~ file: index.tsx:23 ~ observer ~ entries:", entries)
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      square?.classList.add('square-transition');
-      return;
-    }
-
-    square?.classList.remove('square-transition');
-  });
-});
-
-// observer?.observe(document?.querySelector('.square-wrapper')!);
-  }
+ 
  
   return (
     <div>

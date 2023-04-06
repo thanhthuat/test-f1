@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react'
 
 import imgMap from 'public/image/company/location_map.png'
+import { motion } from 'framer-motion';
 
 
 const CompanyLocation = () => {
@@ -11,10 +12,23 @@ const CompanyLocation = () => {
         <div className="prefixlocation-title">
           <h3> way to come</h3>
         </div>
-        <div className="prefixlocation-map">
-          <Image className="prefixlocation-map__img" src={imgMap} alt="location" />
-        </div>
-        <div className="prefixlocation-vehicle">
+        <motion.div
+          initial={{ opacity: 0, transform: "translate(0%, 20%)" }}
+          whileInView={{ opacity: 1, transform: "translate(0%, 0%)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2 }}
+          className="prefixlocation-map"
+        >
+            <Image className="prefixlocation-map__img" src={imgMap} alt="location" />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, transform: "translate(0%, 20%)" }}
+          whileInView={{ opacity: 1, transform: "translate(0%, 0%)" }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2 }}
+         className="prefixlocation-vehicle"
+        >
+         
           <div className="prefixlocation-vehicle-item">
             <div className="prefixlocation-vehicle-item__title">
               <h3>Access by subway</h3>
@@ -60,8 +74,10 @@ const CompanyLocation = () => {
                 </p>
               </div>
             </div>
-          </div>
+          
         </div>
+        </motion.div>
+        
       </div>
     </section>
   );

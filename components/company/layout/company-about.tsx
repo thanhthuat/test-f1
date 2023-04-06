@@ -1,18 +1,36 @@
 import Image from "next/image";
 import React from "react";
+
+import { motion } from "framer-motion";
 import imgdiagram from "public/image/company/intro_diagram.png";
 interface ICompanyAboutProps {}
 
 const CompanyAbout: React.FC<ICompanyAboutProps> = (props) => {
   return (
-    <section className="prefixabout wapper animate">
-      <h2 className="prefixabout-title"> About Chosun Biz</h2>
-      <div className="prefixabout-content">
+    <section className="prefixabout wapper ">
+       <motion.div
+        initial={{ opacity: 0, transform: "translate( 0%, 30%)" }}
+        whileInView={{ opacity: 1, transform: "translate(0%, 0%)" }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
+        <h2 className="prefixabout-title"> About Chosun Biz</h2>
+      </motion.div>
+      
+      <motion.div
+        initial={{ opacity: 0, transform: "translate( 0%, 20%)" }}
+        whileInView={{ opacity: 1, transform: "translate(0%, 0%)" }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.2 }}
+        className="prefixabout-content"
+      >
         <div className="prefixabout-img">
           <Image src={imgdiagram} alt="img-diagram" />
         </div>
         <div className="prefixabout-article">
-          <h4 className="prefixabout-article__title">Chosun Biz, the economic center of Chosun Media Group</h4>
+          <h4 className="prefixabout-article__title">
+            Chosun Biz, the economic center of Chosun Media Group
+          </h4>
           <p className="prefixabout-article__content">
             On May 10, 2010, Chosun Media Group introduced Chosun Biz, an online economic news.
             Chosun Biz has established itself as a premium economic media by servicing high-quality
@@ -24,7 +42,7 @@ const CompanyAbout: React.FC<ICompanyAboutProps> = (props) => {
             24 hours a day.
           </p>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
