@@ -5,20 +5,21 @@ import React from "react";
 import img from "public/image/detail-page/picture.png";
 interface IItemViewProps {
   hasImg?: boolean;
+  item: string;
+  index:number
 }
 
-const ItemView: React.FC<IItemViewProps> = ({ hasImg = false }) => {
+const ItemView: React.FC<IItemViewProps> = ({ hasImg = false ,item ,index}) => {
   return (
     <Box className="prefixitemview" sx={{ maxWidth: "300px", background: "#fff" }}>
       <div className="prefixitemview-content">
         <div className="prefixitemview-number">
-          <span className="prefixitemview-number__num"> 1</span>
+          <span className="prefixitemview-number__num"> {index}</span>
         </div>
         <div className="prefixitemview-title">
           <Link href="/">
             <p>
-              SK Hynix, a 'deficit swamp', has to pay hundreds of billions of won for patent
-              monsters... It is inevitable to use technology to manufacture DRAM
+             {item}
             </p>
           </Link>
         </div>

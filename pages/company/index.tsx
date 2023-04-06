@@ -3,10 +3,10 @@ import React from 'react'
 
 type Props = {}
 
-const index = (props: Props) => {
+const Index = (props: Props) => {
   return (
    <HomeCompany/>
   )
 }
 
-export default index
+export default Index

@@ -3,6 +3,7 @@ import HeaderDetail from "./header/header-detail";
 import AuthorAction from "./author-action/author-action";
 import ArticlePage from "./article/article";
 import ItemView from "@components/common/Item-view/item-view";
+import ArticleAside from "./article-aside/article-aside";
 
 type Props = {};
 
@@ -12,7 +13,7 @@ const DetailNew = (props: Props) => {
       <HeaderDetail />
       <section className="prefixarticledetail1">
         <ArticlePage />
-      <ItemView/>
+      <ArticleAside/>
       </section>
     </div>
   );
