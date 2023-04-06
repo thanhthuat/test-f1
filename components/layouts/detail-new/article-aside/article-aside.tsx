@@ -1,5 +1,6 @@
 import ItemView from "@components/common/Item-view/item-view";
 import React from "react";
+import BannerAdvertise from "../banner-advertise/banner-adv";
 
 type Props = {};
 const arr = [
@@ -22,6 +23,11 @@ const ArticleAside = (props: Props) => {
       <h3>most viewed news</h3>
       {arr.map((item, index) => (
         <ItemView item={item} key={`1-${index}`} index={index} />
+      ))}
+      <BannerAdvertise/>
+      <h3>most viewed news</h3>
+      {arr.map((item, index) => (
+        <ItemView item={item} key={`1-${index}`} index={index} hasImg={true} />
       ))}
     </aside>
   );

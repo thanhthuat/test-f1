@@ -16,7 +16,7 @@ const ItemView: React.FC<IItemViewProps> = ({ hasImg = false ,item ,index}) => {
         <div className="prefixitemview-number">
           <span className="prefixitemview-number__num"> {index}</span>
         </div>
-        <div className="prefixitemview-title">
+        <div className="prefixitemview-title" >
           <Link href="/">
             <p>
              {item}
