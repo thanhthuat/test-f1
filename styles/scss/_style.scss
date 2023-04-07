@@ -6,3 +6,21 @@ a {
 body {
   background-color: #f7f7f7;
 }
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  left: 0;
+}
+li {
+  list-style: none;
+}

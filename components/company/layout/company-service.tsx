@@ -58,7 +58,7 @@ const CompanyService = () => {
           initial={{ opacity: 0, transform: "translate(0%, 20%)" }}
           whileInView={{ opacity: 1, transform: "translate(0%, 0%)" }}
           viewport={{ once: true }}
-          transition={{ duration: 1.2  ,delay:0.2}}
+          transition={{ duration: 1.2, delay: 0.2 }}
           className="wapper prefixservice-baner"
         >
           <Stack direction="row" spacing={0} sx={{ flexWrap: "wrap" }}>
@@ -72,7 +72,7 @@ const CompanyService = () => {
           initial={{ opacity: 0, transform: "translate(0%, 20%)" }}
           whileInView={{ opacity: 1, transform: "translate(0%, 0%)" }}
           viewport={{ once: true }}
-          transition={{ duration: 1.2 ,delay:0.5 }}
+          transition={{ duration: 1.2, delay: 0.5 }}
           className="wapper prefixservice-contact"
         >
           <ul>
