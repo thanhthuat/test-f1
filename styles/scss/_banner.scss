@@ -9,11 +9,20 @@
   padding-bottom: 20px;
   border-bottom: 1px solid #333;
 
+  @include sm {
+    flex-direction: column-reverse;
+  }
+
   &__title {
     font-weight: 700;
     font-size: 36px;
     color: #222;
     text-align: center;
+
+    @include sm {
+      font-size: 18px;
+      text-align: left;
+    }
   }
 
   &__content {
@@ -23,8 +32,8 @@
     height: 100%;
 
     &__figure {
-      min-width: 300px;
-      min-height: 165px;
+      min-width: 40%;
+      height: auto;
 
       &__img {
         width: 100%;
@@ -38,6 +47,10 @@
       overflow: hidden;
       text-overflow: ellipsis;
       color: #999;
+
+      @include sm {
+        display: none;
+      }
     }
 
     &__link > a {

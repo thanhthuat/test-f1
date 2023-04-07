@@ -11,6 +11,8 @@ import Opinion from "@components/opinion/opinion";
 import Slick from "@components/slick/slick";
 import MostViewsNews from "@components/common/mostViewsNews/mostViewsNews";
 import Stock from "@components/stock/stock";
+import ILiveNews from "@components/common/liveNews/liveNews";
+import StoryFeeds from "@components/storyFeeds/storyFeeds";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +32,7 @@ export default function Home() {
       <main className="home">
         {/* <HomeCompany/> */}
         <Header />
-        <section>
+        <section className="box-1">
           <article>
             <Banner />
             <div className="layout">
@@ -67,15 +69,29 @@ export default function Home() {
                 <Stock />
                 <SlickCarousel />
                 <SlickCarousel />
+                <Slick />
               </div>
             </div>
           </article>
 
           <aside>
             <Slick />
+            <Slick />
+            <MostViewsNews />
+            <ILiveNews />
+            <div className="row">
+              <Slick />
+              <Slick />
+            </div>
             <MostViewsNews />
           </aside>
         </section>
+
+        <section className="box-2"></section>
+        <section className="box-3">
+          <StoryFeeds />
+        </section>
+        <section className="box-4"></section>
       </main>
     </>
   );

@@ -1,6 +1,16 @@
 .prefixarticlecontent{
     max-width: calc(((616 + 187) / 1280) * 100%);
     flex-basis: calc(((616 + 187) / 1280) * 100%);
-    padding: 0 70px 0 calc((116) * 1px);
+    padding: 0 70px 0 116px;
     border-right: 1px solid #eaeaea;
+     @include res(1200px){
+     padding: 0 70px 0 40px;
+    }
+     @include res(820px) {
+      max-width: 100%;
+      padding: 0px  40px;
+    }
+      @include res(425px) {
+       padding: 0px 20px;
+    }
 }

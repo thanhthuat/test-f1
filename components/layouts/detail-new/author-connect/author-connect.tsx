@@ -18,7 +18,7 @@ const AuthorConnect = (props: Props) => {
         >
           <Avatar
             alt="Remy Sharp"
-            src="/image/detail-page/avatar.png"
+            src="/image/detailpage/avatar.png"
             sx={{ width: 56, height: 56, marginRight: "20px" }}
           />
           <p>Reporter Yujin Kim</p>

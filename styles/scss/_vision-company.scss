@@ -1,14 +1,8 @@
-.prefixvison{
-    position: relative;
-        background: url('/image/company/vision_bg.svg');
-      
-        background-size: auto;
-        background-repeat: no-repeat;
-        &-content{
-            display: flex;
-            padding: 120px 0 60px;
+.prefixvison {
+  position: relative;
+  background: url("/image/company/vision_bg.svg");
 
-        }
+        
         &-article{
             h3{
                 margin-bottom: 40px;

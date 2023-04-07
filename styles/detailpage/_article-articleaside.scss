@@ -1,7 +1,13 @@
 .prefixarticleaside {
   max-width: calc(((292 + 185) / 1280) * 100%);
   flex-basis: calc(((292 + 185) / 1280) * 100%);
-  padding: 0 calc((116) * 1px) 0 69px;
+  padding: 0 116px 0 69px;
+    @include res(1200px){
+     padding: 0 40px 0 40px;
+    }
+    @include res(820px) {
+      display:none;
+    }
   .prefixitemview:last-child {
     padding: 12px 16px;
     .prefixitemview-content {

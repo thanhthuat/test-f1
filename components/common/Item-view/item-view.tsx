@@ -25,7 +25,7 @@ const ItemView: React.FC<IItemViewProps> = ({ hasImg = false ,item ,index}) => {
         </div>
         {hasImg && (
           <div className="prefixitemview-img">
-            <img src={"/image/detail-page/picture.png"} alt="avatar" />
+            <img src={"/image/detailpage/picture.png"} alt="avatar" />
           </div>
         )}
       </div>
