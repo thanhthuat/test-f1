@@ -1,10 +1,9 @@
 import React from "react";
 
-type Props = {};
 
 interface ILiveNews {}
 
-const LiveNews: React.FC<ILiveNews> = (props: Props) => {
+const LiveNews: React.FC<ILiveNews> = () => {
   return (
     <div className="liveNews">
       <div className="liveNews__header">

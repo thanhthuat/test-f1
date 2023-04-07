@@ -1,41 +1,67 @@
-.prefixabout{
-    padding: 120px 0px ;
-     width: 100%;
-       animation-duration: 1s;
-    animation-fill-mode: both;
-    -webkit-animation-duration: 1s;
-    animation-name: fadeInUpTra;
-    -webkit-animation-name: fadeInUpTra;
-    &-title{
+.prefixabout {
+  padding: 120px 0px;
+  width: 100%;
+  background: #fff;
+  @include res(1200px) {
+    padding: 120px 10px 120px 0px;
+  }
+
+   @include res(726px) {
+    padding: 120px 40px ;
+  }
+
+
+  &-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 60px;
+  }
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include res(726px) {
+      flex-direction: column-reverse;
+    }
+  }
+  &-img {
+     @include res(1200px) {
         text-align: center;
-        font-size: 40px;
-        font-weight: bold;
-        margin-bottom: 60px;
+      }
+    img {
+      max-width: 483px;
+      height: auto;
+      @include res(1200px) {
+        max-width: 100%;
+      }
+       @include res(1200px) {
+        max-width: 90%;
+      }
     }
-    &-content{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+  }
+  &-article {
+    max-width: 547px;
+    @include res(1200px) {
+      max-width: 50%;
     }
-    &-img{
-        img{
-            max-width: 483px;
-            height: auto;
-        }
+     @include res(726px) {
+     max-width: 100%;
     }
-    &-article{
-        max-width: 547px;
-        &__title{
-            font-size: 24px;
-            font-weight: bold;
-            line-height: 1.5;
-            margin-bottom: 24px;
-        }
-        &__content{
-            font-size: 18px;
-            font-weight: normal;
-            line-height: 1.72;
-            word-break: keep-all;
-        }
+    &__title {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.5;
+      margin-bottom: 24px;
     }
+    &__content {
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 1.72;
+      word-break: keep-all;
+      @include res(1200px) {
+        font-size: 16px;
+      }
+    }
+  }
 }

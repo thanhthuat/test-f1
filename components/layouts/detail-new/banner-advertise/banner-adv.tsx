@@ -4,7 +4,7 @@ type Props = {};
 
 const BannerAdvertise: React.FC<Props> = () => {
   return (
-    <div className="prefixbanneradvertise">
+    <div className="prefixbanneradvertise mt-24">
           <div className="prefixbanneradvertise-content">
               <h3>Advertising</h3>
       </div>
