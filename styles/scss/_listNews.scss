@@ -40,9 +40,7 @@
     }
 
     &__figure {
-      min-height: 105px;
-      min-width: 190px;
-
+      min-width: 33%;
       @include sm {
         width: 100%;
       }

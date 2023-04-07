@@ -45,15 +45,17 @@
           padding-bottom: 10px;
         }
 
-        &__left a {
-          color: #222;
-          font-size: 15px;
-          line-height: 1.33;
+        &__left {
+          max-width: 75%;
+
+          a {
+            color: #222;
+            font-size: 15px;
+            line-height: 1.33;
+          }
         }
 
         &__right {
-          width: 50%;
-
           &__figure {
             width: 100%;
             cursor: pointer;
