@@ -1,0 +1,49 @@
+.prefixfootercompany {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 36px;
+  &-content {
+    display: flex;
+    border-top: 1px solid #d7d7d7;
+    justify-content: space-between;
+  }
+  &-pocicy {
+    padding-bottom: 16px;
+   
+  }
+  &-policy {
+    flex-basis: 80%;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0px 12px;
+    }
+    ul > li > span {
+      font-size: 14px;
+
+      line-height: 1.43;
+
+      color: #707070;
+    }
+    p {
+      font-size: 14px;
+
+      line-height: 1.43;
+
+      color: #707070;
+    }
+  }
+  .policy {
+    padding-top: 10px;
+ border-bottom: 1px solid #eaeaea;
+  padding-bottom: 16px;
+  }
+  &-about{
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

@@ -5,5 +5,14 @@
 }
 .wapper{
     margin: 0 auto;
-    width: 1125px;
+    max-width: 1125px;
+}
+.containerpage {
+    max-width: 1280px;
+    margin: 0 auto;
+    background: #f7f7f7;
+}
+body{
+    word-break: keep-all;
+font-family: 'Roboto', sans-serif;
 }

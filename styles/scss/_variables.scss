@@ -1,0 +1,43 @@
+// media queries
+@mixin res($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin minRes($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+// animation
+// @mixin animation-mixin($name, $color-var) {
+//   @keyframes #{$name} {
+//     50% {background-color: $color-var;}
+//   }
+// }
+@mixin animation-fadeInUp($name, $from) {
+  @keyframes #{$name} {
+    from {
+      transform: translate(-50%, $from);
+    }
+
+    to {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+  }
+}
+@mixin animation-fadeInUp-noTran($name, $X,$Y ) {
+  @keyframes #{$name} {
+    from {
+      transform: translate($X,$Y);
+    }
+
+    to {
+      transform: translate(0,0);
+      opacity: 1;
+    }
+  }
+}

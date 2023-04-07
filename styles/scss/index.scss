@@ -1,10 +1,21 @@
 @import "./breakpoints";
 @import "./style";
 @import "./reset";
+@import "./variables";
+@import "./style";
 @import "./home";
 @import "./header-company";
 @import "./programer-company";
 @import "./about-company";
+@import "./organization-company";
+@import "./vision-company";
+@import "./service-company";
+@import "./boxservice";
+@import "./ethics-company";
+@import "./line-area";
+@import "./recruit-company";
+@import "./location-company";
+@import "./footer-company";
 @import "./header";
 // @import "./organization";
 @import "./banner";
@@ -17,3 +28,6 @@
 @import "./stock";
 @import "./liveNews.scss";
 @import "./storyFeeds";
+// page detail
+@import "../detailpage/index";
+@import "./itemview-common";

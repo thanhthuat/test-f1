@@ -8,14 +8,16 @@ import CloseIcon from "@mui/icons-material/Close";
 import subtitlelogo2 from "public/image/logo/logo-2.png";
 import subtitlelogo1 from "public/image/logo/logo-1.png";
 import Image from "next/image";
-interface IHeader {}
+interface IHeader {
+  className?:string
+}
 
-const Header: React.FC<IHeader> = () => {
+const Header: React.FC<IHeader> = ({ className }) => {
   const [isShowSideBar, setIsShowSideBar] = useState(false);
   const [isShowInputSearch, setIsShowInputSearch] = useState(false);
 
   return (
-    <Box className="header">
+    <Box className={`header ${className} `}>
       <Box className="header__top">
         <Image src={subtitlelogo1} alt="" />
         <div className="header__top__login">

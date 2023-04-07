@@ -1,0 +1,25 @@
+.prefixitemview {
+  padding: 12px 16px;
+  &-content {
+    display: flex;
+    border-bottom: 1px solid #cccaca;
+    padding-bottom: 12px;
+   
+  }
+   &-number {
+      margin-right: 16px;
+      &__num {
+        font-size: 20px;
+        color: #222;
+        line-height: 1.44;
+      }
+    }
+    &-img{
+      margin-left: 16px;
+      img{
+        max-width:36px ;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+}

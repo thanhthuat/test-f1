@@ -2,6 +2,10 @@
     border: 1px solid #d7d7d7;
     border-left: none;
     border-right: none;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    background: #fff;
     &-content{
         width: 1125px;
        margin: 0 auto;

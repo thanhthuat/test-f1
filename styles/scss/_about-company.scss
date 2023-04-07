@@ -1,5 +1,11 @@
 .prefixabout{
     padding: 120px 0px ;
+     width: 100%;
+       animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    animation-name: fadeInUpTra;
+    -webkit-animation-name: fadeInUpTra;
     &-title{
         text-align: center;
         font-size: 40px;

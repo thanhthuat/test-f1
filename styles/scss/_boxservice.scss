@@ -1,0 +1,25 @@
+.prexfixboxservice{
+    padding-top: 51px;
+    text-align: center;
+    &-icon{
+        height: 60px;
+        width: 60px;
+        background-color: #fff;
+        border-radius: 50%;
+        margin-bottom: 16px;
+    }
+    &-title{
+        text-align: center;
+        font-size: 20px;
+            font-weight: bold;
+            color: #e82745;
+            line-height: 1.5;
+            margin-bottom: 12px;
+    }
+    &-description{
+            font-size: 15px;
+                font-weight: normal;
+                color: #707070;
+                line-height: 1.73;
+    }
+}
