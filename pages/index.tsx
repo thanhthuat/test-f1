@@ -13,6 +13,7 @@ import MostViewsNews from "@components/common/mostViewsNews/mostViewsNews";
 import Stock from "@components/stock/stock";
 import ILiveNews from "@components/liveNews/liveNews";
 import StoryFeeds from "@components/storyFeeds/storyFeeds";
+import HomePage from "@components/home/layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,66 +33,7 @@ export default function Home() {
       <main className="home">
         {/* <HomeCompany/> */}
         <Header />
-        <section className="box-1">
-          <article>
-            <Banner />
-            <div className="layout">
-              <div className="layout__left">
-                <Slide />
-                <div className="layout__left__listItem__top">
-                  <ListNews isOnlyTittle={false} />
-                  <ListNews isOnlyTittle={false} />
-                  <ListNews isOnlyTittle={true} />
-                  <ListNews isOnlyTittle={true} />
-                  <ListNews isOnlyTittle={true} />
-                  <ListNews isOnlyTittle={true} />
-                </div>
-                <div className="layout__left__listItem__middle">
-                  <ListNews isOnlyTittle={false} />
-                  <ListNews isOnlyTittle={true} />
-                  <ListNews isOnlyTittle={true} />
-                  <ListNews isOnlyTittle={true} />
-                  <ListNews isOnlyTittle={true} />
-                  <ListNews isOnlyTittle={true} />
-                </div>
-                <div className="layout__left__listItem__bottom">
-                  <ListNews isOnlyTittle={false} />
-                  <ListNews isOnlyTittle={true} />
-                  <ListNews isOnlyTittle={true} />
-                  <ListNews isOnlyTittle={true} />
-                  <ListNews isOnlyTittle={true} />
-                  <ListNews isOnlyTittle={true} />
-                </div>
-              </div>
-              <div className="layout__right">
-                <SlickCarousel />
-                <Opinion />
-                <Stock />
-                <SlickCarousel />
-                <SlickCarousel />
-                <Slick />
-              </div>
-            </div>
-          </article>
-
-          <aside>
-            <Slick />
-            <Slick />
-            <MostViewsNews />
-            <ILiveNews />
-            <div className="row">
-              <Slick />
-              <Slick />
-            </div>
-            <MostViewsNews />
-          </aside>
-        </section>
-
-        <section className="box-2"></section>
-        <section className="box-3">
-          <StoryFeeds />
-        </section>
-        <section className="box-4"></section>
+        <HomePage />
       </main>
     </>
   );
