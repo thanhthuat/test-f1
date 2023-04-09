@@ -12,14 +12,14 @@ const LineArea: React.FC<ILineArea> = ({ item }) => {
     <div className="prefixlinearea">
           <strong className="prefixlinearea-title">{ item.title}</strong>
       {item.subtitle.length > 0 &&
-        item.subtitle.map((item) => (
-          <>
+        item.subtitle.map((item ,index) => (
+          <React.Fragment key={`${item.title}-${index}`}>
                 <h5 className="prefixlinearea-subtitle">{item.title}</h5>
                 {item.content.length > 0 && item.content.map((item) => 
-                    <p className="prefixlinearea-content">{item.title}</p>
+                    <p className="prefixlinearea-content" key={`${item.title}-${index}`}>{item.title}</p>
                 )}
             
-          </>
+          </React.Fragment>
         ))}
     </div>
   );

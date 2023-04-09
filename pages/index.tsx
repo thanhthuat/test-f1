@@ -31,7 +31,6 @@ export default function Home() {
         />
       </Head>
       <main className="home">
-        {/* <HomeCompany/> */}
         <Header />
         <HomePage />
       </main>

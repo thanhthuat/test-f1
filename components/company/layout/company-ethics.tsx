@@ -35,7 +35,7 @@ const arr: ILineArea[] = [
     ],
   },
   {
-    title: "Chapter 1. coverage stage",
+    title: "Chapter 2. coverage stage",
     subtitle: [
       {
         title: "Article 1. Illegal coverage prohibited",
@@ -60,7 +60,7 @@ const arr: ILineArea[] = [
     ],
   },
   {
-    title: "Chapter 1. coverage stage",
+    title: "Chapter 3. coverage stage",
     subtitle: [
       {
         title: "Article 1. Illegal coverage prohibited",

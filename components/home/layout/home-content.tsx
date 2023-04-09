@@ -7,7 +7,7 @@ import Opinion from "@components/opinion/opinion";
 import Slick from "@components/slick/slick";
 import MostViewsNews from "@components/common/mostViewsNews/mostViewsNews";
 import Stock from "@components/stock/stock";
-import ILiveNews from "@components/liveNews/liveNews";
+ import ILiveNews from "@components/common/liveNews/liveNews";
 
 type Props = {};
 
