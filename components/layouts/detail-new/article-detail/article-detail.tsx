@@ -20,8 +20,8 @@ const ArticleDetail: React.FC<Props> = (props) => {
           {data.map((item, index) => {
             if (typeof item == "object") {
               return (
-                <div>
-                  <figure className="prefixarticledetail-figure" key={`1-${index}`}>
+                <div key={`1-${index}`}>
+                  <figure className="prefixarticledetail-figure">
                     <img
                       className="prefixarticledetail-figure__img"
                       src={item.url}
@@ -32,7 +32,6 @@ const ArticleDetail: React.FC<Props> = (props) => {
                       {item.alt}
                     </figcaption>
                   </figure>
-                 
                 </div>
               );
             } else {

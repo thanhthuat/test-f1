@@ -6,12 +6,12 @@ import { fetchUsers } from "redux/add/user.action";
 type Props = {};
 
 const Index = (props: Props) => {
-  const { entities } = useAppSelector((state) => state.user);
+  // const { entities } = useAppSelector((state) => state.user);
 
-  const dispath = useAppDispatch();
-  useEffect(() => {
-    dispath(fetchUsers());
-  },[]);
+  // const dispath = useAppDispatch();
+  // useEffect(() => {
+  //   dispath(fetchUsers());
+  // },[]);
   return (
     <>
       <HomeCompany />;

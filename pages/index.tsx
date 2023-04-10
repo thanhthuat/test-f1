@@ -1,18 +1,6 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import Carosel from "@components/carosels/carosel";
-import HomeCompany from "@components/company/layout";
 import Header from "@components/common/header/header";
-import Banner from "@components/banner/banner";
-import Slide from "@components/common/slide/slide";
-import ListNews from "@components/common/listNews/listNews";
-import SlickCarousel from "@components/common/slickCarousel/slickCarousel";
-import Opinion from "@components/opinion/opinion";
-import Slick from "@components/slick/slick";
-import MostViewsNews from "@components/common/mostViewsNews/mostViewsNews";
-import Stock from "@components/stock/stock";
-import ILiveNews from "@components/common/liveNews/liveNews";
-import StoryFeeds from "@components/storyFeeds/storyFeeds";
 import HomePage from "@components/home/layout";
 
 const inter = Inter({ subsets: ["latin"] });

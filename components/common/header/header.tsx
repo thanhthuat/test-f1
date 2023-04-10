@@ -7,8 +7,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import subtitlelogo2 from "public/image/logo/logo-2.png";
 import subtitlelogo1 from "public/image/logo/logo-1.png";
 import Image from "next/image";
-import { log } from "console";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import Link from "next/link";
 interface IHeader {
   className?: string;
 }
@@ -47,9 +47,9 @@ const Header: React.FC<IHeader> = () => {
           </Box>
 
           <Box className={`nav__logo`}>
-            <a href="/">
+            <Link href="/">
               <Image src={subtitlelogo2} alt="" />
-            </a>
+            </Link>
           </Box>
 
           {isShowInputSearch ? (
@@ -70,9 +70,9 @@ const Header: React.FC<IHeader> = () => {
         </div>
       </Box>
       <Box className={`header__center`}>
-        <a className="header__center__logo" href="/">
+        <Link className="header__center__logo" href="/">
           <Image src={subtitlelogo2} alt="" />
-        </a>
+        </Link>
       </Box>
       <Box className="header__bottom">
         {isShowSideBar ? (
@@ -87,9 +87,15 @@ const Header: React.FC<IHeader> = () => {
           />
         )}
         <Box className="header__bottom__navbar">
-          <a className="header__bottom__navbar__link">Car talk</a>
-          <a className="header__bottom__navbar__link">stock</a>
-          <a className="header__bottom__navbar__link">real estate</a>
+          <Link href="/" className="header__bottom__navbar__link">
+            Car talk
+          </Link>
+          <Link href="/" className="header__bottom__navbar__link">
+            stock
+          </Link>
+          <Link href="/" className="header__bottom__navbar__link">
+            real estate
+          </Link>
         </Box>
         {isShowInputSearch ? (
           <Box>
@@ -106,9 +112,9 @@ const Header: React.FC<IHeader> = () => {
         <Box className={`header__side-menu ${isSticky ? "fixed" : "absolute"}`}>
           <ul>
             <li className="item">
-              <a href="#">Car톡</a>
+              <Link href="/">Car톡</Link>
             </li>
-            <li className="item">
+            {/* <li className="item">
               <a className="item__link" href="#">
                 <span>Car톡</span>
                 <ul className="sub-menu">
@@ -156,7 +162,7 @@ const Header: React.FC<IHeader> = () => {
               <a className="item__link" href="#">
                 Car톡
               </a>
-            </li>
+            </li> */}
           </ul>
         </Box>
       )}
