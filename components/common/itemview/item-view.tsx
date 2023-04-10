@@ -2,7 +2,7 @@ import { Box, Stack } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import img from "public/image/detail-page/picture.png";
+
 interface IItemViewProps {
   hasImg?: boolean;
   item: string;
