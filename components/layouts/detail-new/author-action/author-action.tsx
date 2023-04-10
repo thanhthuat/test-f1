@@ -13,7 +13,7 @@ const AuthorAction = (props: Props) => {
         <div className="prefixauthordetailpage-action">
           <p className="prefixauthordetailpage-action__time">Input 2023.04.06 12:00</p>
           <div className="prefixauthordetailpage-action__action">
-            <AccessTimeIcon />
+            <AccessTimeIcon sx={ {marginRight:'16px'}} />
             <AccessTimeIcon />
           </div>
         </div>

@@ -79,7 +79,7 @@ const CompanyFooter = (props: Props) => {
                 size="small"
                 options={top100Films}
                 sx={{ width: "181px", height: "37px" }}
-                renderInput={(params) => <TextField {...params} label="Movie" />}
+                renderInput={(params) => <TextField {...params} label="Select" />}
               />
             </div>
           </div>

@@ -1,6 +1,7 @@
 .prefixarticledetail1 {
   display: flex;
   align-items: flex-start;
+  padding-bottom: 70px;
   @include res(820px) {
     flex-direction: column;
   }

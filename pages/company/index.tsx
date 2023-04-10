@@ -7,12 +7,7 @@ import Head from "next/head";
 type Props = {};
 
 const Index = (props: Props) => {
-  // const { entities } = useAppSelector((state) => state.user);
-
-  // const dispath = useAppDispatch();
-  // useEffect(() => {
-  //   dispath(fetchUsers());
-  // },[]);
+ 
   return (
     <>
       <Head>

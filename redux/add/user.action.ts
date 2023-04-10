@@ -1,9 +1,11 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { apigetData } from "apis/getapi";
 
 
 
 export const fetchUsers = createAsyncThunk('user/getAllUsers',async (thunkApi)=>{
-    const response = await fetch("https://jsonplaceholder.typicode.com/users?_limit=5")
-    const data = await response.json();
+    const response = await apigetData('/iiii/data')
+
+    const data = await response
     return data;
 })

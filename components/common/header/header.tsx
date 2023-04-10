@@ -14,7 +14,7 @@ interface IHeader {
   className?: string;
 }
 
-const Header: React.FC<IHeader> = () => {
+const Header: React.FC<IHeader> = ({ className }) => {
   const [isShowSideBar, setIsShowSideBar] = useState(false);
   const [isShowInputSearch, setIsShowInputSearch] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
@@ -36,7 +36,7 @@ const Header: React.FC<IHeader> = () => {
   }, []);
 
   return (
-    <Box ref={headerRef} className={`header`}>
+    <Box ref={headerRef} className={`header ${className}`}>
       <Box className={`header__scroll ${isSticky ? "sticky" : "hide"}`}>
         <Box className={`nav`}>
           <Box className="nav__menu">
