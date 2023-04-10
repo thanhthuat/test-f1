@@ -12,8 +12,13 @@ const Index = (props: Props) => {
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={" this is detail page"} />
-        <meta property="og:title" content={"new page"} />
+        <meta property="og:url" content={" https://demo123-vd24z7env-thanhthuat.vercel.app/"} />
+        <meta
+          property="og:title"
+          content={
+            "Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform"
+          }
+        />
         <meta
           property="og:description"
           content={`Trial service starting at the end of the year at the earliest
