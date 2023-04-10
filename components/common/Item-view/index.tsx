@@ -1,1 +1,2 @@
-export * from './item-view';
+
+export { default as ItemView } from './item-view'

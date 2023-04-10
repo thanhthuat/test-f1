@@ -1,4 +1,4 @@
-import ItemView from "@components/common/item-view/item-view";
+import { ItemView } from "@components/common/item-view";
 import React from "react";
 import BannerAdvertise from "../banner-advertise/banner-adv";
 import LiveNews from "@components/common/liveNews/liveNews";
