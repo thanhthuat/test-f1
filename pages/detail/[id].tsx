@@ -8,7 +8,9 @@ const Index = (props: Props) => {
   return (
     <>
       <Head>
-        <title>{"new page"}</title>
+        <title>
+          {"Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform"}
+        </title>
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
