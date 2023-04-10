@@ -1,7 +1,6 @@
 import React from "react";
 import subtitleLogoRight from "public/image/icon/icon-right.png";
 import Image from "next/image";
-import Link from "next/link";
 type Props = {};
 
 interface IStoryFeeds {}
@@ -11,7 +10,7 @@ const StoryFeeds: React.FC<IStoryFeeds> = (props: Props) => {
     <div className="story-feeds">
       <div className="card">
         <div className="card__header">
-          <Link href="/">stock</Link>
+          <a href="#">stock</a>
           <Image src={subtitleLogoRight} alt="" />
         </div>
         <div className="card__figure">
@@ -21,20 +20,20 @@ const StoryFeeds: React.FC<IStoryFeeds> = (props: Props) => {
           />
         </div>
         <div className="card__links">
-          <Link href="/">
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
+          </a>
         </div>
       </div>
       <div className="card">
         <div className="card__header">
-          <Link href="/">stock</Link>
+          <a href="#">stock</a>
           <Image src={subtitleLogoRight} alt="" />
         </div>
         <div className="card__figure">
@@ -44,20 +43,20 @@ const StoryFeeds: React.FC<IStoryFeeds> = (props: Props) => {
           />
         </div>
         <div className="card__links">
-          <Link href="/">
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
+          </a>
         </div>
       </div>
       <div className="card">
         <div className="card__header">
-          <Link href="/">stock</Link>
+          <a href="#">stock</a>
           <Image src={subtitleLogoRight} alt="" />
         </div>
         <div className="card__figure">
@@ -67,20 +66,20 @@ const StoryFeeds: React.FC<IStoryFeeds> = (props: Props) => {
           />
         </div>
         <div className="card__links">
-          <Link href="/">
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
+          </a>
         </div>
       </div>
       <div className="card">
         <div className="card__header">
-          <Link href="/">stock</Link>
+          <a href="#">stock</a>
           <Image src={subtitleLogoRight} alt="" />
         </div>
         <div className="card__figure">
@@ -90,20 +89,20 @@ const StoryFeeds: React.FC<IStoryFeeds> = (props: Props) => {
           />
         </div>
         <div className="card__links">
-          <Link href="/">
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
+          </a>
         </div>
       </div>
       <div className="card">
         <div className="card__header">
-          <Link href="/">stock</Link>
+          <a href="#">stock</a>
           <Image src={subtitleLogoRight} alt="" />
         </div>
         <div className="card__figure">
@@ -113,20 +112,20 @@ const StoryFeeds: React.FC<IStoryFeeds> = (props: Props) => {
           />
         </div>
         <div className="card__links">
-          <Link href="/">
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
+          </a>
         </div>
       </div>
       <div className="card">
         <div className="card__header">
-          <Link href="/">stock</Link>
+          <a href="#">stock</a>
           <Image src={subtitleLogoRight} alt="" />
         </div>
         <div className="card__figure">
@@ -136,20 +135,20 @@ const StoryFeeds: React.FC<IStoryFeeds> = (props: Props) => {
           />
         </div>
         <div className="card__links">
-          <Link href="/">
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
+          </a>
         </div>
       </div>
       <div className="card">
         <div className="card__header">
-          <Link href="/">stock</Link>
+          <a href="#">stock</a>
           <Image src={subtitleLogoRight} alt="" />
         </div>
         <div className="card__figure">
@@ -159,20 +158,20 @@ const StoryFeeds: React.FC<IStoryFeeds> = (props: Props) => {
           />
         </div>
         <div className="card__links">
-          <Link href="/">
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
+          </a>
         </div>
       </div>
       <div className="card">
         <div className="card__header">
-          <Link href="/">stock</Link>
+          <a href="#">stock</a>
           <Image src={subtitleLogoRight} alt="" />
         </div>
         <div className="card__figure">
@@ -182,15 +181,15 @@ const StoryFeeds: React.FC<IStoryFeeds> = (props: Props) => {
           />
         </div>
         <div className="card__links">
-          <Link href="/">
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
-          <Link href="/">
+          </a>
+          <a href="#">
             Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform
-          </Link>
+          </a>
         </div>
       </div>
     </div>

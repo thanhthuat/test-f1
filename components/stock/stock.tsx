@@ -84,11 +84,11 @@ const Stock: React.FC<IStock> = (props: Props) => {
 
       <div className="button-group">
         <button>
-          <Image src={subtitleiconstocktiker} alt="img-stock" />
+          <Image src={subtitleiconstocktiker} alt="" />
           <span>stock ticker</span>
         </button>
         <button>
-          <Image src={subtitleiconstockpdf} alt="img-stock" />
+          <Image src={subtitleiconstockpdf} alt="" />
           <span>stock ticker</span>
         </button>
       </div>

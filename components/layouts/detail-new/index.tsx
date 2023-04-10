@@ -2,7 +2,6 @@ import React from "react";
 import HeaderDetail from "./header/header-detail";
 import AuthorAction from "./author-action/author-action";
 import ArticlePage from "./article/article";
-import ItemView from "@components/common/item-view/item-view";
 import ArticleAside from "./article-aside/article-aside";
 import CompanyFooter from "@components/company/layout/company-footer";
 import Header from "@components/common/header/header";

@@ -7,6 +7,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import subtitlelogo2 from "public/image/logo/logo-2.png";
 import subtitlelogo1 from "public/image/logo/logo-1.png";
 import Image from "next/image";
+import { log } from "console";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import Link from "next/link";
 interface IHeader {
@@ -87,13 +88,13 @@ const Header: React.FC<IHeader> = () => {
           />
         )}
         <Box className="header__bottom__navbar">
-          <Link href="/" className="header__bottom__navbar__link">
+          <Link className="header__bottom__navbar__link" href={"/"}>
             Car talk
           </Link>
-          <Link href="/" className="header__bottom__navbar__link">
+          <Link className="header__bottom__navbar__link" href={"/"}>
             stock
           </Link>
-          <Link href="/" className="header__bottom__navbar__link">
+          <Link className="header__bottom__navbar__link" href={"/"}>
             real estate
           </Link>
         </Box>
@@ -112,57 +113,57 @@ const Header: React.FC<IHeader> = () => {
         <Box className={`header__side-menu ${isSticky ? "fixed" : "absolute"}`}>
           <ul>
             <li className="item">
-              <Link href="/">Car톡</Link>
+              <Link href="#">Car톡</Link>
             </li>
-            {/* <li className="item">
-              <a className="item__link" href="#">
+            <li className="item">
+              <Link className="item__link" href="#">
                 <span>Car톡</span>
                 <ul className="sub-menu">
-                  <a href="#">Car톡</a>
-                  <a href="#">Car톡</a>
-                  <a href="#">Car톡</a>
+                  <Link href="#">Car톡</Link>
+                  <Link href="#">Car톡</Link>
+                  <Link href="#">Car톡</Link>
                 </ul>
-              </a>
+              </Link>
               <ChevronRightIcon />
             </li>
             <li className="item">
-              <a className="item__link" href="#">
+              <Link className="item__link" href="#">
                 <span>Car톡</span>
                 <ul className="sub-menu">
-                  <a href="#">Car톡</a>
-                  <a href="#">Car톡</a>
-                  <a href="#">Car톡</a>
+                  <Link href="#">Car톡</Link>
+                  <Link href="#">Car톡</Link>
+                  <Link href="#">Car톡</Link>
                 </ul>
-              </a>
+              </Link>
               <ChevronRightIcon />
             </li>
             <li className="item">
-              <a className="item__link" href="#">
+              <Link className="item__link" href="#">
                 <span>Car톡</span>
                 <ul className="sub-menu">
-                  <a href="#">Car톡</a>
-                  <a href="#">Car톡</a>
-                  <a href="#">Car톡</a>
+                  <Link href="#">Car톡</Link>
+                  <Link href="#">Car톡</Link>
+                  <Link href="#">Car톡</Link>
                 </ul>
-              </a>
+              </Link>
               <ChevronRightIcon />
             </li>
             <li className="item">
-              <a className="item__link" href="#">
+              <Link className="item__link" href="#">
                 <span>Car톡</span>
                 <ul className="sub-menu">
-                  <a href="#">Car톡</a>
-                  <a href="#">Car톡</a>
-                  <a href="#">Car톡</a>
+                  <Link href="#">Car톡</Link>
+                  <Link href="#">Car톡</Link>
+                  <Link href="#">Car톡</Link>
                 </ul>
-              </a>
+              </Link>
               <ChevronRightIcon />
             </li>
             <li className="item">
-              <a className="item__link" href="#">
+              <Link className="item__link" href="#">
                 Car톡
-              </a>
-            </li> */}
+              </Link>
+            </li>
           </ul>
         </Box>
       )}
