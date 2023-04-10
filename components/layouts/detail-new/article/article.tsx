@@ -3,7 +3,7 @@ import AuthorAction from '../author-action/author-action';
 import ArticleDetail from '../article-detail/article-detail';
 import BannerAdvertise from '../banner-advertise/banner-adv';
 import AuthorConnect from '../author-connect/author-connect';
-import ItemViewNew from '@components/common/item-view-new/item-view-new';
+
 import BoardNews from '../board-news/board-news';
 import { databoard } from '../data';
 import ClientComment from '../client-comment/client-comment';

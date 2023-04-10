@@ -24,7 +24,7 @@ const ArticleAside = (props: Props) => {
     <aside className="prefixarticleaside">
       <h3>most viewed news</h3>
       {arr.map((item, index) => (
-        <ItemView item={item} key={`1-${index}`} index={index} />
+        <ItemView item={item} key={`1-${index}`} index={index} hasImg={false} />
       ))}
       <BannerAdvertise />
       <h3>most viewed news</h3>
