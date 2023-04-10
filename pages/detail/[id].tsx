@@ -1,8 +1,8 @@
-import DetailNew from "@components/layouts/detail-new";
-import Head from "next/head";
-import React from "react";
+import DetailNew from '@components/layouts/detail-new';
+import Head from 'next/head';
+import React from 'react'
 
-type Props = {};
+type Props = {}
 
 const Index = (props: Props) => {
   return (
@@ -12,27 +12,19 @@ const Index = (props: Props) => {
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={" https://demo123-vd24z7env-thanhthuat.vercel.app/"} />
-        <meta
-          property="og:title"
-          content={
-            "Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform"
-          }
-        />
-        <meta
-          property="og:description"
-          content={`Trial service starting at the end of the year at the earliest
-Limited to CM products that can be handled Limiting
-the platform’s superior position`}
-        />
+        <meta property="og:url" content={" this is detail page"} />
+        <meta property="og:title" content={"new page"} />
+        <meta property="og:description" content={" this is content of page"} />
         <meta
           property="og:image"
-          content="https://biz.chosun.com/resizer/xhwfVeiwbBzLDap9hErQsP8cFiE=/464x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosunbiz/DJN5OC457RCQDEBRKQEMDDXJF4.jpg"
+          content="https://cdn-static.famiroom.com/static/upload/large/2021-04/16/4495c172-a85f-44ea-a4a9-1b692cca3327.jpg"
         ></meta>
+        <link rel="icon" href="/icon.svg" />
       </Head>
       <DetailNew />
     </>
   );
-};
+}
+
 
 export default Index;
