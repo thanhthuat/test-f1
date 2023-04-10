@@ -17,6 +17,7 @@ const arr = [
   "Koo Young-bae, chairman of Q10, took over WeMakePrice following Ticket Monster and Interpark Commerce",
   "Coupang gives strength to 'delivery'... CJ Logistics and Hanjin 'counterattack' with bio and fashion logistics",
   "Non-face-to-face treatment that would be illegal in May... Start-up 'Baldongdong'",
+  "Non-face-to-face treatment that would be illegal in May... Start-up 'Baldongdong'",
 ];
 const ArticleAside = (props: Props) => {
   return (
