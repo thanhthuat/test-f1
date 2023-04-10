@@ -29,7 +29,7 @@ const ArticleAside = (props: Props) => {
       <BannerAdvertise />
       <h3>most viewed news</h3>
       {arr.map((item, index) => (
-        <ItemView item={item} key={`1-${index}`} index={index} hasImg={true} />
+        <ItemView item={item} key={`2-${index}`} index={index} hasImg={true} />
       ))}
       <div className="mt-24">
         <LiveNews />
