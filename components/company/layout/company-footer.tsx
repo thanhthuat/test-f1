@@ -85,6 +85,10 @@ const CompanyFooter = (props: Props) => {
           </div>
         </div>
       </div>
+      <div className="prefixfootercompany-content-ismobile" >
+                <div >   <Link href={"/"}> privacy policy</Link> </div>
+                <div className="prefixfootercompany-content-ismobile__coppyright"> <p> Copyright Chosun Biz All rights reserved.</p> </div>
+      </div>
     </footer>
   );
 };

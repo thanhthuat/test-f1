@@ -16,7 +16,7 @@ const BoxService: React.FC<IPropsBoxService> = ({ item }) => {
   return (
     <Box
       className="prexfixboxservice"
-      sx={{ padding: " 10px", backgroundColor: "#fbf4f5", width: "219px" }}
+      sx={{ padding: " 10px", backgroundColor: "#fbf4f5", }}
     >
       <Stack direction={{ xs: "column", sm: "column" }} alignItems="center">
         <div className="prexfixboxservice-icon">

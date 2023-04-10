@@ -16,7 +16,7 @@ interface IHomeCompanyProps {}
 const HomeCompany: React.FC<IHomeCompanyProps> = (props) => {
  
   return (
-    <div>
+    <div style={{background:'#fff'}}>
       <Header className='wapper'/>
       <HeaderCompany />
       <CompanyProgramer />

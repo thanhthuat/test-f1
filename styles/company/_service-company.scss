@@ -1,5 +1,11 @@
 .prefixservice {
   padding: 120px 0px 60px;
+  &-content{
+    @include res(1280px){
+          max-width: 669px;
+          margin: 0px auto;
+       }
+  }
   &-title {
     margin: 0 auto 40px;
     max-width: 644px;
@@ -18,8 +24,16 @@
       font-weight: normal;
     }
   }
-  &-baner{
+  &-banner{
     justify-content: space-between;
+    &__content{
+     
+       justify-content: space-between;
+       @include res(1280px){
+          gap: 20px 21px;
+           justify-content:flex-start;
+       }
+    }
   }
      &-contact {
       margin-top: 8px;

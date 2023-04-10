@@ -1,6 +1,10 @@
 .prexfixboxservice{
     padding-top: 51px;
     text-align: center;
+    width: 219px;
+    @include res(1280px){
+         width: 208px;
+    }
     &-icon{
         height: 60px;
         width: 60px;

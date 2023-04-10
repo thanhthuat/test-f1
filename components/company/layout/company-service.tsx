@@ -59,9 +59,14 @@ const CompanyService = () => {
           whileInView={{ opacity: 1, transform: "translate(0%, 0%)" }}
           viewport={{ once: true }}
           transition={{ duration: 1.2, delay: 0.2 }}
-          className="wapper prefixservice-baner"
+          className="wapper prefixservice-banner"
         >
-          <Stack direction="row" spacing={0} sx={{ flexWrap: "wrap" }}>
+          <Stack
+            className="prefixservice-banner__content"
+            direction="row"
+            spacing={0}
+            sx={{ flexWrap: "wrap" }}
+          >
             {arr.map((item, index) => {
               return <BoxService item={item} key={`${item.title}-${index}`} />;
             })}
