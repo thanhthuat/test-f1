@@ -14,6 +14,7 @@
    text-align: center;
    border-top: 1px solid #d7d7d7;
    padding-top: 25px;
+   display: none;
      @include res(768px){
       display:block;
     }

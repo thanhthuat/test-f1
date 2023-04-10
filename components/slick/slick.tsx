@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 interface ISlick {}
@@ -18,9 +19,9 @@ const Slick: React.FC<ISlick> = () => {
         <div className="card">
           <div className="list">
             <div className="list__left">
-              <a href="">
+              <Link href="/detail/lll">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, illum.
-              </a>
+              </Link>
             </div>
             <div className="list__right">
               <div className="list__right__figure">

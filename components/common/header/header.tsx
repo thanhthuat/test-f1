@@ -64,7 +64,10 @@ const Header: React.FC<IHeader> = () => {
       </Box>
 
       <Box className="header__top">
-        <Image src={subtitlelogo1} alt="" />
+        <Link href={"/company"}>
+          <Image src={subtitlelogo1} alt="" />
+        </Link>
+
         <div className="header__top__login">
           <PermIdentityIcon />
           <span>Đăng nhập </span>
