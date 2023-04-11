@@ -8,7 +8,7 @@ type Props = {
   data: any[];
 };
 
-const Index = (props: Props) => {
+const Index: React.FC<Props> = ({data=[]}) => {
   return (
     <>
       <Head>
@@ -27,9 +27,9 @@ const Index = (props: Props) => {
 Limited to CM products that can be handled Limiting
 the platform’s superior position`}
         />
-        <meta property="og:image" content="https://picsum.photos/200/300"></meta>
+        <meta property="og:image" content="https://picsum.photos/300/300"></meta>
       </Head>
-      <DetailNew title={props.data[0].name} />
+      <DetailNew title={data[0]?.name} />
     </>
   );
 };
