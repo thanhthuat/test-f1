@@ -1,4 +1,5 @@
 import DetailNew from "@components/layouts/detail-new";
+import { GetServerSideProps } from "next";
 import Head from "next/head";
 import React from "react";
 
@@ -32,5 +33,11 @@ the platform’s superior position`}
     </>
   );
 };
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  context.res.setHeader("Cache-Control", "public, s-maxage=10, stale-while-revalidate=59");
 
+  return {
+    props: {},
+  };
+};
 export default Index;
