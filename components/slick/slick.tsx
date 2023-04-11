@@ -19,7 +19,7 @@ const Slick: React.FC<ISlick> = () => {
         <div className="card">
           <div className="list">
             <div className="list__left">
-              <Link href="/detail/lll">
+              <Link href="/detail/1">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, illum.
               </Link>
             </div>
