@@ -8,7 +8,7 @@ type Props = {
   data: any[];
 };
 
-const Index: React.FC<Props> = ({data=[]}) => {
+const Index: React.FC<Props> = ({ data = [] }) => {
   return (
     <>
       <Head>
@@ -27,7 +27,10 @@ const Index: React.FC<Props> = ({data=[]}) => {
 Limited to CM products that can be handled Limiting
 the platform’s superior position`}
         />
-        <meta property="og:image" content="https://picsum.photos/300/300"></meta>
+        <meta
+          property="og:image"
+          content={`https://picsum.photos/${Math.floor(Math.random() * 200) + 200}/300`}
+        ></meta>
       </Head>
       <DetailNew title={data[0]?.name} />
     </>
@@ -45,11 +48,11 @@ the platform’s superior position`}
 //     props: {
 //       data: data.data,
 //     },
-    
+
 //   };
 // };
 
-export const   getStaticProps:GetStaticProps = async(context) =>{
+export const getStaticProps: GetStaticProps = async (context) => {
   const { params } = context;
   const axios = require("axios");
   const data = await axios.get(
@@ -62,7 +65,7 @@ export const   getStaticProps:GetStaticProps = async(context) =>{
     },
     revalidate: 10,
   };
-}
+};
 
 export async function getStaticPaths() {
   return {
