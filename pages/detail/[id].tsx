@@ -6,6 +6,7 @@ import React from "react";
 type Props = {};
 
 const Index = (props: Props) => {
+  console.log("🚀 ~ file: [id].tsx:9 ~ Index ~ props:", props)
   return (
     <>
       <Head>
@@ -24,20 +25,24 @@ const Index = (props: Props) => {
 Limited to CM products that can be handled Limiting
 the platform’s superior position`}
         />
-        <meta
-          property="og:image"
-          content="https://biz.chosun.com/resizer/xhwfVeiwbBzLDap9hErQsP8cFiE=/464x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosunbiz/DJN5OC457RCQDEBRKQEMDDXJF4.jpg"
-        ></meta>
+        <meta property="og:image" content="https://picsum.photos/200/300"></meta>
       </Head>
       <DetailNew />
     </>
   );
 };
 export const getServerSideProps: GetServerSideProps = async (context) => {
+  const { params } = context;
+  // console.log("🚀 ~ file: [id].tsx:38 ~ constgetServerSideProps:GetServerSideProps= ~ params:", params)
+  
+  const axios = require("axios");
+  const data = await axios.get(`https://jsonplaceholder.typicode.com/comments?postId=${params?.id}`);
   context.res.setHeader("Cache-Control", "public, s-maxage=10, stale-while-revalidate=59");
-
+ 
   return {
-    props: {},
+    props: {
+      data: data.data,
+    },
   };
 };
 export default Index;
