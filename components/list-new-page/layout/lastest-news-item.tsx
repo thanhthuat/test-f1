@@ -31,9 +31,9 @@ const LastestNewsItem:React.FC<ILastestNewsItemProps> = ({item}) => {
   return (
     <div className="LastestNewsItem">
       <div className="figure-img">
-        <a href="#">
+        <Link href={`/detail/${item.id}`}>
           <img src={apiConfig.originalImage(item.backdrop_path)} alt={item.title} />
-        </a>
+        </Link>
       </div>
       <div className="content">
         <div className="title">
