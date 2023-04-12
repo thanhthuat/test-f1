@@ -16,8 +16,8 @@
   .card {
     border: 1px solid #d7d7d7;
     background-color: white;
-    width: 23%;
-    margin-bottom: 15px;
+    flex: 1 1 23%;
+    // margin-bottom: 15px;
 
     @include md {
       width: 100%;

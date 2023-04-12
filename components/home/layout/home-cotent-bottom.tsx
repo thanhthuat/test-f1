@@ -1,4 +1,4 @@
-import StoryFeeds from "@components/storyFeeds/storyFeeds";
+import StoryFeeds from "@components/storyFeeds/storyFeeds"
 import React from "react";
 
 type Props = {};

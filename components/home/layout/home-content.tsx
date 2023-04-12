@@ -7,49 +7,57 @@ import Opinion from "@components/opinion/opinion";
 import Slick from "@components/slick/slick";
 import MostViewsNews from "@components/common/mostViewsNews/mostViewsNews";
 import Stock from "@components/stock/stock";
- import ILiveNews from "@components/common/liveNews/liveNews";
+// import ILiveNews from "@components/liveNews/liveNews";
+import LiveNews from "@components/common/liveNews/liveNews";
+import { useAppSelector } from "@hook/hooks";
+import { TypeNews } from "lib/models/interface";
+import { opinion } from "lib/api/opinion";
+import { stock } from "lib/api/stock";
+//  import ILiveNews from "@components/common/liveNews/liveNews";
+
+// Import Swiper styles
 
 type Props = {};
 
 const HomeContent = (props: Props) => {
+  const { news, status } = useAppSelector((state) => state.news);
+
+  const tempData = news.filter((item: TypeNews) => item?.news_id > 6);
+
   return (
     <section className="box-1">
       <article>
-        <Banner />
+        <Banner banner={news[0]} />
         <div className="layout">
           <div className="layout__left">
-            <Slide />
+            <Slide data={news} />
             <div className="layout__left__listItem__top">
-              <ListNews isOnlyTittle={false} />
-              <ListNews isOnlyTittle={false} />
-              <ListNews isOnlyTittle={true} />
-              <ListNews isOnlyTittle={true} />
-              <ListNews isOnlyTittle={true} />
-              <ListNews isOnlyTittle={true} />
+              {tempData.length > 0 &&
+                tempData.map((item: TypeNews, index: number) => (
+                  <ListNews key={index} data={item} isOnlyTittle={index !== 0} />
+                ))}
             </div>
             <div className="layout__left__listItem__middle">
-              <ListNews isOnlyTittle={false} />
-              <ListNews isOnlyTittle={true} />
-              <ListNews isOnlyTittle={true} />
-              <ListNews isOnlyTittle={true} />
-              <ListNews isOnlyTittle={true} />
-              <ListNews isOnlyTittle={true} />
+              {tempData.length > 0 &&
+                tempData.map((item: TypeNews, index: number) => (
+                  <ListNews key={index} data={item} isOnlyTittle={index !== 0} />
+                ))}
             </div>
             <div className="layout__left__listItem__bottom">
-              <ListNews isOnlyTittle={false} />
-              <ListNews isOnlyTittle={true} />
-              <ListNews isOnlyTittle={true} />
-              <ListNews isOnlyTittle={true} />
-              <ListNews isOnlyTittle={true} />
-              <ListNews isOnlyTittle={true} />
+              {tempData.length > 0 &&
+                tempData.map((item: TypeNews, index: number) => (
+                  <ListNews key={index} data={item} isOnlyTittle={index !== 0} />
+                ))}
             </div>
           </div>
           <div className="layout__right">
-            <SlickCarousel />
-            <Opinion />
-            <Stock />
-            <SlickCarousel />
-            <SlickCarousel />
+            <SlickCarousel title="interview" />
+            <Opinion data={opinion} />
+            <Stock/>
+            <SlickCarousel title="Opinion" />
+            <SlickCarousel title="Science shot" />
+            <Slick />
+            <SlickCarousel title="Financial focus" />
             <Slick />
           </div>
         </div>
@@ -59,7 +67,7 @@ const HomeContent = (props: Props) => {
         <Slick />
         <Slick />
         <MostViewsNews />
-        <ILiveNews />
+        <LiveNews />
         <div className="row">
           <Slick />
           <Slick />

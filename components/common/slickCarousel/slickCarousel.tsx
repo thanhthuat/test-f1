@@ -4,14 +4,21 @@ import Image from "next/image";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
-interface ISlickCarousel {}
+type Props = {
+  title: string;
+};
 
-const SlickCarousel: React.FC<ISlickCarousel> = () => {
+interface ISlickCarousel {
+  title: string;
+}
+
+const SlickCarousel: React.FC<ISlickCarousel> = (props: Props) => {
+  const { title } = props;
   return (
     <div className="slickCarousel">
       <div className="slickCarousel__top">
         <div className="slickCarousel__top__link">
-          <span className="slickCarousel__top__link__title">Click vao day</span>
+          <span className="slickCarousel__top__link__title">{title}</span>
           <Image src={subtitleLogoRight} alt="" />
         </div>
         <div className="slickCarousel__top__controls">

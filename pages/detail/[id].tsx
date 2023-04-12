@@ -32,7 +32,8 @@ the platform’s superior position`}
           content={`https://picsum.photos/${Math.floor(Math.random() * 200) + 200}/300`}
         ></meta>
       </Head>
-      <DetailNew title={data[0]?.name} />
+      {/* title={data[0]?.name as string} */}
+      <DetailNew />
     </>
   );
 };

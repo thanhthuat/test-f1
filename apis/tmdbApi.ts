@@ -1,3 +1,4 @@
+import { IresponeMovieDetail, responeHttp } from 'lib/models/interface';
 import axiosClient from './axiosClient';
 
 export const category = {
@@ -20,7 +21,7 @@ export const tvType = {
 const tmdbApi = {
   getMoviesList: (type : keyof typeof  movieType  ,  params:any) => {
     const url = 'movie/' + movieType[type ];
-    return axiosClient?.get(url, params);
+    return axiosClient?.get<responeHttp>(url, params);
   },
   getTvList: (type : keyof typeof tvType , params:any) => {
     const url = 'tv/' + tvType[type];
@@ -36,7 +37,7 @@ const tmdbApi = {
   },
   detail: (cate :keyof typeof category, id:any, params:any) => {
     const url = category[cate] + '/' + id;
-    return axiosClient.get(url, params);
+    return axiosClient.get<IresponeMovieDetail>(url, params);
   },
   credits: (cate :keyof typeof category, id:any) => {
     const url = category[cate] + '/' + id + '/credits';

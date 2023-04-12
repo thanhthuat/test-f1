@@ -60,15 +60,48 @@
 
     &__navbar {
       display: flex;
-      gap: 25px;
+      gap: 20px;
+      align-items: center;
 
-      @include md {
+      @include lg {
         display: none;
       }
 
-      &__link {
-        font-weight: 700;
+      .item {
+        display: flex;
+        align-items: center;
         cursor: pointer;
+
+        &__link {
+          font-weight: 700;
+          position: relative;
+          padding: 10px 0;
+
+          .sub-menu {
+            left: 0;
+            display: none;
+            width: 200px;
+            height: auto;
+            position: absolute;
+            top: 100%;
+            background-color: #eaeaea;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 10px;
+
+            li {
+              padding: 8px;
+              font-size: 15px;
+              font-weight: 300;
+              word-wrap: none;
+            }
+          }
+        }
+
+        &:hover .sub-menu {
+          display: flex;
+        }
       }
     }
 

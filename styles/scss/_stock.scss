@@ -60,6 +60,8 @@
             justify-content: space-between;
 
             &__left {
+              display: flex;
+              gap: 10px;
               .code {
                 font-weight: 700;
                 color: #999;

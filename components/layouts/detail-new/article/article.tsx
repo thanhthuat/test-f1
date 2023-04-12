@@ -7,10 +7,12 @@ import AuthorConnect from '../author-connect/author-connect';
 import BoardNews from '../board-news/board-news';
 import { databoard } from '../data';
 import ClientComment from '../client-comment/client-comment';
+import { useAppSelector } from '@hook/hooks';
 
 type Props = {}
 
 const ArticlePage = (props: Props) => {
+  
   return (
     <article className="prefixarticlecontent">
       <AuthorAction />

@@ -8,16 +8,17 @@ import { TextField } from "@mui/material";
 type Props = {};
 
 const CompanyFooter = (props: Props) => {
-    const top100Films = [
-  { label: 'The Shawshank Redemption', year: 1994 },
-  { label: 'The Godfather', year: 1972 },
-  { label: 'The Godfather: Part II', year: 1974 },
-  { label: 'The Dark Knight', year: 2008 },]
+  const top100Films = [
+    { label: "The Shawshank Redemption", year: 1994 },
+    { label: "The Godfather", year: 1972 },
+    { label: "The Godfather: Part II", year: 1974 },
+    { label: "The Dark Knight", year: 2008 },
+  ];
   return (
     <footer className="prefixfootercompany">
       <div className="prefixfootercompany-content">
         <div className="prefixfootercompany-logo">
-          <Image src={imgLogo} alt="logo" />
+          <Link href="/"></Link>
         </div>
 
         <div className="prefixfootercompany-policy">
@@ -52,23 +53,18 @@ const CompanyFooter = (props: Props) => {
           <div className="prefixfootercompany-about">
             <ul>
               <li>
-                {" "}
-                <Link href={"/"}> About Us</Link>
+                <Link href={"/company"}> About Us</Link>
               </li>
               <li>
-                {" "}
                 <Link href={"/"}> Recruitment</Link>
               </li>
               <li>
-                {" "}
                 <Link href={"/"}>Advertising Guide</Link>
               </li>
               <li>
-                {" "}
                 <Link href={"/"}> business inquiry</Link>
               </li>
               <li>
-                {" "}
                 <Link href={"/"}> Reader participation and reporting</Link>
               </li>
             </ul>
@@ -85,9 +81,15 @@ const CompanyFooter = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="prefixfootercompany-content-ismobile" >
-                <div >   <Link href={"/"}> privacy policy</Link> </div>
-                <div className="prefixfootercompany-content-ismobile__coppyright"> <p> Copyright Chosun Biz All rights reserved.</p> </div>
+      <div className="prefixfootercompany-content-ismobile">
+        <div>
+          {" "}
+          <Link href={"/"}> privacy policy</Link>{" "}
+        </div>
+        <div className="prefixfootercompany-content-ismobile__coppyright">
+          {" "}
+          <p> Copyright Chosun Biz All rights reserved.</p>{" "}
+        </div>
       </div>
     </footer>
   );

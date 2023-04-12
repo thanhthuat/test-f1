@@ -1,8 +1,7 @@
-.home {
+.container {
   width: 1280px;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
-  overflow-x: hidden;
 
   .box-1 {
     width: 100%;
@@ -69,6 +68,18 @@
           }
         }
       }
+
+      .more-new-btn {
+        width: 100%;
+        font-size: 15px;
+        padding: 8px;
+        border: none;
+        cursor: pointer;
+        background-color: #eaeaea;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
 
     aside {
@@ -90,7 +101,7 @@
           flex-direction: row;
           padding: 10px 0 20px 0;
         }
-        @include sm {
+        @include md {
           border-bottom: 0px;
           border-top: 0px;
           display: flex;

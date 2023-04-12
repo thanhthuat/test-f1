@@ -1,34 +1,33 @@
+import { TypeNews } from "lib/models/interface";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 type Prop = {
   isOnlyTittle: boolean;
+  data?: TypeNews;
 };
 
 interface IListNew {
   isOnlyTittle: boolean;
+  data?: TypeNews;
 }
 
-const ListNews: React.FC<IListNew> = (props: Prop) => {
-  const { isOnlyTittle } = props;
+const ListNews: React.FC<IListNew> = ({ isOnlyTittle, data }) => {
+  
   return (
     <div className="listNews">
-      <a href="#" className="listNews__title">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-      </a>
+      <Link href={`/detail/${data?.news_id}`} className="listNews__title">
+        {data?.title}
+      </Link>
       {!isOnlyTittle && (
         <div className="listNews__content">
           <div className="listNews__content__figure">
-            <img
-              src="https://biz.chosun.com/resizer/CDZYRxyp6lY2hX-eL7FuDFV438A=/184x104/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosunbiz/7EU56PRESVAOBD2E5GLKUEZ3YY.jpg"
-              alt=""
-              className="listNews__content__figure__img"
-            />
+            <Link href={`/detail/${data?.news_id}`}>
+              <img alt={data?.title} src={data?.img} className="listNews__content__figure__img" />
+            </Link>
           </div>
-          <div className="listNews__content__desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate saepe aperiam
-            perferendis! Rerum error inventore nobis ut minima facere dolorum rem commodi illum,
-            autem, voluptatem doloremque minus odit voluptas hic saepe ullam sed sequi recusandae
-          </div>
+          <div className="listNews__content__desc">{data?.desc}</div>
         </div>
       )}
     </div>

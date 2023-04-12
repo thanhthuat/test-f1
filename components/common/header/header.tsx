@@ -7,9 +7,12 @@ import CloseIcon from "@mui/icons-material/Close";
 import subtitlelogo2 from "public/image/logo/logo-2.png";
 import subtitlelogo1 from "public/image/logo/logo-1.png";
 import Image from "next/image";
-import { log } from "console";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Link from "next/link";
+import { useAppDispatch, useAppSelector } from "@hook/hooks";
+import { fetchCategories } from "lib/redux/category/category.action";
+import { TypeCategories, TypechildCategories } from "lib/models/interface";
 interface IHeader {
   className?: string;
 }
@@ -19,6 +22,15 @@ const Header: React.FC<IHeader> = ({ className }) => {
   const [isShowInputSearch, setIsShowInputSearch] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const headerRef: any = useRef({});
+
+  const { categories, status } = useAppSelector((state) => state.categories);
+
+  const dispath = useAppDispatch();
+  useEffect(() => {
+    if (categories.length === 0) {
+      dispath(fetchCategories());
+    }
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -91,15 +103,25 @@ const Header: React.FC<IHeader> = ({ className }) => {
           />
         )}
         <Box className="header__bottom__navbar">
-          <Link className="header__bottom__navbar__link" href={"/"}>
-            Car talk
-          </Link>
-          <Link className="header__bottom__navbar__link" href={"/"}>
-            stock
-          </Link>
-          <Link className="header__bottom__navbar__link" href={"/"}>
-            real estate
-          </Link>
+          {categories &&
+            categories.map((item: TypeCategories) => (
+              <div className="item" key={item?.category_id}>
+                <Link className="item__link" href={"/category/" + item?.slug}>
+                  {item?.category_name}
+
+                  {item?.children.length > 0 && (
+                    <ul className="sub-menu">
+                      {item?.children.map((childItem: TypechildCategories) => (
+                        <li key={childItem?.category_id}>
+                          <Link href={`./${childItem?.slug}`}>{childItem?.category_name}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </Link>
+                {item?.children.length > 0 && <KeyboardArrowDownIcon />}
+              </div>
+            ))}
         </Box>
         {isShowInputSearch ? (
           <Box>
@@ -112,61 +134,28 @@ const Header: React.FC<IHeader> = ({ className }) => {
           />
         )}
       </Box>
+      {/* sub-menu */}
       {isShowSideBar && (
         <Box className={`header__side-menu ${isSticky ? "fixed" : "absolute"}`}>
           <ul>
-            <li className="item">
-              <Link href="#">Car톡</Link>
-            </li>
-            <li className="item">
-              <Link className="item__link" href="#">
-                <span>Car톡</span>
-                <ul className="sub-menu">
-                  <Link href="#">Car톡</Link>
-                  <Link href="#">Car톡</Link>
-                  <Link href="#">Car톡</Link>
-                </ul>
-              </Link>
-              <ChevronRightIcon />
-            </li>
-            <li className="item">
-              <Link className="item__link" href="#">
-                <span>Car톡</span>
-                <ul className="sub-menu">
-                  <Link href="#">Car톡</Link>
-                  <Link href="#">Car톡</Link>
-                  <Link href="#">Car톡</Link>
-                </ul>
-              </Link>
-              <ChevronRightIcon />
-            </li>
-            <li className="item">
-              <Link className="item__link" href="#">
-                <span>Car톡</span>
-                <ul className="sub-menu">
-                  <Link href="#">Car톡</Link>
-                  <Link href="#">Car톡</Link>
-                  <Link href="#">Car톡</Link>
-                </ul>
-              </Link>
-              <ChevronRightIcon />
-            </li>
-            <li className="item">
-              <Link className="item__link" href="#">
-                <span>Car톡</span>
-                <ul className="sub-menu">
-                  <Link href="#">Car톡</Link>
-                  <Link href="#">Car톡</Link>
-                  <Link href="#">Car톡</Link>
-                </ul>
-              </Link>
-              <ChevronRightIcon />
-            </li>
-            <li className="item">
-              <Link className="item__link" href="#">
-                Car톡
-              </Link>
-            </li>
+            {categories &&
+              categories.map((item: TypeCategories) => (
+                <li key={item?.category_id} className="item">
+                  <Link className="item__link" href={`/category/${item?.slug}`}>
+                    <span>{item?.category_name}</span>
+                    {item?.children.length > 0 && (
+                      <ul className="sub-menu">
+                        {item?.children.map((childItem: TypechildCategories) => (
+                          <Link key={childItem?.category_id} href={`./${childItem?.slug}`}>
+                            {childItem?.category_name}
+                          </Link>
+                        ))}
+                      </ul>
+                    )}
+                  </Link>
+                  {item?.children.length > 0 && <ChevronRightIcon />}
+                </li>
+              ))}
           </ul>
         </Box>
       )}

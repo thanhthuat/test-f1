@@ -18,7 +18,7 @@ export default function Home() {
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         />
       </Head>
-      <main className="home">
+      <main className="home container">
         <Header />
         <HomePage />
       </main>

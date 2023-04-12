@@ -21,12 +21,12 @@
     font-weight: 300;
     color: #222;
 
-    @include sm {
+    @include md {
       font-size: 18px;
     }
 
     &:hover {
-      color: #d7d7d7;
+      color: #707070;
     }
   }
 
@@ -55,8 +55,13 @@
       overflow: hidden;
       text-overflow: ellipsis;
       color: #999;
-      font-size: 16px;
+      font-size: 14px;
       height: 100%;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
 
       @include sm {
         display: none;

@@ -9,7 +9,7 @@
   padding-bottom: 20px;
   border-bottom: 1px solid #333;
 
-  @include sm {
+  @include md {
     flex-direction: column-reverse;
   }
 
@@ -42,13 +42,12 @@
     }
 
     &__desc {
-      word-break: break-all;
       font-size: 14px;
       overflow: hidden;
       text-overflow: ellipsis;
       color: #999;
 
-      @include sm {
+      @include md {
         display: none;
       }
     }

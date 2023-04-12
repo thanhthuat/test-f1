@@ -1,5 +1,8 @@
+//reponsive
 @import "./breakpoints";
+//global css
 @import "./style";
+//component
 @import "./reset";
 @import "./variables";
 @import "./style";
@@ -7,6 +10,7 @@
 @import "./boxservice";
 @import "./line-area";
 @import "./header";
+
 // @import "./organization";
 @import "./banner";
 @import "./slide";
@@ -28,3 +32,6 @@
 @import "./storyFeeds";
 @import "./itemviewnew-common";
 @import "./linenew-common";
+//page list news
+@import "../list-news-page/side-news";
+@import "../list-news-page/lastest-new-item";

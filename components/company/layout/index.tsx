@@ -16,16 +16,9 @@ import { fetchUsers } from "redux/add/user.action";
 interface IHomeCompanyProps {}
 
 const HomeCompany: React.FC<IHomeCompanyProps> = (props) => {
-  const { entities } = useAppSelector((state) => state.user);
-  console.log("🚀 ~ file: index.tsx:11 ~ Index ~ entities:", entities);
-
-  const dispath = useAppDispatch();
-  useEffect(() => {
-    dispath(fetchUsers());
-  }, []);
   return (
-    <div style={{background:'#fff'}}>
-      <Header className='wapper'/>
+    <div>
+      {/* <Header className="wapper" /> */}
       <HeaderCompany />
       <CompanyProgramer />
       <CompanyAbout />
