@@ -10,6 +10,8 @@ export const movieType = {
   upcoming: 'upcoming',
   popular: 'popular',
   top_rated: 'top_rated',
+  now_playing:"now_playing"
+  
 };
 
 export const tvType = {
@@ -19,9 +21,13 @@ export const tvType = {
 };
 
 const tmdbApi = {
-  getMoviesList: (type : keyof typeof  movieType  ,  params:any) => {
-    const url = 'movie/' + movieType[type ];
-    return axiosClient?.get<responeHttp>(url, params);
+  getMoviesList: (type : keyof typeof  movieType  ,page=1 , params:any) => {
+    const url = 'movie/' + movieType[type ]  
+    return axiosClient?.get<responeHttp>(url, {
+      params: {
+        page
+      }
+    });
   },
   getTvList: (type : keyof typeof tvType , params:any) => {
     const url = 'tv/' + tvType[type];

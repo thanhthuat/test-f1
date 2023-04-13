@@ -5,8 +5,8 @@ import { responeHttp } from "lib/models/interface";
 
 
 
-export const getListTop = createAsyncThunk('movie/getMovieTopRate',async (thunkApi)=>{
-    const response = await  tmdbApi.getMoviesList("top_rated", {})
+export const getListTop = createAsyncThunk('movie/getMovieTopRate',async (payload:{page:number},thunkApi)=>{
+    const response = await  tmdbApi.getMoviesList("now_playing",payload.page ,{})
     
     return response;
 })

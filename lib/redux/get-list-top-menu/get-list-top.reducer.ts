@@ -4,10 +4,12 @@ import { IresponeMovie, IresponeMovieDetail } from "lib/models/interface";
 interface IlistMovieSlice{
     topmovie:IresponeMovie[];
     detailmovie: IresponeMovieDetail;
+    page: number;
 }
 const initialState:IlistMovieSlice ={
     topmovie:[],
-    detailmovie:  {} as IresponeMovieDetail
+    detailmovie: {} as IresponeMovieDetail,
+    page:0
 } ;
 
 const listMovieSlice = createSlice({
@@ -17,7 +19,8 @@ const listMovieSlice = createSlice({
     },
     extraReducers:(builder)=>{
         builder.addCase(getListTop.fulfilled ,(state,action)=>{
-            state.topmovie = action.payload.data.results
+            state.topmovie = action.payload.data.results;
+            state.page =action.payload.data.page
         })
          .addCase(getListTop.rejected, (state) => {
         state.topmovie = [];

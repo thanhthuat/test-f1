@@ -13,7 +13,7 @@ const ListNewsPage = (props: Props) => {
   const dispatch = useAppDispatch();
   useEffect(() => {
     if (topmovie.length === 0) {
-      dispatch(getListTop());
+      dispatch(getListTop({page:1} ));
     }
 
     return () => {};
