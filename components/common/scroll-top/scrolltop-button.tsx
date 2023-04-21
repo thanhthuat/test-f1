@@ -48,6 +48,7 @@ const ScrollTop = () => {
             transition: "all 0.2s",
             "&:hover": {
               opacity: "1",
+              backgroundColor: "rgb(0, 4, 3)",
             },
           }}
         >

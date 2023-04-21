@@ -4,7 +4,7 @@
   width: 100%;
   top: 0px;
   background: #fff;
-  margin-bottom: 30px;
+  z-index: 99999;
   &-content {
     display: flex;
     justify-content: space-between;
