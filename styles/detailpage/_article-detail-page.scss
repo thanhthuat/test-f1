@@ -1,7 +1,6 @@
 .prefixarticledetail1 {
   display: flex;
   align-items: flex-start;
-  padding-bottom: 70px;
   @include res(820px) {
     flex-direction: column;
   }
@@ -19,7 +18,7 @@
     }
   }
   &-figure {
-    max-width: calc((464 / 616) * 100%);
+    // max-width: calc((464 / 616) * 100%);
     margin: 0px auto 32px auto;
     @include res(820px) {
       max-width: 100%;

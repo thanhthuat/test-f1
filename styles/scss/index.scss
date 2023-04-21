@@ -24,6 +24,8 @@
 @import "./storyFeeds";
 // page detail
 @import "../detailpage/index";
+// page common 
+@import "../common/index.scss";
 // page company 
 @import "../company/index";
 @import "./itemview-common";
@@ -35,3 +37,5 @@
 //page list news
 @import "../list-news-page/side-news";
 @import "../list-news-page/lastest-new-item";
+// page
+@import "../layout1/index.scss"

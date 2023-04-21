@@ -1,4 +1,4 @@
-import Header from "@components/common/header/header";
+
 import React, { useEffect } from "react";
 import HotNews from "./hot-news";
 import LastestNews from "./lastest-news";
@@ -21,7 +21,6 @@ const ListNewsPage = (props: Props) => {
 
   return (
     <main className="container">
-      <Header />
       {/* <HotNews /> */}
       <LastestNews />
       <CompanyFooter />

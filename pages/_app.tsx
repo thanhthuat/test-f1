@@ -1,5 +1,6 @@
 import { Provider } from "react-redux";
 import "../styles/scss/index.scss";
+import "swiper/css";
 import type { AppProps } from "next/app";
 import { store } from "lib/redux/store/store";
 

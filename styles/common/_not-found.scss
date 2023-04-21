@@ -1,0 +1,49 @@
+@function multiple-shadow($length){
+    $value: 2px -1px 0 #000;
+    @for $i from 2 through $length{
+        $ho: $i * 2;
+        $vo: -#{$ho / 2};
+        $col: hsl(0deg, 0%, $i * 2%);
+        $value: $value, #{$ho}px #{$vo}px 0 $col
+    }
+    @return $value;
+}
+
+
+
+
+.clsnotfound{
+    &-content{
+        .page_404{ padding:40px 0; background:#fff; font-family: 'Arvo', serif;
+        }
+        
+        .page_404  img{ width:100%;}
+        
+        .four_zero_four_bg{
+         
+         background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+            height: 400px;
+            background-position: center;
+            text-align: center;
+         }
+         
+         
+         .four_zero_four_bg {.text-center{
+         font-size:80px;
+         }}
+         
+          .four_zero_four_bg {.h3{
+               font-size:80px;
+               text-align: center;
+               }}
+               
+               .link_404{      
+          color: #fff!important;
+            padding: 10px 20px;
+            background: #39ac31;
+            margin: 20px 0;
+            display: inline-block;}
+          .contant_box_404{ margin-top:-50px;
+        text-align: center;}
+    }
+}

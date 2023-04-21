@@ -1,0 +1,21 @@
+.clsarticleitemcarousel {
+  background: #17191a;
+  padding: 25px;
+  height: 100%;
+  &-content {
+  }
+  &-summary {
+    &__title {
+      color: #bdbdbd;
+
+      font-size: 18px;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+    &__des {
+      line-height: 140%;
+      font-size: 14px;
+      color: #4f4f4f;
+    }
+  }
+}

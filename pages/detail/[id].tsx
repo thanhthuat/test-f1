@@ -1,77 +1,35 @@
-import DetailNew from "@components/layouts/detail-new";
-import { GetServerSideProps, GetStaticProps } from "next";
-import Head from "next/head";
-import React from "react";
-import { data } from "./../../constants/data";
+import DetailArticle from '@components/common/detail-article/detail-article';
+import MainLayout from '@components/layouts/layout1/HOC/main-layout';
+import DetailNew from '@components/layouts/layout1/detail-new/detail-new';
+import Head from 'next/head';
+import React from 'react'
 
-type Props = {
-  data: any[];
-};
+type Props = {}
 
-const Index: React.FC<Props> = ({ data = [] }) => {
+const Index = (props: Props) => {
   return (
     <>
       <Head>
-        <title>
-          {"Comparing and recommending car and indemnity insurance on the 'Naver Kakao' platform"}
-        </title>
+        
+        <title>{'new page'}</title>
+    
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={" https://demo123-gyexk7cn4-thanhthuat.vercel.app/"} />
-        {/* <meta property="og:title" content={"new page"} /> */}
-        <link rel="icon" href="/icon.svg" />
-        <meta
-          property="og:description"
-          content={`Trial service starting at the end of the year at the earliest
-Limited to CM products that can be handled Limiting
-the platform’s superior position`}
-        />
-        <meta
-          property="og:image"
-          content={`https://picsum.photos/${Math.floor(Math.random() * 200) + 200}/300`}
-        ></meta>
+        <meta property="og:url" content={' this is detail page'} />
+        <meta property="og:title" content={'new page'} />
+        <meta property="og:description" content={' this is content of page'} />
+        <meta property="og:image" content="https://cdn-static.famiroom.com/static/upload/large/2021-04/16/4495c172-a85f-44ea-a4a9-1b692cca3327.jpg"></meta>
+      
+      
       </Head>
-      {/* title={data[0]?.name as string} */}
+      <MainLayout>
       <DetailNew />
+      </MainLayout>
+    
     </>
   );
-};
-// export const getServerSideProps: GetServerSideProps = async (context) => {
-//   const { params } = context;
-//   const axios = require("axios");
-//   const data = await axios.get(
-//     `https://jsonplaceholder.typicode.com/comments?postId=${params?.id}`
-//   );
-//   context.res.setHeader("Cache-Control", "public, s-maxage=10, stale-while-revalidate=59");
-
-//   return {
-//     props: {
-//       data: data.data,
-//     },
-
-//   };
-// };
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const { params } = context;
-  const axios = require("axios");
-  const data = await axios.get(
-    `https://jsonplaceholder.typicode.com/comments?postId=${params?.id}`
-  );
-
-  return {
-    props: {
-      data: data.data,
-    },
-    revalidate: 10,
-  };
-};
-
-export async function getStaticPaths() {
-  return {
-    paths: [{ params: { id: "1" } }],
-    fallback: true,
-  };
 }
+
+
 export default Index;

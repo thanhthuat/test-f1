@@ -1,0 +1,49 @@
+.clstabcolumn{
+    &header{
+        &-content{
+            display: flex;
+            list-style: none;
+            margin-bottom: 12px;
+        }
+        &-item{
+            margin-right: 12px;
+            font-size: 13px;
+            line-height: 1.6;
+           
+            font-family: "Arial",serif;
+            color: #222;
+            font-weight: bold;
+        }
+    }
+    &content{
+        display: flex;
+        justify-content: space-between;
+        &-left{
+            flex-basis: 60%;
+            .clsarticletext {
+                position: relative;
+                max-width: 200px;
+                position: relative;
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border: none;
+                padding-left: 15px;
+               &::before{
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                content: "";
+                background: #ababab;
+                position: absolute;
+                top: 21px;
+                left: 0;
+               } }
+        &__bottom{
+            display: flex;
+        }
+        }
+        &-right{
+            flex-basis: 40%;
+        }
+    }
+}

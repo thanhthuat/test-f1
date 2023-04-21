@@ -1,0 +1,39 @@
+.clsexpertperspective {
+  width: 100%;
+  max-width: 280px;
+  &-content {
+  }
+  &-category {
+        font-size: 14px;
+    line-height: 16px;
+    color: #9f224e;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  &-title {
+    color: #222222;
+    font-size: 15px;
+    
+  }
+  &-des {
+    margin-top: 5px;
+    color: #4f4f4f;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  &-author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__avatar {
+      width:72px;
+      height:72px;
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+        height: auto;
+      }
+    }
+  }
+}

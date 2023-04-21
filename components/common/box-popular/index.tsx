@@ -1,0 +1,1 @@
+export { default as BoxPopular } from './box-popular';

@@ -4,7 +4,6 @@ import AuthorAction from "./author-action/author-action";
 import ArticlePage from "./article/article";
 import ArticleAside from "./article-aside/article-aside";
 import CompanyFooter from "@components/company/layout/company-footer";
-import Header from "@components/common/header/header";
 import BannerAdvertise from "./banner-advertise/banner-adv";
 import { useAppDispatch, useAppSelector } from "@hook/hooks";
 import { getDetailNew, getListTop } from "lib/redux/get-list-top-menu/get-list-top.action";
@@ -25,7 +24,6 @@ const DetailNew = (props: Props) => {
   }, [router.query?.id]);
   return (
     <div className="containerpage">
-      <Header />
       <BannerAdvertise />
       <HeaderDetail />
       <section className="prefixarticledetail1">

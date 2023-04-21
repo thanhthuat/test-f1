@@ -1,0 +1,50 @@
+.clsheaderlayou1 {
+  border-bottom: 1px solid #f0f0f0;
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-parent{
+    ul {
+        display: flex;
+    }
+  }
+  &-item{
+    position: relative;
+    padding: 15px 0px ;
+    margin-right: 15px;
+    &:hover .clsheaderlayou1-submenu{
+        opacity: 1;
+        visibility: visible;
+    }
+    &:hover{
+      border-bottom: 1px soid #000;
+    }
+  }
+  &-submenu{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 190px;
+    background: #fff;
+    z-index: 2;
+    top: calc(100% );
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    padding: 10px 10px 10px 20px;
+    &:hover{
+         opacity: 1;
+        visibility: visible;
+    }
+    &__item{
+        padding: 10px 0px;
+        &:hover{
+           text-decoration :underline;
+        }
+    }
+  }
+}

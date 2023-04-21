@@ -1,0 +1,33 @@
+.clscardcolumn {
+  width: 100%;
+  height: auto;
+  &-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+  }
+  &-img {
+    flex-shrink: 0;
+    flex-basis: 40%;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  &-des {
+    padding: 5px 0px 10px;
+  }
+  &-title {
+    margin-bottom: 12px;
+    &__title {
+      font-size: 13px;
+      word-break: break-all;
+    }
+    &__sumary {
+      display: flex;
+      color: #999999;
+      font-size: 11px;
+    }
+  }
+}

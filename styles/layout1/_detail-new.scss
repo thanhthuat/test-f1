@@ -1,0 +1,16 @@
+.clsdetailnew{
+    display: flex;
+    background: #FCFAF6;
+    &-item1{
+        flex-basis: 60%;
+    }
+    &-item2{
+        flex-basis: 40%;
+       
+        padding: 100px 0 0 55px;
+    }
+    &-strickly{
+        position: sticky;
+        top: 0px;
+    }
+}

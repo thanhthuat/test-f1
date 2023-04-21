@@ -1,0 +1,43 @@
+.clsarticletitletop {
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 15px;
+  padding-top: 12px;
+  &-content {
+  }
+  &-title {
+    h3{
+      font-family: 'Merriweather', serif;
+      font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    line-height: 160%;
+    color: #222;
+    }
+    
+  }
+  &-body {
+    display: flex;
+  }
+  &-image {
+    flex-basis: 40%;
+    flex-shrink: 0;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &-des {
+    padding: 0px 0px 0px 10px;
+    p {
+      font-size: 14px;
+      line-height: 140%;
+      color: #4f4f4f;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}

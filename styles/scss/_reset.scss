@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Arial';
+    src: url('../font/ArialMT.woff') format('woff2'),
+        url('../font/ArialMT.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -13,10 +24,59 @@
     margin: 0 auto;
   
 }
+.containerlayout1{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1170px;
+}
+
 body{
     word-break: keep-all;
-font-family: 'Roboto', sans-serif;
+font-family: 'Merriweather', serif;
+background: #fff;
 }
-.mt-24{
-    margin-top: 24px;
+
+.has_border {
+    margin-top: 20px;
+    padding-top: 20px;
+    position: relative;
+    &:before {
+        width: calc(100% - 30px);
+        background: #e5e5e5;
+        height: 1px;
+        position: absolute;
+        top: 0;
+        left: 15px;
+        content: "";
+    }
+
+}
+.cls-BreadCrumb {
+    .item {
+      display: inline-block;
+      svg {
+        vertical-align: middle;
+      }
+      a {
+        color: #a1a1b4;
+        text-decoration: none;
+      }
+      > span {
+        color: #292968;
+      }
+    }
+  }
+  span#text-link {
+    &:hover {
+      color: #3f51b5;
+    }
+  }
+  
+.mt-15{
+    margin-top: 15px;
+}
+.mr-1{
+    margin-right: 8px;
 }

@@ -1,0 +1,24 @@
+.clsboxcolumn{
+    &-content{
+        display: flex;
+    }
+    &-item1 ,&-item2 {
+        padding: 0px 20px;
+        border-right: 1px solid #e5e5e5;
+        .clscardcolumn{
+            &-content{
+                padding: 0px;
+            }
+
+        }
+    }
+    &-item3{
+        padding: 0px 20px;
+        .clscardcolumn{
+            &-content{
+                padding: 0px;
+            }
+
+        }
+    }
+}
