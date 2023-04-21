@@ -10,7 +10,8 @@ const HeaderLayout1 = (props: Props) => {
     <div className="clsheaderlayou1">
       <header className="clsheaderlayou1-content containerlayout1">
         <div className="clsheaderlayou1-logo">
-          <Image src={img} alt="logo"></Image>
+          <Link href={'/'}>  <Image src={img} alt="logo"></Image> </Link>
+         
         </div>
         <nav className="clsheaderlayou1-parent">
           <ul>

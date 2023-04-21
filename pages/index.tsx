@@ -1,9 +1,5 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-
-import CarouselStory from "@components/common/carousel-story/carousel-story";
-import CarSlide from "@components/common/car-slide/car-slide";
-import CarouselTop from "@components/common/carousel-story/carosel-top";
 import HomeLayout1 from "@components/layouts/layout1/view/home/home";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,12 +19,7 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Roboto:wght@100;300;700;900&display=swap" rel="stylesheet"></link>
       </Head>
       <main>
-        {/* <HomeCompany/> */}
         <HomeLayout1 />
-        {/* <Header />
-        <CarouselStory />
-        <CarouselTop />
-        <HomePage /> */}
       </main>
     </>
   );

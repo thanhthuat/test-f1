@@ -59,7 +59,7 @@ const ContentHome = (props: Props) => {
   }, []);
   return (
     <>
-      <div className="clscontenthomelayout1">
+      <div className="clscontenthomelayout1 mt-40">
         <div className="clscontenthomelayout1-content containerlayout1">
           <div className="clscontenthomelayout1-item1">
             {/* <CarouselStory /> */}

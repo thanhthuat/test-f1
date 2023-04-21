@@ -75,7 +75,7 @@ const DetailNew:React.FC<DetailNewProps> = ({className}) => {
         <div className='clsdetailnew-item2'>
         <div className='clsdetailnew-strickly'>
           {topmovie.slice(5,9).map((item)=> <CardRow item={item} isdes={false} key={item.id}/> )}
-        <BannerAdvertise/>
+        <BannerAdvertise className='mt-15'/>
         <BannerAdvertise/>
         </div>
        

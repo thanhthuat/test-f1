@@ -1,6 +1,10 @@
 .clsheaderlayou1 {
   border-bottom: 1px solid #f0f0f0;
-
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  background: #fff;
+  margin-bottom: 30px;
   &-content {
     display: flex;
     justify-content: space-between;
