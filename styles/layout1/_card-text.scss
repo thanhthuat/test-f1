@@ -2,7 +2,14 @@
   width: 100%;
   height: auto;
   font-family: Arial, sans-serif;
+  &:hover  &__title{
+    font-weight: 900;
+ }
   &-content {
+    transition: all 0.2s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   &-title {
     h5{
