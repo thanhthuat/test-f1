@@ -7,33 +7,55 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Pagination, EffectFade } from "swiper";
 import CarSlide from "../car-slide/car-slide";
-type Props = {};
+import Box from "@mui/material/Box";
+import { SxProps, Theme } from "@mui/material/styles";
+interface CarouselTopProps {
+  children?: React.ReactNode;
+  className?: string;
+  sx?: SxProps<Theme>;
+}
 
-const CarouselTop = (props: Props) => {
+const CarouselTop: React.FC<CarouselTopProps> = ({ children, className = "", sx = {} }) => {
   return (
-    <Swiper
-      slidesPerView={3}
-      spaceBetween={30}
-      pagination={{
-        clickable: true,
-      }}
-      // modules={[Pagination]}
-      className="mySwiper"
-    >
-      <SwiperSlide>
-        <CarSlide />
-      </SwiperSlide>
-      <SwiperSlide>
-        <CarSlide />
-      </SwiperSlide>
-      <SwiperSlide><CarSlide/></SwiperSlide>
-      <SwiperSlide><CarSlide/></SwiperSlide>
-      <SwiperSlide><CarSlide/></SwiperSlide>
-      <SwiperSlide><CarSlide/></SwiperSlide>
-      <SwiperSlide><CarSlide/></SwiperSlide>
-      <SwiperSlide><CarSlide/></SwiperSlide>
-      <SwiperSlide><CarSlide/></SwiperSlide>
-    </Swiper>
+    <Box sx={{ ...sx }}>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        // modules={[Pagination]}
+        className={`${className}`}
+      >
+        <SwiperSlide>
+          <CarSlide />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CarSlide />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CarSlide />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CarSlide />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CarSlide />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CarSlide />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CarSlide />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CarSlide />
+        </SwiperSlide>
+        <SwiperSlide>
+          <CarSlide />
+        </SwiperSlide>
+      </Swiper>
+    </Box>
   );
 };
 

@@ -3,24 +3,24 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import img from "public/image/detail-page/picture.png";
+import { SxProps, Theme } from "@mui/material/styles";
 interface IItemViewProps {
   hasImg?: boolean;
   item: string;
-  index:number
+  index: number;
+  sx?: SxProps<Theme>;
 }
 
-const ItemView: React.FC<IItemViewProps> = ({ hasImg = false ,item ,index}) => {
+const ItemView: React.FC<IItemViewProps> = ({ hasImg = false, item, index, sx }) => {
   return (
-    <Box className="prefixitemview" sx={{ maxWidth: "300px", background: "#fff" }}>
+    <Box className="prefixitemview" sx={{ ...sx, maxWidth: "300px", background: "#fff" }}>
       <div className="prefixitemview-content">
         <div className="prefixitemview-number">
           <span className="prefixitemview-number__num"> {index}</span>
         </div>
-        <div className="prefixitemview-title" >
+        <div className="prefixitemview-title">
           <Link href="/">
-            <p>
-             {item}
-            </p>
+            <p>{item}</p>
           </Link>
         </div>
         {hasImg && (

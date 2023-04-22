@@ -1,13 +1,16 @@
 import React from "react";
-
+import Box from "@mui/material/Box";
 import img from "public/image/bg-carousel.jpg";
-type Props = {};
+import { SxProps, Theme } from "@mui/material/styles";
+interface CarouselItemProps {
+  children?: React.ReactNode;
+  className?: string;
+  sx?: SxProps<Theme>;
+}
 
-const CarouselItem = (props: Props) => {
+const CarouselItem: React.FC<CarouselItemProps> = ({ className = "", sx = {} }) => {
   return (
-    <div
-      className="prefixcarouselitem "
-    >
+    <Box className="prefixcarouselitem ">
       <div className="prefixcarouselitem-bg">
         <img src={"/image/bg-carousel.jpg"} alt="bg" />
       </div>
@@ -38,7 +41,7 @@ const CarouselItem = (props: Props) => {
           </p>
         </div>
       </div>
-    </div>
+    </Box>
   );
 };
 

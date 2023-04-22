@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
+import { SxProps, Theme } from "@mui/material/styles";
 interface Icon {
   url: string ;
   title: string;
@@ -10,13 +11,14 @@ interface Icon {
 }
 interface IPropsBoxService {
   item: Icon;
+  sx?: SxProps<Theme>;
 }
 
-const BoxService: React.FC<IPropsBoxService> = ({ item }) => {
+const BoxService: React.FC<IPropsBoxService> = ({ item ,sx={}}) => {
   return (
     <Box
       className="prexfixboxservice"
-      sx={{ padding: " 10px", backgroundColor: "#fbf4f5", }}
+      sx={{ ...sx,padding: " 10px", backgroundColor: "#fbf4f5", }}
     >
       <Stack direction={{ xs: "column", sm: "column" }} alignItems="center">
         <div className="prexfixboxservice-icon">

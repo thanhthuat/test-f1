@@ -7,20 +7,6 @@ import { useAppSelector } from '@hook/hooks';
 interface  BoxPopularProps  {
     isImg?:boolean
 }
-const array = [
-  {
-    title: "Điều kiện chờ 12 tháng khó ngăn người rút bảo hiểm một lần",
-    des: "Các công trình vệ sinh đạt chuẩn và nguồn nước sạch tại 20 trường ở Hà Giang sẽ được Quỹ Hy vọng xây mới trong năm 2023, với sự đồng hành của Sanofi Việt Nam. Các công trình vệ sinh đạt chuẩn và nguồn nước sạch tại 20 trường ở Hà Giang sẽ được Quỹ Hy vọng xây mới trong năm 2023, với sự đồng hành của Sanofi Việt Nam.",
-  },
-  {
-    title: "Khởi động dự án 'Vệ sinh học đường' tại Hà Giang",
-    des: "Các công trình vệ sinh đạt chuẩn và nguồn nước sạch tại 20 trường ở Hà Giang sẽ được Quỹ Hy vọng xây mới trong năm 2023, với sự đồng hành của Sanofi Việt Nam. Các công trình vệ sinh đạt chuẩn và nguồn nước sạch tại 20 trường ở Hà Giang sẽ được Quỹ Hy vọng xây mới trong năm 2023, với sự đồng hành của Sanofi Việt Nam.",
-  },
-  {
-    title: "Khởi động dự án 'Vệ sinh học đường' tại Hà Giang",
-    des: "Các công trình vệ sinh đạt chuẩn và nguồn nước sạch tại 20 trường ở Hà Giang sẽ được Quỹ Hy vọng xây mới trong năm 2023, với sự đồng hành của Sanofi Việt Nam.",
-  },
-];
 const BoxPopular:React.FC<BoxPopularProps> = ({isImg=false}) => {
   const { topmovie } = useAppSelector((state) => state.movie);
   return (

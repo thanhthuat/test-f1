@@ -5,32 +5,36 @@ import img from "public/image/bg.png";
 import Link from "next/link";
 import { IresponeMovie } from "lib/models/interface";
 import apiConfig from "lib/api/apiConfig";
+import Box from "@mui/material/Box";
+import { SxProps, Theme } from "@mui/material/styles";
 
-interface CardTitleTopProps{
-  className?:string;
-  item:IresponeMovie
+interface CardTitleTopProps {
+  className?: string;
+  item: IresponeMovie;
+  sx?: SxProps<Theme>;
 }
-const CardTitleTop:React.FC<CardTitleTopProps> = ({className ,item}) => {
+const CardTitleTop: React.FC<CardTitleTopProps> = ({ className = "", item, sx = {} }) => {
   return (
-    <article className={`${className} clsarticletitletop`} >
-      <Link href={"/detail/d"} >
-     
-      <div className="clsarticletitletop-content">
-        <div className="clsarticletitletop-title">
-          <h3>{item?.title}</h3>
-        </div>
-        <div className="clsarticletitletop-body">
-          <div className="clsarticletitletop-image">
-          <Image src={ item?.backdrop_path ? apiConfig.originalImage(item?.backdrop_path) : img  } alt={item?.title ||'img'}  width="1500" height="750" />
+    <article className={`${className} clsarticletitletop`}>
+      <Link href={"/detail/d"}>
+        <Box className="clsarticletitletop-content" sx={{ ...sx }}>
+          <div className="clsarticletitletop-title">
+            <h3>{item?.title}</h3>
           </div>
-          <div className="clsarticletitletop-des">
-            <p>
-            {item?.overview}
-            </p>
+          <div className="clsarticletitletop-body">
+            <div className="clsarticletitletop-image">
+              <Image
+                src={item?.backdrop_path ? apiConfig.originalImage(item?.backdrop_path) : img}
+                alt={item?.title || "img"}
+                width="1500"
+                height="750"
+              />
+            </div>
+            <div className="clsarticletitletop-des">
+              <p>{item?.overview}</p>
+            </div>
           </div>
-        </div>
-        
-      </div>
+        </Box>
       </Link>
     </article>
   );

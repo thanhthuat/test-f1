@@ -1,11 +1,13 @@
 import Image from "next/image";
 import React from "react";
 
-type Props = {};
+interface ImgItemProps {
+  className?: string;
+}
 
-const ImgItem = (props: Props) => {
+const ImgItem: React.FC<ImgItemProps> = ({ className = "" }) => {
   return (
-    <figure className="prefixarticledetail-figure">
+    <figure className={`${className} prefixarticledetail-figure`} >
       <Image className="prefixarticledetail-figure__img" src={""} alt="img" />
       <figcaption className="prefixarticledetail-figure__caption">{}</figcaption>
     </figure>

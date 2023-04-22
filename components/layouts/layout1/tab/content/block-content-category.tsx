@@ -4,42 +4,34 @@ import CardTextTitle from "../../../../common/card-text-title/card-text-title";
 import CardText from "../../../../common/card-text/card-text";
 import CarouselTop from "../../../../common/carousel-story/carosel-top";
 import { useAppSelector } from "@hook/hooks";
+import Box from "@mui/material/Box";
+import { SxProps, Theme } from "@mui/material/styles";
+interface BlockContentCategoryProps {
+  children?: React.ReactNode;
+  className?: string;
+  sx?: SxProps<Theme>;
+}
 
-type Props = {};
-const array = [
-  {
-    title: "Điều kiện chờ 12 tháng khó ngăn người rút bảo hiểm một lần",
-    des: "Các công trình vệ sinh đạt chuẩn và nguồn nước sạch tại 20 trường ở Hà Giang sẽ được Quỹ Hy vọng xây mới trong năm 2023, với sự đồng hành của Sanofi Việt Nam. Các công trình vệ sinh đạt chuẩn và nguồn nước sạch tại 20 trường ở Hà Giang sẽ được Quỹ Hy vọng xây mới trong năm 2023, với sự đồng hành của Sanofi Việt Nam.",
-  },
-];
-const BlockContentCategory = (props: Props) => {
+const BlockContentCategory: React.FC<BlockContentCategoryProps> = ({ className = "", sx = {} }) => {
   const { topmovie } = useAppSelector((state) => state.movie);
   return (
-    <div className="clstabblock">
+    <Box className={`${className} clstabblock`} sx={{ ...sx }}>
       <div className="clstabblock-contenttop">
         <div className="clstabblock-right">
-          {topmovie.slice(13,14).map((item, index) => {
+          {topmovie.slice(13, 14).map((item, index) => {
             return <CardRow item={item} key={index} />;
           })}
         </div>
         <div className="clstabblock-left">
-        {topmovie.slice(13,14)
-          .map((item, index) => (
+          {topmovie.slice(13, 18).map((item, index) => (
             <CardText key={index} />
           ))}
         </div>
       </div>
-      
-      {/* <div className="clstabblock-contentbody has_border">
-        {Array(3)
-          .fill(null)
-          .map((item, index) => (
-            <CardText key={index} />
-          ))}
-      </div> */}
+
       <div className="has_border"></div>
       {/* <CarouselTop /> */}
-    </div>
+    </Box>
   );
 };
 

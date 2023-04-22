@@ -1,85 +1,79 @@
 @font-face {
-    font-family: 'Arial';
-    src: url('../font/ArialMT.woff') format('woff2'),
-        url('../font/ArialMT.woff2') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Arial";
+  src: url("../font/ArialMT.woff") format("woff2"), url("../font/ArialMT.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-
-
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-.wapper{
-    margin: 0 auto;
-    max-width: 1125px;
-   
+.wapper {
+  margin: 0 auto;
+  max-width: 1125px;
 }
 .containerpage {
-    max-width: 1280px;
-    margin: 0 auto;
-  
+  max-width: 1280px;
+  margin: 0 auto;
 }
-.containerlayout1{
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1170px;
+.containerlayout1 {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px;
 }
 
-body{
-    word-break: keep-all;
-font-family: 'Merriweather', serif;
-background: #fff;
+body {
+  word-break: keep-all;
+  font-family: "Merriweather", serif;
+  background: #fff;
 }
 
 .has_border {
-    margin-top: 20px;
-    padding-top: 20px;
-    position: relative;
-    &:before {
-        width: calc(100% - 30px);
-        background: #e5e5e5;
-        height: 1px;
-        position: absolute;
-        top: 0;
-        left: 15px;
-        content: "";
-    }
-
+  margin-top: 20px;
+  padding-top: 20px;
+  position: relative;
+  &:before {
+    width: calc(100% - 30px);
+    background: #e5e5e5;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    content: "";
+  }
 }
 .cls-BreadCrumb {
-    .item {
-      display: inline-block;
-      svg {
-        vertical-align: middle;
-      }
-      a {
-        color: #a1a1b4;
-        text-decoration: none;
-      }
-      > span {
-        color: #292968;
-      }
+  .item {
+    display: inline-block;
+    svg {
+      vertical-align: middle;
+    }
+    a {
+      color: #a1a1b4;
+      text-decoration: none;
+    }
+    > span {
+      color: #292968;
     }
   }
-  span#text-link {
-    &:hover {
-      color: #3f51b5;
-    }
+}
+span#text-link {
+  &:hover {
+    color: #3f51b5;
   }
-  
-.mt-15{
-    margin-top: 15px;
 }
-.mr-1{
-    margin-right: 8px;
+
+.mt-15 {
+  margin-top: 15px;
 }
-.mt-40{
+.mr-1 {
+  margin-right: 8px;
+}
+.mt-40 {
   margin-top: 40px;
 }

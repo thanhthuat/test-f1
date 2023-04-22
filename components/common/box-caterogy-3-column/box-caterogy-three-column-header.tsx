@@ -1,16 +1,20 @@
-import React from 'react'
+import React from 'react';
+import Box from "@mui/material/Box";
+import { SxProps, Theme } from "@mui/material/styles";
+import Link from 'next/link';
 interface BoxCaterogyThreeColumnHeaderProps{
     item:{title:string}[];
     className?:string ;
+    sx?: SxProps<Theme>;
 }
 
-const BoxCaterogyThreeColumnHeader:React.FC<BoxCaterogyThreeColumnHeaderProps> = ({className='',item}) => {
+const BoxCaterogyThreeColumnHeader:React.FC<BoxCaterogyThreeColumnHeaderProps> = ({className='',item ,sx={}}) => {
   return (
-    <div className={`clstabcolumnheader  ${className}`}>
+    <Box className={`clstabcolumnheader  ${className}`} sx={{ ...sx }}>
         <ul className='clstabcolumnheader-content'>
-            {item?.map((item)=> <li className='clstabcolumnheader-item' key={item.title}> {item.title}</li>) }
+            {item?.map((item)=> <li className='clstabcolumnheader-item' key={item.title}> <Link href={item.title}>{item.title}</Link></li>) }
         </ul>
-    </div>
+    </Box>
   )
 }
 

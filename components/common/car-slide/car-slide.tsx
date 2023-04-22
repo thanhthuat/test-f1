@@ -1,12 +1,16 @@
 import Image from "next/image";
 import React from "react";
+import Box from "@mui/material/Box";
+import { SxProps, Theme } from "@mui/material/styles";
+import img from 'public/image/bg-carousel.jpg';
+interface CarSlideProps {
+className?:string ;
+sx?: SxProps<Theme>;
+}
 
-import img from 'public/image/bg-carousel.jpg'
-type Props = {};
-
-const CarSlide = (props: Props) => {
+const CarSlide:React.FC<CarSlideProps> = ({className='',sx={}}) => {
   return (
-    <div className="prefixcarslide">
+    <Box  className="prefixcarslide" sx={{...sx}}>
       <div className="prefixcarslide-content">
         <div className="prefixcarslide-img">
           <Image alt="123" src={img} />
@@ -23,7 +27,7 @@ const CarSlide = (props: Props) => {
           </p>
         </div>
       </div>
-    </div>
+    </Box >
   );
 };
 

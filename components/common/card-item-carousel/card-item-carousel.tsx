@@ -1,11 +1,15 @@
 import React from "react";
+import Box from "@mui/material/Box";
+import { SxProps, Theme } from "@mui/material/styles";
+interface CardItemCarouselProps {
+  className?: string;
+  sx?: SxProps<Theme>;
+}
 
-type Props = {};
-
-const CardItemCarousel = (props: Props) => {
+const CardItemCarousel: React.FC<CardItemCarouselProps> = ({ className = "", sx = {} }) => {
   return (
-    <article className="clsarticleitemcarousel">
-      <div className="clsarticleitemcarousel-content">
+    <article className={`${className} clsarticleitemcarousel`}>
+      <Box className="clsarticleitemcarousel-content" sx={{ ...sx }}>
         <div className="clsarticleitemcarousel-summary">
           <div className="clsarticleitemcarousel-summary__title">
             <h5>Làng quê Quảng Nam nhuốm vàng hoa sưa</h5>
@@ -17,7 +21,7 @@ const CardItemCarousel = (props: Props) => {
             </p>
           </div>
         </div>
-      </div>
+      </Box>
     </article>
   );
 };

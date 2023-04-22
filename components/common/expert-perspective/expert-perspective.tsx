@@ -1,13 +1,18 @@
 import Image from "next/image";
 import React from "react";
+import Box from "@mui/material/Box";
+import { SxProps, Theme } from "@mui/material/styles";
+import img from "public/image/Tuanapng.png";
+interface ExpertPerspectiveProps {
+  children?: React.ReactNode;
+  className?: string;
+  sx?: SxProps<Theme>;
+}
 
-import img from 'public/image/Tuanapng.png'
-type Props = {};
-
-const ExpertPerspective = (props: Props) => {
+const ExpertPerspective: React.FC<ExpertPerspectiveProps> = ({ className = "", sx = {} }) => {
   return (
-    <article className="clsexpertperspective">
-      <div className="clsexpertperspective-content">
+    <article className={`${className} clsexpertperspective `}>
+      <Box className="clsexpertperspective-content" sx={{ ...sx }}>
         <h2 className="clsexpertperspective-category"> Goc nhin</h2>
         <h3 className="clsexpertperspective-title"> Bán bất động sản qua sàn</h3>
         <h3 className="clsexpertperspective-des">
@@ -23,7 +28,7 @@ const ExpertPerspective = (props: Props) => {
             <Image src={img} alt="img" />
           </div>
         </div>
-      </div>
+      </Box>
     </article>
   );
 };

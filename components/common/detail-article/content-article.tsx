@@ -1,10 +1,13 @@
 import React from "react";
-import {data} from './data';
+import { data } from "./data";
+import Box from "@mui/material/Box";
+import { SxProps, Theme } from "@mui/material/styles";
 interface ContentArticleProps {
   className?: string;
+  sx?: SxProps<Theme>;
 }
 
-const ContentArticle: React.FC<ContentArticleProps> = ({ className = "" }) => {
+const ContentArticle: React.FC<ContentArticleProps> = ({ className = "", sx = {} }) => {
   const renderContent = (item: any, index: number) => {
     switch (item.type) {
       case "img":
@@ -19,7 +22,7 @@ const ContentArticle: React.FC<ContentArticleProps> = ({ className = "" }) => {
       case "text":
         return (
           <p className="prefixarticledetail-item" key={`1-${index}`}>
-           {item.content}
+            {item.content}
           </p>
         );
 
@@ -29,12 +32,14 @@ const ContentArticle: React.FC<ContentArticleProps> = ({ className = "" }) => {
             {item.content}
           </p>
         );
-        break ;
+        break;
     }
   };
-  return <div className={`${className} contentarticle`}>
-    { data.map((item,index)=>  renderContent(item,index))}
-  </div>;
+  return (
+    <Box className={`${className} contentarticle`} sx={{ ...sx }}>
+      {data.map((item, index) => renderContent(item, index))}
+    </Box>
+  );
 };
 
 export default ContentArticle;
