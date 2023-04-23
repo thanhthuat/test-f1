@@ -48,9 +48,8 @@ const ContentHome = (props: Props) => {
   return (
     <>
       <div className="clscontenthomelayout1 mt-40">
-        <div className="clscontenthomelayout1-content containerlayout1">
+        {/* <div className="clscontenthomelayout1-content containerlayout1">
           <div className="clscontenthomelayout1-item1">
-            {/* <CarouselStory /> */}
             <CardRowMain />
 
             <div className="clscontenthomelayout1-item1__content">
@@ -69,7 +68,7 @@ const ContentHome = (props: Props) => {
             <BannerAdvertise />
             <BannerAdvertise />
           </div>
-        </div>
+        </div> */}
         <Box className="containerlayout1">
           <Grid container spacing={2}>
             <Grid xs={8}>
