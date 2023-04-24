@@ -5,7 +5,8 @@
     }
     &-item1{
         // flex-basis: 50%;
-        width: 65%;
+        // width: 65%;
+        width: 741px;
         padding: 20px 15px;
         border-right: 1px solid #f0f0f0;
         &__content{
@@ -17,6 +18,9 @@
                 width: calc(33.33% - 20px);
             }
         }
+            @include res(980px){
+                width: 50%;
+            }
     }
      &-item2{
         // flex-basis: 50%;
@@ -32,6 +36,9 @@
             border-top:none;
             margin-top: 0px;
             padding-top: 0px;
+        }
+        @include res(980px){
+            width: 50%;
         }
     }
     &-item4{

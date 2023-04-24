@@ -10,7 +10,7 @@ sx?: SxProps<Theme>;
 
 const CarSlide:React.FC<CarSlideProps> = ({className='',sx={}}) => {
   return (
-    <Box  className="prefixcarslide" sx={{...sx}}>
+    <Box  className={`${className} prefixcarslide`}  sx={{...sx}}>
       <div className="prefixcarslide-content">
         <div className="prefixcarslide-img">
           <Image alt="123" src={img} />

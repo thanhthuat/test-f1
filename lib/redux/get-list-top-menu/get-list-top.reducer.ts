@@ -7,7 +7,7 @@ interface IlistMovieSlice{
     page: number;
 }
 const initialState:IlistMovieSlice ={
-    topmovie:[],
+    topmovie: [],
     detailmovie: {} as IresponeMovieDetail,
     page:0
 } ;

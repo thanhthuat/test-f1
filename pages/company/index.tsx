@@ -1,7 +1,5 @@
 import HomeCompany from "@components/company/layout";
 import React, { useEffect } from "react";
-import { useAppSelector, useAppDispatch } from "@hook/hooks";
-import { fetchUsers } from "redux/add/user.action";
 import Head from "next/head";
 
 type Props = {};
@@ -20,13 +18,10 @@ const Index = (props: Props) => {
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         />
       </Head>
-      <HomeCompany />;
+      <HomeCompany />
+      
     </>
   ); 
 };
-// Index.getInitialProps = async () => {
-//   const res = await fetch('https://api.github.com/repos/vercel/next.js')
-//   const json = await res.json()
-//   return { stars: json.stargazers_count }
-// }
+
 export default Index;

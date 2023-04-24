@@ -1,16 +1,10 @@
 import { TypeNews } from "lib/models/interface";
 import Image from "next/image";
 import Link from "next/link";
-
-
-
 interface IBanner {
   banner?: TypeNews;
 }
-
 const Banner: React.FC<IBanner> = ({ banner }) => {
-
-
   return (
     <div className="banner">
       <div className="banner__title">

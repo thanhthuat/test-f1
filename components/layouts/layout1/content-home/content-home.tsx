@@ -48,55 +48,40 @@ const ContentHome = (props: Props) => {
   return (
     <>
       <div className="clscontenthomelayout1 pt-2">
-        {/* <div className="clscontenthomelayout1-content containerlayout1">
-          <div className="clscontenthomelayout1-item1">
-            <CardRowMain />
-
-            <div className="clscontenthomelayout1-item1__content">
-              {topmovie.length > 0 &&
-                topmovie?.slice(4, 6).map((item, index) => {
-                  return (
-                    <div className="itemhome" key={index}>
-                      <CardTextTitle item={item} />
-                    </div>
-                  );
-                })}
-              <ExpertPerspective />
-            </div>
-          </div>
-          <div className="clscontenthomelayout1-item2">
-            <BannerAdvertise />
-            <BannerAdvertise />
-          </div>
-        </div> */}
-        <Box className="containerlayout1">
+        <Box className="">
           <Grid container spacing={2}>
-            <Grid sx={{ paddingTop: 0 }} xs={9}>
+            <Grid sx={{ paddingTop: 0 ,paddingBottom:0 }}  md={9} sm={12}>
               <CardRowMain />
               <Grid container spacing={2} sx={{ paddingTop: 2 }}>
                 {topmovie.length > 0 &&
                   topmovie?.slice(4, 6).map((item, index) => {
                     return (
-                      <Grid xs={4}>
+                      <Grid sm={4} >
                         <CardTextTitle item={item} />
                       </Grid>
                     );
                   })}
-                <Divider orientation="vertical" flexItem sx={{ borderRightWidth: "3px" }}></Divider>
+                <Divider orientation="vertical" flexItem sx={{ borderRightWidth: "3px" ,display:{
+                  md:'block',
+                  xs:"none"
+                } }}></Divider>
                 <Grid xs>
                   <ExpertPerspective />
                 </Grid>
               </Grid>
             </Grid>
-            <Divider orientation="vertical" flexItem></Divider>
+            <Divider orientation="vertical" flexItem sx={{display:{
+                  md:'block',
+                  xs:"none"
+                }}}></Divider>
             <Grid sx={{ paddingTop: 0 }} xs>
-              <BannerAdvertise />
+            
               <BannerAdvertise />
             </Grid>
           </Grid>
         </Box>
       </div>
-      <section className="has_border containerlayout1 clscontenthomelayout1-content  ">
+    <section className="has_border containerlayout1 clscontenthomelayout1-content  ">
         <div className="clscontenthomelayout1-item3">
           {topmovie.length > 0 &&
             topmovie?.slice(0, 4).map((item, index) => {
@@ -108,7 +93,7 @@ const ContentHome = (props: Props) => {
           <Tab>
             {" "}
             <BlockContent>
-              <div className="clstabblock-contenttop">
+              {/* <div className="clstabblock-contenttop">
                 <div className="clstabblock-right">
                   {topmovie.slice(10, 11).map((item, index) => {
                     return <CardRow item={item} key={index} />;
@@ -126,7 +111,7 @@ const ContentHome = (props: Props) => {
                     <CardText key={index} />
                   ))}
               </div>
-              <div className="has_border"></div>
+              <div className="has_border"></div> */}
             </BlockContent>
           </Tab>
 
@@ -140,8 +125,8 @@ const ContentHome = (props: Props) => {
           <TabColumn />
         </div>
       </section>
-
-      <BoxCaterogryThreeColumn className="containerlayout1">
+  {/* 
+      <BoxCaterogryThreeColumn >
         <Grid container>
           <Grid xs={6}>
             <CardColumn item={topmovie[10]} />
@@ -159,7 +144,7 @@ const ContentHome = (props: Props) => {
         </Grid>
       </BoxCaterogryThreeColumn>
       <BorderLine className="containerlayout1" />
-      <BoxCaterogryThreeColumn className="containerlayout1">
+      <BoxCaterogryThreeColumn>
         <Grid container>
           <Grid xs={6}>
             <BoxCaterogryColumnHeader item={arr} />
@@ -176,10 +161,10 @@ const ContentHome = (props: Props) => {
             <CardRow item={topmovie[11]} isdes={false} />
             <CardRow item={topmovie[19]} isdes={false} />
           </Grid>
-        </Grid>{" "}
+        </Grid>
       </BoxCaterogryThreeColumn>
 
-      <BoxCaterogryColumn className="containerlayout1">
+      <BoxCaterogryColumn >
         <Grid container>
           <Grid xs={4}>
             <CardColumn item={topmovie[18]} />
@@ -196,13 +181,13 @@ const ContentHome = (props: Props) => {
             <div className="has_border"></div>
             <CardTextTitle />
           </Grid>
-        </Grid>{" "}
+        </Grid>
       </BoxCaterogryColumn>
-      <BorderLine className="containerlayout1" />
-      <CarouselTwo className="containerlayout1" />
-      <BorderLine className="containerlayout1" />
+      <BorderLine />
+      <CarouselTwo  />
+      <BorderLine  />
 
-      <BoxCaterogryColumn className="containerlayout1">
+      <BoxCaterogryColumn >
         <Grid container>
           <Grid xs={6}>
             <CardColumn item={topmovie[18]} />
@@ -217,49 +202,9 @@ const ContentHome = (props: Props) => {
             <CardRow item={topmovie[11]} isdes={false} />
             <CardRow item={topmovie[19]} isdes={false} />
           </Grid>
-        </Grid>{" "}
-      </BoxCaterogryColumn>
+        </Grid>
+      </BoxCaterogryColumn> */}
 
-      {/* <div className="clscontenthomelayout1">
-        <div className="clscontenthomelayout1-content containerlayout1">
-          <div className="clscontenthomelayout1-item1">
-          
-
-            {array.map((item, index) => {
-              return <CardRow item={item} key={index} />;
-            })}
-          </div>
-         
-          <div className="clscontenthomelayout1-item3">
-            <BoxPopular />
-          </div>
-        </div>
-      </div>
-      <div className="clscontenthomelayout1">
-        <div className="clscontenthomelayout1-content containerlayout1">
-          <div className="clscontenthomelayout1-item4">
-           
-            <CarouselTwo />
-          </div>
-
-        
-        </div>
-      </div>
-      <div className="clscontenthomelayout1">
-        <div className="clscontenthomelayout1-content containerlayout1">
-          <div className="clscontenthomelayout1-item4">
-         
-            {array.map((item, index) => {
-              return <CardRow item={item} key={index} />;
-            })}
-          </div>
-
-          <div className="clscontenthomelayout1-item3">
-            <BoxPopular isImg={true} />
-            <BoxPopular isImg={true} />
-          </div>
-        </div>
-      </div> */}
     </>
   );
 };
