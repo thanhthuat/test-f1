@@ -1,18 +1,17 @@
-import React from 'react'
-import HeaderTop from '../../header-top/header';
-import HeaderLayout1 from '../../header/header-layout1';
-import ContentHome from '../../content-home/content-home';
+import React from "react";
+import HeaderTop from "../../header-top/header";
+import HeaderLayout1 from "../../header/header-layout1";
+import ContentHome from "../../content-home/content-home";
+import MainLayout from "../../HOC/main-layout";
 
-type Props = {}
+type Props = {};
 
 function HomeLayout1({}: Props) {
   return (
-      <div className=''>
-          {/* <HeaderTop /> */}
-          <HeaderLayout1 />
-          <ContentHome/>
-    </div>
-  )
+    <MainLayout>
+      <ContentHome />
+    </MainLayout>
+  );
 }
 
 export default HomeLayout1;

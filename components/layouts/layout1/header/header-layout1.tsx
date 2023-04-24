@@ -13,7 +13,6 @@ const HeaderLayout1 = (props: Props) => {
     } else {
       document.body.classList.remove("disable-scrolling");
     }
-
     return () => {};
   }, [rotate]);
 

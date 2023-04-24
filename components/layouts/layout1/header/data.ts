@@ -23,8 +23,5 @@ export const data = [
         title: " Giải trí", submenu: [{ title: "Giới sao" }, { title: "Video" }, { title: "Phim" }, { title: "Nhạc" }
             , { title: "Thời trang" }, { title: "Làm đẹp" }, { title: "Sách" } ,{ title: "Sân khấu - Mỹ thuật" } ]
     },
-        {
-        title: " Giáo dục", submenu: [{ title: "Tin tức" }, { title: "Tuyển sinh" }, { title: "Chân dung" }, { title: "Du học" }
-            , { title: "Học tiếng Anh" }, { title: "Trắc nghiệm" }, { title: "Giáo dục 4.0" }  ]
-    }
+       
 ]

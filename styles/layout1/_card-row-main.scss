@@ -14,9 +14,9 @@
     width: 70%;
     flex-shrink: 0;
     overflow: hidden;
-    img{
+    img {
       width: 100%;
-      height: auto;
+      height: 100%;
       transition: all 0.2s;
     }
     margin-right: 15px;
@@ -24,31 +24,31 @@
       transform: scale(1.07);
     }
   }
-  &__title{
+  &__title {
     margin-bottom: 12px;
   }
-  &-summary{
+  &-summary {
     display: flex;
     flex-direction: column;
     padding: 5px 10px;
-   
-    &__title{
+
+    &__title {
       margin-bottom: 10px;
-    padding-top: 20px;
-    font-weight: 700;
-    font-size: 20px;
+      padding-top: 20px;
+      font-weight: 700;
+      font-size: 20px;
     }
-    &__des{
+    &__des {
       margin-top: 10px;
       font-size: 14px;
       line-height: 140%;
-       display: -webkit-box;
+      display: -webkit-box;
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
       text-overflow: ellipsis;
       overflow: hidden;
     }
-    &__category{
+    &__category {
       margin-top: 10px;
       font-size: 14px;
     }

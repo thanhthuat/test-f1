@@ -47,7 +47,7 @@ const ContentHome = (props: Props) => {
   }, []);
   return (
     <>
-      <div className="clscontenthomelayout1 mt-40">
+      <div className="clscontenthomelayout1 pt-2">
         {/* <div className="clscontenthomelayout1-content containerlayout1">
           <div className="clscontenthomelayout1-item1">
             <CardRowMain />
@@ -71,23 +71,25 @@ const ContentHome = (props: Props) => {
         </div> */}
         <Box className="containerlayout1">
           <Grid container spacing={2}>
-            <Grid xs={8}>
+            <Grid sx={{ paddingTop: 0 }} xs={9}>
               <CardRowMain />
-
-              <div className="clscontenthomelayout1-item1__content">
+              <Grid container spacing={2} sx={{ paddingTop: 2 }}>
                 {topmovie.length > 0 &&
                   topmovie?.slice(4, 6).map((item, index) => {
                     return (
-                      <div className="itemhome" key={index}>
+                      <Grid xs={4}>
                         <CardTextTitle item={item} />
-                      </div>
+                      </Grid>
                     );
                   })}
-                <ExpertPerspective />
-              </div>
+                <Divider orientation="vertical" flexItem sx={{ borderRightWidth: "3px" }}></Divider>
+                <Grid xs>
+                  <ExpertPerspective />
+                </Grid>
+              </Grid>
             </Grid>
             <Divider orientation="vertical" flexItem></Divider>
-            <Grid xs>
+            <Grid sx={{ paddingTop: 0 }} xs>
               <BannerAdvertise />
               <BannerAdvertise />
             </Grid>
@@ -218,8 +220,6 @@ const ContentHome = (props: Props) => {
         </Grid>{" "}
       </BoxCaterogryColumn>
 
-      <BorderLine className="containerlayout1" />
-      <FooterLayout1 />
       {/* <div className="clscontenthomelayout1">
         <div className="clscontenthomelayout1-content containerlayout1">
           <div className="clscontenthomelayout1-item1">

@@ -99,7 +99,9 @@
           animation: fadeIn linear 5s;
         }
         &-category {
-          width: 150px;
+          margin-right: 25px;
+          margin-bottom: 30px;
+          width: calc(20% - 25px);
           &__title {
             color: #9f224e;
             font-size: 16px;
