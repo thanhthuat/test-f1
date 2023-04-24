@@ -1,47 +1,59 @@
-.clscontenthomelayout1{
-    &-content{
-        display: flex;
-       
+.clscontenthomelayout1 {
+  &-content {
+    display: flex;
+    @include res(600px) {
+      flex-direction: column;
     }
-    &-item1{
-        // flex-basis: 50%;
-        // width: 65%;
-        width: 741px;
-        padding: 20px 15px;
-        border-right: 1px solid #f0f0f0;
-        &__content{
-            display: flex;
-           
-            margin-top: 20px;
-            justify-content: space-between;
-            .itemhome{
-                width: calc(33.33% - 20px);
-            }
-        }
-            @include res(980px){
-                width: 50%;
-            }
+  }
+  &-item1 {
+    // flex-basis: 50%;
+    // width: 65%;
+    width: 741px;
+    padding: 20px 15px;
+    border-right: 1px solid #f0f0f0;
+    &__content {
+      display: flex;
+
+      margin-top: 20px;
+      justify-content: space-between;
+      .itemhome {
+        width: calc(33.33% - 20px);
+      }
     }
-     &-item2{
-        // flex-basis: 50%;
-        width: 35%;
-        padding :20px 10px;
+    @include res(980px) {
+      width: 50%;
+      border-right: none;
     }
-     &-item3{
-        // flex-basis: 50%;
-        border-right: 1px solid #f0f0f0;
-        width: 35%;
-        padding :20px 10px;
-        .clsarticletitletop:first-child  {
-            border-top:none;
-            margin-top: 0px;
-            padding-top: 0px;
-        }
-        @include res(980px){
-            width: 50%;
-        }
+    @include res(600px) {
+      width: 100%;
+      padding: 0px;
     }
-    &-item4{
-        width: 100%;
+  }
+  &-item2 {
+    // flex-basis: 50%;
+    width: 35%;
+    padding: 20px 10px;
+  }
+  &-item3 {
+    // flex-basis: 50%;
+    border-right: 1px solid #f0f0f0;
+    width: 35%;
+    padding: 20px 10px;
+    .clsarticletitletop:first-child {
+      border-top: none;
+      margin-top: 0px;
+      padding-top: 0px;
     }
+    @include res(980px) {
+      width: 50%;
+    }
+    @include res(600px) {
+      width: 100%;
+      border-right: none;
+      padding: 20px 0px;
+    }
+  }
+  &-item4 {
+    width: 100%;
+  }
 }

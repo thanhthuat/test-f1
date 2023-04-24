@@ -24,6 +24,8 @@ import { useRouter } from "next/router";
 import { getDetailNew, getListTop } from "lib/redux/get-list-top-menu/get-list-top.action";
 import BoxCaterogryColumnHeader from "@components/common/box-caterogy-column/box-caterogry-column-header";
 import CardText from "@components/common/card-text/card-text";
+import Grid2 from "@mui/material/Unstable_Grid2";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Box, Divider } from "@mui/material";
 
 type Props = {};
@@ -50,41 +52,53 @@ const ContentHome = (props: Props) => {
       <div className="clscontenthomelayout1 pt-2">
         <Box className="">
           <Grid container spacing={2}>
-            <Grid sx={{ paddingTop: 0 ,paddingBottom:0 }}  md={9} sm={12}>
+            <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} md={9} sm={12}>
               <CardRowMain />
               <Grid container spacing={2} sx={{ paddingTop: 2 }}>
                 {topmovie.length > 0 &&
                   topmovie?.slice(4, 6).map((item, index) => {
                     return (
-                      <Grid sm={4} >
+                      <Grid sm={4}>
                         <CardTextTitle item={item} />
                       </Grid>
                     );
                   })}
-                <Divider orientation="vertical" flexItem sx={{ borderRightWidth: "3px" ,display:{
-                  md:'block',
-                  xs:"none"
-                } }}></Divider>
+                <Divider
+                  orientation="vertical"
+                  flexItem
+                  sx={{
+                    borderRightWidth: "3px",
+                    display: {
+                      md: "block",
+                      xs: "none",
+                    },
+                  }}
+                ></Divider>
                 <Grid xs>
                   <ExpertPerspective />
                 </Grid>
               </Grid>
             </Grid>
-            <Divider orientation="vertical" flexItem sx={{display:{
-                  md:'block',
-                  xs:"none"
-                }}}></Divider>
+            <Divider
+              orientation="vertical"
+              flexItem
+              sx={{
+                display: {
+                  md: "block",
+                  xs: "none",
+                },
+              }}
+            ></Divider>
             <Grid sx={{ paddingTop: 0 }} xs>
-            
               <BannerAdvertise />
             </Grid>
           </Grid>
         </Box>
       </div>
-    <section className="has_border containerlayout1 clscontenthomelayout1-content  ">
+      <section className="has_border clscontenthomelayout1-content  ">
         <div className="clscontenthomelayout1-item3">
           {topmovie.length > 0 &&
-            topmovie?.slice(0, 4).map((item, index) => {
+            topmovie?.slice(0, 8).map((item, index) => {
               return <CardTitleTop item={item} key={index} />;
             })}
           <BannerAdvertise />
@@ -125,9 +139,71 @@ const ContentHome = (props: Props) => {
           <TabColumn />
         </div>
       </section>
-  {/* 
-      <BoxCaterogryThreeColumn >
-        <Grid container>
+
+      <BoxCaterogryThreeColumn>
+        <Grid2 container spacing={1}>
+          <Grid xs={12} tablet={6} laptop={6}>
+            <CardColumn item={topmovie[10]} />
+          </Grid>
+          <Grid xs={12} tablet={6} laptop={3}>
+            <CardColumn isDes={false} item={topmovie[16]} />
+            <CardColumn item={topmovie[13]} isDes={false} />
+          </Grid>
+          <Grid xs={12} laptop={3}>
+            <Grid container rowSpacing={1}>
+              <Grid xs={12} tablet={6} laptop={12}>
+                <CardRow
+                  item={topmovie[18]}
+                  isdes={false}
+                  sx={{
+                    flexDirection: {
+                      laptop: "row-reverse",
+                      tablet: "row",
+                    },
+                  }}
+                />
+              </Grid>
+              <Grid xs={12} tablet={6} laptop={12}>
+                <CardRow
+                  item={topmovie[17]}
+                  isdes={false}
+                  sx={{
+                    flexDirection: {
+                      laptop: "row-reverse",
+                      tablet: "row",
+                    },
+                  }}
+                />
+              </Grid>
+              <Grid xs={12} tablet={6} laptop={12}>
+                <CardRow
+                  item={topmovie[16]}
+                  isdes={false}
+                  sx={{
+                    flexDirection: {
+                      laptop: "row-reverse",
+                      tablet: "row",
+                    },
+                  }}
+                />
+              </Grid>
+              <Grid xs={12} tablet={6} laptop={12}>
+                <CardRow
+                  item={topmovie[15]}
+                  isdes={false}
+                  sx={{
+                    flexDirection: {
+                      laptop: "row-reverse",
+                      tablet: "row",
+                    },
+                  }}
+                />
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid2>
+
+        {/* <Grid container>
           <Grid xs={6}>
             <CardColumn item={topmovie[10]} />
           </Grid>
@@ -141,49 +217,93 @@ const ContentHome = (props: Props) => {
             <CardRow item={topmovie[11]} isdes={false} />
             <CardRow item={topmovie[19]} isdes={false} />
           </Grid>
-        </Grid>
+        </Grid> */}
       </BoxCaterogryThreeColumn>
-      <BorderLine className="containerlayout1" />
+      <BorderLine />
       <BoxCaterogryThreeColumn>
-        <Grid container>
-          <Grid xs={6}>
-            <BoxCaterogryColumnHeader item={arr} />
-            <CardColumn item={topmovie[10]} />
+        <Grid2 container spacing={1}>
+          <Grid xs={12} tablet={6} laptop={6}>
+            <CardColumn item={topmovie[11]} />
           </Grid>
-          <Grid xs={3}>
-            <BoxCaterogryColumnHeader item={arr} />
-            <CardColumn item={topmovie[10]} isDes={false} />
-            <CardColumn item={topmovie[13]} isDes={false} />
+          <Grid xs={12} tablet={6} laptop={3}>
+            <CardColumn isDes={false} item={topmovie[12]} />
+            <CardColumn item={topmovie[14]} isDes={false} />
           </Grid>
-          <Grid xs={3}>
-            <CardRow item={topmovie[18]} isdes={false} />
-            <CardRow item={topmovie[15]} isdes={false} />
-            <CardRow item={topmovie[11]} isdes={false} />
-            <CardRow item={topmovie[19]} isdes={false} />
+          <Grid xs={12} laptop={3}>
+            <Grid container rowSpacing={1} columnSpacing={1}>
+              <Grid xs={12} tablet={6} laptop={12}>
+                <CardRow
+                  item={topmovie[15]}
+                  isdes={false}
+                  sx={{
+                    flexDirection: {
+                      laptop: "row-reverse",
+                      tablet: "row",
+                    },
+                  }}
+                />
+              </Grid>
+              <Grid xs={12} tablet={6} laptop={12}>
+                <CardRow
+                  item={topmovie[16]}
+                  isdes={false}
+                  sx={{
+                    flexDirection: {
+                      laptop: "row-reverse",
+                      tablet: "row",
+                    },
+                  }}
+                />
+              </Grid>
+              <Grid xs={12} tablet={6} laptop={12}>
+                <CardRow
+                  item={topmovie[17]}
+                  isdes={false}
+                  sx={{
+                    flexDirection: {
+                      laptop: "row-reverse",
+                      tablet: "row",
+                    },
+                  }}
+                />
+              </Grid>
+              <Grid xs={12} tablet={6} laptop={12}>
+                <CardRow
+                  item={topmovie[19]}
+                  isdes={false}
+                  sx={{
+                    flexDirection: {
+                      laptop: "row-reverse",
+                      tablet: "row",
+                    },
+                  }}
+                />
+              </Grid>
+            </Grid>
           </Grid>
-        </Grid>
+        </Grid2>
       </BoxCaterogryThreeColumn>
 
-      <BoxCaterogryColumn >
-        <Grid container>
-          <Grid xs={4}>
+      <BoxCaterogryColumn>
+        <Grid container spacing={1}>
+          <Grid tablet={6} tablet1={4}>
             <CardColumn item={topmovie[18]} />
             <div className="has_border"></div>
             <CardTextTitle />
           </Grid>
-          <Grid xs={4}>
+          <Grid tablet={6} tablet1={4}>
             <CardColumn item={topmovie[19]} />
             <div className="has_border"></div>
             <CardTextTitle />
           </Grid>
-          <Grid xs={4}>
+          <Grid tablet={6} tablet1={4}>
             <CardColumn item={topmovie[1]} />
             <div className="has_border"></div>
             <CardTextTitle />
           </Grid>
         </Grid>
       </BoxCaterogryColumn>
-      <BorderLine />
+      {/*  <BorderLine />
       <CarouselTwo  />
       <BorderLine  />
 
@@ -204,7 +324,6 @@ const ContentHome = (props: Props) => {
           </Grid>
         </Grid>
       </BoxCaterogryColumn> */}
-
     </>
   );
 };

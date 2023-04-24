@@ -1,40 +1,42 @@
-.clsboxcaterogrycolumn{
-   background: #FCFAF6; 
-   padding: 20px;
-    &-content{
-        display: flex;
+.clsboxcaterogrycolumn {
+  background: #fcfaf6;
+  padding: 20px;
+  @include res(600px) {
+    padding: 20px 0px;
+  }
+  &-content {
+    display: flex;
+  }
+  &-item1 {
+    flex-basis: 42%;
+    border-right: 1px solid #f0f0f0;
+  }
+  &-item2,
+  &-item3 {
+    flex-basis: 29%;
+  }
+  &-item2 {
+    border-right: 1px solid #f0f0f0;
+  }
+  &-item3 {
+    .clsarticle {
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #e5e5e5;
+      &-content {
+        flex-direction: row-reverse;
+      }
+      &-img {
+        margin-top: 0px;
+      }
     }
-    &-item1 {
-        flex-basis: 42%;
-        border-right: 1px solid #f0f0f0;
+    .clscardcolumn {
+      &-content {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #e5e5e5;
+        border-width: calc(100% - 30px);
+      }
     }
-    &-item2 , &-item3{
-        flex-basis: 29%;
-    }
-    &-item2{
-        border-right: 1px solid #f0f0f0;
-    }
-    &-item3{
-       
-        .clsarticle{
-            padding-bottom: 15px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #e5e5e5;
-            &-content{
-                flex-direction: row-reverse;
-            }
-            &-img{
-                margin-top: 0px;
-            }
-        }
-        .clscardcolumn{
-            &-content{
-                padding-bottom: 15px;
-                margin-bottom: 15px;
-                border-bottom: 1px solid #e5e5e5;
-                border-width: calc(100% - 30px);
-            }
-          
-        }
-    }
+  }
 }
