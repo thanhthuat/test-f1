@@ -1,36 +1,57 @@
-.clslistcategory{
-     &-content {
-        display: flex;
-     }
-     &-item1{
-        flex-basis: 65%;
-     }
-     &-itemsub{
-        display: flex;
-        margin: 0px -10px;
-     }
-     &-item2{
-        flex-basis: 35%;
-        max-height: 500px;
+.clslistcategory {
+  &-content {
+    display: flex;
+  }
+  &-item1 {
+    flex-basis: 65%;
+  }
+  &-itemsub {
+    display: flex;
+    margin: 0px -10px;
+  }
+  &-item2 {
+    flex-basis: 35%;
+    max-height: 571px;
     overflow-y: scroll;
     padding-left: 20px;
- 
-  &::-webkit-scrollbar-track {
-    background-color: #e5e5e5;
- }
- 
-  &::-webkit-scrollbar {
-   width: 8px;
-   height: 8px;
-   background-color: #fff;
- }
- 
-  &::-webkit-scrollbar-thumb {
-   border-radius: 10px;
-   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-   // background-color: #218b82;
-   max-height: 10px;
- }
- 
-     }
+    position: relative;
+    &::after {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+      width: 100%;
+      height: 60px;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #e5e5e5;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+      background-color: #fff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      // background-color: #218b82;
+      max-height: 10px;
+    }
+
+    .border {
+      margin-top: 10px;
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 10px;
+    }
+    .border:first-child {
+      margin-top: 0px;
+    }
+    .border:last-child {
+      border-bottom: none;
+    }
+  }
 }

@@ -30,12 +30,6 @@ import { Box, Divider } from "@mui/material";
 
 type Props = {};
 
-const arr = [
-  { title: "Giải trí" },
-  { title: "Giới sao" },
-  { title: "Phim Nhạc" },
-  { title: "Thời trang" },
-];
 const ContentHome = (props: Props) => {
   const dispatch = useAppDispatch();
   const { topmovie } = useAppSelector((state) => state.movie);
@@ -107,25 +101,7 @@ const ContentHome = (props: Props) => {
           <Tab>
             {" "}
             <BlockContent>
-              {/* <div className="clstabblock-contenttop">
-                <div className="clstabblock-right">
-                  {topmovie.slice(10, 11).map((item, index) => {
-                    return <CardRow item={item} key={index} />;
-                  })}
-                </div>
-                <div className="clstabblock-left">
-                  <CardTextTitle />
-                </div>
-              </div>
-
-              <div className="clstabblock-contentbody has_border">
-                {Array(3)
-                  .fill(null)
-                  .map((item, index) => (
-                    <CardText key={index} />
-                  ))}
-              </div>
-              <div className="has_border"></div> */}
+            
             </BlockContent>
           </Tab>
 

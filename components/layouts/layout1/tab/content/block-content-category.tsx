@@ -18,12 +18,12 @@ const BlockContentCategory: React.FC<BlockContentCategoryProps> = ({ className =
     <Box className={`${className} clstabblock`} sx={{ ...sx }}>
       <div className="clstabblock-contenttop">
         <div className="clstabblock-right">
-          {topmovie.slice(13, 14).map((item, index) => {
-            return <CardRow item={item} key={index} />;
+          {topmovie.slice(13, 15).map((item, index) => {
+            return <CardRow className="border" item={item} key={index} />;
           })}
         </div>
         <div className="clstabblock-left">
-          {topmovie.slice(13, 18).map((item, index) => (
+          {topmovie.slice(13, 17).map((item, index) => (
             <CardText key={index} />
           ))}
         </div>
