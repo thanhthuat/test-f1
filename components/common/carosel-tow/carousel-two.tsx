@@ -9,93 +9,74 @@ import { FreeMode, Navigation, Thumbs } from "swiper";
 import CardItemCarousel from "../card-item-carousel/card-item-carousel";
 import Box from "@mui/material/Box";
 import { SxProps, Theme } from "@mui/material/styles";
+import { IresponeMovie } from "lib/models/interface";
+import apiConfig from "apis/apiConfig";
+import Image from "next/image";
+import Link from "next/link";
+import { useWindowDimensions } from "@hook/hooks";
 interface CarouselTwoProps {
   className?: string;
   sx?: SxProps<Theme>;
+  listItem: IresponeMovie[];
 }
-const CarouselTwo: React.FC<CarouselTwoProps> = ({ className = "", sx = {} }) => {
+const CarouselTwo: React.FC<CarouselTwoProps> = ({ className = "", sx = {}, listItem }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
+  const size = useWindowDimensions();
 
   return (
     <Box className={`${className} clscarouselthumbs`} sx={{ ...sx }}>
       <Swiper
         spaceBetween={10}
         navigation={true}
+        loop={true}
         direction={"vertical"}
         thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper2"
       >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
+        {listItem.map((item, index) => (
+          <SwiperSlide key={item.id}>
+            <Link href={`/detail/${item.id}`}>
+              <Image
+                src={item?.backdrop_path ? apiConfig.originalImage(item?.backdrop_path) : ""}
+                alt={item?.title || "img"}
+                width="1024"
+                height="750"
+              ></Image>
+            </Link>
+          </SwiperSlide>
+        ))}
       </Swiper>
       <Swiper
         watchSlidesProgress
         onSwiper={setThumbsSwiper}
-        slidesPerView={2}
+        slidesPerView={size?.width! > 980 ? 2 : 2}
         freeMode={true}
-        direction={"vertical"}
+        direction={size?.width! > 980 ? "vertical" : "horizontal"}
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper"
+        breakpoints={{
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 2,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 2,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 2,
+          },
+        }}
       >
-        <SwiperSlide>
-          <CardItemCarousel />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardItemCarousel />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardItemCarousel />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardItemCarousel />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardItemCarousel />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardItemCarousel />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardItemCarousel />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardItemCarousel />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardItemCarousel />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardItemCarousel />
-        </SwiperSlide>
+        {listItem.map((item, index) => (
+          <SwiperSlide key={item.id}>
+            <Link href={`/detail/${item.id}`}>
+              <CardItemCarousel item={item} />
+            </Link>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Box>
   );

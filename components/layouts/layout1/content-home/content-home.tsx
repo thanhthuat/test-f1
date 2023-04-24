@@ -303,11 +303,11 @@ const ContentHome = (props: Props) => {
           </Grid>
         </Grid>
       </BoxCaterogryColumn>
-      {/*  <BorderLine />
-      <CarouselTwo  />
-      <BorderLine  />
+      <BorderLine />
+      <CarouselTwo listItem={topmovie?.slice(0, 8)} />
+      <BorderLine />
 
-      <BoxCaterogryColumn >
+      {/* <BoxCaterogryColumn >
         <Grid container>
           <Grid xs={6}>
             <CardColumn item={topmovie[18]} />
