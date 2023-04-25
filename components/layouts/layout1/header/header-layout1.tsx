@@ -8,6 +8,11 @@ type Props = {};
 const HeaderLayout1 = (props: Props) => {
   const [rotate, setRotate] = useState<boolean>(false);
   const headerRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLDivElement>(null);
+
+  const showNavbar = () => {
+    navRef?.current!.classList.toggle("responsive_nav");
+  };
   useEffect(() => {
     if (rotate) {
       document.body.classList.add("disable-scrolling");
@@ -74,15 +79,20 @@ const HeaderLayout1 = (props: Props) => {
               {data.map((item, index) => {
                 return (
                   <li className="ismobile-category" key={`${item.title}-${index}`}>
-                    <Link href={`/category/${index}`} className="ismobile-category__title">
-                      {item.title}
-                    </Link>
+                    <label htmlFor="nav-toggle">
+                      <Link href={`/popular/${index}`} className="ismobile-category__title">
+                        {item.title}
+                      </Link>
+                    </label>
+
                     <ul className="">
                       {item.submenu.map((item, index) => {
                         return (
-                          <li className="" key={`${item.title}-${index}`}>
-                            <Link href={`/category/${index}`}>{item.title}</Link>
-                          </li>
+                          <label htmlFor="nav-toggle">
+                            <li className="" key={`${item.title}-${index}`}>
+                              <Link href={`/category/${index}`}>{item.title}</Link>
+                            </li>
+                          </label>
                         );
                       })}
                     </ul>
