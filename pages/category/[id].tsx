@@ -9,7 +9,7 @@ const Index = (props: Props) => {
   return (
     <>
       <Head>
-        <title>{"new page"}</title>
+        <title>{"new page category"}</title>
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={" this is detail page"} />

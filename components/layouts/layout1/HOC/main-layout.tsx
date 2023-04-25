@@ -5,6 +5,7 @@ import ScrollTop from "@components/common/scroll-top/scrolltop-button";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 interface MainLayoutProps {
   children: React.ReactNode;
+  className?: string;
 }
 import { ThemeOptions } from "@mui/material/styles/createTheme";
 
@@ -40,12 +41,14 @@ export const themeOptions: any = {
     },
   },
 };
-const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+const MainLayout: React.FC<MainLayoutProps> = ({ children, className = "" }) => {
   return (
     <div>
       <ThemeProvider theme={createTheme(themeOptions)}>
         <HeaderLayout1 />
-        <main className="containerlayout1 clsmain ">{children}</main>
+        <main className={`${className} `}>
+          <div className={` containerlayout1 clsmain`}>{children}</div>
+        </main>
         <ScrollTop />
         <FooterLayout1 />
       </ThemeProvider>

@@ -84,7 +84,7 @@
       .ismobile {
         &-content {
           display: flex;
-          justify-content: space-between;
+          // justify-content: space-between;
           flex-wrap: wrap;
         }
         &-bg {
@@ -102,6 +102,12 @@
           margin-right: 25px;
           margin-bottom: 30px;
           width: calc(20% - 25px);
+          @include res(768px) {
+            width: calc(25% - 25px);
+          }
+          @include res(600px) {
+            width: calc(33.33% - 25px);
+          }
           &__title {
             color: #9f224e;
             font-size: 16px;
@@ -110,7 +116,6 @@
         }
       }
     }
-    
   }
   &-item {
     position: relative;
@@ -161,6 +166,6 @@
     opacity: 1;
   }
 }
-.shrink{
-box-shadow: 0 2px 8px rgba(0,0,0,.1);
-} 
+.shrink {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

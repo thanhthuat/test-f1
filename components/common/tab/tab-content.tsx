@@ -24,7 +24,7 @@ const TabContent: React.FC<TabContentProps> = ({ className = "", sx = {} }) => {
     <Box className={`clstabcolumncontent ${className}`} sx={{ ...sx }}>
       <div className="clstabcolumncontent-left">
         <TabHeader item={arr} />
-        <CardRow item={topmovie[17]} />;<div className="has_border"> </div>
+        <CardRow item={topmovie[17]} /><div className="has_border"> </div>
         <div className="clstabcolumncontent-left__bottom">
           {topmovie.slice(10, 12).map((item, index) => (
             <CardText key={index} item={item} />

@@ -16,20 +16,19 @@ const HeaderLayout1 = (props: Props) => {
     }
     return () => {};
   }, [rotate]);
-   useEffect(() => {
-        const shrinkHeader = () => {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                headerRef?.current!.classList.add('shrink');
-            } else {
-                headerRef?.current!.classList.remove('shrink');
-            }
-        }
-        window.addEventListener('scroll', shrinkHeader);
-        return () => {
-            window.removeEventListener('scroll', shrinkHeader);
-        };
-    }, []);
-  
+  useEffect(() => {
+    const shrinkHeader = () => {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        headerRef?.current!.classList.add("shrink");
+      } else {
+        if (headerRef?.current != null) headerRef?.current!.classList.remove("shrink");
+      }
+    };
+    window.addEventListener("scroll", shrinkHeader);
+    return () => {
+      window.removeEventListener("scroll", shrinkHeader);
+    };
+  }, []);
 
   return (
     <div className="clsheaderlayou1" ref={headerRef}>
@@ -51,7 +50,7 @@ const HeaderLayout1 = (props: Props) => {
             {data.map((item, index) => {
               return (
                 <li className="clsheaderlayou1-item" key={`${item.title}-${index}`}>
-                  <Link href={`/category/${index}`}>{item.title}</Link>
+                  <Link href={`/popular/${index}`}>{item.title}</Link>
                   <ul className="clsheaderlayou1-submenu">
                     {item.submenu.map((item, index) => {
                       return (

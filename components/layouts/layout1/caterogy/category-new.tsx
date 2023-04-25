@@ -3,7 +3,7 @@ import CardRowMain from "@components/common/car-row-main/card-row-main";
 import CardColumn from "@components/common/card-column/card-column";
 import CardRow from "@components/common/card-row/card-row";
 
-import React from "react";
+import React, { useEffect } from "react";
 import CategoryHeader from "./category-header";
 import BorderLine from "@components/common/border-line/border-line";
 import CardTitleTop from "@components/common/card-title-top/card-title-top";
@@ -11,16 +11,25 @@ import Tab from "../tab/tab";
 import TabColumn from "@components/common/tab/tab";
 import BlockContent from "../tab/content/block-content";
 import BlockContentCategory from "../tab/content/block-content-category";
-import { useAppSelector } from "@hook/hooks";
+import { useAppDispatch, useAppSelector } from "@hook/hooks";
 import { Box, Divider } from "@mui/material";
 import CardTextTitle from "@components/common/card-text-title/card-text-title";
 import Grid from "@mui/system/Unstable_Grid";
+import { getListTop } from "lib/redux/get-list-top-menu/get-list-top.action";
 interface CategoryNewProps {
   className?: string;
 }
 
 const CategoryNew: React.FC<CategoryNewProps> = ({ className = "" }) => {
   const { topmovie } = useAppSelector((state) => state.movie);
+   const dispatch = useAppDispatch();
+ 
+  
+   useEffect(() => {
+     dispatch(getListTop({ page: 3 }));
+
+     return () => {};
+   }, []);
   return (
     <div className={`${className} clslistcategory clscontenthomelayout1`}>
       <CategoryHeader />

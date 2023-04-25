@@ -35,9 +35,7 @@ const ContentHome = (props: Props) => {
   const { topmovie } = useAppSelector((state) => state.movie);
   const router = useRouter();
   useEffect(() => {
-    if (topmovie.length === 0) {
-      dispatch(getListTop({ page: 1 }));
-    }
+    dispatch(getListTop({ page: 1 }));
 
     return () => {};
   }, []);
@@ -53,6 +51,21 @@ const ContentHome = (props: Props) => {
                   topmovie?.slice(4, 6).map((item, index) => {
                     return (
                       <Grid sm={4} key={index}>
+                        <Divider
+                          orientation="horizontal"
+                          flexItem
+                          sx={{
+                            borderRightWidth: "3px",
+                            display: {
+                              xs: "block",
+                              sm: "none",
+                            },
+                            marginBottom: {
+                              xs: 1,
+                              sm: 0,
+                            },
+                          }}
+                        />
                         <CardTextTitle item={item} />
                       </Grid>
                     );
@@ -61,7 +74,6 @@ const ContentHome = (props: Props) => {
                   orientation="vertical"
                   flexItem
                   sx={{
-                    borderRightWidth: "3px",
                     display: {
                       md: "block",
                       xs: "none",
@@ -69,6 +81,21 @@ const ContentHome = (props: Props) => {
                   }}
                 ></Divider>
                 <Grid xs>
+                  <Divider
+                    orientation="horizontal"
+                    flexItem
+                    sx={{
+                      borderRightWidth: "3px",
+                      display: {
+                        xs: "block",
+                        sm: "none",
+                      },
+                      marginBottom: {
+                        xs: 1,
+                        sm: 0,
+                      },
+                    }}
+                  />
                   <ExpertPerspective />
                 </Grid>
               </Grid>
@@ -95,14 +122,12 @@ const ContentHome = (props: Props) => {
             topmovie?.slice(0, 8).map((item, index) => {
               return <CardTitleTop item={item} key={index} />;
             })}
-          <BannerAdvertise />
+          <BannerAdvertise className="mt-1" />
         </div>
         <div className="clscontenthomelayout1-item1">
           <Tab>
             {" "}
-            <BlockContent>
-            
-            </BlockContent>
+            <BlockContent></BlockContent>
           </Tab>
 
           <TabColumn />
@@ -280,9 +305,8 @@ const ContentHome = (props: Props) => {
         </Grid>
       </BoxCaterogryColumn>
       <BorderLine />
-      
+
       <CarouselTwo listItem={topmovie?.slice(0, 8)} />
-      
 
       {/* <BoxCaterogryColumn >
         <Grid container>
