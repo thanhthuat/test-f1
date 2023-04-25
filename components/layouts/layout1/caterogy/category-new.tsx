@@ -16,20 +16,22 @@ import { Box, Divider } from "@mui/material";
 import CardTextTitle from "@components/common/card-text-title/card-text-title";
 import Grid from "@mui/system/Unstable_Grid";
 import { getListTop } from "lib/redux/get-list-top-menu/get-list-top.action";
+import { useRouter } from "next/router";
 interface CategoryNewProps {
   className?: string;
 }
 
 const CategoryNew: React.FC<CategoryNewProps> = ({ className = "" }) => {
   const { topmovie } = useAppSelector((state) => state.movie);
-   const dispatch = useAppDispatch();
- 
-  
-   useEffect(() => {
-     dispatch(getListTop({ page: 3 }));
+  const dispatch = useAppDispatch();
+  const router = useRouter();
 
-     return () => {};
-   }, []);
+  useEffect(() => {
+    dispatch(getListTop({ page: Number(router?.query?.id) || 3 }));
+
+    return () => {};
+  }, [router?.query?.id]);
+
   return (
     <div className={`${className} clslistcategory clscontenthomelayout1`}>
       <CategoryHeader />

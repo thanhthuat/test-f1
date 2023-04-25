@@ -18,18 +18,21 @@ import Tab from "../../tab/tab";
 import BlockContentCategory from "../../tab/content/block-content-category";
 import BlockContent from "../../tab/content/block-content";
 import { getListTop } from "lib/redux/get-list-top-menu/get-list-top.action";
+import { useRouter } from "next/router";
 interface PopularNewsProps {
   className?: string;
 }
 
 const PopularNews: React.FC<PopularNewsProps> = ({ className = "" }) => {
   const dispatch = useAppDispatch();
+  const router = useRouter();
+  
   const { topmovie } = useAppSelector((state) => state.movie);
   useEffect(() => {
-    dispatch(getListTop({ page: 2 }));
+    dispatch(getListTop({ page: Number(router?.query?.popular)  || 2 }));
 
     return () => {};
-  }, []);
+  }, [router?.query?.popular]);
   return (
     <div className={`${className} clspopular `}>
       <CategoryHeader />
