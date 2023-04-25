@@ -88,8 +88,8 @@ const HeaderLayout1 = (props: Props) => {
                     <ul className="">
                       {item.submenu.map((item, index) => {
                         return (
-                          <label htmlFor="nav-toggle">
-                            <li className="" key={`${item.title}-${index}`}>
+                          <label htmlFor="nav-toggle" key={`${item.title}-${index}`}>
+                            <li className="">
                               <Link href={`/category/${index}`}>{item.title}</Link>
                             </li>
                           </label>
