@@ -52,7 +52,7 @@ const ContentHome = (props: Props) => {
                 {topmovie.length > 0 &&
                   topmovie?.slice(4, 6).map((item, index) => {
                     return (
-                      <Grid sm={4}>
+                      <Grid sm={4} key={index}>
                         <CardTextTitle item={item} />
                       </Grid>
                     );
@@ -280,8 +280,9 @@ const ContentHome = (props: Props) => {
         </Grid>
       </BoxCaterogryColumn>
       <BorderLine />
+      
       <CarouselTwo listItem={topmovie?.slice(0, 8)} />
-      <BorderLine />
+      
 
       {/* <BoxCaterogryColumn >
         <Grid container>

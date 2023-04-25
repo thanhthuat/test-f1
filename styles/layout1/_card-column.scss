@@ -4,14 +4,22 @@
   &-content {
     display: flex;
     flex-direction: column;
-    padding: 0px ;
+    padding: 0px;
+    &:hover .clscardcolumn-img img {
+      transform: scale(1.1);
+    }
+    &:hover .clscardcolumn-title .clscardcolumn-title__title {
+      text-decoration: underline;
+    }
   }
   &-img {
     flex-shrink: 0;
     flex-basis: 40%;
+    overflow: hidden;
     img {
+      transition: transform linear 0.35s;
       width: 100%;
-      height: auto;
+      height: 100%;
       object-fit: cover;
     }
   }

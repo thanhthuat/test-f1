@@ -33,7 +33,7 @@ const CategoryNew: React.FC<CategoryNewProps> = ({ className = "" }) => {
               {topmovie.length > 0 &&
                 topmovie?.slice(4, 7).map((item, index) => {
                   return (
-                    <Grid sm={4}>
+                    <Grid sm={4} key={index}>
                       <CardColumn item={item} key={item.title} />
                     </Grid>
                   );

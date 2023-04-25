@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { data } from "./data";
 import img from "public/layout1/small-logo.png";
 type Props = {};
 
 const HeaderLayout1 = (props: Props) => {
   const [rotate, setRotate] = useState<boolean>(false);
+  const headerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (rotate) {
       document.body.classList.add("disable-scrolling");
@@ -15,10 +16,23 @@ const HeaderLayout1 = (props: Props) => {
     }
     return () => {};
   }, [rotate]);
+   useEffect(() => {
+        const shrinkHeader = () => {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                headerRef?.current!.classList.add('shrink');
+            } else {
+                headerRef?.current!.classList.remove('shrink');
+            }
+        }
+        window.addEventListener('scroll', shrinkHeader);
+        return () => {
+            window.removeEventListener('scroll', shrinkHeader);
+        };
+    }, []);
+  
 
- 
   return (
-    <div className="clsheaderlayou1">
+    <div className="clsheaderlayou1" ref={headerRef}>
       <header className="clsheaderlayou1-content containerlayout1">
         <div className="clsheaderlayou1-logo">
           <Link href={"/"}>

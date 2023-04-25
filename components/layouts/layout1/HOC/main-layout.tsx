@@ -28,10 +28,10 @@ declare module "@mui/material/styles" {
 export const themeOptions: any = {
   breakpoints: {
     values: {
-      sm:600,
-      md:900,
-      lg:1200,
-      xl:1536,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
       xs: 0,
       tablet: 600,
       tablet1: 768,
@@ -47,7 +47,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         <HeaderLayout1 />
         <main className="containerlayout1 clsmain ">{children}</main>
         <ScrollTop />
-        {/* <FooterLayout1 /> */}
+        <FooterLayout1 />
       </ThemeProvider>
     </div>
   );
