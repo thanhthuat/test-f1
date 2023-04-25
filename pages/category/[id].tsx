@@ -1,5 +1,5 @@
 import MainLayout from "@components/layouts/layout1/HOC/main-layout";
-import CategoryNew from "@components/layouts/layout1/caterogy/category-new";
+import CategoryNew from "@components/layouts/layout1/view/caterogy/category-new";
 import Head from "next/head";
 import React from "react";
 

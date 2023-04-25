@@ -10,6 +10,7 @@ import { useAppDispatch, useAppSelector } from "@hook/hooks";
 import NotFound from "@components/common/not-found/not-found";
 import { getListTop } from "lib/redux/get-list-top-menu/get-list-top.action";
 import Grid from "@mui/system/Unstable_Grid";
+import DetailNewSekeleton from "./detail-new-sekeleton";
 interface DetailNewProps {
   className?: string;
 }
@@ -63,30 +64,33 @@ const DetailNew: React.FC<DetailNewProps> = ({ className }) => {
   }
   return (
     <React.Fragment>
-      <div className={`${className} clsdetailnew`}>
-        <div className="clsdetailnew-item1">
-          <DetailArticle>
-            <BoxCategory>
-              {array.map((item) => (
-                <CardRow item={topmovie[9]} key={item.title} />
-              ))}
-            </BoxCategory>{" "}
-          </DetailArticle>
-          <div className="has_border"></div>
-        </div>
-        <div className="clsdetailnew-item2">
-          <div className="clsdetailnew-strickly">
-            <h3 className="clsdetailnew-item2__title ">{"Popular News"}</h3>
-            {topmovie.slice(5, 9).map((item) => (
-              <CardRow item={item} isdes={false} key={item.id} />
-            ))}
-            <BannerAdvertise className="mt-15" />
-            <BannerAdvertise />
-          </div>
-        </div>
-        <div className="has_border"></div>
+      {first ? (
+        <React.Fragment>
+          {" "}
+          <div className={`${className} clsdetailnew`}>
+            <div className="clsdetailnew-item1">
+              <DetailArticle>
+                <BoxCategory>
+                  {array.map((item) => (
+                    <CardRow item={topmovie[9]} key={item.title} />
+                  ))}
+                </BoxCategory>{" "}
+              </DetailArticle>
+              <div className="has_border"></div>
+            </div>
+            <div className="clsdetailnew-item2">
+              <div className="clsdetailnew-strickly">
+                <h3 className="clsdetailnew-item2__title ">{"Popular News"}</h3>
+                {topmovie.slice(5, 9).map((item) => (
+                  <CardRow item={item} isdes={false} key={item.id} />
+                ))}
+                <BannerAdvertise className="mt-15" />
+                <BannerAdvertise />
+              </div>
+            </div>
+            <div className="has_border"></div>
 
-        {/* <>
+            {/* <>
             <div className="clsdetailnew-item1">
               <BoxCategory>
                 {array.map((item) => (
@@ -110,42 +114,46 @@ const DetailNew: React.FC<DetailNewProps> = ({ className }) => {
             </div>
             <div className="has_border"></div>
           </> */}
-      </div>
-      <div className={`${className} clsdetailnew`}>
-        <div className="clsdetailnew-item1">
-          {topmovie.slice(0, 9).map((item) => {
-            return (
-              <React.Fragment key={item.id}>
-                <CardRow item={item} />
-              </React.Fragment>
-            );
-          })}
-        </div>
-        <div className="clsdetailnew-item2">
-          <div className="clsdetailnew-strickly">
-            <BoxCategory>
-              {topmovie.slice(9, 13).map((item) => (
-                <CardRow item={item} key={item.id} />
-              ))}
-            </BoxCategory>
-            <BannerAdvertise className="mt-1" />
-            <BannerAdvertise className="mt-1 mb-1" />
           </div>
-        </div>
-      </div>
-      <div className="has_border"></div>
-      <Grid container spacing={1}>
-        {topmovie.slice(9, 13).map((item, index) => (
-          <Grid tablet={6} tablet1={3} key={index}>
-            <CardColumn item={item} key={item.id} />
+          <div className={`${className} clsdetailnew`}>
+            <div className="clsdetailnew-item1">
+              {topmovie.slice(0, 9).map((item) => {
+                return (
+                  <React.Fragment key={item.id}>
+                    <CardRow item={item} />
+                  </React.Fragment>
+                );
+              })}
+            </div>
+            <div className="clsdetailnew-item2">
+              <div className="clsdetailnew-strickly">
+                <BoxCategory>
+                  {topmovie.slice(9, 13).map((item) => (
+                    <CardRow item={item} key={item.id} />
+                  ))}
+                </BoxCategory>
+                <BannerAdvertise className="mt-1" />
+                <BannerAdvertise className="mt-1 mb-1" />
+              </div>
+            </div>
+          </div>
+          <div className="has_border"></div>
+          <Grid container spacing={1}>
+            {topmovie.slice(9, 13).map((item, index) => (
+              <Grid tablet={6} tablet1={3} key={index}>
+                <CardColumn item={item} key={item.id} />
+              </Grid>
+            ))}
           </Grid>
-        ))}
-      </Grid>
-      {/* <div className={`${className} clsdetailnew`}>
+          {/* <div className={`${className} clsdetailnew`}>
         {topmovie.slice(9, 13).map((item) => (
           <CardColumn item={item} key={item.id} />
         ))}
       </div> */}
+        </React.Fragment>
+      ) : (
+        <DetailNewSekeleton />
+      )}
     </React.Fragment>
   );
 };

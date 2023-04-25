@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 import listMovieSlice from '../get-list-top-menu/get-list-top.reducer';
+import { commonReducer } from "../common";
 export function makeStore() {
   return configureStore({
     reducer: {
-      movie:listMovieSlice
+      movie:listMovieSlice,
+      commonReducer:commonReducer
     },
     middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

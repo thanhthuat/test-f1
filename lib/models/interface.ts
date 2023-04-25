@@ -60,9 +60,6 @@ export interface TypeRateMoney {
 }
 
 export interface IresponeMovie {
-
-
-  
   adult: boolean;
   backdrop_path: string;
     genre_ids: number[
@@ -135,4 +132,8 @@ export interface responeHttp{
   results: IresponeMovie[];
   total_results: number;
 
+}
+export class HttpResponse<T> {
+  statusCode!: string;
+  data!: T;
 }

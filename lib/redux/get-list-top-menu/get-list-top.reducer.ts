@@ -9,7 +9,8 @@ interface IlistMovieSlice{
 const initialState:IlistMovieSlice ={
     topmovie: [],
     detailmovie: {} as IresponeMovieDetail,
-    page:0
+    page:0,
+   
 } ;
 
 const listMovieSlice = createSlice({
@@ -20,7 +21,8 @@ const listMovieSlice = createSlice({
     extraReducers:(builder)=>{
         builder.addCase(getListTop.fulfilled ,(state,action)=>{
             state.topmovie = action.payload.data.results;
-            state.page =action.payload.data.page
+            state.page =action.payload.data.page ;
+            
         })
          .addCase(getListTop.rejected, (state) => {
         state.topmovie = [];
