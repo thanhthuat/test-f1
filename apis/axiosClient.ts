@@ -13,6 +13,7 @@ const axiosClient = axios.create({
 
 axiosClient.interceptors.request.use(async (config) => {
   
+  
   config.params = {
    // add your default ones
    api_key: apiConfig.apiKey,

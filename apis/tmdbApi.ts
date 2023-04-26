@@ -38,8 +38,11 @@ const tmdbApi = {
     return axiosClient.get(url, { params: {} });
   },
     search: (cate :keyof typeof category, params:any) => {
+      console.log("🚀 ~ file: tmdbApi.ts:57 ~ tmdbApi.params:", params)
     const url = 'search/' + category[cate];
-    return axiosClient.get(url, params);
+    return axiosClient.get(url, {
+      params:params
+    });
   },
   detail: (cate :keyof typeof category, id:any, params:any) => {
     const url = category[cate] + '/' + id;
@@ -54,5 +57,6 @@ const tmdbApi = {
     return axiosClient.get(url, { params: {} });
   },
 };
+
 
 export default tmdbApi;

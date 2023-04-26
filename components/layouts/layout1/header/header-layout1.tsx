@@ -3,6 +3,9 @@ import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import { data } from "./data";
 import img from "public/layout1/small-logo.png";
+import SearchBox from "@components/common/search/search";
+import HeaderSearch from "../headersearch/header-search";
+import HomeIcon from "@mui/icons-material/Home";
 type Props = {};
 
 const HeaderLayout1 = (props: Props) => {
@@ -37,11 +40,11 @@ const HeaderLayout1 = (props: Props) => {
 
   return (
     <div className="clsheaderlayou1" ref={headerRef}>
+    
       <header className="clsheaderlayou1-content containerlayout1">
         <div className="clsheaderlayou1-logo">
           <Link href={"/"}>
-            {" "}
-            <Image src={img} alt="logo"></Image>{" "}
+            <HomeIcon/>
           </Link>
         </div>
         <nav className="clsheaderlayou1-parent">
