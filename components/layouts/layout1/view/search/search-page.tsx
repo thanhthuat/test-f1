@@ -46,8 +46,8 @@ const SearchPage: React.FC<SearchPageProps> = ({ className = "" }) => {
   return (
     <React.Fragment>
       <div className={`${className} clspopular `}>
-        <BorderLine />
-        <Box className=" ">
+       
+        <Box sx={{paddingTop:1}}>
           <Grid container spacing={2}>
             <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} desktop={8} xs={12} laptop={8}>
               <HeaderSearchPage />

@@ -34,13 +34,13 @@ const HeaderSearch: React.FC<HeaderSearchProps> = ({ className = "", sx = {} }) 
                 <Image src={img} alt="logo"></Image>
               </Link>
             </div>
-            {/* <div className={`clsheadersearch-date`}>
+            <div className={`clsheadersearch-date`}>
               {DateUtil.formatShowDateDetail(Date.now())}
             </div>
             <div className={`clsheadersearch-weather`}>
               <CarouselWeather />
             
-            </div> */}
+            </div>
           </div>
           <div className="clsheadersearch-right">
             <SearchBox
@@ -50,15 +50,7 @@ const HeaderSearch: React.FC<HeaderSearchProps> = ({ className = "", sx = {} }) 
               sx={{ with: "100%" }}
             />
           </div>
-          <div className={`clsheadersearch-left`}>
-            <div className={`clsheadersearch-date`}>
-              {DateUtil.formatShowDateDetail(Date.now())}
-            </div>
-            <div className={`clsheadersearch-weather`}>
-              <CarouselWeather />
-              {/* <Brightness2Icon /> */}
-            </div>
-          </div>
+         
         </div>
       </Box>
     </div>
