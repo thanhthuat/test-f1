@@ -3,24 +3,52 @@
   @include res(1250px) {
     padding: 20px 15px 30px 15px;
   }
+  @include res(600px) {
+    padding: 10px 15px;
+  }
   &-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include res(786px) {
+      flex-direction: column;
+    }
   }
   &-left {
     display: flex;
     align-items: flex-end;
   }
+  &-logo {
+    @include res(550px) {
+      img {
+        width: 140px;
+      }
+    }
+  }
+  &-date {
+    @include res(600px) {
+      display: none;
+    }
+  }
   &-logo,
   &-date {
     margin-right: 30px;
+    @include res(600px) {
+      margin-right: 20px;
+    }
+    @include res(500px) {
+      margin-right: 0px;
+    }
   }
   &-weather {
     width: 150px;
   }
   &-right {
     width: 10%;
+    @include res(786px) {
+      margin-top: 10px;
+      width: 15%;
+    }
     transition: width linear 0.3s;
     .MuiOutlinedInput-notchedOutline {
       border-width: 0px;
