@@ -41,8 +41,8 @@ const DetailNewSekeleton: React.FC<DetailNewSekeletonProps> = ({ className = "" 
               <h3 className="clsdetailnew-item2__title ">{"Popular News"}</h3>
             </Skeleton>
             {topmovie.slice(5, 9).map((item) => (
-              <Skeleton>
-                <CardRow item={item} isdes={false} key={item.id} />
+              <Skeleton key={item.id}>
+                <CardRow item={item} isdes={false} />
               </Skeleton>
             ))}
             <Skeleton width={"100%"}>

@@ -19,16 +19,16 @@ const CarouselWeather: React.FC<CarouselWeatherProps> = ({ className = "" }) => 
         modules={[Autoplay]}
       >
         <SwiperSlide>
-         18 C <Brightness2Icon />{" "}
+          Hcm 18 C <Brightness2Icon />{" "}
         </SwiperSlide>
         <SwiperSlide>
-         19 C <Brightness3Icon />
+          Ha Noi 19 C <Brightness3Icon />
         </SwiperSlide>
         <SwiperSlide>
-         15 C <Brightness5Icon />
+          Da Nang 15 C <Brightness5Icon />
         </SwiperSlide>
         <SwiperSlide>
-          30 C <Brightness4Icon />
+          Nghe An 30 C <Brightness4Icon />
         </SwiperSlide>
       </Swiper>
     </div>

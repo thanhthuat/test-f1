@@ -6,6 +6,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 interface MainLayoutProps {
   children: React.ReactNode;
   className?: string;
+  isFooter?: boolean;
 }
 import { ThemeOptions } from "@mui/material/styles/createTheme";
 
@@ -42,17 +43,17 @@ export const themeOptions: any = {
     },
   },
 };
-const MainLayout: React.FC<MainLayoutProps> = ({ children, className = "" }) => {
+const MainLayout: React.FC<MainLayoutProps> = ({ children, className = "", isFooter = true }) => {
   return (
     <div>
       <ThemeProvider theme={createTheme(themeOptions)}>
-          <HeaderSearch className="containerlayout1" />
+        <HeaderSearch className="containerlayout1" />
         <HeaderLayout1 />
         <main className={`${className} `}>
           <div className={` containerlayout1 clsmain`}>{children}</div>
         </main>
         <ScrollTop />
-        <FooterLayout1 />
+        {isFooter && <FooterLayout1 />}
       </ThemeProvider>
     </div>
   );

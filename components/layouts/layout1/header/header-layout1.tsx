@@ -40,11 +40,10 @@ const HeaderLayout1 = (props: Props) => {
 
   return (
     <div className="clsheaderlayou1" ref={headerRef}>
-    
       <header className="clsheaderlayou1-content containerlayout1">
         <div className="clsheaderlayou1-logo">
           <Link href={"/"}>
-            <HomeIcon/>
+            <HomeIcon />
           </Link>
         </div>
         <nav className="clsheaderlayou1-parent">

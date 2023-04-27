@@ -22,9 +22,19 @@ interface SearchBoxProps {
 const SearchBox: React.FC<SearchBoxProps> = ({ onChange, onSubmit, value, sx = {} }) => {
   return (
     <Box component="form" noValidate autoComplete="off" onSubmit={onSubmit} sx={{ width: "100%" }}>
-      <FormControl sx={{  width: "100%",marginBottom:1 }} variant="outlined">
+      <FormControl
+        sx={{
+          width: "100%",
+          "& .MuiOutlinedInput-root.Mui-focused": {
+            "& > fieldset": {
+              borderColor: "rgba(0, 0, 0, 0.23)",
+            },
+          },
+        }}
+        variant="outlined"
+      >
         <OutlinedInput
-          id="outlined-adornment-password"
+          id="outlined-adornment"
           size="small"
           endAdornment={
             <InputAdornment position="end">
@@ -41,7 +51,9 @@ const SearchBox: React.FC<SearchBoxProps> = ({ onChange, onSubmit, value, sx = {
           }
           value={value}
           onChange={onChange}
-          sx={{ ...sx }}
+          sx={{
+            ...sx,
+          }}
         />
       </FormControl>
     </Box>

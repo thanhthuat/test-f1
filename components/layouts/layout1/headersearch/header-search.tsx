@@ -8,6 +8,7 @@ import { DateUtil } from "@utils/date.util";
 import Brightness2Icon from "@mui/icons-material/Brightness2";
 import CarouselWeather from "@components/common/carosel-weather/carosel-weather";
 import { useRouter } from "next/router";
+import SearchIcon from "@mui/icons-material/Search";
 interface HeaderSearchProps {
   sx?: {};
   className?: string;
@@ -16,6 +17,7 @@ interface HeaderSearchProps {
 const HeaderSearch: React.FC<HeaderSearchProps> = ({ className = "", sx = {} }) => {
   const router = useRouter();
   const [value, setValue] = React.useState("");
+  const [showSearch, setShowSearch] = React.useState(false);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement> | React.MouseEvent) => {
     e.preventDefault();
     if (value === "") return;
@@ -35,22 +37,22 @@ const HeaderSearch: React.FC<HeaderSearchProps> = ({ className = "", sx = {} }) 
               </Link>
             </div>
             <div className={`clsheadersearch-date`}>
-              {DateUtil.formatShowDateDetail(Date.now())}
+              {DateUtil.formatShowDate(Date.now())}
             </div>
             <div className={`clsheadersearch-weather`}>
               <CarouselWeather />
-            
             </div>
           </div>
           <div className="clsheadersearch-right">
-            <SearchBox
-              value={value}
-              onChange={handleChange}
-              onSubmit={handleSubmit}
-              sx={{ with: "100%" }}
-            />
+            
+              <SearchBox
+                value={value}
+                onChange={handleChange}
+                onSubmit={handleSubmit}
+                sx={{ with: "100%" }}
+              />
+           
           </div>
-         
         </div>
       </Box>
     </div>

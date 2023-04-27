@@ -9,7 +9,7 @@ export const getListTop = createAsyncThunk(
   async (payload: { page: number }, thunkAPI) => {
     try {
       thunkAPI.dispatch(isLoading());
-      const response = await tmdbApi.getMoviesList("now_playing", payload.page, {});
+      const response:any = await tmdbApi.getMoviesList("now_playing", payload.page, {});
       thunkAPI.dispatch(clearLoading());
       return response;
     } catch (error) {

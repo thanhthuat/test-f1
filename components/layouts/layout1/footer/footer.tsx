@@ -23,7 +23,7 @@ const FooterLayout1: React.FC<FooterLayout1Props> = ({ className }) => {
           <div className="clsfooterlayout1-social">
             <p>
               <span className="clsfooterlayout1-social__rss"> RSS</span>
-              Theo dõi VnExpress trên
+              Theo dõi Hotmagazine trên
               <span className="clsfooterlayout1-social__icon">
                 <YouTubeIcon />
               </span>
@@ -55,7 +55,7 @@ const FooterLayout1: React.FC<FooterLayout1Props> = ({ className }) => {
           <div className="clsfooterlayout1-license">
             <p>
               {" "}
-              <span>© 1997-2023.</span> Toàn bộ bản quyền thuộc VnExpress
+              <span>© 1997-2023.</span> Toàn bộ bản quyền thuộc Hotmagazine
             </p>
           </div>
         </div>
