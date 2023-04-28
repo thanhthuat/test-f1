@@ -6,7 +6,7 @@ import { title } from "process";
 import BoxCategory from "../../../common/box-category/box-category";
 import CardRowMain from "../../../common/car-row-main/card-row-main";
 import { BoxPopular } from "../../../common/box-popular";
-import CarouselTwo from "../../../common/carosel-tow/carousel-two";
+import CarouselTwo from "../../../common/carousel-two/carousel-two";
 import ExpertPerspective from "../../../common/expert-perspective/expert-perspective";
 import CardTitleTop from "../../../common/card-title-top/card-title-top";
 import Tab from "../tab/tab";

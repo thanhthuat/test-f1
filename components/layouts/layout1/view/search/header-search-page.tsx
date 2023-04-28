@@ -1,4 +1,5 @@
 import SearchBox from "@components/common/search/search";
+import CaterogyList from "@components/common/slickCarousel/slickCarousel";
 import { useAppDispatch } from "@hook/hooks";
 import Divider from "@mui/material/Divider";
 import { searchList } from "lib/redux/search-list/search-list.action";
@@ -38,7 +39,8 @@ const HeaderSearchPage: React.FC<HeaderSearchPageProps> = ({ className = "" }) =
           <h1 className={`${className} clsheadersearchpage-title`}> Search</h1>
         </div>
         <SearchBox value={value} onChange={handleChange} onSubmit={handleSubmit} />
-        <Divider sx={{margin:'10px 0px'}}></Divider>
+        {/* <CaterogyList /> */}
+        <Divider sx={{ margin: "10px 0px" }}></Divider>
       </div>
     </div>
   );

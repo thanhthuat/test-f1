@@ -1,57 +1,98 @@
-import React from "react";
-import subtitleLogoRight from "public/image/icon/icon-right.png";
-import Image from "next/image";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import React, { useRef, useState } from "react";
 
-type Props = {
-  title: string;
-};
+import { Swiper, SwiperSlide } from "swiper/react";
+import { useSwiper } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { Pagination, Navigation } from "swiper";
+import CardColumn from "../card-column/card-column";
+export default function CaterogyList() {
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index: number, className: string) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  };
+  return (
+    <>
+      <Swiper
+        pagination={{
+          type: "fraction",
+        }}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <div>
+            {" "}
+            12121 <p>dsfsdfsdf</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div>
+            {" "}
+            12121 <p>dsfsdfsdf</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div>
+            {" "}
+            12121 <p>dsfsdfsdf</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div>
+            {" "}
+            12121 <p>dsfsdfsdf</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div>
+            {" "}
+            12121 <p>dsfsdfsdf</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div>
+            {" "}
+            12121 <p>dsfsdfsdf</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div>
+            {" "}
+            12121 <p>dsfsdfsdf</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div>
+            {" "}
+            12121 <p>dsfsdfsdf</p>
+          </div>
+        </SwiperSlide>
 
-interface ISlickCarousel {
-  title: string;
+        <SwiperNavButtons />
+      </Swiper>
+    </>
+  );
 }
 
-const SlickCarousel: React.FC<ISlickCarousel> = (props: Props) => {
-  const { title } = props;
+export const SwiperNavButtons = () => {
+  const swiper = useSwiper();
   return (
-    <div className="slickCarousel">
-      <div className="slickCarousel__top">
-        <div className="slickCarousel__top__link">
-          <span className="slickCarousel__top__link__title">{title}</span>
-          <Image src={subtitleLogoRight} alt="" />
-        </div>
-        <div className="slickCarousel__top__controls">
-          <button className="slickCarousel__top__controls__button">
-            <ChevronLeftIcon className="slickCarousel__top__controls__button__icon" />
-          </button>
-          <div className="slickCarousel__top__controls__count">
-            <span className="slickCarousel__top__controls__count__left">1</span>
-            <span className="slickCarousel__top__controls__count__midle">/</span>
-            <span className="slickCarousel__top__controls__count__right">2</span>
-          </div>
-          <button className="slickCarousel__top__controls__button">
-            <ChevronRightIcon className="slickCarousel__top__controls__button__icon" />
-          </button>
-        </div>
-      </div>
-      <div className="slickCarousel__bottom">
-        <div className="slickCarousel__bottom__figure">
-          <a href="#">
-            {" "}
-            <img
-              className="slickCarousel__bottom__figure__img"
-              alt=""
-              src="https://biz.chosun.com/resizer/FrcwJDRQ5Mk-zcED20DSkiJuiro=/184x104/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosunbiz/ZJVJRUG5WBG4VEMOLDATSG3VVA.jpg"
-            />
-          </a>
-        </div>
-        <a href="#" className="slickCarousel__bottom__link">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </a>
-      </div>
+    <div
+      className="swiper-nav-btns"
+      style={{ position: "absolute", top: "0", right: "0", zIndex: "1000" }}
+    >
+      <button onClick={() => swiper.slidePrev()}>
+        <ArrowBackIosIcon />
+      </button>
+      <button onClick={() => swiper.slideNext()}>
+        <ArrowForwardIosIcon />
+      </button>
     </div>
   );
 };
-
-export default SlickCarousel;

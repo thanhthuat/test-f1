@@ -6,9 +6,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { DateUtil } from "@utils/date.util";
 import Brightness2Icon from "@mui/icons-material/Brightness2";
-import CarouselWeather from "@components/common/carosel-weather/carosel-weather";
+import CarouselWeather from "@components/common/carousel-weather/carousel-weather";
 import { useRouter } from "next/router";
 import SearchIcon from "@mui/icons-material/Search";
+import CaterogyList from "@components/common/slickCarousel/slickCarousel";
 interface HeaderSearchProps {
   sx?: {};
   className?: string;
@@ -36,21 +37,18 @@ const HeaderSearch: React.FC<HeaderSearchProps> = ({ className = "", sx = {} }) 
                 <Image src={img} alt="logo"></Image>
               </Link>
             </div>
-            <div className={`clsheadersearch-date`}>
-              {DateUtil.formatShowDate(Date.now())}
-            </div>
+            <div className={`clsheadersearch-date`}>{DateUtil.formatShowDate(Date.now())}</div>
             <div className={`clsheadersearch-weather`}>
               <CarouselWeather />
             </div>
           </div>
           <div className="clsheadersearch-right">
-            
-              <SearchBox
-                value={value}
-                onChange={handleChange}
-                onSubmit={handleSubmit}
-                sx={{ with: "100%" }}
-              />
+            <SearchBox
+              value={value}
+              onChange={handleChange}
+              onSubmit={handleSubmit}
+              sx={{ with: "100%" }}
+            />
            
           </div>
         </div>
