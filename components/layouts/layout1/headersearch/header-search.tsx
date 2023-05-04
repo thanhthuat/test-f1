@@ -18,7 +18,6 @@ interface HeaderSearchProps {
 const HeaderSearch: React.FC<HeaderSearchProps> = ({ className = "", sx = {} }) => {
   const router = useRouter();
   const [value, setValue] = React.useState("");
-  const [showSearch, setShowSearch] = React.useState(false);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement> | React.MouseEvent) => {
     e.preventDefault();
     if (value === "") return;

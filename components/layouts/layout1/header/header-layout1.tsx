@@ -6,13 +6,14 @@ import img from "public/layout1/small-logo.png";
 import SearchBox from "@components/common/search/search";
 import HeaderSearch from "../headersearch/header-search";
 import HomeIcon from "@mui/icons-material/Home";
+import { useWindowDimensions } from "@hook/hooks";
 type Props = {};
 
 const HeaderLayout1 = (props: Props) => {
   const [rotate, setRotate] = useState<boolean>(false);
   const headerRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
-
+  const size = useWindowDimensions();
   const showNavbar = () => {
     navRef?.current!.classList.toggle("responsive_nav");
   };
@@ -24,6 +25,11 @@ const HeaderLayout1 = (props: Props) => {
     }
     return () => {};
   }, [rotate]);
+  useEffect(() => {
+    if (size?.width! > 1100) {
+      setRotate(false);
+    }
+  }, [size]);
   useEffect(() => {
     const shrinkHeader = () => {
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -47,12 +53,15 @@ const HeaderLayout1 = (props: Props) => {
           </Link>
         </div>
         <nav className="clsheaderlayou1-parent">
-          <input type="checkbox" id="nav-toggle" onClick={() => setRotate(!rotate)} />
-          <label htmlFor="nav-toggle" className="icon-burger">
+          {/* <input type="checkbox" id="nav-toggle" onClick={() => setRotate(!rotate)} /> */}
+          <div
+            className={rotate ? "icon-burger active " : "icon-burger"}
+            onClick={() => setRotate(!rotate)}
+          >
             <div className="line"></div>
             <div className="line"></div>
             <div className="line"></div>
-          </label>
+          </div>
           <ul className="isdesktop">
             {data.map((item, index) => {
               return (
@@ -75,26 +84,30 @@ const HeaderLayout1 = (props: Props) => {
             })}
           </ul>
 
-          <div className="ismobile">
-            <label htmlFor="nav-toggle" className="ismobile-bg"></label>
+          <div className={rotate ? "ismobile active " : "ismobile"}>
+            <div className="ismobile-bg" onClick={() => setRotate(!rotate)}></div>
             <ul className="ismobile-content">
               {data.map((item, index) => {
                 return (
-                  <li className="ismobile-category" key={`${item.title}-${index}`}>
-                    <label htmlFor="nav-toggle">
-                      <Link href={`/popular/${index}`} className="ismobile-category__title">
-                        {item.title}
-                      </Link>
-                    </label>
+                  <li
+                    className="ismobile-category"
+                    key={`${item.title}-${index}`}
+                    onClick={() => setRotate(!rotate)}
+                  >
+                    <Link href={`/popular/${index}`} className="ismobile-category__title">
+                      {item.title}
+                    </Link>
 
                     <ul className="">
                       {item.submenu.map((item, index) => {
                         return (
-                          <label htmlFor="nav-toggle" key={`${item.title}-${index}`}>
-                            <li className="">
-                              <Link href={`/category/${index}`}>{item.title}</Link>
-                            </li>
-                          </label>
+                          <li
+                            className=""
+                            key={`${item.title}-${index}`}
+                            onClick={() => setRotate(!rotate)}
+                          >
+                            <Link href={`/category/${index}`}>{item.title}</Link>
+                          </li>
                         );
                       })}
                     </ul>

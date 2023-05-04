@@ -7,15 +7,15 @@ import { IresponeMovie } from "lib/models/interface";
 import apiConfig from "lib/api/apiConfig";
 import { SxProps, Theme } from "@mui/material/styles";
 interface CardColumnProps {
-  classname?: string;
+  className?: string;
   isDes?: boolean;
   item: IresponeMovie;
   sx?: SxProps<Theme>;
 }
 
-const CardColumn: React.FC<CardColumnProps> = ({ classname = "", isDes = true, item, sx = {} }) => {
+const CardColumn: React.FC<CardColumnProps> = ({ className = "", isDes = true, item, sx = {} }) => {
   return (
-    <article className={`${classname} clscardcolumn`}>
+    <article className={`${className} clscardcolumn`}>
       <Link href={`/detail/${item?.title}`}>
         <Box className="clscardcolumn-content" sx={{ ...sx }}>
           <div className="clscardcolumn-img">

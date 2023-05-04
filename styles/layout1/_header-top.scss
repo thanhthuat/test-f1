@@ -20,15 +20,7 @@
       }
     }
     .ismobile {
-      // display: none;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.5s ease-in-out;
-      transform: translateY(-100%);
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
+      display: none;
     }
     #nav-toggle {
       position: absolute;
@@ -37,8 +29,10 @@
     }
     .icon-burger {
       display: none;
+
       @include res(1100px) {
         display: block;
+        cursor: pointer;
       }
       position: absolute;
       right: 5%;
@@ -55,22 +49,33 @@
       transition: all 0.5s ease-in-out;
     }
     @media screen and (max-width: 1100px) {
-      #nav-toggle:checked ~ .icon-burger {
+      .icon-burger.active {
         .line:nth-child(1) {
           transform: translateY(10px) rotate(225deg);
         }
       }
-      #nav-toggle:checked ~ .icon-burger {
+      .icon-burger.active {
         .line:nth-child(3) {
           transform: translateY(-10px) rotate(-225deg);
         }
       }
-      #nav-toggle:checked ~ .icon-burger {
+      .icon-burger.active {
         .line:nth-child(2) {
           opacity: 0;
         }
       }
-      #nav-toggle:checked ~ .ismobile {
+      .ismobile {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease-in-out;
+        transform: translateY(-100%);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+      }
+      .ismobile.active {
         display: block;
         position: absolute;
         visibility: visible;
@@ -82,7 +87,10 @@
         opacity: 1;
         padding: 20px 15px;
         transform: translateY(0);
-        overflow-y: scroll;
+        @include res(600px) {
+          overflow-y: scroll;
+        }
+
         &::-webkit-scrollbar {
           width: 6px;
         }

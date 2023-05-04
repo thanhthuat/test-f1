@@ -1,3 +1,5 @@
+import CardWithAuthorRow from "@components/common/card-author-row/card-author-row";
+import CardWithAuthor from "@components/common/card-author/card-author";
 import SearchBox from "@components/common/search/search";
 import CaterogyList from "@components/common/slickCarousel/slickCarousel";
 import { useAppDispatch } from "@hook/hooks";
@@ -40,6 +42,8 @@ const HeaderSearchPage: React.FC<HeaderSearchPageProps> = ({ className = "" }) =
         </div>
         <SearchBox value={value} onChange={handleChange} onSubmit={handleSubmit} />
         {/* <CaterogyList /> */}
+        <CardWithAuthorRow/>
+        {/* <CardWithAuthor /> */}
         <Divider sx={{ margin: "10px 0px" }}></Divider>
       </div>
     </div>

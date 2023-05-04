@@ -6,9 +6,9 @@ import Modal from "@mui/material/Modal";
 import Image from "next/image";
 
 type Props = {
-    url: string;
-    open: boolean;
-    onClose: ()=>void
+  url: string;
+  open: boolean;
+  onClose: () => void;
 };
 const style = {
   position: "absolute" as "absolute",
@@ -21,10 +21,7 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-const ModalImg: React.FC<Props> = ({url ,open,onClose}) => {
-  
- 
-
+const ModalImg: React.FC<Props> = ({ url, open, onClose }) => {
   return (
     <Modal
       open={open}
@@ -34,7 +31,7 @@ const ModalImg: React.FC<Props> = ({url ,open,onClose}) => {
       className="prefixmodalimage"
     >
       <Box sx={style}>
-        <img src={url} alt="modal-img" style={{width:'500px',height:'auto'}} />
+        <img src={url} alt="modal-img" style={{ width: "500px", height: "auto" }} />
       </Box>
     </Modal>
   );

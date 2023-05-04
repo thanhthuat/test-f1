@@ -66,7 +66,6 @@ const DetailNew: React.FC<DetailNewProps> = ({ className }) => {
     <React.Fragment>
       {first ? (
         <React.Fragment>
-          {" "}
           <div className={`${className} clsdetailnew`}>
             <div className="clsdetailnew-item1">
               <DetailArticle>
@@ -89,31 +88,6 @@ const DetailNew: React.FC<DetailNewProps> = ({ className }) => {
               </div>
             </div>
             <div className="has_border"></div>
-
-            {/* <>
-            <div className="clsdetailnew-item1">
-              <BoxCategory>
-                {array.map((item) => (
-                  <Skeleton
-                    animation="wave"
-                    height={250}
-                    width="100%"
-                    key={item.title}
-                    style={{ marginBottom: 6 }}
-                  />
-                ))}
-              </BoxCategory>
-              <Skeleton animation="wave" height={1} width="100%" style={{ marginBottom: 6 }} />
-            </div>
-            <div className="clsdetailnew-item2">
-              <div className="clsdetailnew-strickly">
-                <Skeleton animation="wave" height={100} width="100%" style={{ marginBottom: 6 }} />
-                <Skeleton animation="wave" height={100} width="100%" style={{ marginBottom: 6 }} />
-                <Skeleton animation="wave" height={100} width="100%" style={{ marginBottom: 6 }} />
-              </div>
-            </div>
-            <div className="has_border"></div>
-          </> */}
           </div>
           <div className={`${className} clsdetailnew`}>
             <div className="clsdetailnew-item1">
@@ -145,11 +119,6 @@ const DetailNew: React.FC<DetailNewProps> = ({ className }) => {
               </Grid>
             ))}
           </Grid>
-          {/* <div className={`${className} clsdetailnew`}>
-        {topmovie.slice(9, 13).map((item) => (
-          <CardColumn item={item} key={item.id} />
-        ))}
-      </div> */}
         </React.Fragment>
       ) : (
         <DetailNewSekeleton />
