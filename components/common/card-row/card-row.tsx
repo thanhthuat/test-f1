@@ -6,15 +6,25 @@ import { IresponeMovie } from "lib/models/interface";
 import apiConfig from "lib/api/apiConfig";
 import { SxProps, Theme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
+import PersonIcon from "@mui/icons-material/Person";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 interface ICardRowProps {
   item: IresponeMovie;
   isdes?: boolean;
+  isAuthor?: boolean;
   isImg?: boolean;
   className?: string;
   sx?: SxProps<Theme>;
 }
 
-const CardRow: React.FC<ICardRowProps> = ({ item, isdes = true, isImg = true, className = "",sx = {} }) => {
+const CardRow: React.FC<ICardRowProps> = ({
+  item,
+  isdes = true,
+  isImg = true,
+  className = "",
+  sx = {},
+  isAuthor = false,
+}) => {
   return (
     <article className={`${className} clsarticle`}>
       <Link href={"/detail/123"}>
@@ -36,6 +46,17 @@ const CardRow: React.FC<ICardRowProps> = ({ item, isdes = true, isImg = true, cl
               <h5>{item?.title}</h5>
             </div>
             <div className="clsarticle-summary__des">{isdes && <p>{item?.overview}</p>}</div>
+            {isAuthor && (
+              <div className="clsarticletitletop-category">
+                <span className="clsarticletitletop-category__author">
+                  <PersonIcon sx={{ paddingRight: "2px", width: "20px", height: "20px" }} />
+                  {item?.original_title.slice(0, 10)}
+                </span>
+                <span className="clsarticletitletop-category__time">
+                  <CalendarMonthIcon sx={{ paddingRight: "2px", width: "20px", height: "20px" }} /> {item?.release_date}
+                </span>
+              </div>
+            )}
           </div>
         </Box>
       </Link>

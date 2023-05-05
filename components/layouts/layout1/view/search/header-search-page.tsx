@@ -42,7 +42,7 @@ const HeaderSearchPage: React.FC<HeaderSearchPageProps> = ({ className = "" }) =
         </div>
         <SearchBox value={value} onChange={handleChange} onSubmit={handleSubmit} />
         {/* <CaterogyList /> */}
-        <CardWithAuthorRow/>
+        {/* <CardWithAuthorRow/> */}
         {/* <CardWithAuthor /> */}
         <Divider sx={{ margin: "10px 0px" }}></Divider>
       </div>

@@ -144,11 +144,11 @@ const ContentHome = (props: Props) => {
       <BoxCaterogryThreeColumn>
         <Grid2 container spacing={1}>
           <Grid xs={12} tablet={6} laptop={6}>
-            <CardColumn item={topmovie[10]} />
+            <CardColumn item={topmovie[10]} isAuthor={true} />
           </Grid>
           <Grid xs={12} tablet={6} laptop={3}>
             <CardColumn isDes={false} item={topmovie[16]} />
-            <CardColumn item={topmovie[13]} isDes={false} />
+            <CardColumn item={topmovie[13]} isDes={false}  />
           </Grid>
           <Grid xs={12} laptop={3}>
             <Grid container rowSpacing={1}>
@@ -224,11 +224,11 @@ const ContentHome = (props: Props) => {
       <BoxCaterogryThreeColumn>
         <Grid2 container spacing={1}>
           <Grid xs={12} tablet={6} laptop={6}>
-            <CardColumn item={topmovie[11]} />
+            <CardColumn item={topmovie[11]} isAuthor={true} />
           </Grid>
           <Grid xs={12} tablet={6} laptop={3}>
-            <CardColumn isDes={false} item={topmovie[12]} />
-            <CardColumn item={topmovie[14]} isDes={false} />
+            <CardColumn isDes={false} item={topmovie[12]}  />
+            <CardColumn item={topmovie[14]} isDes={false}  />
           </Grid>
           <Grid xs={12} laptop={3}>
             <Grid container rowSpacing={1} columnSpacing={1}>
@@ -288,17 +288,17 @@ const ContentHome = (props: Props) => {
       <BoxCaterogryColumn>
         <Grid container spacing={1}>
           <Grid tablet={6} tablet1={4}>
-            <CardColumn item={topmovie[18]} />
+            <CardColumn item={topmovie[18]} isAuthor={true} />
             <div className="has_border"></div>
             <CardTextTitle />
           </Grid>
           <Grid tablet={6} tablet1={4}>
-            <CardColumn item={topmovie[19]} />
+            <CardColumn item={topmovie[19]} isAuthor={true} />
             <div className="has_border"></div>
             <CardTextTitle />
           </Grid>
           <Grid tablet={6} tablet1={4}>
-            <CardColumn item={topmovie[1]} />
+            <CardColumn item={topmovie[1]} isAuthor={true} />
             <div className="has_border"></div>
             <CardTextTitle />
           </Grid>

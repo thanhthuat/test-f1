@@ -7,7 +7,8 @@ import { IresponeMovie } from "lib/models/interface";
 import apiConfig from "lib/api/apiConfig";
 import Box from "@mui/material/Box";
 import { SxProps, Theme } from "@mui/material/styles";
-
+import PersonIcon from "@mui/icons-material/Person";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 interface CardTitleTopProps {
   className?: string;
   item: IresponeMovie;
@@ -32,6 +33,15 @@ const CardTitleTop: React.FC<CardTitleTopProps> = ({ className = "", item, sx = 
             </div>
             <div className="clsarticletitletop-des">
               <p>{item?.overview}</p>
+              <div className="clsarticletitletop-category">
+                <span className="clsarticletitletop-category__author">
+                  <PersonIcon sx={{ paddingRight: "2px", width: "20px", height: "20px" }} />
+                  {item?.original_title.slice(0, 10)}
+                </span>
+                <span className="clsarticletitletop-category__time">
+                  <CalendarMonthIcon sx={{ paddingRight: "2px", width: "20px", height: "20px" }} /> {item?.release_date}
+                </span>
+              </div>
             </div>
           </div>
         </Box>

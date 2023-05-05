@@ -45,7 +45,7 @@ const CategoryNew: React.FC<CategoryNewProps> = ({ className = "" }) => {
                 topmovie?.slice(4, 7).map((item, index) => {
                   return (
                     <Grid sm={4} key={index}>
-                      <CardColumn item={item} key={item.title} />
+                      <CardColumn item={item} key={item.title} isAuthor={true} />
                     </Grid>
                   );
                 })}
@@ -64,7 +64,7 @@ const CategoryNew: React.FC<CategoryNewProps> = ({ className = "" }) => {
           <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} xs>
             <BoxCategory className="clslistcategory-item2">
               {topmovie.slice(12, 20).map((item) => (
-                <CardRow className="border" item={item} key={item.title} />
+                <CardRow className="border" item={item} key={item.title} isAuthor={true} />
               ))}
             </BoxCategory>
           </Grid>

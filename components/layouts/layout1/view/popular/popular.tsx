@@ -43,7 +43,7 @@ const PopularNews: React.FC<PopularNewsProps> = ({ className = "" }) => {
             <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} desktop={7} xs={12} laptop={7}>
               <CardRowMain />
               {topmovie.slice(0, 20).map((item) => (
-                <CardRow className="border" item={item} key={item.title} />
+                <CardRow className="border" item={item} key={item.title} isAuthor={true} />
               ))}
             </Grid>
             <Divider
@@ -59,7 +59,7 @@ const PopularNews: React.FC<PopularNewsProps> = ({ className = "" }) => {
             <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} xs>
               <BoxCategory className="clslistcategory-item2">
                 {topmovie.slice(12, 20).map((item) => (
-                  <CardRow className="border" item={item} key={item.title} />
+                  <CardRow className="border" item={item} key={item.title} isAuthor={true} />
                 ))}
               </BoxCategory>
             </Grid>

@@ -22,7 +22,7 @@ const BlockContent: React.FC<BlockContentProps> = ({ className = "", sx = {}, ch
       <div className="clstabblock-contenttop">
         <div className="clstabblock-right">
           {topmovie.slice(10, 11).map((item, index) => {
-            return <CardRow item={item} key={index} />;
+            return <CardRow item={item} key={index} isAuthor={true} />;
           })}
         </div>
         <div className="clstabblock-left ">
