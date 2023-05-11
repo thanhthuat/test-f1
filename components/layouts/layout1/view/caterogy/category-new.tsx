@@ -38,7 +38,7 @@ const CategoryNew: React.FC<CategoryNewProps> = ({ className = "" }) => {
       <BorderLine />
       <Box className=" ">
         <Grid container spacing={2}>
-          <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} md={8} sm={12}>
+          <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} md={7} sm={12}>
             <CardRowMain />
             <Grid container spacing={2} sx={{ paddingTop: 2, paddingLeft: 0, paddingRight: 0 }}>
               {topmovie.length > 0 &&

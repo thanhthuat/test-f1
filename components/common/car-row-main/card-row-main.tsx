@@ -22,21 +22,27 @@ const CardRowMain: React.FC<ICardRowMain> = ({ children, className = "", sx = {}
       {topmovie[0] && (
         <Link href={"/detail/s"}>
           <Box className="clsarticlemain-content" sx={{ ...sx }}>
-            <div className="clsarticlemain-img">
-              <Image
-                src={
-                  topmovie[0]?.backdrop_path
-                    ? apiConfig.originalImage(topmovie[0]?.backdrop_path)
-                    : img
-                }
-                alt={topmovie[0]?.title}
-                width="1500"
-                height="750"
-              />
-            </div>
+            {topmovie[0]?.backdrop_path && (
+              <div className="clsarticlemain-img">
+                <Image
+                  src={
+                    topmovie[0]?.backdrop_path
+                      ? apiConfig.originalImage(topmovie[0]?.backdrop_path)
+                      : img
+                  }
+                  alt={topmovie[0]?.title}
+                  width="1500"
+                  height="750"
+                />
+              </div>
+            )}
+
             <div className="clsarticlemain-summary">
               <div className="clsarticlemain-summary__title">
                 <h5>{topmovie[0]?.title}</h5>
+              </div>
+              <div className="clsarticlemain-summary__title">
+                <h5>{topmovie[0]?.popularity}</h5>
               </div>
               <div className="clsarticlemain-summary__des">
                 <p> {topmovie[0]?.overview}</p>
@@ -47,7 +53,8 @@ const CardRowMain: React.FC<ICardRowMain> = ({ children, className = "", sx = {}
                   {topmovie[0]?.original_title.slice(0, 10)}
                 </p>
                 <p className="clsarticlemain-summary__category-time">
-                  <CalendarMonthIcon sx={{ paddingRight: "2px", width: "20px", height: "20px" }} /> {topmovie[0]?.release_date}
+                  <CalendarMonthIcon sx={{ paddingRight: "2px", width: "20px", height: "20px" }} />{" "}
+                  {topmovie[0]?.release_date}
                 </p>
               </div>
             </div>

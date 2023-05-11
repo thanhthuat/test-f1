@@ -1,5 +1,5 @@
 import DetailArticle from "@components/common/detail-article/detail-article";
-import MainLayout from "@components/layouts/layout1/HOC/main-layout";
+import MainLayout from "@components/layouts/layout1/hoc/main-layout";
 import DetailNew from "@components/layouts/layout1/view/detail-new/detail-new";
 import Head from "next/head";
 import React from "react";

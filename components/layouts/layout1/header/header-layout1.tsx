@@ -46,12 +46,7 @@ const HeaderLayout1 = (props: Props) => {
 
   return (
     <div className="clsheaderlayou1" ref={headerRef}>
-      <header className="clsheaderlayou1-content containerlayout1">
-        <div className="clsheaderlayou1-logo">
-          <Link href={"/"}>
-            <HomeIcon />
-          </Link>
-        </div>
+      <header className="clsheaderlayou1-content ">
         <nav className="clsheaderlayou1-parent">
           {/* <input type="checkbox" id="nav-toggle" onClick={() => setRotate(!rotate)} /> */}
           <div
@@ -67,18 +62,21 @@ const HeaderLayout1 = (props: Props) => {
               return (
                 <li className="clsheaderlayou1-item" key={`${item.title}-${index}`}>
                   <Link href={`/popular/${index}`}>{item.title}</Link>
-                  <ul className="clsheaderlayou1-submenu">
-                    {item.submenu.map((item, index) => {
-                      return (
-                        <li
-                          className="clsheaderlayou1-submenu__item"
-                          key={`${item.title}-${index}`}
-                        >
-                          <Link href={`/category/${index}`}>{item.title}</Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
+                  {item.submenu.length > 0 && (
+                    <ul className="clsheaderlayou1-submenu">
+                      {item.submenu.length > 0 &&
+                        item.submenu.map((item, index) => {
+                          return (
+                            <li
+                              className="clsheaderlayou1-submenu__item"
+                              key={`${item.title}-${index}`}
+                            >
+                              <Link href={`/category/${index}`}>{item.title}</Link>
+                            </li>
+                          );
+                        })}
+                    </ul>
+                  )}
                 </li>
               );
             })}
@@ -97,20 +95,21 @@ const HeaderLayout1 = (props: Props) => {
                     <Link href={`/popular/${index}`} className="ismobile-category__title">
                       {item.title}
                     </Link>
-
-                    <ul className="">
-                      {item.submenu.map((item, index) => {
-                        return (
-                          <li
-                            className=""
-                            key={`${item.title}-${index}`}
-                            onClick={() => setRotate(!rotate)}
-                          >
-                            <Link href={`/category/${index}`}>{item.title}</Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
+                    {item.submenu.length > 0 && (
+                      <ul className="">
+                        {item.submenu.map((item, index) => {
+                          return (
+                            <li
+                              className=""
+                              key={`${item.title}-${index}`}
+                              onClick={() => setRotate(!rotate)}
+                            >
+                              <Link href={`/category/${index}`}>{item.title}</Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    )}
                   </li>
                 );
               })}

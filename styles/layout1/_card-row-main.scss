@@ -15,7 +15,7 @@
     }
   }
   &-img {
-    width: 70%;
+    width: 66%;
     flex-shrink: 0;
     overflow: hidden;
     @include res(768px) {
@@ -65,11 +65,12 @@
         margin-top: 10px;
         font-size: 14px;
         line-height: 140%;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        overflow: hidden;
+        // display: -webkit-box;
+        // -webkit-line-clamp: 3;
+        // -webkit-box-orient: vertical;
+        // text-overflow: ellipsis;
+        // overflow: hidden;
+        @include displayText(7);
         @include res(500px) {
           font-size: 12px;
         }

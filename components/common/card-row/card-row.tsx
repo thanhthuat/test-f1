@@ -29,17 +29,18 @@ const CardRow: React.FC<ICardRowProps> = ({
     <article className={`${className} clsarticle`}>
       <Link href={"/detail/123"}>
         <Box className="clsarticle-content" sx={{ ...sx }}>
-          {isImg && (
-            <div className="clsarticle-img">
-              {/* <Image src={img} alt="123" /> */}
-              <Image
-                src={item?.backdrop_path ? apiConfig.originalImage(item?.backdrop_path) : img}
-                alt={item?.title || "img"}
-                width="500"
-                height="350"
-              />
-            </div>
-          )}
+          {isImg &&
+            item?.backdrop_path &&(
+              <div className="clsarticle-img">
+                {/* <Image src={img} alt="123" /> */}
+                <Image
+                  src={item?.backdrop_path ? apiConfig.originalImage(item?.backdrop_path) : img}
+                  alt={item?.title || "img"}
+                  width="500"
+                  height="350"
+                />
+              </div>
+            )}
 
           <div className="clsarticle-summary">
             <div className="clsarticle-summary__title">
@@ -53,7 +54,8 @@ const CardRow: React.FC<ICardRowProps> = ({
                   {item?.original_title.slice(0, 10)}
                 </span>
                 <span className="clsarticletitletop-category__time">
-                  <CalendarMonthIcon sx={{ paddingRight: "2px", width: "20px", height: "20px" }} /> {item?.release_date}
+                  <CalendarMonthIcon sx={{ paddingRight: "2px", width: "20px", height: "20px" }} />{" "}
+                  {item?.release_date}
                 </span>
               </div>
             )}

@@ -32,6 +32,7 @@
     flex-basis: 40%;
     flex-shrink: 0;
     overflow: hidden;
+   margin-right: 10px;
     img {
       transition: transform linear 0.35s;
       width: 100%;
@@ -40,7 +41,6 @@
     }
   }
   &-des {
-    padding: 0px 0px 0px 10px;
     p {
       font-size: 14px;
       line-height: 140%;

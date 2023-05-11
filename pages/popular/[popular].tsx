@@ -1,4 +1,4 @@
-import MainLayout from "@components/layouts/layout1/HOC/main-layout";
+import MainLayout from "@components/layouts/layout1/hoc/main-layout";
 import PopularNews from "@components/layouts/layout1/view/popular/popular";
 import Head from "next/head";
 import React from "react";

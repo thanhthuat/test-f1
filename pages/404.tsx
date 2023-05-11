@@ -1,5 +1,5 @@
 import NotFound from "@components/common/not-found/not-found";
-import MainLayout from "@components/layouts/layout1/HOC/main-layout";
+import MainLayout from "@components/layouts/layout1/hoc/main-layout";
 import React from "react";
 
 type Props = {};

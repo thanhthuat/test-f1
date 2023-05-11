@@ -26,8 +26,8 @@ import BoxCaterogryColumnHeader from "@components/common/box-caterogy-column/box
 import CardText from "@components/common/card-text/card-text";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { Box, Divider } from "@mui/material";
-
+import { Box, Divider, Stack } from "@mui/material";
+import Button from "@mui/material/Button";
 type Props = {};
 
 const ContentHome = (props: Props) => {
@@ -44,11 +44,11 @@ const ContentHome = (props: Props) => {
       <div className="clscontenthomelayout1 pt-2">
         <Box className="">
           <Grid container spacing={2}>
-            <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} md={9} sm={12}>
+            <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} md={8} sm={12}>
               <CardRowMain />
               <Grid container spacing={2} sx={{ paddingTop: 2 }}>
                 {topmovie.length > 0 &&
-                  topmovie?.slice(4, 6).map((item, index) => {
+                  topmovie?.slice(4, 7).map((item, index) => {
                     return (
                       <Grid sm={4} key={index}>
                         <Divider
@@ -80,24 +80,6 @@ const ContentHome = (props: Props) => {
                     },
                   }}
                 ></Divider>
-                <Grid xs>
-                  <Divider
-                    orientation="horizontal"
-                    flexItem
-                    sx={{
-                      borderRightWidth: "3px",
-                      display: {
-                        xs: "block",
-                        sm: "none",
-                      },
-                      marginBottom: {
-                        xs: 1,
-                        sm: 0,
-                      },
-                    }}
-                  />
-                  <ExpertPerspective />
-                </Grid>
               </Grid>
             </Grid>
             <Divider
@@ -111,7 +93,16 @@ const ContentHome = (props: Props) => {
               }}
             ></Divider>
             <Grid sx={{ paddingTop: 0 }} xs>
-              <BannerAdvertise />
+              <BoxCategory className="clslistcategory-item2">
+                <Stack spacing={2} direction="row">
+                  <Button variant="contained">Last new</Button>
+                  <Button variant="contained">New</Button>
+                </Stack>
+
+                {topmovie.slice(12, 20).map((item) => (
+                  <CardRow className="border" item={item} key={item.title} isAuthor={true} />
+                ))}
+              </BoxCategory>
             </Grid>
           </Grid>
         </Box>
@@ -148,7 +139,7 @@ const ContentHome = (props: Props) => {
           </Grid>
           <Grid xs={12} tablet={6} laptop={3}>
             <CardColumn isDes={false} item={topmovie[16]} />
-            <CardColumn item={topmovie[13]} isDes={false}  />
+            <CardColumn item={topmovie[13]} isDes={false} />
           </Grid>
           <Grid xs={12} laptop={3}>
             <Grid container rowSpacing={1}>
@@ -227,8 +218,8 @@ const ContentHome = (props: Props) => {
             <CardColumn item={topmovie[11]} isAuthor={true} />
           </Grid>
           <Grid xs={12} tablet={6} laptop={3}>
-            <CardColumn isDes={false} item={topmovie[12]}  />
-            <CardColumn item={topmovie[14]} isDes={false}  />
+            <CardColumn isDes={false} item={topmovie[12]} />
+            <CardColumn item={topmovie[14]} isDes={false} />
           </Grid>
           <Grid xs={12} laptop={3}>
             <Grid container rowSpacing={1} columnSpacing={1}>

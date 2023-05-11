@@ -27,14 +27,17 @@ const CardColumn: React.FC<CardColumnProps> = ({
     <article className={`${className} clscardcolumn`}>
       <Link href={`/detail/${item?.title}`}>
         <Box className="clscardcolumn-content" sx={{ ...sx }}>
-          <div className="clscardcolumn-img">
-            <Image
-              src={item?.backdrop_path ? apiConfig.originalImage(item?.backdrop_path) : img}
-              alt={item?.title || "img"}
-              width="500"
-              height="350"
-            />
-          </div>
+          {item?.backdrop_path && (
+            <div className="clscardcolumn-img">
+              <Image
+                src={item?.backdrop_path ? apiConfig.originalImage(item?.backdrop_path) : img}
+                alt={item?.title || "img"}
+                width="500"
+                height="350"
+              />
+            </div>
+          )}
+
           <div className="clscardcolumn-des">
             <div className="clscardcolumn-title">
               <h5 className="clscardcolumn-title__title">{item?.title}</h5>

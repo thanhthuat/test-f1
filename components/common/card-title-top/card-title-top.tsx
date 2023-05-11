@@ -23,14 +23,17 @@ const CardTitleTop: React.FC<CardTitleTopProps> = ({ className = "", item, sx = 
             <h3>{item?.title}</h3>
           </div>
           <div className="clsarticletitletop-body">
-            <div className="clsarticletitletop-image">
-              <Image
-                src={item?.backdrop_path ? apiConfig.originalImage(item?.backdrop_path) : img}
-                alt={item?.title || "img"}
-                width="1500"
-                height="750"
-              />
-            </div>
+            {item?.backdrop_path && (
+              <div className="clsarticletitletop-image">
+                <Image
+                  src={item?.backdrop_path ? apiConfig.originalImage(item?.backdrop_path) : img}
+                  alt={item?.title || "img"}
+                  width="1500"
+                  height="750"
+                />
+              </div>
+            )}
+
             <div className="clsarticletitletop-des">
               <p>{item?.overview}</p>
               <div className="clsarticletitletop-category">
@@ -39,7 +42,8 @@ const CardTitleTop: React.FC<CardTitleTopProps> = ({ className = "", item, sx = 
                   {item?.original_title.slice(0, 10)}
                 </span>
                 <span className="clsarticletitletop-category__time">
-                  <CalendarMonthIcon sx={{ paddingRight: "2px", width: "20px", height: "20px" }} /> {item?.release_date}
+                  <CalendarMonthIcon sx={{ paddingRight: "2px", width: "20px", height: "20px" }} />{" "}
+                  {item?.release_date}
                 </span>
               </div>
             </div>

@@ -8,13 +8,16 @@
   z-index: 99999;
   &-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 60px;
+    min-height: 60px;
+    margin: 0px auto;
   }
   &-parent {
     .isdesktop {
       display: flex;
+      max-width: 1200px;
+      flex-wrap: wrap;
       @include res(1100px) {
         display: none;
       }
