@@ -1,4 +1,4 @@
-import MainLayout from "@components/layouts/layout1/hoc/main-layout";
+import MainLayout from "@components/layouts/layout1/hoc-component/main-layout";
 import CategoryNew from "@components/layouts/layout1/view/caterogy/category-new";
 import Head from "next/head";
 import React from "react";
