@@ -1,6 +1,6 @@
 import React from "react";
-import ContentHome from "../../content-home/content-home";
 import MainLayout from "../../hoc/main-layout";
+import ContentHome from "../../content-home/content-home";
 
 type Props = {};
 
