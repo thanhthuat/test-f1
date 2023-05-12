@@ -49,14 +49,6 @@ const HeaderLayout1 = (props: Props) => {
       <header className="clsheaderlayou1-content ">
         <nav className="clsheaderlayou1-parent">
           {/* <input type="checkbox" id="nav-toggle" onClick={() => setRotate(!rotate)} /> */}
-          <div
-            className={rotate ? "icon-burger active " : "icon-burger"}
-            onClick={() => setRotate(!rotate)}
-          >
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
-          </div>
           <ul className="isdesktop">
             {data.map((item, index) => {
               return (
@@ -82,39 +74,7 @@ const HeaderLayout1 = (props: Props) => {
             })}
           </ul>
 
-          <div className={rotate ? "ismobile active " : "ismobile"}>
-            <div className="ismobile-bg" onClick={() => setRotate(!rotate)}></div>
-            <ul className="ismobile-content">
-              {data.map((item, index) => {
-                return (
-                  <li
-                    className="ismobile-category"
-                    key={`${item.title}-${index}`}
-                    onClick={() => setRotate(!rotate)}
-                  >
-                    <Link href={`/popular/${index}`} className="ismobile-category__title">
-                      {item.title}
-                    </Link>
-                    {item.submenu.length > 0 && (
-                      <ul className="">
-                        {item.submenu.map((item, index) => {
-                          return (
-                            <li
-                              className=""
-                              key={`${item.title}-${index}`}
-                              onClick={() => setRotate(!rotate)}
-                            >
-                              <Link href={`/category/${index}`}>{item.title}</Link>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+        
         </nav>
       </header>
     </div>

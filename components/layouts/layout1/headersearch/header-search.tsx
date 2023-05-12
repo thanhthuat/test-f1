@@ -15,6 +15,7 @@ import SearchApi from "@components/common/search-api/search-api";
 import CloseIcon from "@mui/icons-material/Close";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import BasicModal from "@components/common/modal-signin/modal-signin";
+import Button from "@mui/material/Button";
 interface HeaderSearchProps {
   sx?: {};
   className?: string;
@@ -57,6 +58,7 @@ const HeaderSearch: React.FC<HeaderSearchProps> = ({ className = "", sx = {} }) 
             </div>
           </div>
           <div className="clsheadersearch-right">
+             <Button >Login | Sign-up</Button>
             <BasicModal/>
             {/* <SearchApi /> */}
           </div>

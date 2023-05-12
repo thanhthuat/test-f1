@@ -1,24 +1,30 @@
 .clsheadersearch {
   padding: 5px 0px 5px 0px;
   background: #eaeaea;
-  @include res(1250px) {
-    padding: 20px 15px 30px 15px;
-  }
-  @include res(600px) {
-    padding: 10px 15px;
-  }
+  // @include res(1250px) {
+  //   padding: 20px 15px 30px 15px;
+  // }
+  // @include res(600px) {
+  //   padding: 10px 15px;
+  // }
   &-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    @include res(786px) {
+    @include res(400px) {
       flex-direction: column;
     }
   }
   &-left {
     display: flex;
     align-items: center;
+     @include res(400px) {
+       align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    }
+   
   }
   &-logo {
     .icon-burger {
@@ -57,10 +63,10 @@
     width: 150px;
   }
   &-right {
-    @include res(786px) {
-      margin-top: 10px;
-      width: 15%;
-    }
+    // @include res(786px) {
+    //   margin-top: 10px;
+    //   width: 15%;
+    // }
 
     // transition: width linear 0.3s;
     // .MuiOutlinedInput-notchedOutline {

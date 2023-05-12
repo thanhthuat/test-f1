@@ -61,7 +61,7 @@ export default function BasicModal() {
   };
   return (
     <div>
-      <Button onClick={handleOpen}>Login | Sign-up</Button>
+      {/* <Button onClick={handleOpen}>Login | Sign-up</Button> */}
       <Modal
         open={open}
         onClose={handleClose}
