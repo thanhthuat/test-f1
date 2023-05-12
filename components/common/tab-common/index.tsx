@@ -57,7 +57,7 @@ const TabContainer: React.FC<TabContainerProps> = ({ arrayTabs, arrayTabPanel })
       </Box>
       {arrayTabPanel.map((item, index) => {
         return (
-          <TabPanel value={value} index={index}>
+          <TabPanel value={value} index={index} key={`tabpanel-${index}`}>
             {item.children}
           </TabPanel>
         );
