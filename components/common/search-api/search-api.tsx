@@ -1,7 +1,4 @@
-import { useAppDispatch } from "@hook/hooks";
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
+import { useAppDispatch, useOnClickOutside } from "@hook/hooks";
 import React from "react";
 import { useRouter } from "next/router";
 import { ChangeEvent, useEffect, useRef, useState } from "react";
@@ -31,32 +28,31 @@ export interface Images {
 const SearchApi = () => {
   const [notices, setNotices] = useState<IresponeMovie[]>([]);
   const [search, setSearch] = useState<string | null>(null);
+  const [searchDebouce, setSearchDebouce] = useState<string>("");
   const [loading, setLoading] = useState(false);
   const typingTimeOut = useRef<ReturnType<typeof setInterval> | null>(null);
+  const inputRef = useRef<HTMLDivElement>(null);
+
+  const clickOutsidehandler = () => {
+    if (notices.length != 0 || (notices.length == 0 && search && !loading)) {
+      setNotices([]);
+      setLoading(false);
+      setSearch(null);
+      setSearchDebouce("");
+    }
+  };
+  useOnClickOutside(inputRef, clickOutsidehandler);
 
   const router = useRouter();
   const dispatch = useAppDispatch();
 
   const [value, setValue] = React.useState((router.query?.search as string) || " ");
-  //   const handleSubmit = (e: React.FormEvent<HTMLFormElement> | React.MouseEvent) => {
-  //     e.preventDefault();
-  //     if (value === "") return;
-  //     router.replace(`/search/${value}`);
-  //   };
-  //   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //     setValue(event.target.value);
-  //   };
-  //   useEffect(() => {
-  //     setValue((router.query?.search as string) || "");
-  //     dispatch(searchList({ params: router.query?.search as string }));
-  //     return () => {};
-  //   }, [router.query?.search]);
-  //   useEffect(() => {
-  //     dispatch(searchList({ params: router.query?.search as string }));
-  //   }, []);
-
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    if (!loading && e.target.value) {
+    setSearchDebouce(e.target.value);
+    if (!Boolean(e.target.value)) {
+      setLoading(false);
+    }
+    if (!loading && Boolean(e.target.value)) {
       setLoading(true);
     }
     if (typingTimeOut.current) {
@@ -68,24 +64,30 @@ const SearchApi = () => {
   };
   const handleRender = () => {
     if (notices.length == 0 && search && !loading) {
-      return <p>Không tìm thấy kết quả chứa từ khóa của bạn</p>;
+      return (
+        <div className={search == null ? "clssearchapi-results nodisplay" : "clssearchapi-results"}>
+          <p>Không tìm thấy kết quả chứa từ khóa của bạn</p>
+        </div>
+      );
     } else {
-      return notices.map((item, index) => (
-        <CardRow className="border" item={item} key={`${index}-${item.title}`} />
-      ));
+      return (
+        <div
+          className={
+            notices.length == 0 ? "clssearchapi-results nodisplay" : "clssearchapi-results"
+          }
+        >
+          {notices.map((item, index) => (
+            <CardRow className="border mb-10 pd-10" item={item} key={`${index}-${item.title}`} />
+          ))}
+        </div>
+      );
     }
   };
   useEffect(() => {
-    // search the api
-
     async function fetchData() {
       setLoading(true);
       setNotices([]);
       let res = await dispatch(searchList({ params: search as string }));
-
-      //   const data = await fetch(
-      //     `https://ws-public.interpol.int/notices/v1/red?forename=${search}&resultPerPage=200`
-      //   ).then((res) => res.json());
       setNotices(res.payload.data.results);
       setLoading(false);
     }
@@ -93,13 +95,25 @@ const SearchApi = () => {
   }, [search]);
 
   return (
-    <div>
-      <main>
-        {" "}
-        <input type="search" placeholder="Search" onChange={handleChange} />
-        {loading && <p>Loading...</p>}
+    <div className="clssearchapi">
+      <div className="clssearchapi-content" ref={inputRef}>
+        <input
+          className="clssearchapi-input"
+          type="search"
+          placeholder="Search"
+          value={searchDebouce}
+          onChange={handleChange}
+        />
+
+        {loading && (
+          <div className="typing">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        )}
         {handleRender()}
-      </main>
+      </div>
     </div>
   );
 };

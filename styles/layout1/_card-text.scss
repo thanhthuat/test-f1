@@ -5,70 +5,92 @@
 
   &-content {
     transition: all 0.2s;
+
     &:hover .clsarticletext-title h5 {
-     text-decoration: underline;
+      text-decoration: underline;
     }
   }
   &-title {
-    h5{
-      font-family: 'Merriweather', serif;
+    h5 {
+      font-family: "Merriweather", serif;
       color: #222222;
-    font-size: 14px;
-    font-weight: 700;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    transition: all linear 0.3s;
-    }
-    
-  }
-  &-des{
-    p{
       font-size: 14px;
-    line-height: 140%;
-    margin-top: 5px;
-    color: #4f4f4f;
+      font-weight: 700;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      transition: all linear 0.3s;
     }
-    
+  }
+  &-des {
+    p {
+      font-size: 14px;
+      line-height: 140%;
+      margin-top: 5px;
+      color: #4f4f4f;
+    }
   }
 }
 
 .clsarticletexttitle {
   width: 100%;
   height: auto;
- 
+  display: flex;
+
   &-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  &-top {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    // h5 {
+
+    //   color: #222222;
+    //   font-size: 15px;
+    //   font-weight: 700;
+    //   line-height: 160%;
+    //   font-family: "Merriweather", serif;
+    // }
   }
   &-title {
-    h5{
-      color: #222222;
+    color: #222222;
     font-size: 15px;
     font-weight: 700;
     line-height: 160%;
-    font-family: 'Merriweather', serif;
-    }
+    font-family: "Merriweather", serif;
+    flex-grow: 1;
   }
-  &-des{
-    p{
+  &-category {
+    color: #222222;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 160%;
+    font-family: "Merriweather", serif;
+  }
+  &-des {
+    p {
       font-size: 14px;
-    line-height: 140%;
-    margin-top: 5px;
-    color: #4f4f4f;
-    @include res(768px){
-       display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    overflow: hidden;
+      line-height: 140%;
+      margin-top: 5px;
+      color: #4f4f4f;
+      @include displayText(3);
+      @include res(768px) {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      // display: -webkit-box;
+      // -webkit-line-clamp: 4;
+      // -webkit-box-orient: vertical;
+      // text-overflow: ellipsis;
+      overflow: hidden;
     }
-    // display: -webkit-box;
-    // -webkit-line-clamp: 4;
-    // -webkit-box-orient: vertical;
-    // text-overflow: ellipsis;
-    overflow: hidden;
-    }
-    
   }
 }

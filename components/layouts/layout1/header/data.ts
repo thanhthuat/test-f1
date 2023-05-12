@@ -12,9 +12,7 @@ export const data = [
     {title: "văn nghệ", submenu: [] },
     {title: "du lịch", submenu: [] },
     {title: "khu vực", submenu: [] },
-    {title: "khởi nghiệp", submenu: [{ title: "kĩ thuật khoa học" }, { title: "công nghệ IT" }, { title: "internet- thông tin" }] },
-    {title: "xây dựng", submenu: [{ title: "kĩ thuật khoa học" }, { title: "công nghệ IT" }, { title: "internet- thông tin" }] },
-    {title: "bất động sản", submenu: [{ title: "kĩ thuật khoa học" }, { title: "công nghệ IT" }, { title: "internet- thông tin" }] },
+ 
            
 ]
 

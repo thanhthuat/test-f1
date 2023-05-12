@@ -21,7 +21,11 @@ import Grid2 from "@mui/material/Unstable_Grid2";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Box, Divider, Stack } from "@mui/material";
 import Button from "@mui/material/Button";
+import TabContainer from "@components/common/tab-common";
+import RenderCard from "@components/common/render-card/render-card";
 type Props = {};
+
+const arrayTabs = [{ title: "News" }, { title: "LastNews" }];
 
 const ContentHome = (props: Props) => {
   const dispatch = useAppDispatch();
@@ -32,6 +36,7 @@ const ContentHome = (props: Props) => {
 
     return () => {};
   }, []);
+
   return (
     <>
       <div className="clscontenthomelayout1 pt-2">
@@ -39,7 +44,12 @@ const ContentHome = (props: Props) => {
           <Grid container spacing={2}>
             <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} md={8} sm={12}>
               <CardRowMain />
-              <Grid container spacing={2} sx={{ paddingTop: 2 }}>
+              <div style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}>
+                {topmovie?.slice(4, 7).map((item) => {
+                  return <CardTextTitle item={item} />;
+                })}
+              </div>
+              {/* <Grid container spacing={2} sx={{ paddingTop: 2 }}>
                 {topmovie.length > 0 &&
                   topmovie?.slice(4, 7).map((item, index) => {
                     return (
@@ -63,6 +73,7 @@ const ContentHome = (props: Props) => {
                       </Grid>
                     );
                   })}
+
                 <Divider
                   orientation="vertical"
                   flexItem
@@ -73,7 +84,7 @@ const ContentHome = (props: Props) => {
                     },
                   }}
                 ></Divider>
-              </Grid>
+              </Grid> */}
             </Grid>
             <Divider
               orientation="vertical"
@@ -87,14 +98,28 @@ const ContentHome = (props: Props) => {
             ></Divider>
             <Grid sx={{ paddingTop: 0 }} xs>
               <BoxCategory className="clslistcategory-item2">
-                <Stack spacing={2} direction="row">
-                  <Button variant="contained">Last new</Button>
-                  <Button variant="contained">New</Button>
-                </Stack>
+                <TabContainer
+                  arrayTabs={arrayTabs}
+                  arrayTabPanel={[
+                    {
+                      children: <RenderCard arr={topmovie.slice(12, 20)} />,
+                    },
+                    {
+                      children: <RenderCard arr={topmovie.slice(4, 12)} />,
+                    },
+                  ]}
+                ></TabContainer>
 
-                {topmovie.slice(12, 20).map((item) => (
-                  <CardRow className="border" item={item} key={item.title} isAuthor={true} />
-                ))}
+                {/* {topmovie.slice(12, 20).map((item) => (
+                  <CardRow
+                    className="border"
+                    item={item}
+                    key={item.title}
+                    isAuthor={true}
+                    sx={{ alignItems: "center" }}
+                    // isImg={false}
+                  />
+                ))} */}
               </BoxCategory>
             </Grid>
           </Grid>
@@ -110,14 +135,12 @@ const ContentHome = (props: Props) => {
         </div>
         <div className="clscontenthomelayout1-item1">
           <Tab>
-            {" "}
             <BlockContent></BlockContent>
           </Tab>
 
           <TabColumn />
           <div className="has_border"></div>
           <Tab>
-            {" "}
             <BlockContent />
           </Tab>
 
@@ -175,6 +198,30 @@ const ContentHome = (props: Props) => {
               <Grid xs={12} tablet={6} laptop={12}>
                 <CardRow
                   item={topmovie[15]}
+                  isdes={false}
+                  sx={{
+                    flexDirection: {
+                      laptop: "row-reverse",
+                      tablet: "row",
+                    },
+                  }}
+                />
+              </Grid>
+              <Grid xs={12} tablet={6} laptop={12}>
+                <CardRow
+                  item={topmovie[16]}
+                  isdes={false}
+                  sx={{
+                    flexDirection: {
+                      laptop: "row-reverse",
+                      tablet: "row",
+                    },
+                  }}
+                />
+              </Grid>
+              <Grid xs={12} tablet={6} laptop={12}>
+                <CardRow
+                  item={topmovie[17]}
                   isdes={false}
                   sx={{
                     flexDirection: {

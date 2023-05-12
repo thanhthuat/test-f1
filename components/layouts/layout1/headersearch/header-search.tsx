@@ -12,6 +12,9 @@ import SearchIcon from "@mui/icons-material/Search";
 import CaterogyList from "@components/common/slickCarousel/slickCarousel";
 import { data } from "../header/data";
 import SearchApi from "@components/common/search-api/search-api";
+import CloseIcon from "@mui/icons-material/Close";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import BasicModal from "@components/common/modal-signin/modal-signin";
 interface HeaderSearchProps {
   sx?: {};
   className?: string;
@@ -39,11 +42,13 @@ const HeaderSearch: React.FC<HeaderSearchProps> = ({ className = "", sx = {} }) 
         <div className={` ${className} clsheadersearch-content`}>
           <div className={`clsheadersearch-left`}>
             <div className={`clsheadersearch-logo`}>
-              <Link href={"/"}>
+              {/* <Link href={"/"}>
                 <Image src={img} alt="logo"></Image>
-              </Link>
-              <div onClick={handleOpenMenu}>
-                12345 <br /> 456
+              </Link> */}
+              <div className="icon-burger" onClick={handleOpenMenu}>
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
               </div>
             </div>
             <div className={`clsheadersearch-date`}>{DateUtil.formatShowDate(Date.now())}</div>
@@ -52,19 +57,35 @@ const HeaderSearch: React.FC<HeaderSearchProps> = ({ className = "", sx = {} }) 
             </div>
           </div>
           <div className="clsheadersearch-right">
-            <SearchApi />
-            {/* <SearchBox
-              value={value}
-              onChange={handleChange}
-              onSubmit={handleSubmit}
-              sx={{ with: "100%" }}
-            /> */}
+            <BasicModal/>
+            {/* <SearchApi /> */}
           </div>
         </div>
       </Box>
       <ul className={openMenu ? "clsheadersearch-menu active" : "clsheadersearch-menu"}>
-        {data.map((item) => {
-          return <li> {item.title}</li>;
+        <div onClick={handleOpenMenu} className="clsheadersearch-close">
+          <CloseIcon />
+        </div>
+        {data.map((item, index) => {
+          return (
+            <li className="clsheadersearch-menu__title" key={`${item.title}-${index}`}>
+              <Link href={`/popular/${index}`} className=" clsheadersearch-menu__icon">
+                {item.title}
+                {item.submenu.length > 0 && <KeyboardArrowDownIcon />}
+              </Link>
+              {item.submenu.length > 0 && (
+                <ul className="">
+                  {item.submenu.map((item, index) => {
+                    return (
+                      <li className="clsheadersearch-menu__subtitle" key={`${item.title}-${index}`}>
+                        <Link href={`/category/${index}`}>{item.title}</Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+            </li>
+          );
         })}
       </ul>
     </div>

@@ -16,7 +16,7 @@
   &-img {
     width: 33%;
     flex-shrink: 0;
-
+    margin-right: 15px;
     overflow: hidden;
     img {
       transition: transform linear 0.35s;
@@ -33,7 +33,7 @@
   &-summary {
     display: flex;
     flex-direction: column;
-    padding: 0px 10px 5px 15px;
+    padding: 0px 10px 5px 0px;
     &__title {
       h5 {
         font-family: "Merriweather", serif;
@@ -55,4 +55,7 @@
       }
     }
   }
+}
+.clsarticle.border {
+     border-bottom: 1px solid #e5e5e5;
 }

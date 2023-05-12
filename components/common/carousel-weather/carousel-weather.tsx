@@ -18,16 +18,18 @@ const CarouselWeather: React.FC<CarouselWeatherProps> = ({ className = "" }) => 
         autoplay={{ delay: 2000, disableOnInteraction: false }}
         modules={[Autoplay]}
       >
-        <SwiperSlide>
-          Hcm 18 C <Brightness2Icon />{" "}
+        <SwiperSlide style={{ background: "transparent" }}>
+          <div style={{ background: "transparent" }}>
+            Hcm 18 C <Brightness2Icon />{" "}
+          </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide style={{ background: "transparent" }}>
           Ha Noi 19 C <Brightness3Icon />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide style={{ background: "transparent" }}>
           Da Nang 15 C <Brightness5Icon />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide style={{ background: "transparent" }}>
           Nghe An 30 C <Brightness4Icon />
         </SwiperSlide>
       </Swiper>
