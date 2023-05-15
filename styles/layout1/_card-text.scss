@@ -72,11 +72,7 @@
       color: #4f4f4f;
       @include displayText(3);
       @include res(768px) {
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        overflow: hidden;
+        @include displayText(4  );
       }
       // display: -webkit-box;
       // -webkit-line-clamp: 4;
