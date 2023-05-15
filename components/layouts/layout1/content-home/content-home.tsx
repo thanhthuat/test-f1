@@ -102,10 +102,10 @@ const ContentHome = (props: Props) => {
                   arrayTabs={arrayTabs}
                   arrayTabPanel={[
                     {
-                      children: <RenderCard arr={topmovie.slice(12, 20)} />,
+                      children: <RenderCard arr={topmovie.slice(12, 17)} />,
                     },
                     {
-                      children: <RenderCard arr={topmovie.slice(4, 12)} />,
+                      children: <RenderCard arr={topmovie.slice(4, 9)} />,
                     },
                   ]}
                 ></TabContainer>
@@ -163,6 +163,7 @@ const ContentHome = (props: Props) => {
                 <CardRow
                   item={topmovie[18]}
                   isdes={false}
+                  className="iscolumn"
                   sx={{
                     flexDirection: {
                       laptop: "row-reverse",
@@ -175,6 +176,7 @@ const ContentHome = (props: Props) => {
                 <CardRow
                   item={topmovie[17]}
                   isdes={false}
+                  className="iscolumn"
                   sx={{
                     flexDirection: {
                       laptop: "row-reverse",
@@ -187,6 +189,7 @@ const ContentHome = (props: Props) => {
                 <CardRow
                   item={topmovie[16]}
                   isdes={false}
+                  className="iscolumn"
                   sx={{
                     flexDirection: {
                       laptop: "row-reverse",
@@ -199,6 +202,7 @@ const ContentHome = (props: Props) => {
                 <CardRow
                   item={topmovie[15]}
                   isdes={false}
+                  className="iscolumn"
                   sx={{
                     flexDirection: {
                       laptop: "row-reverse",
@@ -211,6 +215,7 @@ const ContentHome = (props: Props) => {
                 <CardRow
                   item={topmovie[16]}
                   isdes={false}
+                  className="iscolumn"
                   sx={{
                     flexDirection: {
                       laptop: "row-reverse",
@@ -223,6 +228,7 @@ const ContentHome = (props: Props) => {
                 <CardRow
                   item={topmovie[17]}
                   isdes={false}
+                  className="iscolumn"
                   sx={{
                     flexDirection: {
                       laptop: "row-reverse",
@@ -267,6 +273,7 @@ const ContentHome = (props: Props) => {
                 <CardRow
                   item={topmovie[15]}
                   isdes={false}
+                  className="iscolumn"
                   sx={{
                     flexDirection: {
                       laptop: "row-reverse",
@@ -279,6 +286,7 @@ const ContentHome = (props: Props) => {
                 <CardRow
                   item={topmovie[16]}
                   isdes={false}
+                  className="iscolumn"
                   sx={{
                     flexDirection: {
                       laptop: "row-reverse",
@@ -291,6 +299,21 @@ const ContentHome = (props: Props) => {
                 <CardRow
                   item={topmovie[17]}
                   isdes={false}
+                  className="iscolumn"
+                  sx={{
+                    flexDirection: {
+                      laptop: "row-reverse",
+                      tablet: "row",
+                    },
+                    textAlign: "right",
+                  }}
+                />
+              </Grid>
+              <Grid xs={12} tablet={6} laptop={12}>
+                <CardRow
+                  item={topmovie[19]}
+                  isdes={false}
+                  className="iscolumn"
                   sx={{
                     flexDirection: {
                       laptop: "row-reverse",
@@ -301,8 +324,22 @@ const ContentHome = (props: Props) => {
               </Grid>
               <Grid xs={12} tablet={6} laptop={12}>
                 <CardRow
-                  item={topmovie[19]}
+                  item={topmovie[11]}
                   isdes={false}
+                  className="iscolumn"
+                  sx={{
+                    flexDirection: {
+                      laptop: "row-reverse",
+                      tablet: "row",
+                    },
+                  }}
+                />
+              </Grid>
+              <Grid xs={12} tablet={6} laptop={12}>
+                <CardRow
+                  item={topmovie[10]}
+                  isdes={false}
+                  className="iscolumn"
                   sx={{
                     flexDirection: {
                       laptop: "row-reverse",

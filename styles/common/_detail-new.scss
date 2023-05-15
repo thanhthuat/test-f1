@@ -5,6 +5,60 @@
     justify-content: space-between;
     margin-bottom: 10px;
     align-items: center;
+    &__detail {
+      display: flex;
+      align-items: center;
+      .author,
+      .time,
+      .view {
+        display: flex;
+        align-items: center;
+        padding: 0px 10px;
+      }
+      .author {
+        span {
+          color: rgb(199, 20, 20);
+        }
+      }
+      .time,
+      .view {
+        color: #999999;
+      }
+      .author {
+        padding-left: 0px;
+      }
+      .time,
+      .view {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1px;
+          height: 100%;
+          background: #999999;
+        }
+      }
+    }
+
+    &__action {
+      display: flex;
+      .share-icon,
+      .save-icon,
+      .sum-icon,
+      .print-icon {
+        height: 42px;
+        width: 42px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 4px;
+        color: #999999;
+      }
+    }
     @include res(600px) {
       justify-content: flex-end;
       .cls-BreadCrumb {
@@ -16,14 +70,13 @@
     h1 {
       font-size: 32px;
       line-height: 150%;
-      font-family: "Merriweather", serif;
+      font-family: "Noto Sans KR", sans-serif;
       font-weight: bold;
       margin-bottom: 15px;
-       @include res(600px) {
-     line-height: 100%;
-     font-size: 24px;
+      @include res(600px) {
+        line-height: 100%;
+        font-size: 24px;
       }
-    
     }
   }
 }

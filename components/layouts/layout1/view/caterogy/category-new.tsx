@@ -92,9 +92,11 @@ const CategoryNew: React.FC<CategoryNewProps> = ({ className = "" }) => {
       </div> */}
       <section className="has_border  clscontenthomelayout1-content  ">
         <div className="clscontenthomelayout1-item3">
-          {topmovie.slice(7, 14).map((item, index) => {
-            return <CardTitleTop key={index} item={item} />;
-          })}
+          <Box sx={{ paddingTop: 0, paddingBottom: 0, position: "sticky", top: "66px" }}>
+            {topmovie.slice(7, 14).map((item, index) => {
+              return <CardTitleTop key={index} item={item} />;
+            })}
+          </Box>
         </div>
 
         <div className="clscontenthomelayout1-item1">

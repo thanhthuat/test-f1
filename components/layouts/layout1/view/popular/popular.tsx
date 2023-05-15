@@ -9,7 +9,7 @@ import BorderLine from "@components/common/border-line/border-line";
 import CardTitleTop from "@components/common/card-title-top/card-title-top";
 
 import TabColumn from "@components/common/tab/tab";
-
+import BoxCaterogryThreeColumn from "@components/common/box-caterogy-3-column/box-caterogry-three-column";
 import { useAppDispatch, useAppSelector } from "@hook/hooks";
 import { Box, Divider } from "@mui/material";
 import CardTextTitle from "@components/common/card-text-title/card-text-title";
@@ -42,9 +42,18 @@ const PopularNews: React.FC<PopularNewsProps> = ({ className = "" }) => {
           <Grid container spacing={2}>
             <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} desktop={7} xs={12} laptop={7}>
               <CardRowMain />
-              {topmovie.slice(0, 20).map((item) => (
+              {topmovie.slice(0, 10).map((item) => (
                 <CardRow className="border" item={item} key={item.title} isAuthor={true} />
               ))}
+              {/* <Tab>
+                <BlockContent></BlockContent>
+              </Tab> */}
+              <TabColumn />
+              <div className="has_border"></div>
+              {topmovie.slice(10, 20).map((item) => (
+                <CardRow className="border" item={item} key={item.title} isAuthor={true} />
+              ))}
+              <TabColumn />
             </Grid>
             <Divider
               orientation="vertical"
@@ -57,7 +66,10 @@ const PopularNews: React.FC<PopularNewsProps> = ({ className = "" }) => {
               }}
             ></Divider>
             <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} xs>
-              <BoxCategory className="clslistcategory-item2">
+              <BoxCategory
+                className="clslistcategory-item2"
+                sx={{ paddingTop: 0, paddingBottom: 0, position: "sticky", top: "66px" }}
+              >
                 {topmovie.slice(12, 20).map((item) => (
                   <CardRow className="border" item={item} key={item.title} isAuthor={true} />
                 ))}

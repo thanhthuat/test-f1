@@ -29,23 +29,20 @@ const CardRow: React.FC<ICardRowProps> = ({
     <article className={`${className} clsarticle`}>
       <Link href={"/detail/123"}>
         <Box className="clsarticle-content" sx={{ ...sx }}>
-          {isImg &&
-            item?.backdrop_path &&(
-              <div className="clsarticle-img">
-                {/* <Image src={img} alt="123" /> */}
-                <Image
-                  src={item?.backdrop_path ? apiConfig.originalImage(item?.backdrop_path) : img}
-                  alt={item?.title || "img"}
-                  width="500"
-                  height="350"
-                />
-              </div>
-            )}
-
-          <div className="clsarticle-summary">
-            <div className="clsarticle-summary__title">
-              <h5>{item?.title}</h5>
+          {isImg && item?.backdrop_path && (
+            <div className="clsarticle-img">
+              {/* <Image src={img} alt="123" /> */}
+              <Image
+                src={item?.backdrop_path ? apiConfig.originalImage(item?.backdrop_path) : img}
+                alt={item?.title || "img"}
+                width="500"
+                height="350"
+              />
             </div>
+          )}
+          <div className="clsarticle-summary">
+            <h5 className="clsarticle-summary__title">{item?.title}</h5>
+            <h5 className="clsarticle-summary__category">{"category-name"} </h5>
             <div className="clsarticle-summary__des">{isdes && <p>{item?.overview}</p>}</div>
             {isAuthor && (
               <div className="clsarticletitletop-category">

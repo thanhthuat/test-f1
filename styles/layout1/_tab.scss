@@ -1,19 +1,24 @@
 .clstab {
-  font-family: Arial, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   &header {
     &-content {
       display: flex;
       list-style: none;
       text-decoration: none;
       flex-wrap: wrap;
+      align-items: flex-end;
     }
     &-item {
       margin-right: 12px;
+      &:first-child {
+        font-size: 15px;
+        color: red;
+      }
     }
     @include res(980px) {
       font-size: 13px;
       line-height: 1.6;
-      font-family: "Arial", serif;
+      font-family: "Noto Sans KR", sans-serif;
       color: #222;
       font-weight: bold;
     }

@@ -12,6 +12,7 @@ import { ThemeOptions } from "@mui/material/styles/createTheme";
 
 import { BreakpointOverrides } from "@mui/material/styles";
 import HeaderSearch from "../headersearch/header-search";
+import HeaderLogo from "../header-logo/header-logo";
 
 declare module "@mui/material/styles" {
   interface BreakpointOverrides {
@@ -48,6 +49,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, className = "", isFoo
     <div>
       <ThemeProvider theme={createTheme(themeOptions)}>
         <HeaderSearch className="containerlayout1" />
+        <HeaderLogo />
         <HeaderLayout1 />
         <main className={`${className} `}>
           <div className={` containerlayout1 clsmain`}>{children}</div>

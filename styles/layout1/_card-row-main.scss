@@ -1,7 +1,7 @@
 .clsarticlemain {
   width: 100%;
   height: auto;
-  font-family: Arial, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   &-content {
     display: flex;
     background: #f7f7f7;
@@ -40,21 +40,26 @@
     padding: 5px 10px;
 
     &__title {
-      h5 {
-        margin-bottom: 10px;
-        padding-top: 20px;
-        font-weight: 700;
-        font-size: 20px;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        @include res(500px) {
-          font-size: 16px;
-          padding-top: 0px;
-          margin-bottom: 0px;
-        }
+      margin-bottom: 10px;
+      padding-top: 20px;
+      font-weight: 700;
+      font-size: 20px;
+      @include displayText(2);
+      @include res(500px) {
+        font-size: 16px;
+        padding-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+    &__category {
+      margin-bottom: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      @include displayText(2);
+      @include res(500px) {
+        font-size: 14px;
+        padding-top: 0px;
+        margin-bottom: 0px;
       }
     }
     &__des {

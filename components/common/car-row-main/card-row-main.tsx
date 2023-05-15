@@ -38,12 +38,9 @@ const CardRowMain: React.FC<ICardRowMain> = ({ children, className = "", sx = {}
             )}
 
             <div className="clsarticlemain-summary">
-              <div className="clsarticlemain-summary__title">
-                <h5>{topmovie[0]?.title}</h5>
-              </div>
-              <div className="clsarticlemain-summary__title">
-                <h5>{topmovie[0]?.popularity}</h5>
-              </div>
+              <h5 className="clsarticlemain-summary__title">{topmovie[0]?.title}</h5>
+              <h5 className="clsarticlemain-summary__category"> category-name</h5>
+
               <div className="clsarticlemain-summary__des">
                 <p> {topmovie[0]?.overview}</p>
               </div>

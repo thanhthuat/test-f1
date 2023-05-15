@@ -19,9 +19,7 @@ const CardTextTitle: React.FC<ICardRowMain> = ({ className = "", item, sx = {} }
             <h5 className="clsarticletexttitle-title">
               {item?.title || "Nhiều quy định phòng cháy chữa cháy như trên trời rơi xuống"}{" "}
             </h5>
-            <h5 className="clsarticletexttitle-category">
-              {item?.id || "Nhiều quy định phòng cháy chữa cháy như trên trời rơi xuống"}{" "}
-            </h5>
+            <h5 className="clsarticletexttitle-category">{item?.id || "category-name"} </h5>
           </div>
 
           <div className="clsarticletexttitle-des">

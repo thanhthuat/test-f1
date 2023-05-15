@@ -25,6 +25,13 @@ const HeaderSearch: React.FC<HeaderSearchProps> = ({ className = "", sx = {} }) 
   const router = useRouter();
   const [value, setValue] = React.useState("");
   const [openMenu, setOpenMenu] = React.useState<boolean>(false);
+  const [openModalLogin, setopenModalLogin] = React.useState<boolean>(false);
+  const handleOpenModalLogin = () => {
+    setopenModalLogin(true);
+  };
+  const handleCloseModalLogin = () => {
+    setopenModalLogin(false);
+  };
   const handleOpenMenu = () => {
     setOpenMenu(!openMenu);
   };
@@ -58,8 +65,9 @@ const HeaderSearch: React.FC<HeaderSearchProps> = ({ className = "", sx = {} }) 
             </div>
           </div>
           <div className="clsheadersearch-right">
-             <Button >Login | Sign-up</Button>
-            <BasicModal/>
+            <Button onClick={handleOpenModalLogin}>Login | Sign-up</Button>
+            {openModalLogin && <BasicModal open={openModalLogin} onClose={handleCloseModalLogin} />}
+
             {/* <SearchApi /> */}
           </div>
         </div>
