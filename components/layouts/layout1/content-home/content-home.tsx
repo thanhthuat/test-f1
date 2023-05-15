@@ -44,7 +44,7 @@ const ContentHome = (props: Props) => {
           <Grid container spacing={2}>
             <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} md={8} sm={12}>
               <CardRowMain />
-              <div style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}>
+              <div className="layoutgrid-3" style={{ margin: "20px 0px" }}>
                 {topmovie?.slice(4, 7).map((item) => {
                   return <CardTextTitle item={item} key={`card -title-${item.title}`} />;
                 })}
