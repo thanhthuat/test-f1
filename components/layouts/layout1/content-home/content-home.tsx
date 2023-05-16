@@ -23,6 +23,8 @@ import { Box, Divider, Stack } from "@mui/material";
 import Button from "@mui/material/Button";
 import TabContainer from "@components/common/tab-common";
 import RenderCard from "@components/common/render-card/render-card";
+import { createPage } from "@components/dynamic-rendering";
+import mockResponse from "@components/dynamic-rendering/dynamic-rendering.mock";
 type Props = {};
 
 const arrayTabs = [{ title: "News" }, { title: "LastNews" }];
@@ -49,42 +51,7 @@ const ContentHome = (props: Props) => {
                   return <CardTextTitle item={item} key={`card -title-${item.title}`} />;
                 })}
               </div>
-              {/* <Grid container spacing={2} sx={{ paddingTop: 2 }}>
-                {topmovie.length > 0 &&
-                  topmovie?.slice(4, 7).map((item, index) => {
-                    return (
-                      <Grid sm={4} key={index}>
-                        <Divider
-                          orientation="horizontal"
-                          flexItem
-                          sx={{
-                            borderRightWidth: "3px",
-                            display: {
-                              xs: "block",
-                              sm: "none",
-                            },
-                            marginBottom: {
-                              xs: 1,
-                              sm: 0,
-                            },
-                          }}
-                        />
-                        <CardTextTitle item={item} />
-                      </Grid>
-                    );
-                  })}
-
-                <Divider
-                  orientation="vertical"
-                  flexItem
-                  sx={{
-                    display: {
-                      md: "block",
-                      xs: "none",
-                    },
-                  }}
-                ></Divider>
-              </Grid> */}
+              {createPage(mockResponse)}
             </Grid>
             <Divider
               orientation="vertical"
