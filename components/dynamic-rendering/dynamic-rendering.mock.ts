@@ -18,7 +18,7 @@ const mockResponse: IComponent = {
               type: "Button",
               data: {
                 id: "4400936b-6158-9087-9dc8-a04c57e1af46121x212",
-                title: "Button example",
+                title: "Button example 0",
                 className: "btn-primary",
                 action: {
                   type: "call",
@@ -30,7 +30,7 @@ const mockResponse: IComponent = {
               type: "Card",
               data: {
                 id: "26b3f355-2f121265-4aae-b9fd-609779f24fdd12122",
-                title: "A custom title",
+                title: "A custom title item 1",
                 headline: "A random Headline",
                 copy: "A really long text....",
                 action: {
