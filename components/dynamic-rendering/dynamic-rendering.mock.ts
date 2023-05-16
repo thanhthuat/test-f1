@@ -13,12 +13,27 @@ const mockResponse: IComponent = {
           title: "A custom title",
           headline: "A random Headline",
           copy: "A really long text....",
+            image: {
+                  url: "https://i.stack.imgur.com/y9DpT.jpg",
+                },
           items: [
             {
               type: "Button",
               data: {
                 id: "4400936b-6158-9087-9dc8-a04c57e1af46121x212",
                 title: "Button example",
+                className: "btn-primary",
+                action: {
+                  type: "call",
+                  url: "https://pokeapi.co/api/v2/",
+                },
+              },
+            },
+              {
+              type: "Button",
+              data: {
+                id: "4400936b-6158-9087-9dc8-a04c57e1af46121x2121213",
+                title: "Button add",
                 className: "btn-primary",
                 action: {
                   type: "call",
