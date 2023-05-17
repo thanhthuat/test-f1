@@ -51,7 +51,7 @@ const ContentHome = (props: Props) => {
                   return <CardTextTitle item={item} key={`card -title-${item.title}`} />;
                 })}
               </div>
-              {createPage(mockResponse)}
+            
               {/* {createPage(mockResponse)} */}
             </Grid>
             <Divider
@@ -66,7 +66,7 @@ const ContentHome = (props: Props) => {
             ></Divider>
             <Grid sx={{ paddingTop: 0 }} xs>
               <BoxCategory className="clslistcategory-item2">
-                <TabContainer
+                {/* <TabContainer
                   arrayTabs={arrayTabs}
                   arrayTabPanel={[
                     {
@@ -76,7 +76,7 @@ const ContentHome = (props: Props) => {
                       children: <RenderCard arr={topmovie.slice(4, 9)} />,
                     },
                   ]}
-                ></TabContainer>
+                ></TabContainer> */}
 
                 {/* {topmovie.slice(12, 20).map((item) => (
                   <CardRow

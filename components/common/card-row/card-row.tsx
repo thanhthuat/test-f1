@@ -8,6 +8,7 @@ import { SxProps, Theme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import PersonIcon from "@mui/icons-material/Person";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import { useAppSelector } from "@hook/hooks";
 interface ICardRowProps {
   item: IresponeMovie;
   isdes?: boolean;
@@ -25,6 +26,7 @@ const CardRow: React.FC<ICardRowProps> = ({
   sx = {},
   isAuthor = false,
 }) => {
+    const { topmovie } = useAppSelector((state) => state.movie);
   return (
     <article className={`${className} clsarticle`}>
       <Link href={"/detail/123"}>

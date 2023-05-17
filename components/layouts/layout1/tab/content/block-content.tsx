@@ -6,43 +6,47 @@ import CarouselTop from "../../../../common/carousel-story/carosel-top";
 import { useAppSelector } from "@hook/hooks";
 import { SxProps, Theme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import { IComponent1 } from "@components/dynamic-rendering.interfaces";
 import { createPage } from "@components/dynamic-rendering.service";
 import { renderComponent } from "@components/index";
+import { IComponent } from "@components/dynamic-rendering.interfaces";
 interface BlockContentProps {
   children?: React.ReactNode;
   className?: string;
   sx?: SxProps<Theme>;
-  arrChildren?: Array<IComponent1>;
+  arrChildren?: Array<IComponent>;
 }
 
 const BlockContent: React.FC<BlockContentProps> = ({
   className = "",
   sx = {},
   children,
-  arrChildren,
   ...props
 }) => {
-  console.log("🚀 ~ file: block-content.tsx:25 ~ arrChildren:", arrChildren, props);
+  console.log("🚀 ~ file: block-content.tsx:25 ~ arrChildren:", children);
   const { topmovie } = useAppSelector((state) => state.movie);
-  // const handleRender = (arrChildren: IComponent1 | undefined) => {
-  //   if (!!arrChildren) return renderComponent(arrChildren);
-  // };
+ 
   return (
     <div className={`${className} clstabblock`}>
-      {children}
+    
       <div className="clstabblock-contenttop">
         <div className="clstabblock-right">
-          {/* {handleRender(arrChildren && arrChildren![0])} */}
+         
+          {children &&
+            (children as React.ReactNode[]).length > 0 &&
+            (children as React.ReactNode[])[0]}
           {/* {topmovie.slice(10, 11).map((item, index) => {
             return <CardRow item={item} key={index} isAuthor={true} />;
-          })} */}
+          })}  */}
         </div>
         <div className="clstabblock-left ">
-          {/* {arrChildren && createPage(arrChildren[1])} */}
-          {/* {topmovie.slice(11, 12).map((item, index) => {
+         
+        {/* {topmovie.slice(11, 12).map((item, index) => {
             return <CardTextTitle item={item} key={index} />;
-          })} */}
+          })} 
+         */}
+          {children &&
+            (children as React.ReactNode[]).length > 0 &&
+            (children as React.ReactNode[])[1]}
         </div>
       </div>
       <div className="clstabblock-contentbody has_border">

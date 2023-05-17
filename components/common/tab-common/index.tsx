@@ -9,9 +9,12 @@ import a11yProps from "./all-props";
 import TabPanel from "./tab-panel";
 
 interface TabContainerProps {
-  arrayTabs: { title: string }[];
+  tabTitle: string[];
   arrayTabPanel: { children: React.ReactNode }[];
+  children: React.ReactNode;
+  datanew: { LastNews: any[]; News: any[] };
 }
+
 const styles = {
   tab: {
     color: "#D97D54",
@@ -20,7 +23,12 @@ const styles = {
     background: "none",
   },
 };
-const TabContainer: React.FC<TabContainerProps> = ({ arrayTabs, arrayTabPanel }) => {
+const TabContainer: React.FC<TabContainerProps> = ({
+  tabTitle,
+  arrayTabPanel,
+  children,
+  datanew,
+}) => {
   const [value, setValue] = React.useState(0);
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -40,37 +48,30 @@ const TabContainer: React.FC<TabContainerProps> = ({ arrayTabs, arrayTabPanel })
             },
           }}
         >
-          {arrayTabs.map((item, index) => {
+          {tabTitle.map((item, index) => {
             return (
               <Tab
                 style={value == index ? styles.tab : {}}
-                label={item.title}
+                label={item}
                 {...a11yProps(index)}
-                key={`${item.title}-${index}`}
+                key={`${item}-${index}`}
               />
             );
           })}
-          {/* <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} /> */}
         </Tabs>
       </Box>
-      {arrayTabPanel.map((item, index) => {
+      {tabTitle.map((item, index) => {
         return (
           <TabPanel value={value} index={index} key={`tabpanel-${index}`}>
-            {item.children}
+            {(children as React.ReactNode[])?.length > 0 &&
+              datanew[item as keyof typeof datanew]?.map((item) => {
+                return React.cloneElement((children as any[])[0], {
+                  item: { ...item, title: "123131-trhchxc", opacity: "121kjcshdjf" },
+                });
+              })}
           </TabPanel>
         );
       })}
-      {/* <TabPanel value={value} index={0}>
-        Item One
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        Item Two
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel> */}
     </Box>
   );
 };

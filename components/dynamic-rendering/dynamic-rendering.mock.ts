@@ -1,11 +1,11 @@
-import { IComponent } from "../dynamic-rendering.interfaces";
+import { IComponent } from "@components/dynamic-rendering.interfaces";
 
 const mockResponse: IComponent = {
-  type: "Container",
+  type: "MainLayout",
   data: {
     id: "4400936b-6158-1354-9dc8-a04c57e1af46",
     fluid: true,
-    items: [
+    children: [
       {
         type: "BoxCard",
         data: {
@@ -16,7 +16,7 @@ const mockResponse: IComponent = {
           image: {
             url: "https://i.stack.imgur.com/y9DpT.jpg",
           },
-          items: [
+          children: [
             {
               type: "BoxCard",
               data: {
@@ -67,7 +67,7 @@ const mockResponse: IComponent = {
           image: {
             url: "https://i.stack.imgur.com/y9DpT.jpg",
           },
-          items: [
+          children: [
             {
               type: "CardTextTitle",
               data: {
@@ -145,18 +145,18 @@ const mockResponse: IComponent = {
           },
         },
       },
-      {
-        type: "BlockContent",
-        data: {
-          id: "4400936b-6158-4943-9dc8-a04c57e1af46",
-          title: "Title",
-          headline: "This can be anything",
-          copy: "A really long text....",
-          image: {
-            url: "https://i.stack.imgur.com/y9DpT.jpg",
-          },
-        },
-      },
+      // {
+      //   type: "BlockContent",
+      //   data: {
+      //     id: "4400936b-6158-4943-9dc8-a04c57e1af46",
+      //     title: "Title",
+      //     headline: "This can be anything",
+      //     copy: "A really long text....",
+      //     image: {
+      //       url: "https://i.stack.imgur.com/y9DpT.jpg",
+      //     },
+      //   },
+      // },
 
       {
         type: "BlockContent",
@@ -165,9 +165,37 @@ const mockResponse: IComponent = {
           title: "Title",
           headline: "This can be anything",
           copy: "A really long text....",
-          arrChildren: [
+          item: {},
+          image: {
+            url: "https://i.stack.imgur.com/y9DpT.jpg",
+          },
+          children: [
             {
               type: "CardTextTitle",
+              data: {
+                id: "4400936b-6158-4943-9dc8-a04c57e1af46y7",
+                title: "Title",
+                headline: "This can be anything",
+                copy: "A really long text....",
+                items: {
+                  title: "string",
+                  urlImg: "https://i.stack.imgur.com/y9DpT.jpg",
+                  description: "string description",
+                  author: "string Jonh",
+                  createDay: new Date(),
+                  publishDay: new Date(),
+                  className: " container2", // enum list
+                  id: "4400936b-6158-string", // call api detail
+                  slug: "string-this-is article", // change params url ,
+                  overview: " string-this-is article___ overview",
+                },
+                image: {
+                  url: "https://i.stack.imgur.com/y9DpT.jpg",
+                },
+              },
+            },
+            {
+              type: "BoxCard",
               data: {
                 id: "4400936b-6158-9087-9dc8-a04c57e1af46121x212",
                 title: "CardTextTitle example",
@@ -181,22 +209,139 @@ const mockResponse: IComponent = {
             {
               type: "CardTextTitle",
               data: {
-                id: "4400936b-6158-9087-9dc8-a04c57e1af46121x212",
-                title: "CardTextTitle example",
-                className: "btn-primary",
-                action: {
-                  type: "call",
-                  url: "https://pokeapi.co/api/v2/",
+                id: "4400936b-6158-4943-9dc8-a04c57e1af46y7",
+                title: "Title",
+                headline: "This can be anything",
+                copy: "A really long text....",
+                image: {
+                  url: "https://i.stack.imgur.com/y9DpT.jpg",
                 },
               },
             },
           ],
+        },
+      },
+      {
+        type: "TabContainer",
+        data: {
+          id: "4400936b-6158-4943-9dc8-a04c57e1af461",
+          title: "Title",
+          headline: "This can be anything",
+          copy: "A really long text....",
+          item: {},
           image: {
             url: "https://i.stack.imgur.com/y9DpT.jpg",
           },
-          items: [
+          tabTitle: ["LastNews", "News"],
+          datanew:{
+            LastNews:[
+              {
+          id: "4400936b-6158-4943-9dc8-a04c57e1af46121",
+          title: "Title",
+          headline: "This can be anything",
+          copy: "A really long text....",
+          item: {},
+          image: {
+            url: "https://i.stack.imgur.com/y9DpT.jpg",
+          }},
+            {
+          id: "4400936b-6158-4943-9dc8-a04c57e121af461",
+          title: "Title",
+          headline: "This can be anything",
+          copy: "A really long text....",
+          item: {},
+          image: {
+            url: "https://i.stack.imgur.com/y9DpT.jpg",
+          }},
+            {
+          id: "4400936b-6158-4943-9dc8-a0412c57e1af461",
+          title: "Title",
+          headline: "This can be anything",
+          copy: "A really long text....",
+          item: {},
+          image: {
+            url: "https://i.stack.imgur.com/y9DpT.jpg",
+          }},
+            {
+          id: "4400936b-6158-4943-9dc8-a04121c57e1af461",
+          title: "Title",
+          headline: "This can be anything",
+          copy: "A really long text....",
+          item: {},
+          image: {
+            url: "https://i.stack.imgur.com/y9DpT.jpg",
+          }},
+
+            ],
+            News:[
+                   {
+          id: "4400936b-6158-4943-9dc8-a04c57e19af4611",
+          title: "Title New 2222222",
+          headline: "This can be anything",
+          copy: "A really long text....",
+          item: {},
+          image: {
+            url: "https://i.stack.imgur.com/y9DpT.jpg",
+          }},
+            {
+          id: "4400936b-6158-4943-9dc8-a04c5776e121af461",
+          title: "Title 121344",
+          headline: "This can be anything",
+          copy: "A really long text....",
+          item: {},
+          image: {
+            url: "https://i.stack.imgur.com/y9DpT.jpg",
+          }},
+            {
+          id: "4400936b-6158-4943-9dc8-a041u72c57e1af461",
+          title: "Title",
+          headline: "This can be anything",
+          copy: "A really long text....",
+          item: {},
+          image: {
+            url: "https://i.stack.imgur.com/y9DpT.jpg",
+          }},
+            {
+          id: "4400936b-6158-4943-9dc8-a0412166c57e1af461",
+          title: "Title",
+          headline: "This can be anything",
+          copy: "A really long text....",
+          item: {},
+          image: {
+            url: "https://i.stack.imgur.com/y9DpT.jpg",
+          }},
+
+            ]
+          },
+          
+          
+          children: [
             {
               type: "CardTextTitle",
+              data: {
+                id: "4400936b-6158-4943-9dc8-a04c57e1af46y7",
+                title: "Title",
+                headline: "This can be anything",
+                copy: "A really long text....",
+                items: {
+                  title: "string",
+                  urlImg: "https://i.stack.imgur.com/y9DpT.jpg",
+                  description: "string description",
+                  author: "string Jonh",
+                  createDay: new Date(),
+                  publishDay: new Date(),
+                  className: " container2", // enum list
+                  id: "4400936b-6158-string", // call api detail
+                  slug: "string-this-is article", // change params url ,
+                  overview: " string-this-is article___ overview",
+                },
+                image: {
+                  url: "https://i.stack.imgur.com/y9DpT.jpg",
+                },
+              },
+            },
+            {
+              type: "BoxCard",
               data: {
                 id: "4400936b-6158-9087-9dc8-a04c57e1af46121x212",
                 title: "CardTextTitle example",
@@ -210,7 +355,7 @@ const mockResponse: IComponent = {
             {
               type: "CardTextTitle",
               data: {
-                id: "4400936b-6158-4943-9dc8-a04c57e1af46y",
+                id: "4400936b-6158-4943-9dc8-a04c57e1af46y7",
                 title: "Title",
                 headline: "This can be anything",
                 copy: "A really long text....",
