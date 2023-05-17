@@ -6,29 +6,43 @@ import CarouselTop from "../../../../common/carousel-story/carosel-top";
 import { useAppSelector } from "@hook/hooks";
 import { SxProps, Theme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-type Props = {};
+import { IComponent1 } from "@components/dynamic-rendering.interfaces";
+import { createPage } from "@components/dynamic-rendering.service";
+import { renderComponent } from "@components/index";
 interface BlockContentProps {
   children?: React.ReactNode;
   className?: string;
   sx?: SxProps<Theme>;
-  
+  arrChildren?: Array<IComponent1>;
 }
 
-const BlockContent: React.FC<BlockContentProps> = ({ className = "", sx = {}, children }) => {
+const BlockContent: React.FC<BlockContentProps> = ({
+  className = "",
+  sx = {},
+  children,
+  arrChildren,
+  ...props
+}) => {
+  console.log("🚀 ~ file: block-content.tsx:25 ~ arrChildren:", arrChildren, props);
   const { topmovie } = useAppSelector((state) => state.movie);
+  // const handleRender = (arrChildren: IComponent1 | undefined) => {
+  //   if (!!arrChildren) return renderComponent(arrChildren);
+  // };
   return (
-    <Box className={`${className} clstabblock`}>
+    <div className={`${className} clstabblock`}>
       {children}
       <div className="clstabblock-contenttop">
         <div className="clstabblock-right">
-          {topmovie.slice(10, 11).map((item, index) => {
+          {/* {handleRender(arrChildren && arrChildren![0])} */}
+          {/* {topmovie.slice(10, 11).map((item, index) => {
             return <CardRow item={item} key={index} isAuthor={true} />;
-          })}
+          })} */}
         </div>
         <div className="clstabblock-left ">
-          {topmovie.slice(11, 12).map((item, index) => {
+          {/* {arrChildren && createPage(arrChildren[1])} */}
+          {/* {topmovie.slice(11, 12).map((item, index) => {
             return <CardTextTitle item={item} key={index} />;
-          })}
+          })} */}
         </div>
       </div>
       <div className="clstabblock-contentbody has_border">
@@ -40,7 +54,7 @@ const BlockContent: React.FC<BlockContentProps> = ({ className = "", sx = {}, ch
       </div>
       <div className="has_border"></div>
       {/* <CarouselTop /> */}
-    </Box>
+    </div>
   );
 };
 

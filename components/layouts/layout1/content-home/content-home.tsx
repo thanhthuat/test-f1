@@ -23,7 +23,7 @@ import { Box, Divider, Stack } from "@mui/material";
 import Button from "@mui/material/Button";
 import TabContainer from "@components/common/tab-common";
 import RenderCard from "@components/common/render-card/render-card";
-import { createPage } from "@components/dynamic-rendering";
+import { createPage } from "@components/dynamic-rendering.service";
 import mockResponse from "@components/dynamic-rendering/dynamic-rendering.mock";
 type Props = {};
 
@@ -52,6 +52,7 @@ const ContentHome = (props: Props) => {
                 })}
               </div>
               {createPage(mockResponse)}
+              {/* {createPage(mockResponse)} */}
             </Grid>
             <Divider
               orientation="vertical"

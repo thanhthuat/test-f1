@@ -1,4 +1,4 @@
-import { IComponent } from "./dynamic-rendering.interfaces";
+import { IComponent } from "../dynamic-rendering.interfaces";
 
 const mockResponse: IComponent = {
   type: "Container",
@@ -7,33 +7,33 @@ const mockResponse: IComponent = {
     fluid: true,
     items: [
       {
-        type: "Card",
+        type: "BoxCard",
         data: {
           id: "26b3f355-2f65-4aae-b9fd-609779f24fdd212",
           title: "A custom title",
           headline: "A random Headline",
           copy: "A really long text....",
-            image: {
-                  url: "https://i.stack.imgur.com/y9DpT.jpg",
-                },
+          image: {
+            url: "https://i.stack.imgur.com/y9DpT.jpg",
+          },
           items: [
             {
-              type: "Button",
+              type: "BoxCard",
               data: {
-                id: "4400936b-6158-9087-9dc8-a04c57e1af46121x212",
-                title: "Button example",
-                className: "btn-primary",
-                action: {
-                  type: "call",
-                  url: "https://pokeapi.co/api/v2/",
+                id: "26b3f355-2f65-4aae-b9fd-609779f24fdd212",
+                title: "A custom title",
+                headline: "A random Headline",
+                copy: "A really long text....",
+                image: {
+                  url: "https://i.stack.imgur.com/y9DpT.jpg",
                 },
               },
             },
-              {
-              type: "Button",
+            {
+              type: "CardTextTitle",
               data: {
                 id: "4400936b-6158-9087-9dc8-a04c57e1af46121x2121213",
-                title: "Button add",
+                title: "CardTextTitle add",
                 className: "btn-primary",
                 action: {
                   type: "call",
@@ -42,7 +42,7 @@ const mockResponse: IComponent = {
               },
             },
             {
-              type: "Card",
+              type: "BoxCard",
               data: {
                 id: "26b3f355-2f121265-4aae-b9fd-609779f24fdd12122",
                 title: "A custom title",
@@ -58,7 +58,7 @@ const mockResponse: IComponent = {
         },
       },
       {
-        type: "Card",
+        type: "BoxCard",
         data: {
           id: "4400936b-6158-4943-9dc8-a04c57e1af46121",
           ititle: "Title",
@@ -69,17 +69,10 @@ const mockResponse: IComponent = {
           },
           items: [
             {
-              type: "Divider",
-              data: {
-                id: "4400936b-6158-4943-9dc8-dsfhjs32723sds",
-                marginY: 5,
-              },
-            },
-            {
-              type: "Button",
+              type: "CardTextTitle",
               data: {
                 id: "4400936b-6158-9087-9dc8-a04c57e1af46121x212",
-                title: "Button example",
+                title: "CardTextTitle example",
                 className: "btn-primary",
                 action: {
                   type: "call",
@@ -88,9 +81,9 @@ const mockResponse: IComponent = {
               },
             },
             {
-              type: "Card",
+              type: "CardTextTitle",
               data: {
-                id: "4400936b-6158-4943-9dc8-a04c57e1af46",
+                id: "4400936b-6158-4943-9dc8-a04c57e1af46yi",
                 title: "Title",
                 headline: "This can be anything",
                 copy: "A really long text....",
@@ -102,17 +95,11 @@ const mockResponse: IComponent = {
           ],
         },
       },
+
       {
-        type: "Divider",
+        type: "BoxCard",
         data: {
-          id: "4400936b-6158-4943-9dc8-dsfhjs32723",
-          marginY: 5,
-        },
-      },
-      {
-        type: "Card",
-        data: {
-          id: "4400936b-6158-4943-9dc8-a04c57e1af46",
+          id: "4400936b-6158-4943-9dc8-a04c57e1af46y7",
           title: "Title",
           headline: "This can be anything",
           copy: "A really long text....",
@@ -121,19 +108,13 @@ const mockResponse: IComponent = {
           },
         },
       },
-      {
-        type: "Divider",
-        data: {
-          id: "4400936b-6158-4845-9dc8-dsfhjs32723",
-          marginY: 5,
-        },
-      },
+
       {
         type: "Container",
         data: {
           id: "d76e3a5f-01ad-46f6-a45d-3ad9699ecf99",
           embeddedView: {
-            type: "Input",
+            type: "CardTextTitle",
             data: {
               id: "26b3f355-2f65-4aae-b9fd-123",
               label: "Input",
@@ -150,6 +131,95 @@ const mockResponse: IComponent = {
               ],
             },
           },
+        },
+      },
+      {
+        type: "CarouselWeather",
+        data: {
+          id: "4400936b-6158-4943-9dc8-a04c57e1af467y65",
+          title: "Title",
+          headline: "This can be anything",
+          copy: "A really long text....",
+          image: {
+            url: "https://i.stack.imgur.com/y9DpT.jpg",
+          },
+        },
+      },
+      {
+        type: "BlockContent",
+        data: {
+          id: "4400936b-6158-4943-9dc8-a04c57e1af46",
+          title: "Title",
+          headline: "This can be anything",
+          copy: "A really long text....",
+          image: {
+            url: "https://i.stack.imgur.com/y9DpT.jpg",
+          },
+        },
+      },
+
+      {
+        type: "BlockContent",
+        data: {
+          id: "4400936b-6158-4943-9dc8-a04c57e1af461",
+          title: "Title",
+          headline: "This can be anything",
+          copy: "A really long text....",
+          arrChildren: [
+            {
+              type: "CardTextTitle",
+              data: {
+                id: "4400936b-6158-9087-9dc8-a04c57e1af46121x212",
+                title: "CardTextTitle example",
+                className: "btn-primary",
+                action: {
+                  type: "call",
+                  url: "https://pokeapi.co/api/v2/",
+                },
+              },
+            },
+            {
+              type: "CardTextTitle",
+              data: {
+                id: "4400936b-6158-9087-9dc8-a04c57e1af46121x212",
+                title: "CardTextTitle example",
+                className: "btn-primary",
+                action: {
+                  type: "call",
+                  url: "https://pokeapi.co/api/v2/",
+                },
+              },
+            },
+          ],
+          image: {
+            url: "https://i.stack.imgur.com/y9DpT.jpg",
+          },
+          items: [
+            {
+              type: "CardTextTitle",
+              data: {
+                id: "4400936b-6158-9087-9dc8-a04c57e1af46121x212",
+                title: "CardTextTitle example",
+                className: "btn-primary",
+                action: {
+                  type: "call",
+                  url: "https://pokeapi.co/api/v2/",
+                },
+              },
+            },
+            {
+              type: "CardTextTitle",
+              data: {
+                id: "4400936b-6158-4943-9dc8-a04c57e1af46y",
+                title: "Title",
+                headline: "This can be anything",
+                copy: "A really long text....",
+                image: {
+                  url: "https://i.stack.imgur.com/y9DpT.jpg",
+                },
+              },
+            },
+          ],
         },
       },
     ],
