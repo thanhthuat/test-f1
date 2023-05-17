@@ -51,7 +51,7 @@ const ContentHome = (props: Props) => {
                   return <CardTextTitle item={item} key={`card -title-${item.title}`} />;
                 })}
               </div>
-              {createPage(mockResponse)}
+              {/* {createPage(mockResponse)} */}
             </Grid>
             <Divider
               orientation="vertical"
