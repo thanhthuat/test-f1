@@ -29,6 +29,7 @@ import React from 'react';
 import { IComponent } from './dynamic-rendering.interfaces';
 import MainLayout from './layouts/layout1/hoc-component/main-layout';
 import TabContainer from "@components/common/tab-common";
+import BlockMainWithTab from "./common/block-main-with-tab/block-main-with-tab";
 export const Components = {
   BlockContent,
   BannerAdvertise,
@@ -58,7 +59,8 @@ export const Components = {
   ItemView,
   Container,
   MainLayout,
-  TabContainer
+  TabContainer,
+  BlockMainWithTab
 };
 export  const renderComponent = (block:IComponent) => {
     const { data, type } = block;

@@ -27,6 +27,7 @@ type ComponentList =
     'BlockContent'|
     'MainLayout'|
     'TabContainer'|
+    'BlockMainWithTab'|
     'ItemView';
 
     interface ITypeItem {

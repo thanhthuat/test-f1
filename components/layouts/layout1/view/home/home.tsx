@@ -11,9 +11,9 @@ function HomeLayout1({}: Props) {
     <>
       {createPage(mockResponse)}
 
-      {/* <MainLayout>
+      <MainLayout>
         <ContentHome />
-      </MainLayout> */}
+      </MainLayout>
     </>
   );
 }

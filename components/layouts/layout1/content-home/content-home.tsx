@@ -77,17 +77,6 @@ const ContentHome = (props: Props) => {
                     },
                   ]}
                 ></TabContainer> */}
-
-                {/* {topmovie.slice(12, 20).map((item) => (
-                  <CardRow
-                    className="border"
-                    item={item}
-                    key={item.title}
-                    isAuthor={true}
-                    sx={{ alignItems: "center" }}
-                    // isImg={false}
-                  />
-                ))} */}
               </BoxCategory>
             </Grid>
           </Grid>
