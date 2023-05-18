@@ -1,29 +1,22 @@
 import BoxCategory from "@components/common/box-category/box-category";
 import CardRowMain from "@components/common/car-row-main/card-row-main";
-import CardColumn from "@components/common/card-column/card-column";
 import CardRow from "@components/common/card-row/card-row";
-
 import React, { useEffect } from "react";
 import CategoryHeader from "./popular-header";
 import BorderLine from "@components/common/border-line/border-line";
-import CardTitleTop from "@components/common/card-title-top/card-title-top";
-
 import TabColumn from "@components/common/tab/tab";
-import BoxCaterogryThreeColumn from "@components/common/box-caterogy-3-column/box-caterogry-three-column";
 import { useAppDispatch, useAppSelector } from "@hook/hooks";
 import { Box, Divider } from "@mui/material";
-import CardTextTitle from "@components/common/card-text-title/card-text-title";
 import Grid from "@mui/system/Unstable_Grid";
-import Tab from "../../tab/tab";
-import BlockContentCategory from "../../tab/content/block-content-category";
-import BlockContent from "../../tab/content/block-content";
 import { getListTop } from "lib/redux/get-list-top-menu/get-list-top.action";
 import { useRouter } from "next/router";
 import PopularLoading from "./popular-sekeleton";
+import { createPage } from "@components/dynamic-rendering.service";
+import mockResponse from "@components/dynamic-rendering/dynamic-rendering.mock";
+import mockResponsePopular from "@components/dynamic-rendering/dynamic-rendering-popular.mock";
 interface PopularNewsProps {
   className?: string;
 }
-
 const PopularNews: React.FC<PopularNewsProps> = ({ className = "" }) => {
   const dispatch = useAppDispatch();
   const router = useRouter();
@@ -36,8 +29,10 @@ const PopularNews: React.FC<PopularNewsProps> = ({ className = "" }) => {
   return (
     <React.Fragment>
       <div className={`${className} clspopular `}>
-        <CategoryHeader />
+        {createPage(mockResponsePopular)}
+        {/* <CategoryHeader />
         <BorderLine />
+
         <Box className=" ">
           <Grid container spacing={2}>
             <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} desktop={7} xs={12} laptop={7}>
@@ -45,9 +40,7 @@ const PopularNews: React.FC<PopularNewsProps> = ({ className = "" }) => {
               {topmovie.slice(0, 10).map((item) => (
                 <CardRow className="border" item={item} key={item.title} isAuthor={true} />
               ))}
-              {/* <Tab>
-                <BlockContent></BlockContent>
-              </Tab> */}
+
               <TabColumn />
               <div className="has_border"></div>
               {topmovie.slice(10, 20).map((item) => (
@@ -76,7 +69,7 @@ const PopularNews: React.FC<PopularNewsProps> = ({ className = "" }) => {
               </BoxCategory>
             </Grid>
           </Grid>
-        </Box>
+        </Box> */}
       </div>
     </React.Fragment>
   );

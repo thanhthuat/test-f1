@@ -51,7 +51,7 @@ const ContentHome = (props: Props) => {
                   return <CardTextTitle item={item} key={`card -title-${item.title}`} />;
                 })}
               </div>
-            
+
               {/* {createPage(mockResponse)} */}
             </Grid>
             <Divider
@@ -105,7 +105,7 @@ const ContentHome = (props: Props) => {
         </div>
       </section>
 
-      <BoxCaterogryThreeColumn>
+      <BoxCaterogryThreeColumn listCategory={[]}>
         <Grid2 container spacing={1}>
           <Grid xs={12} tablet={6} laptop={6}>
             <CardColumn item={topmovie[10]} isAuthor={true} />
@@ -197,26 +197,11 @@ const ContentHome = (props: Props) => {
             </Grid>
           </Grid>
         </Grid2>
-
-        {/* <Grid container>
-          <Grid xs={6}>
-            <CardColumn item={topmovie[10]} />
-          </Grid>
-          <Grid xs={3}>
-            <CardColumn isDes={false} item={topmovie[16]} />
-            <CardColumn item={topmovie[13]} isDes={false} />
-          </Grid>
-          <Grid xs={3}>
-            <CardRow item={topmovie[18]} isdes={false} />
-            <CardRow item={topmovie[15]} isdes={false} />
-            <CardRow item={topmovie[11]} isdes={false} />
-            <CardRow item={topmovie[19]} isdes={false} />
-          </Grid>
-        </Grid> */}
       </BoxCaterogryThreeColumn>
+
       <BorderLine />
-      <BoxCaterogryThreeColumn>
-        <Grid2 container spacing={1}>
+      <BoxCaterogryThreeColumn listCategory={[]}>
+        {/* <Grid2 container spacing={1}>
           <Grid xs={12} tablet={6} laptop={6}>
             <CardColumn item={topmovie[11]} isAuthor={true} />
           </Grid>
@@ -307,25 +292,25 @@ const ContentHome = (props: Props) => {
               </Grid>
             </Grid>
           </Grid>
-        </Grid2>
+        </Grid2> */}
       </BoxCaterogryThreeColumn>
 
       <BoxCaterogryColumn>
         <Grid container spacing={1}>
           <Grid tablet={6} tablet1={4}>
             <CardColumn item={topmovie[18]} isAuthor={true} />
-            <div className="has_border"></div>
-            <CardTextTitle />
+            {/*  <div className="has_border"></div>
+           <CardTextTitle /> */}
           </Grid>
           <Grid tablet={6} tablet1={4}>
             <CardColumn item={topmovie[19]} isAuthor={true} />
-            <div className="has_border"></div>
-            <CardTextTitle />
+            {/*  <div className="has_border"></div>
+           <CardTextTitle /> */}
           </Grid>
           <Grid tablet={6} tablet1={4}>
             <CardColumn item={topmovie[1]} isAuthor={true} />
-            <div className="has_border"></div>
-            <CardTextTitle />
+            {/*  <div className="has_border"></div>
+           <CardTextTitle /> */}
           </Grid>
         </Grid>
       </BoxCaterogryColumn>

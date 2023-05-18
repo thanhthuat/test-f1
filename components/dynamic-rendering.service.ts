@@ -7,10 +7,10 @@ export function createPage(data?: IComponent): React.ReactNode {
     function createComponent(item: IComponent): React.ReactNode {
         // console.log("🚀 ~ file: dynamic-rendering.service.ts:8 ~ createComponent ~ item:", item)
         const { data, type } = item;
-        const { items, embeddedView, id, children, ...rest   } = data;
+        const { items, embeddedView, id, children,className, ...rest   } = data;
         return React.createElement(
             Components[type] as any,
-            { ...rest,id,key: id ,item:items} as any,
+            { ...rest,id,key: id ,item:items ,className:className} as any,
             Array.isArray(children)
                 ? children.map(renderer)
                 : renderer(embeddedView ?? null),

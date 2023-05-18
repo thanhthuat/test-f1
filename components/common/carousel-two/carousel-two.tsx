@@ -13,13 +13,15 @@ import { IresponeMovie } from "lib/models/interface";
 import apiConfig from "apis/apiConfig";
 import Image from "next/image";
 import Link from "next/link";
-import { useWindowDimensions } from "@hook/hooks";
+import { useAppSelector, useWindowDimensions } from "@hook/hooks";
 interface CarouselTwoProps {
   className?: string;
   sx?: SxProps<Theme>;
-  listItem: IresponeMovie[];
+  listItem?: IresponeMovie[];
 }
-const CarouselTwo: React.FC<CarouselTwoProps> = ({ className = "", sx = {}, listItem }) => {
+const CarouselTwo: React.FC<CarouselTwoProps> = ({ className = "", sx = {}, listItem = [] }) => {
+  const { topmovie } = useAppSelector((state) => state.movie);
+  listItem = listItem = topmovie?.slice(0, 8);
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   const size = useWindowDimensions();
 

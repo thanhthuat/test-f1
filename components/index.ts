@@ -1,3 +1,5 @@
+
+import  BoxCaterogryColumn  from '@components/common/box-caterogy-column/box-caterogry-column';
 import BannerAdvertise from "./common/banner-advertise/banner-adv";
 import BorderLine from "./common/border-line/border-line";
 import BoxCard from "./common/box-card/box-card";
@@ -29,7 +31,11 @@ import React from 'react';
 import { IComponent } from './dynamic-rendering.interfaces';
 import MainLayout from './layouts/layout1/hoc-component/main-layout';
 import TabContainer from "@components/common/tab-common";
+import TabColumn from "@components/common/tab/tab";
 import BlockMainWithTab from "./common/block-main-with-tab/block-main-with-tab";
+import MainTwoColumn from "./common/main-two-column/main-two-column";
+import BoxCategory from "@components/common/box-category/box-category";
+import CategoryHeader from './layouts/layout1/view/caterogy/category-header';
 export const Components = {
   BlockContent,
   BannerAdvertise,
@@ -60,7 +66,12 @@ export const Components = {
   Container,
   MainLayout,
   TabContainer,
-  BlockMainWithTab
+  BlockMainWithTab,
+  MainTwoColumn,
+  TabColumn,
+  BoxCaterogryColumn,
+  BoxCategory,
+  CategoryHeader,
 };
 export  const renderComponent = (block:IComponent) => {
     const { data, type } = block;

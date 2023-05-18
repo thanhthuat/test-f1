@@ -28,6 +28,11 @@ type ComponentList =
     'MainLayout'|
     'TabContainer'|
     'BlockMainWithTab'|
+    'BoxCaterogryColumn'|
+    'MainTwoColumn'|
+    'TabColumn'|
+    'CategoryHeader'|
+    "BoxCategory"|
     'ItemView';
 
     interface ITypeItem {

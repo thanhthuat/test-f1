@@ -18,9 +18,8 @@ const Index = () => {
           content="https://cdn-static.famiroom.com/static/upload/large/2021-04/16/4495c172-a85f-44ea-a4a9-1b692cca3327.jpg"
         ></meta>
       </Head>
-      <MainLayout>
-        <PopularNews />
-      </MainLayout>
+
+      <PopularNews />
     </>
   );
 };

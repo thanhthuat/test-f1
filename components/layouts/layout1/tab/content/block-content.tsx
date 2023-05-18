@@ -22,28 +22,16 @@ const BlockContent: React.FC<BlockContentProps> = ({
   children,
   ...props
 }) => {
-  console.log("🚀 ~ file: block-content.tsx:25 ~ arrChildren:", children);
   const { topmovie } = useAppSelector((state) => state.movie);
- 
   return (
     <div className={`${className} clstabblock`}>
-    
       <div className="clstabblock-contenttop">
         <div className="clstabblock-right">
-         
           {children &&
             (children as React.ReactNode[]).length > 0 &&
             (children as React.ReactNode[])[0]}
-          {/* {topmovie.slice(10, 11).map((item, index) => {
-            return <CardRow item={item} key={index} isAuthor={true} />;
-          })}  */}
         </div>
         <div className="clstabblock-left ">
-         
-        {/* {topmovie.slice(11, 12).map((item, index) => {
-            return <CardTextTitle item={item} key={index} />;
-          })} 
-         */}
           {children &&
             (children as React.ReactNode[]).length > 0 &&
             (children as React.ReactNode[])[1]}
