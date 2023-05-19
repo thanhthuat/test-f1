@@ -61,13 +61,18 @@ const BlockMainWithTab: React.FC<BlockMainWithTabProps> = ({
           <Grid sx={{ paddingTop: 0 }} xs>
             {isTab ? (
               <>
-                {(children as React.ReactNode[])?.length > 2 &&  (children as React.ReactNode[])?.length > 1 &&
-                listNew.slice(10, 20).map((item, index) => {
-                  return React.cloneElement((children as any[])[1], {
-                    item: { ...item },
-                    key: `${(children as any[])[1].key}-${index}`,
-                  });
-                })}
+                {
+                  (children as React.ReactNode[])?.length > 2 && (children as React.ReactNode[])[2]
+                  // listNew.slice(10, 20).map((item, index) => {
+                  //   return React.cloneElement((children as any[])[1], {
+                  //     item: { ...item },
+                  //     key: `${(children as any[])[1].key}-${index}`,
+                  //   });
+                  // })
+                }
+                {(children as React.ReactNode[])?.length > 2 && (
+                  (children as React.ReactNode[])[4]
+                )}
               </>
             ) : (
               <BoxCategory className="clslistcategory-item2">
