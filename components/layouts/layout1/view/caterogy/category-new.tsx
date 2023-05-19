@@ -17,6 +17,7 @@ import CardTextTitle from "@components/common/card-text-title/card-text-title";
 import Grid from "@mui/system/Unstable_Grid";
 import { getListTop } from "lib/redux/get-list-top-menu/get-list-top.action";
 import { useRouter } from "next/router";
+import HeaderCommon from "@components/common/header-common/header-common";
 interface CategoryNewProps {
   className?: string;
 }
@@ -34,9 +35,10 @@ const CategoryNew: React.FC<CategoryNewProps> = ({ className = "" }) => {
 
   return (
     <div className={`${className} clslistcategory clscontenthomelayout1`}>
-      <CategoryHeader />
-      <BorderLine />
+      {/* <CategoryHeader /> */}
+
       <Box className=" ">
+        <HeaderCommon title="Kinh doanh" />
         <Grid container spacing={2}>
           <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} md={7} sm={12}>
             <CardRowMain />

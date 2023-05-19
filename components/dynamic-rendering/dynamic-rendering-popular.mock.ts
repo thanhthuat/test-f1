@@ -8,9 +8,9 @@ const mockResponsePopular: IComponent = {
     //CategoryHeader
     children: [
       {
-        type: "CategoryHeader",
+        type: "HeaderCommon",
         data: {
-          id: "26b3f355-2f65-4aae-b9fd-609779f24fdd21289",
+          id: "26b3f355-2f65-4aae-b9fd-609779f24fdd2128955",
           title: "A custom title",
           headline: "A random Headline",
           copy: "A really long text....",

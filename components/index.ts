@@ -1,3 +1,4 @@
+import  HeaderCommon  from '@components/common/header-common/header-common';
 
 import  BoxCaterogryColumn  from '@components/common/box-caterogy-column/box-caterogry-column';
 import BannerAdvertise from "./common/banner-advertise/banner-adv";
@@ -72,6 +73,7 @@ export const Components = {
   BoxCaterogryColumn,
   BoxCategory,
   CategoryHeader,
+  HeaderCommon,
 };
 export  const renderComponent = (block:IComponent) => {
     const { data, type } = block;
