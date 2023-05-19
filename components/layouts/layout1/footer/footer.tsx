@@ -5,15 +5,94 @@ import Link from "next/link";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TelegramIcon from "@mui/icons-material/Telegram";
+import { data } from "../header/data";
 interface FooterLayout1Props {
   className?: string;
 }
 
 const FooterLayout1: React.FC<FooterLayout1Props> = ({ className }) => {
   return (
-    <footer className={`${className} clsfooterlayout1 containerlayout1 mt-40`}>
+    <footer className={`${className} clsfooterlayout1  mt-40`}>
       <div className="clsfooterlayout1-content">
-        <div className="clsfooterlayout1-contact">
+        <div className="clsfooterlayout1-body">
+          <div className="clsfooterlayout1-logo">
+            <Link href={"/"}>
+              <Image src={img} alt="logo" />
+            </Link>
+            <div className="clsfooterlayout1-logo__information  mt-2">
+              <p>
+                사이트 설명글 회사소개 <br /> 페이지에서 텍스트 출력 4줄까지
+                <br /> 출력 / 4줄 이상은 …으로 표시 … 끝에 <br />
+                [더보기] 클릭하면 페이지 이동
+              </p>
+            </div>
+            <div className="clsfooterlayout1-logo__contact mt-1">
+              <p className="bold mb-1"> NEWS INFO</p>
+              <ul>
+                <li>Email : thanh @gmail.com</li>
+                <li>Adress: 29/9/3 ward</li>
+                <li>Phone: 0974747443</li>
+                <li>Face: thanh mai</li>
+              </ul>
+            </div>
+            <div className="clsfooterlayout1-logo__social mt-1">
+              <ul>
+                <li>F</li>
+                <li>T</li>
+                <li>G</li>
+                <li>R</li>
+              </ul>
+            </div>
+          </div>
+          <div className="clsfooterlayout1-other">
+            <div className="clsfooterlayout1-header">
+              <p className="bold">CENTER</p>
+            </div>
+
+            <ul className="clsfooterlayout1-other__policy mt-2">
+              <li>언론사 소개 </li>
+              <li>
+                <b>개인정보취급방침</b>
+              </li>
+              <li> 청소년보호정책 </li>
+              <li> 이메일수집거부 </li>
+              <li> 광고·제휴 </li>
+              <li> 기사제보 </li>
+              <li>문의하기</li>
+            </ul>
+          </div>
+          <div className="clsfooterlayout1-category">
+            <div className="clsfooterlayout1-header">
+              <p className="bold">CATEGORIES</p>
+            </div>
+            <ul className="mt-2">
+              {data.map((item) => {
+                return <li>{item.title}</li>;
+              })}
+            </ul>
+          </div>
+        </div>
+
+        <div className="clsfooterlayout1-coppyright">
+          <p>
+            OOOO의 모든 콘텐츠(영상,기사, 사진)는 저작권법의 보호를 받은바, 무단 전재와 복사, 배포
+            등을 금합니다.
+          </p>
+        </div>
+        <div className="clsfooterlayout1-license">
+          <p className="clsfooterlayout1-license__left">
+            Copyright © 2021 LINENEWS. All rights reserved. LINEADD.
+          </p>
+          <a
+            className="clsfooterlayout1-license__linkcompany"
+            href="https://lineadd.co.kr/index.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            POWERED <br /> BY LINEADD
+          </a>
+        </div>
+        {/* <div className="clsfooterlayout1-contact">
           <div className="clsfooterlayout1-logo">
             <p className="mr-1"> Báo điện tử</p>
             <Link href={"/"}>
@@ -58,7 +137,7 @@ const FooterLayout1: React.FC<FooterLayout1Props> = ({ className }) => {
               <span>© 1997-2023.</span> Toàn bộ bản quyền thuộc Hotmagazine
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
