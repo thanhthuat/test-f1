@@ -18,8 +18,6 @@ interface FormLoginProps {
   isLogin?: boolean;
 }
 const FormLogin: React.FC<FormLoginProps> = ({ isLogin = true }) => {
-  const [showPassword, setShowPassword] = React.useState(false);
-  const handleClickShowPassword = () => setShowPassword((show) => !show);
   const form = useForm();
   const { control, handleSubmit } = form;
   const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {

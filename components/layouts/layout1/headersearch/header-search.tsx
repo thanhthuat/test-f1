@@ -16,6 +16,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import BasicModal from "@components/common/modal-signin/modal-signin";
 import Button from "@mui/material/Button";
+import ModalCommon from "@components/common/modal-common/modal-common";
+import ModalLoginSns from "@components/common/modal-login-sns/modal-login-sns";
 interface HeaderSearchProps {
   sx?: {};
   className?: string;
@@ -26,11 +28,19 @@ const HeaderSearch: React.FC<HeaderSearchProps> = ({ className = "", sx = {} }) 
   const [value, setValue] = React.useState("");
   const [openMenu, setOpenMenu] = React.useState<boolean>(false);
   const [openModalLogin, setopenModalLogin] = React.useState<boolean>(false);
+  const [openModalSns, setOpenModalSns] = React.useState<boolean>(false);
   const handleOpenModalLogin = () => {
     setopenModalLogin(true);
   };
   const handleCloseModalLogin = () => {
     setopenModalLogin(false);
+    handleOpenModalSns();
+  };
+  const handleOpenModalSns = () => {
+    setOpenModalSns(true);
+  };
+  const handleCloseModalSns = () => {
+    setOpenModalSns(false);
   };
   const handleOpenMenu = () => {
     setOpenMenu(!openMenu);
@@ -67,8 +77,7 @@ const HeaderSearch: React.FC<HeaderSearchProps> = ({ className = "", sx = {} }) 
           <div className="clsheadersearch-right">
             <Button onClick={handleOpenModalLogin}>Login | Sign-up</Button>
             {openModalLogin && <BasicModal open={openModalLogin} onClose={handleCloseModalLogin} />}
-
-            {/* <SearchApi /> */}
+            <ModalLoginSns open={openModalSns} onClose={handleCloseModalSns}></ModalLoginSns>
           </div>
         </div>
       </Box>
