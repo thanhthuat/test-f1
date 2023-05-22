@@ -66,8 +66,8 @@ const FooterLayout1: React.FC<FooterLayout1Props> = ({ className }) => {
               <p className="bold">CATEGORIES</p>
             </div>
             <ul className="mt-2">
-              {data.map((item) => {
-                return <li>{item.title}</li>;
+              {data.map((item ,index) => {
+                return <li key={index}>{item.title}</li>;
               })}
             </ul>
           </div>
