@@ -1,6 +1,7 @@
 .clscontenthomelayout1 {
   &-content {
     display: flex;
+    align-items: baseline;
     @include res(600px) {
       flex-direction: column;
     }
@@ -36,6 +37,8 @@
   }
   &-item3 {
     // flex-basis: 50%;
+    position: sticky;
+    top: 70px;
     border-right: 1px solid #f0f0f0;
     width: 35%;
     padding: 20px 10px;
