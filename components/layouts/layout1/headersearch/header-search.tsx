@@ -19,6 +19,7 @@ import Button from "@mui/material/Button";
 import ModalCommon from "@components/common/modal-common/modal-common";
 import ModalLoginSns from "@components/common/modal-login-sns/modal-login-sns";
 import ModalLoginSucess from "@components/common/modal-login-sucess/modal-login-sucess";
+import Avatar from "@mui/material/Avatar";
 interface HeaderSearchProps {
   sx?: {};
   className?: string;
@@ -31,6 +32,7 @@ const HeaderSearch: React.FC<HeaderSearchProps> = ({ className = "", sx = {} }) 
   const [openModalLogin, setopenModalLogin] = React.useState<boolean>(false);
   const [openModalSns, setOpenModalSns] = React.useState<boolean>(false);
   const [openModalLoginSucess, setOpenModalLoginSucess] = React.useState<boolean>(false);
+  const [showLogin, setshowLogin] = React.useState<boolean>(true);
   const handleOpenModalLogin = () => {
     setopenModalLogin(true);
   };
@@ -46,11 +48,12 @@ const HeaderSearch: React.FC<HeaderSearchProps> = ({ className = "", sx = {} }) 
   };
 
   //
-  const handleOpenModalLoginSucess = () => {
+  const handleOpenModalLoginSuccess = () => {
     setOpenModalLoginSucess(true);
   };
-  const handleCloseModalLoginSucess = () => {
+  const handleCloseModalLoginSuccess = () => {
     setOpenModalLoginSucess(false);
+    setshowLogin(false);
   };
   const handleOpenMenu = () => {
     setOpenMenu(!openMenu);
@@ -85,15 +88,25 @@ const HeaderSearch: React.FC<HeaderSearchProps> = ({ className = "", sx = {} }) 
             </div>
           </div>
           <div className="clsheadersearch-right">
-            <Button onClick={handleOpenModalLogin}>Login | Sign-up</Button>
+            {showLogin ? (
+              <Button onClick={handleOpenModalLogin}>Login | Sign-up</Button>
+            ) : (
+              <Link href={"/profile"}>
+                <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
+              </Link>
+            )}
+
             {openModalLogin && <BasicModal open={openModalLogin} onClose={handleCloseModalLogin} />}
             <ModalLoginSns
               open={openModalSns}
               onClose={handleCloseModalSns}
-              handleOpenModalLoginSucess={handleOpenModalLoginSucess}
+              handleOpenModalLoginSucess={handleOpenModalLoginSuccess}
             ></ModalLoginSns>
             {openModalLoginSucess && (
-              <ModalLoginSucess open={openModalLoginSucess} onClose={handleCloseModalLoginSucess} />
+              <ModalLoginSucess
+                open={openModalLoginSucess}
+                onClose={handleCloseModalLoginSuccess}
+              />
             )}
           </div>
         </div>

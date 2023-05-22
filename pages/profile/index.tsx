@@ -1,5 +1,6 @@
 import MainLayout from "@components/layouts/layout1/hoc-component/main-layout";
 import PopularNews from "@components/layouts/layout1/view/popular/popular";
+import ProfilePage from "@components/layouts/layout1/view/profile/profile";
 import Head from "next/head";
 import React from "react";
 
@@ -17,7 +18,9 @@ const Index = () => {
           content="https://cdn-static.famiroom.com/static/upload/large/2021-04/16/4495c172-a85f-44ea-a4a9-1b692cca3327.jpg"
         ></meta>
       </Head>
-      <PopularNews />
+      <MainLayout>
+        <ProfilePage />
+      </MainLayout>
     </>
   );
 };

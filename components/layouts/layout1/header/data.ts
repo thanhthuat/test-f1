@@ -1,18 +1,38 @@
 export const data = [
-    { title: "kinh tế", submenu: [] },
-    { title: "xã hội", submenu: [{title:'xã hội dại chúng'}, {title:'chính sách'},{title:'giáo dục'},{title:'môi trường'}] },
-    { title: "văn hóa", submenu: [] },
-    { title: "khoa học IT", submenu: [{ title: "kĩ thuật khoa học" }, { title: "công nghệ IT" }, { title: "internet- thông tin" }] },
-    { title: "công nghiệp", submenu: [ { title: "xe hơi" }, { title: "công nghiệp nặng" }, { title: "máy móc- phụ tùng" }  , { title: "điện- điện tử- robot" }]},
-    { title: "thế giới", submenu: [  ]},
-    {title: " fashion", submenu: [ ]},
-    {title: "sports", submenu: [ ]},
-    {title: " sức khỏe", submenu: [] },
-    {title: " lao động-phúc lợi", submenu: [ ] },
-    {title: "văn nghệ", submenu: [] },
-    {title: "du lịch", submenu: [] },
-    {title: "khu vực", submenu: [] },
- 
-           
-]
-
+  { title: "Kinh tế", submenu: [] },
+  {
+    title: "Xã hội",
+    submenu: [
+      { title: "xã hội đại chúng" },
+      { title: "chính sách" },
+      { title: "giáo dục" },
+      { title: "môi trường" },
+    ],
+  },
+  { title: "Văn hóa", submenu: [] },
+  {
+    title: "Khoa học IT",
+    submenu: [
+      { title: "kĩ thuật khoa học" },
+      { title: "công nghệ IT" },
+      { title: "internet- thông tin" },
+    ],
+  },
+  {
+    title: "Công nghiệp",
+    submenu: [
+      { title: "xe hơi" },
+      { title: "công nghiệp nặng" },
+      { title: "máy móc- phụ tùng" },
+      { title: "điện- điện tử- robot" },
+    ],
+  },
+  { title: "Thế giới", submenu: [] },
+  { title: " Fashion", submenu: [] },
+  { title: "Sport", submenu: [] },
+  { title: " Sức khỏe", submenu: [] },
+  { title: " Lao động-phúc lợi", submenu: [] },
+  { title: "Văn nghệ", submenu: [] },
+  { title: "Du lịch", submenu: [] },
+  { title: "Khu vực", submenu: [] },
+];
