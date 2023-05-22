@@ -110,13 +110,17 @@ const FormPolicy: React.FC<FormPolicyProps> = ({ onClose, handleOpenModalLoginSu
                 />
               )}
             />
-            <a
-              href="https://www.youtube.com/watch?v=FQ9zcAIHDm0"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              만 14세 이상입니다
-            </a>
+            <p style={{ display: "inline-block" }}>
+              만 14세 이상입니다{" "}
+              <a
+                href="https://www.w3schools.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "red" }}
+              >
+                (필수)
+              </a>
+            </p>
           </div>
 
           <div>
@@ -134,13 +138,17 @@ const FormPolicy: React.FC<FormPolicyProps> = ({ onClose, handleOpenModalLoginSu
                 />
               )}
             />
-            <a
-              href="https://www.youtube.com/watch?v=FQ9zcAIHDm0"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <p style={{ display: "inline-block" }}>
               이용약관동의
-            </a>
+              <a
+                href="https://www.w3schools.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "red" }}
+              >
+                (필수)
+              </a>
+            </p>
           </div>
           <div>
             <Controller
@@ -157,13 +165,17 @@ const FormPolicy: React.FC<FormPolicyProps> = ({ onClose, handleOpenModalLoginSu
                 />
               )}
             />
-            <a
-              href="https://www.youtube.com/watch?v=FQ9zcAIHDm0"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <p style={{ display: "inline-block" }}>
               개인정보 수집 및 이용
-            </a>
+              <a
+                href="https://www.w3schools.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "red" }}
+              >
+                (필수)
+              </a>
+            </p>
           </div>
         </form>
 
