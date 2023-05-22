@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/plugin-transform-block-scoping": "^7.21.0",
+    "@babel/preset-typescript": "^7.21.5",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.11",
@@ -31,6 +33,7 @@
     "react-hook-form": "^7.43.9",
     "react-number-format": "^5.1.4",
     "react-redux": "^8.0.5",
+    "react-sns-login": "^1.0.0",
     "react-toastify": "^9.1.2",
     "sass": "^1.60.0",
     "scss": "^0.2.4",

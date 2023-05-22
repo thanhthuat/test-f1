@@ -6,29 +6,35 @@ import CarouselTop from "../../../../common/carousel-story/carosel-top";
 import { useAppSelector } from "@hook/hooks";
 import { SxProps, Theme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-type Props = {};
+import { createPage } from "@components/dynamic-rendering.service";
+import { renderComponent } from "@components/index";
+import { IComponent } from "@components/dynamic-rendering.interfaces";
 interface BlockContentProps {
   children?: React.ReactNode;
   className?: string;
   sx?: SxProps<Theme>;
-  
+  arrChildren?: Array<IComponent>;
 }
 
-const BlockContent: React.FC<BlockContentProps> = ({ className = "", sx = {}, children }) => {
+const BlockContent: React.FC<BlockContentProps> = ({
+  className = "",
+  sx = {},
+  children,
+  ...props
+}) => {
   const { topmovie } = useAppSelector((state) => state.movie);
   return (
-    <Box className={`${className} clstabblock`}>
-      {children}
+    <div className={`${className} clstabblock`}>
       <div className="clstabblock-contenttop">
         <div className="clstabblock-right">
-          {topmovie.slice(10, 11).map((item, index) => {
-            return <CardRow item={item} key={index} isAuthor={true} />;
-          })}
+          {children &&
+            (children as React.ReactNode[]).length > 0 &&
+            (children as React.ReactNode[])[0]}
         </div>
         <div className="clstabblock-left ">
-          {topmovie.slice(11, 12).map((item, index) => {
-            return <CardTextTitle item={item} key={index} />;
-          })}
+          {children &&
+            (children as React.ReactNode[]).length > 0 &&
+            (children as React.ReactNode[])[1]}
         </div>
       </div>
       <div className="clstabblock-contentbody has_border">
@@ -40,7 +46,7 @@ const BlockContent: React.FC<BlockContentProps> = ({ className = "", sx = {}, ch
       </div>
       <div className="has_border"></div>
       {/* <CarouselTop /> */}
-    </Box>
+    </div>
   );
 };
 

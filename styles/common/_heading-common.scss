@@ -1,0 +1,16 @@
+.clsheadingcm {
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 20px;
+  width: 100%;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 98%;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background: #773a3a;
+  }
+}

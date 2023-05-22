@@ -6,12 +6,24 @@
   &-content {
     display: flex;
     transition: all 0.3s;
+    align-items: center;
     &:hover .clsarticle-img img {
       transform: scale(1.1);
     }
     &:hover .clsarticle-summary .clsarticle-summary__title h5 {
       text-decoration: underline;
     }
+  }
+  &-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9eaeb;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 22px;
+    flex-shrink: 0;
   }
   &-img {
     width: 33%;
@@ -65,12 +77,10 @@
 .clsarticle.border {
   border-bottom: 1px solid #e5e5e5;
 }
-.iscolumn  {
- .clsarticle-content {
+.iscolumn {
+  .clsarticle-content {
     .clsarticle-summary {
       text-align: right;
     }
   }
-
-  
 }

@@ -12,8 +12,7 @@ interface ICard {
   image: ImageResponse | null;
 }
 
-export default function Card({ copy, headline, image, title, children }: ICard) {
-  console.log("children", children);
+export default function Card({ children, copy, headline, image, title }: ICard) {
   return (
     <div className="card" style={{ width: "18rem" }}>
       {image && <img src={image.url} className="card-img-top" alt={title}></img>}
@@ -21,17 +20,7 @@ export default function Card({ copy, headline, image, title, children }: ICard) 
         <h5 className="card-title">{title}</h5>
         <h6 className="card-subtitle mb-2 text-muted">{headline}</h6>
         <p className="card-text">{copy}</p>
-        <div style={{ background: "blue" }}>
-          {" "}
-          {children &&
-            (children as React.ReactNode[]).length > 0 &&
-            (children as React.ReactNode[])[0]}
-        </div>
-        <div style={{ background: "red" }}>
-          {children &&
-            (children as React.ReactNode[]).length > 0 &&
-            (children as React.ReactNode[])[1]}
-        </div>
+        <div style={{ background: "blue", padding: "20px" }}>{children}</div>
       </div>
     </div>
   );

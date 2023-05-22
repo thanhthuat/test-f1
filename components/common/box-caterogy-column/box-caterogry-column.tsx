@@ -4,6 +4,7 @@ import CardTextTitle from "../card-text-title/card-text-title";
 import BoxCaterogryColumnHeader from "./box-caterogry-column-header";
 import { useAppSelector } from "@hook/hooks";
 import Box from "@mui/material/Box";
+import Grid from "@mui/system/Unstable_Grid";
 import { SxProps, Theme } from "@mui/material/styles";
 interface BoxCaterogryColumnProps {
   className?: string;
@@ -21,26 +22,35 @@ const BoxCategoryColumn: React.FC<BoxCaterogryColumnProps> = ({ className = "", 
   return (
     <section className={`${className} clsboxcolumn`}>
       <div className={` clsboxcolumn-content`}>
-        {children}
-        {/* <div className="clsboxcolumn-item1">
-          jjjjjjjjjjjjjjjjj
-          <BoxCaterogryColumnHeader item={arr} />
-          <CardColumn item={topmovie[19]} />
-          <div className="has_border"></div>
-          <CardTextTitle />
-        </div>
-        <div className="clsboxcolumn-item2">
-          <BoxCaterogryColumnHeader item={arr} />
-          <CardColumn item={topmovie[18]} />
-          <div className="has_border"></div>
-          <CardTextTitle />
-        </div>
-        <div className="clsboxcolumn-item3">
-          <BoxCaterogryColumnHeader item={arr} />
-          <CardColumn item={topmovie[17]} />
-          <div className="has_border"></div>
-          <CardTextTitle />
-        </div> */}
+        <Grid container spacing={1}>
+          <Grid tablet={6} tablet1={4}>
+            {children &&
+              (children as React.ReactNode[]).length > 0 &&
+              React.cloneElement((children as any[])[0], {
+                item: { ...topmovie[18] },
+                isAuthor: true,
+              })}
+          </Grid>
+          <Grid tablet={6} tablet1={4}>
+            {children &&
+              (children as React.ReactNode[]).length > 0 &&
+              React.cloneElement((children as any[])[0], {
+                item: { ...topmovie[19] },
+                isAuthor: true,
+              })}
+          </Grid>
+          <Grid tablet={6} tablet1={4}>
+            {children &&
+              (children as React.ReactNode[]).length > 0 &&
+              React.cloneElement((children as any[])[0], {
+                item: { ...topmovie[17] },
+                isAuthor: true,
+              })}
+            {/* <CardColumn item={topmovie[1]} isAuthor={true} />
+             <div className="has_border"></div>
+           <CardTextTitle /> */}
+          </Grid>
+        </Grid>
       </div>
     </section>
   );

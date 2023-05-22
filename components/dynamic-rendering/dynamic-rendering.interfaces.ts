@@ -1,9 +1,11 @@
+
 type ComponentList =
-    | 'Button'
-    | 'Card'
-    | 'Container'
-    | 'Divider'
-    | 'Input';
+    'Button'|
+    'Card'|
+    "Divider"|
+    "Input"|
+    'Container' ;
+   
 
 export interface IComponent {
     type: ComponentList;
@@ -12,6 +14,6 @@ export interface IComponent {
         embeddedView?: IComponent;
         items?: Array<IComponent>;
         [key: string]: unknown;
-        children?:  Array<IComponent>;
+        arrChildren?:  Array<IComponent>;
     };
 }

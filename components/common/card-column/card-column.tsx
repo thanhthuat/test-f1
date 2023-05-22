@@ -47,7 +47,7 @@ const CardColumn: React.FC<CardColumnProps> = ({
               <div className="clsarticletitletop-category">
                 <span className="clsarticletitletop-category__author">
                   <PersonIcon sx={{ paddingRight: "2px", width: "20px", height: "20px" }} />
-                  {item?.original_title.slice(0, 10)}
+                  {item?.original_title?.slice(0, 10)}
                 </span>
                 <span className="clsarticletitletop-category__time">
                   <CalendarMonthIcon sx={{ paddingRight: "2px", width: "20px", height: "20px" }} />{" "}

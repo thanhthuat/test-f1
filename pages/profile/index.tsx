@@ -7,8 +7,7 @@ const Index = () => {
   return (
     <>
       <Head>
-        <title>{"popular"}</title>
-        {/* <!-- Open Graph / Facebook --> */}
+        <title>{"profile"}</title>
         <meta property="og:type" content="website" />
         <meta property="og:url" content={" this is detail page"} />
         <meta property="og:title" content={"new page"} />
@@ -18,7 +17,6 @@ const Index = () => {
           content="https://cdn-static.famiroom.com/static/upload/large/2021-04/16/4495c172-a85f-44ea-a4a9-1b692cca3327.jpg"
         ></meta>
       </Head>
-
       <PopularNews />
     </>
   );

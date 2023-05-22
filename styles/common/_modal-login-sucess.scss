@@ -1,0 +1,35 @@
+.clsloginsucess {
+  display: flex;
+  justify-content: center;
+  width: 350px;
+  padding: 30px;
+  &-content {
+    text-align: center;
+  }
+  &-title {
+    padding: 0px 0px 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  &-description {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+  &-btnstart {
+    width: 186px;
+    border-radius: 18px;
+    background: #434343;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  &-coppyright {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+}

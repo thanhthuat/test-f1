@@ -7,8 +7,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background: #fff;
-    width: 500px;
-    height: 500px;
+    padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px 0 rgba(151, 151, 151, 0.5);
   }
@@ -17,8 +16,8 @@
 
     .btn-close-modal {
       position: absolute;
-      right: -4%;
-      top: -19px;
+      right: -6%;
+      top: -29px;
       color: #4f4f4f;
       width: 32px;
       height: 32px;
@@ -28,18 +27,63 @@
   }
 }
 .clsformlogin {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  width: 450px;
   height: 400px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  // height: 400px;
   &-content {
     width: 350px;
+    padding: 50px 0px;
+  }
+  &-logo {
+    margin-bottom: 25px;
+  }
+  &-social {
+    display: flex;
+    // margin-left: -15px;
+    &__item {
+      width: 70px;
+      height: 70px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 15px;
+      background: #4f4f4f;
+      color: #fff;
+      border: 1px solid #b6ab8b;
+      cursor: pointer;
+    }
+    .naver {
+      background: #6aa84f;
+    }
+    .talk {
+      background: #ffd966;
+      color: #000;
+    }
+    .facebook {
+      background: #3c78d8;
+    }
+    .google {
+      background: #cc0000;
+    }
+  }
+  &-description {
+    margin-bottom: 30px;
+  }
+  &-footer {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
   }
   &-title {
     text-align: center;
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   .clsformlogin &-input {
     width: 100%;

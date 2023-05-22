@@ -18,8 +18,6 @@ interface FormLoginProps {
   isLogin?: boolean;
 }
 const FormLogin: React.FC<FormLoginProps> = ({ isLogin = true }) => {
-  const [showPassword, setShowPassword] = React.useState(false);
-  const handleClickShowPassword = () => setShowPassword((show) => !show);
   const form = useForm();
   const { control, handleSubmit } = form;
   const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -29,11 +27,12 @@ const FormLogin: React.FC<FormLoginProps> = ({ isLogin = true }) => {
   return (
     <div className="clsformlogin ">
       <div className="clsformlogin-content">
-        <h2 className="clsformlogin-title">
-          {" "}
-          {isLogin ? "Login with username password" : "Sign up"}
-        </h2>
-        <form noValidate autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
+        <img className="clsformlogin-logo" src="/layout1/small-logo.png" alt=" logo" />
+        <h2 className="clsformlogin-title">{isLogin ? "SNS계정으로 로그인" : "Sign up"}</h2>
+        <p className="clsformlogin-description">
+          <b> 소셜 계정</b>&nbsp;으로 간편하게 로그인하세요
+        </p>
+        {/* <form noValidate autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
           <Controller
             name={"username"}
             control={control}
@@ -85,7 +84,18 @@ const FormLogin: React.FC<FormLoginProps> = ({ isLogin = true }) => {
           <Button variant="contained" type="submit" className="clsformlogin-button">
             Send
           </Button>
-        </form>
+        </form> */}
+
+        <div className="clsformlogin-social">
+          <div className="clsformlogin-social__item naver">N</div>
+          <div className="clsformlogin-social__item talk">Talk</div>
+          <div className="clsformlogin-social__item facebook">F</div>
+          <div className="clsformlogin-social__item google">G</div>
+        </div>
+        <div className="clsformlogin-footer">
+          <p>이용약관 개인정보처리방침</p>
+          <p>© 언론사명. All rights reserved.</p>
+        </div>
       </div>
     </div>
   );
