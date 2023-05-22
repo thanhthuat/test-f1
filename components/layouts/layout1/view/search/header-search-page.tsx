@@ -38,9 +38,11 @@ const HeaderSearchPage: React.FC<HeaderSearchPageProps> = ({ className = "" }) =
     <div className={`${className} clsheadersearchpage`}>
       <div className={`${className} clsheadersearchpage-content`}>
         <div className={`${className} clsheadersearchpage-header`}>
-          <h1 className={`${className} clsheadersearchpage-title`}> Search</h1>
+          <h1 className={`${className} clsheadersearchpage-title`}>
+            <b>Tag :</b> {router.query?.search || ""}
+          </h1>
         </div>
-        <SearchBox value={value} onChange={handleChange} onSubmit={handleSubmit} />
+        {/* <SearchBox value={value} onChange={handleChange} onSubmit={handleSubmit} /> */}
         {/* <CaterogyList /> */}
         {/* <CardWithAuthorRow/> */}
         {/* <CardWithAuthor /> */}

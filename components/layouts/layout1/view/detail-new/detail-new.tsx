@@ -11,6 +11,7 @@ import NotFound from "@components/common/not-found/not-found";
 import { getListTop } from "lib/redux/get-list-top-menu/get-list-top.action";
 import Grid from "@mui/system/Unstable_Grid";
 import DetailNewSekeleton from "./detail-new-sekeleton";
+import ClientComment from "@components/layouts/detail-new/client-comment/client-comment";
 interface DetailNewProps {
   className?: string;
 }
@@ -75,7 +76,7 @@ const DetailNew: React.FC<DetailNewProps> = ({ className }) => {
                   ))}
                 </BoxCategory>{" "}
               </DetailArticle>
-              <div className="has_border"></div>
+             
             </div>
             <div className="clsdetailnew-item2">
               <div className="clsdetailnew-strickly">

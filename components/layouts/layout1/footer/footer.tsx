@@ -50,15 +50,15 @@ const FooterLayout1: React.FC<FooterLayout1Props> = ({ className }) => {
             </div>
 
             <ul className="clsfooterlayout1-other__policy mt-2">
-              <li>언론사 소개 </li>
+              <li>Giới thiệu tòa soạn báo </li>
               <li>
-                <b>개인정보취급방침</b>
+                <b>Chính sách bảo mật thông tin cá nhân</b>
               </li>
-              <li> 청소년보호정책 </li>
-              <li> 이메일수집거부 </li>
-              <li> 광고·제휴 </li>
-              <li> 기사제보 </li>
-              <li>문의하기</li>
+              <li> Chính sách bảo hộ thanh thiếu niên </li>
+              <li> Từ chối thu thập email </li>
+              <li> Quảng cáo, hợp tác</li>
+              <li>Cung cấp tin </li>
+              <li>Hỏi đáp</li>
             </ul>
           </div>
           <div className="clsfooterlayout1-category">
@@ -66,7 +66,7 @@ const FooterLayout1: React.FC<FooterLayout1Props> = ({ className }) => {
               <p className="bold">CATEGORIES</p>
             </div>
             <ul className="mt-2">
-              {data.map((item ,index) => {
+              {data.map((item, index) => {
                 return <li key={index}>{item.title}</li>;
               })}
             </ul>

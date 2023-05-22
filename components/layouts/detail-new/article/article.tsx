@@ -22,6 +22,7 @@ const ArticlePage = (props: Props) => {
       <BoardNews title="Stock Most Viewed News" arrnew={databoard} />
       <BoardNews title="Stock Most Viewed News" arrnew={databoard} />
       <BannerAdvertise />
+   
       <ClientComment />
       <BannerAdvertise />
     </article>
