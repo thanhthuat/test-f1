@@ -32,7 +32,20 @@ const SearchPage: React.FC<SearchPageProps> = ({ className = "" }) => {
 
   const handleRender = (data: any[]) => {
     if (data.length == 0) {
-      return <p>Không tìm thấy kết quả chứa từ khóa của bạn</p>;
+      return (
+        <p>
+          <span>
+            ‘world’
+            <b> {router?.query?.search}</b> 에 대한 검색결과가 없습니다.
+          </span>
+          <ul className="list-style">
+            <li> 단어의 철자가 정확한지 확인해 보세요.</li>
+            <li>한글을 영어로 혹은 영어를 한글로 입력했는지 확인해 보세요.</li>
+            <li>검색어의 단어 수를 줄이거나, 보다 일반적인 검색어로 다시 검색해 보세요.</li>
+            <li>두 단어 이상의 검색어인 경우, 띄어쓰기를 확인해 보세요.</li>
+          </ul>
+        </p>
+      );
     } else {
       return data.map((item, index) => (
         <CardRow className="border" item={item} key={`${index}-${item.title}`} />
@@ -46,8 +59,7 @@ const SearchPage: React.FC<SearchPageProps> = ({ className = "" }) => {
   return (
     <React.Fragment>
       <div className={`${className} clspopular `}>
-       
-        <Box sx={{paddingTop:1}}>
+        <Box sx={{ paddingTop: 1 }}>
           <Grid container spacing={2}>
             <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} desktop={8} xs={12} laptop={8}>
               <HeaderSearchPage />

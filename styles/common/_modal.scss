@@ -17,13 +17,20 @@
 
     .btn-close-modal {
       position: absolute;
-    right: -6%;
-    top: -29px;
+      right: -6%;
+      top: -29px;
       color: #4f4f4f;
       width: 32px;
       height: 32px;
       background: #fff;
       border-radius: 50%;
     }
+  }
+}
+.list-style {
+  padding-left: 50px;
+  margin-top: 20px;
+  li {
+    list-style: disc;
   }
 }
