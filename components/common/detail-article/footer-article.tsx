@@ -5,18 +5,34 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import Box from "@mui/material/Box";
+import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import { SxProps, Theme } from "@mui/material/styles";
 interface FooterArticleProps {
   className?: string;
   sx?: SxProps<Theme>;
 }
 
-const FooterArticle: React.FC<FooterArticleProps> = ({ className = "" ,sx={}}) => {
+const arr = ["News", "Faction", "Policy", "Sport"];
+const FooterArticle: React.FC<FooterArticleProps> = ({ className = "", sx = {} }) => {
   return (
     <Box className={`${className} clsfooterarticle`} sx={{ ...sx }}>
       <div className="clsfooterarticle-content">
         <div className="clsfooterarticle-author">
-          <strong>Tuấn Hưng - Huy Đức</strong>
+          {/* <strong>Tuấn Hưng - Huy Đức</strong> */}
+          <p>
+            tag :<LocalOfferIcon />
+          </p>
+          <ul>
+            {arr.map((item) => {
+              return <li key={item}> {item}</li>;
+            })}
+          </ul>
+          <p>
+            <strong>Tuấn Hưng </strong>/ <span> 18</span>
+          </p>
+        </div>
+        <div>
+          <h3>Bai bao chinh</h3>
         </div>
         <div className="clsfooterarticle-action">
           <div className="clsfooterarticle-button">

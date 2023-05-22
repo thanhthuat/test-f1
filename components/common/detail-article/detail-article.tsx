@@ -4,12 +4,12 @@ import ContentArticle from "./content-article";
 import FooterArticle from "./footer-article";
 import ClientComment from "@components/layouts/detail-new/client-comment/client-comment";
 
-interface DetailArticleProps{
+interface DetailArticleProps {
   className?: string;
-  children?:React.ReactNode
+  children?: React.ReactNode;
 }
 
-const DetailArticle:React.FC<DetailArticleProps> = ({className='',children}) => {
+const DetailArticle: React.FC<DetailArticleProps> = ({ className = "", children }) => {
   return (
     <article className={` ${className} clsarticle`}>
       <HeaderArticle />
