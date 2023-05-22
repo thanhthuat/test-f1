@@ -70,7 +70,8 @@ const ModalLogin: React.FC<ModalLoginProps> = ({ open, onClose }) => {
           </div>
 
           <Box>
-            <Box sx={{ width: "100%" }}>
+            <FormLogin />
+            {/* <Box sx={{ width: "100%" }}>
               <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
                 <Tabs
                   variant="fullWidth"
@@ -82,13 +83,11 @@ const ModalLogin: React.FC<ModalLoginProps> = ({ open, onClose }) => {
                   <Tab label="Sign up" {...a11yProps(1)} />
                 </Tabs>
               </Box>
-              <TabPanel value={value} index={0}>
-                <FormLogin />
-              </TabPanel>
+              <TabPanel value={value} index={0}></TabPanel>
               <TabPanel value={value} index={1}>
                 <FormLogin isLogin={false} />
               </TabPanel>
-            </Box>
+            </Box> */}
           </Box>
         </Box>
       </Modal>

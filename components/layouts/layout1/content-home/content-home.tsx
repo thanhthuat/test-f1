@@ -44,7 +44,7 @@ const ContentHome = (props: Props) => {
       <div className="clscontenthomelayout1 pt-2">
         <Box className="">
           <Grid container spacing={2}>
-            <Grid sx={{ paddingTop: 0, paddingBottom: 0 }} md={8} sm={12}>
+            <Grid sx={{ paddingTop: 0, paddingBottom: 0, marginTop: "100px" }} md={8} sm={12}>
               <CardRowMain />
               <div className="layoutgrid-3" style={{ margin: "20px 0px" }}>
                 {topmovie?.slice(4, 7).map((item) => {

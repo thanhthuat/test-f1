@@ -5,6 +5,7 @@ const mockResponsePopular: IComponent = {
   data: {
     id: "4400936b-6158-1354-9dc8-a04c57e1af46",
     fluid: true,
+
     //CategoryHeader
     children: [
       {
@@ -610,7 +611,13 @@ const mockResponsePopular: IComponent = {
               data: {
                 id: "4400936b-6158-9087-9dc8-a04c57e1af46121x2121213",
                 className: "clslistcategory-item2",
-                sx: { paddingTop: 0, paddingBottom: 0, position: "sticky", top: "66px" },
+                sx: {
+                  paddingTop: 0,
+                  paddingBottom: 0,
+                  position: "sticky",
+                  top: "66px",
+                  marginTop: "100px",
+                },
                 children: [
                   {
                     type: "TabContainer",

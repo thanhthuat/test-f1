@@ -217,7 +217,7 @@ const mockResponse: IComponent = {
 
                 children: [
                   {
-                    type: "CardTextTitle",
+                    type: "CardRow",
                     data: {
                       id: "4400936b-6158-4943-9dc8-a04c57e1af46y72121",
                       title: "Title",

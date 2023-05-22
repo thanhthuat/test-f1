@@ -7,8 +7,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background: #fff;
-    width: 500px;
-    height: 450px;
+    padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px 0 rgba(151, 151, 151, 0.5);
   }
@@ -17,8 +16,8 @@
 
     .btn-close-modal {
       position: absolute;
-      right: -4%;
-      top: -19px;
+      right: -6%;
+      top: -29px;
       color: #4f4f4f;
       width: 32px;
       height: 32px;
@@ -28,14 +27,16 @@
   }
 }
 .clsformlogin {
+  width: 450px;
+  height: 400px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   text-align: center;
-  height: 400px;
+  // height: 400px;
   &-content {
     width: 350px;
-    padding: 10px 0px 50px 0px;
+    padding: 50px 0px;
   }
   &-logo {
     margin-bottom: 25px;
