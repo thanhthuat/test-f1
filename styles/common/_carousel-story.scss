@@ -1,0 +1,45 @@
+.carouseldetail {
+  width: 100%;
+  max-width: 100vw;
+}
+.carouseldetail,
+swiper-container {
+  padding: 50px !important;
+}
+.swipercustomerbtn {
+  position: absolute;
+  top: 18%;
+  left: 5%;  
+}
+.swipercustomerbtnnext {
+  position: absolute;
+  top: 20%;
+  right: 12%;
+}
+.swipercustomerbtnnext button {
+  border: none;
+  outline: none;
+  color: #999999;
+  margin: 0px 0.5rem;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+  position: absolute;
+  top: 100%;
+  z-index: 9999;
+}
+.swipercustomerbtn button {
+  border: none;
+  outline: none;
+  color: #999999;
+  margin: 0px 0.5rem;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+  position: absolute;
+  top: 100%;
+  z-index: 9999;
+}
+
+// .swipercustomerbtn button:hover {
+//   background-color: hsl(210, 100%, 40%);
+//   cursor: pointer;
+// }

@@ -82,6 +82,7 @@
 }
 .clsfooterarticle {
   &-content {
+    width: 100%;
   }
   &-button {
     display: flex;
@@ -173,8 +174,4 @@
       justify-content: center;
     }
   }
-}
-.carouseldetail {
-  max-width: 100vw;
-  width: 100%;
 }

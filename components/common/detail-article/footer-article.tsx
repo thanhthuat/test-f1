@@ -14,6 +14,14 @@ import CardRow from "../card-row/card-row";
 import { useAppSelector } from "@hook/hooks";
 import CarouselStory from "../carousel-story/carousel-story";
 import CarouselWeather from "../carousel-weather/carousel-weather";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Pagination } from "swiper";
 interface FooterArticleProps {
   className?: string;
   sx?: SxProps<Theme>;
@@ -46,10 +54,11 @@ const FooterArticle: React.FC<FooterArticleProps> = ({ className = "", sx = {} }
               })}
             </ul>
           </p>
-          <div style={{ width: "100%" }}>
-            {/* <CarouselWeather /> */}
-            {/* <CarouselStory array={topmovie.slice(0, 5)} className="carouseldetail" /> */}
-          </div>
+          {/* <div style={{ width: "800px" }}>
+           
+            <CarouselStory array={topmovie.slice(0, 5)} className="carouseldetail" />
+          </div> */}
+
           <p className="clsfooterarticle-author__post">
             <strong>Tuấn Hưng </strong>/{" "}
             <span className="clsfooterarticle-author__active"> 18</span>
