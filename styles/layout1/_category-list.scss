@@ -15,6 +15,9 @@
     overflow-y: scroll;
     padding-left: 20px;
     position: relative;
+    @include res(600px) {
+      padding-left: 5px;
+    }
     // &::after {
     //   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
     //   width: 100%;
