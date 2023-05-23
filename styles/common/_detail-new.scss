@@ -116,6 +116,36 @@
   &-author {
     text-align: right;
     margin-top: 10px;
+    &__tag {
+      margin-top: 20px;
+      padding-top: 10px;
+      display: flex;
+      color: #999999;
+      align-items: center;
+      ul {
+        display: flex;
+      }
+    }
+    &__tagitem {
+      padding: 8px 7px;
+      border: 1px solid #eeeeee;
+      margin-left: 10px;
+      color: #999999;
+    }
+    &__post {
+      text-align: left;
+      padding: 10px 0px;
+      margin: 15px 0px;
+    }
+    &__active {
+      color: red;
+    }
+    &__relatenew {
+      &-title {
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+      }
+    }
   }
   &-action {
     margin-top: 10px;
@@ -143,4 +173,8 @@
       justify-content: center;
     }
   }
+}
+.carouseldetail {
+  max-width: 100vw;
+  width: 100%;
 }

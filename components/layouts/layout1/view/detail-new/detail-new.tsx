@@ -70,11 +70,11 @@ const DetailNew: React.FC<DetailNewProps> = ({ className }) => {
           <div className={`${className} clsdetailnew`}>
             <div className="clsdetailnew-item1">
               <DetailArticle>
-                <BoxCategory>
+                {/* <BoxCategory>
                   {array.map((item) => (
                     <CardRow item={topmovie[9]} key={item.title} />
                   ))}
-                </BoxCategory>{" "}
+                </BoxCategory>{" "} */}
               </DetailArticle>
              
             </div>

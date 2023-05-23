@@ -10,12 +10,17 @@ import { Pagination, EffectFade } from "swiper";
 
 interface CarouselStoryProps {
   array: any[];
-  className?: string ;
-  slidesPerView?:number;
-  spaceBetween?:number;
+  className?: string;
+  slidesPerView?: number;
+  spaceBetween?: number;
 }
 
-const CarouselStory:React.FC<CarouselStoryProps> = ({array,className ='',slidesPerView=1,spaceBetween=10}) => {
+const CarouselStory: React.FC<CarouselStoryProps> = ({
+  array,
+  className = "",
+  slidesPerView = 1,
+  spaceBetween = 10,
+}) => {
   return (
     <Swiper
       spaceBetween={50}
@@ -30,9 +35,20 @@ const CarouselStory:React.FC<CarouselStoryProps> = ({array,className ='',slidesP
       onSwiper={(swiper) => console.log(swiper)}
       className={`${className}`}
     >
-      {array.map((item ,index)=>  <SwiperSlide key={index}> <div> {item?.title}</div></SwiperSlide>)}
-     
-     
+      <SwiperSlide>
+        <div>121</div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div>124</div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div>1551</div>
+      </SwiperSlide>
+      {/* {array.map((item, index) => (
+        <SwiperSlide key={index}>
+          <div>{item?.title}</div>
+        </SwiperSlide>
+      ))} */}
     </Swiper>
   );
 };
