@@ -69,14 +69,12 @@ const DetailNew: React.FC<DetailNewProps> = ({ className }) => {
         <React.Fragment>
           <div className={`${className} clsdetailnew`}>
             <div className="clsdetailnew-item1">
-              <DetailArticle>
-                {/* <BoxCategory>
+              <DetailArticle />
+              {/* <BoxCategory>
                   {array.map((item) => (
                     <CardRow item={topmovie[9]} key={item.title} />
                   ))}
                 </BoxCategory>{" "} */}
-              </DetailArticle>
-             
             </div>
             <div className="clsdetailnew-item2">
               <div className="clsdetailnew-strickly">

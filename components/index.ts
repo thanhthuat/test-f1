@@ -1,6 +1,6 @@
-import  HeaderCommon  from '@components/common/header-common/header-common';
+import HeaderCommon from "@components/common/header-common/header-common";
 
-import  BoxCaterogryColumn  from '@components/common/box-caterogy-column/box-caterogry-column';
+import BoxCaterogryColumn from "@components/common/box-caterogy-column/box-caterogry-column";
 import BannerAdvertise from "./common/banner-advertise/banner-adv";
 import BorderLine from "./common/border-line/border-line";
 import BoxCard from "./common/box-card/box-card";
@@ -28,15 +28,16 @@ import ImgItem from "./common/img-item/img-item";
 import ItemView from "./common/Item-view/item-view";
 import Container from "./component/Container";
 import BlockContent from "./layouts/layout1/tab/content/block-content";
-import React from 'react';
-import { IComponent } from './dynamic-rendering.interfaces';
-import MainLayout from './layouts/layout1/hoc-component/main-layout';
+import React from "react";
+import { IComponent } from "./dynamic-rendering.interfaces";
+import MainLayout from "./layouts/layout1/hoc-component/main-layout";
 import TabContainer from "@components/common/tab-common";
 import TabColumn from "@components/common/tab/tab";
 import BlockMainWithTab from "./common/block-main-with-tab/block-main-with-tab";
 import MainTwoColumn from "./common/main-two-column/main-two-column";
 import BoxCategory from "@components/common/box-category/box-category";
-import CategoryHeader from './layouts/layout1/view/caterogy/category-header';
+import CategoryHeader from "./layouts/layout1/view/caterogy/category-header";
+import DetailNew from "./layouts/layout1/view/detail-new/detail-new";
 export const Components = {
   BlockContent,
   BannerAdvertise,
@@ -74,12 +75,16 @@ export const Components = {
   BoxCategory,
   CategoryHeader,
   HeaderCommon,
+  DetailNew,
 };
-export  const renderComponent = (block:IComponent) => {
-    const { data, type } = block;
-     const { items, embeddedView, id, ...rest } = data;
+export const renderComponent = (block: IComponent) => {
+  const { data, type } = block;
+  const { items, embeddedView, id, ...rest } = data;
   if (typeof Components[type] !== "undefined") {
     return React.createElement(Components[type] as any, {
-      ...rest,id,key: id
+      ...rest,
+      id,
+      key: id,
     });
-  }}
+  }
+};

@@ -1,4 +1,6 @@
 import DetailArticle from "@components/common/detail-article/detail-article";
+import { createPage } from "@components/dynamic-rendering.service";
+import mockResponseDetail from "@components/dynamic-rendering/dynamic-rendering-detail.mock";
 import MainLayout from "@components/layouts/layout1/hoc-component/main-layout";
 import DetailNew from "@components/layouts/layout1/view/detail-new/detail-new";
 import Head from "next/head";
@@ -21,9 +23,11 @@ const Index = (props: Props) => {
           content="https://cdn-static.famiroom.com/static/upload/large/2021-04/16/4495c172-a85f-44ea-a4a9-1b692cca3327.jpg"
         ></meta>
       </Head>
-      <MainLayout className="bg-detail-new">
+      {createPage(mockResponseDetail)}
+
+      {/* <MainLayout className="bg-detail-new">
         <DetailNew />
-      </MainLayout>
+      </MainLayout> */}
     </>
   );
 };

@@ -42,7 +42,7 @@ const FooterArticle: React.FC<FooterArticleProps> = ({ className = "", sx = {} }
       <div className="clsfooterarticle-content">
         <div className="clsfooterarticle-author">
           {/* <strong>Tuấn Hưng - Huy Đức</strong> */}
-          <p className="clsfooterarticle-author__tag">
+          <div className="clsfooterarticle-author__tag">
             <LocalOfferIcon /> Tags :
             <ul>
               {arr.map((item, index) => {
@@ -53,15 +53,12 @@ const FooterArticle: React.FC<FooterArticleProps> = ({ className = "", sx = {} }
                 );
               })}
             </ul>
-          </p>
+          </div>
           {/* <div style={{ width: "800px" }}>
-           
             <CarouselStory array={topmovie.slice(0, 5)} className="carouseldetail" />
           </div> */}
-
           <p className="clsfooterarticle-author__post">
-            <strong>Tuấn Hưng </strong>/{" "}
-            <span className="clsfooterarticle-author__active"> 18</span>
+            <strong>Tuấn Hưng </strong>/<span className="clsfooterarticle-author__active"> 18</span>
           </p>
         </div>
         <div className="clsfooterarticle-author__relatenew">
@@ -70,7 +67,7 @@ const FooterArticle: React.FC<FooterArticleProps> = ({ className = "", sx = {} }
             {topmovie.slice(0, 5).map((item) => (
               <CardRow item={item} key={item.title} isImg={false} />
             ))}
-          </BoxCategory>{" "}
+          </BoxCategory>
         </div>
 
         {/* <div className="clsfooterarticle-action">

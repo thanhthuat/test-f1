@@ -29,6 +29,9 @@
 .clsformlogin {
   width: 450px;
   height: 400px;
+  @include res(600px) {
+    width: 88vw;
+  }
   display: flex;
   align-items: flex-start;
   justify-content: center;

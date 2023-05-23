@@ -4,6 +4,9 @@
   &-content {
     padding: 20px 30px;
     width: 450px;
+    @include res(600px) {
+      width: 88vw;
+    }
   }
   &-header {
     padding: 10px 0px 25px 0px;

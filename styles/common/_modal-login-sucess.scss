@@ -3,6 +3,9 @@
   justify-content: center;
   width: 350px;
   padding: 30px;
+  @include res(400px) {
+    width: 88vw;
+  }
   &-content {
     text-align: center;
   }

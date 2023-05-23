@@ -34,6 +34,7 @@ type ComponentList =
   | "CategoryHeader"
   | "BoxCategory"
   | "HeaderCommon"
+  | "DetailNew"
   | "ItemView";
 
 interface ITypeItem {

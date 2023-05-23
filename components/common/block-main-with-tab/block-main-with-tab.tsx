@@ -4,7 +4,6 @@ import CardRowMain from "@components/common/car-row-main/card-row-main";
 import CardTextTitle from "@components/common/card-text-title/card-text-title";
 import Grid from "@mui/system/Unstable_Grid";
 import { Box, Divider, Stack } from "@mui/material";
-import Tab from "@components/layouts/layout1/tab/tab";
 interface BlockMainWithTabProps {
   children: React.ReactNode;
   listNew: any[];
@@ -70,9 +69,7 @@ const BlockMainWithTab: React.FC<BlockMainWithTabProps> = ({
                   //   });
                   // })
                 }
-                {(children as React.ReactNode[])?.length > 2 && (
-                  (children as React.ReactNode[])[4]
-                )}
+                {(children as React.ReactNode[])?.length > 2 && (children as React.ReactNode[])[4]}
               </>
             ) : (
               <BoxCategory className="clslistcategory-item2">

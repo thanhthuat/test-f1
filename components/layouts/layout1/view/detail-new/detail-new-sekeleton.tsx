@@ -24,7 +24,6 @@ const DetailNewSekeleton: React.FC<DetailNewSekeletonProps> = ({ className = "" 
               <h3 className="clsdetailnew-item2__title ">{"Popular News"}</h3>
             </Skeleton>
           </Stack>
-
           {topmovie.slice(0, 9).map((item) => {
             return (
               <React.Fragment key={item.id}>

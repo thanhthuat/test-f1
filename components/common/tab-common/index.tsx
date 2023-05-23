@@ -66,7 +66,7 @@ const TabContainer: React.FC<TabContainerProps> = ({
             {(children as React.ReactNode[])?.length > 0 &&
               datanew[item as keyof typeof datanew]?.map((item,index) => {
                 return React.cloneElement((children as any[])[0], {
-                  item: { ...item, title: "123131-trhchxc", opacity: "121kjcshdjf" },
+                  item: { ...item },
                   key: `${(children as any[])[0].key}-${index}`,
                 });
               })}
