@@ -1,0 +1,58 @@
+.clstransportcompany {
+  padding: 50px 0px 100px 0px;
+  &-content {
+    display: flex;
+    padding: 10px 20px;
+  }
+  &-adress {
+    flex-basis: 50%;
+    &__box {
+      width: 420px;
+    }
+    p {
+      font-size: 25px;
+    }
+  }
+  &-public {
+    &-train {
+      &__adress {
+        padding: 8px 12px;
+        background: #eeeeee;
+        color: #000;
+        width: 150px;
+        border-radius: 25px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      &__item {
+        margin: 10px 0px;
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+
+    &-bus {
+      margin-top: 30px;
+      &__adress {
+        padding: 8px 12px;
+        background: #eeeeee;
+        color: #000;
+        width: 150px;
+        border-radius: 25px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      &__item {
+        display: flex;
+        margin: 10px 0px;
+        p {
+          font-size: 20px;
+        }
+        .pr-1 {
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+}

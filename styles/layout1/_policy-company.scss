@@ -1,0 +1,39 @@
+.clspolicycompany {
+  &-content {
+    padding: 0px 150px;
+  }
+  &-title {
+    text-align: center;
+    padding: 10px 0px;
+    margin: 10px 0px;
+  }
+  &-menu {
+    display: flex;
+  }
+  &-left {
+    padding-right: 25px;
+    p {
+      &:first-child {
+        margin-top: 0px;
+      }
+    }
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   height: 100%;
+    //   width: 1px;
+    //   ba
+    // }
+    border-right: 1px solid #eeeeee;
+  }
+  &-right {
+    padding-left: 25px;
+    p {
+      &:first-child {
+        margin-top: 0px;
+      }
+    }
+  }
+}

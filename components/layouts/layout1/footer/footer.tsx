@@ -23,7 +23,7 @@ const FooterLayout1: React.FC<FooterLayout1Props> = ({ className }) => {
               <p>
                 사이트 설명글 회사소개 <br /> 페이지에서 텍스트 출력 4줄까지
                 <br /> 출력 / 4줄 이상은 …으로 표시 … 끝에 <br />
-                [더보기] 클릭하면 페이지 이동
+                <Link href={"/company"}>[더보기] 클릭하면 페이지 이동</Link>
               </p>
             </div>
             <div className="clsfooterlayout1-logo__contact mt-1">
