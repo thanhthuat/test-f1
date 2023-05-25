@@ -20,7 +20,7 @@ const BuyNewsCcrap = (props: Props) => {
           </div>
         );
       })} */}
-      {topmovie.length == 0 && !show && (
+      { !show && (
         <>
           <div className="clsbuynewsscrap-nodata">
             <p>không có news nào scrap . </p>
@@ -36,7 +36,7 @@ const BuyNewsCcrap = (props: Props) => {
           </div>
         </>
       )}
-      {show || (topmovie.length == 0 && <BlockBuyNew />)}
+      {show  && <BlockBuyNew />}
       <div className="clsnewsscrap-coppyright">
         <p>
           이용약관 <b>개인정보처리방침</b>
