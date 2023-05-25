@@ -15,16 +15,19 @@ const FormSigin = ({}) => {
   const submit = (data: any) => {
     console.log("data", data);
   };
-   const firstName = useWatch({
-     control,
-     name: "agree",
-   });
+  const firstName = useWatch({
+    control,
+    name: "agree",
+  });
   return (
     <div className="clsformnew">
       <div className="clsformnew-content containerlayout1 ">
         <div></div>
         <div>
           <form autoComplete="off" onSubmit={handleSubmit(submit)}>
+            <p className="m-1">
+              <b>신청자 정보</b>
+            </p>
             <Controller
               name={"name1212"}
               control={control}
@@ -97,6 +100,9 @@ const FormSigin = ({}) => {
                 />
               )}
             />
+            <p className="m-1">
+              <b>수취인 정보</b>
+            </p>
             <Controller
               name={"name1"}
               control={control}
@@ -286,6 +292,9 @@ const FormSigin = ({}) => {
                 />
               )}
             />
+            <p className="m-1">
+              <b>구독료</b>
+            </p>
             <Controller
               name={"paymment"}
               control={control}
@@ -303,6 +312,7 @@ const FormSigin = ({}) => {
                 </RadioGroup>
               )}
             />
+
             <Controller
               name={"comment"}
               control={control}
@@ -350,8 +360,8 @@ const FormSigin = ({}) => {
               </p>
             </div>
 
-            <button type="submit" disabled={!firstName}>
-              submit
+            <button className="clsformnew-button" type="submit" disabled={!firstName}>
+              Send
             </button>
           </form>
         </div>

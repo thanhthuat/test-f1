@@ -48,7 +48,7 @@ const BoxCategoryThreeColumn: React.FC<BoxCategoryThreeColumnProps> = ({
             {children &&
               (children as React.ReactNode[]).length > 0 &&
               React.cloneElement((children as any[])[1], {
-                item: { ...topmovie[11], title: "123131-trhchxc", opacity: "121kjcshdjf" },
+                item: { ...topmovie[11], title: "123131-trhchxc" },
                 isAuthor: true,
                 isDes: false,
               })}

@@ -17,6 +17,8 @@ interface ICardRowProps {
   isImg?: boolean;
   className?: string;
   number?: number;
+  isReverse?: boolean;
+
   sx?: SxProps<Theme>;
 }
 
@@ -29,12 +31,23 @@ const CardRow: React.FC<ICardRowProps> = ({
   isAuthor = false,
   isShowNumber = false,
   number = 0,
+  isReverse = false,
 }) => {
   const { topmovie } = useAppSelector((state) => state.movie);
   return (
     <article className={`${className} clsarticle`}>
       <Link href={"/detail/123"}>
-        <Box className="clsarticle-content" sx={{ ...sx }}>
+        <Box
+          className="clsarticle-content"
+          sx={
+            isReverse
+              ? {
+                  ...sx,
+                  flexDirection: "row-reverse",
+                }
+              : { ...sx }
+          }
+        >
           {isShowNumber ? (
             <div className="clsarticle-number">
               <h2>{number}</h2>

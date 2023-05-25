@@ -76,3 +76,10 @@ export const dataContact = [
   { name: "마케팅부", phone: "02) 1234-6789" },
   { name: "취재부", phone: "02) 1234-6789" },
 ];
+
+export const dataContactHandle = [
+  { name: "전화", phone: "02) 1234-6789" },
+  { name: "팩스", phone: "02) 1234-6789" },
+  { name: "마케팅부", phone: "02) 1234-6789" },
+  { name: "이메일", phone: "thanh@gmail.com" },
+];

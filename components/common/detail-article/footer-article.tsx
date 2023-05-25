@@ -58,14 +58,20 @@ const FooterArticle: React.FC<FooterArticleProps> = ({ className = "", sx = {} }
             <CarouselStory array={topmovie.slice(0, 5)} className="carouseldetail" />
           </div> */}
           <p className="clsfooterarticle-author__post">
-            <strong>Tuấn Hưng </strong>/<span className="clsfooterarticle-author__active"> 18</span>
+            <strong>Tuấn Hưng </strong>/
+            <span className="clsfooterarticle-author__active">
+              {" "}
+              <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">
+                18
+              </a>
+            </span>
           </p>
         </div>
         <div className="clsfooterarticle-author__relatenew">
           <h3 className="clsfooterarticle-author__relatenew-title">Bài báo chính</h3>
           <BoxCategory>
-            {topmovie.slice(0, 5).map((item) => (
-              <CardRow item={item} key={item.title} isImg={false} />
+            {topmovie.slice(0, 5).map((item, index) => (
+              <CardRow item={item} key={item.title} isImg={index == 0} isReverse={index == 0} />
             ))}
           </BoxCategory>
         </div>

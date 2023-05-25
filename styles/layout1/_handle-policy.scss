@@ -1,0 +1,11 @@
+.clshandlepolicy {
+  &-content {
+    display: flex;
+  }
+  &-title {
+    flex-basis: 50%;
+  }
+  &-policy {
+    flex-basis: 50%;
+  }
+}

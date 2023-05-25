@@ -1,0 +1,27 @@
+.clshandleinformation {
+  &-content {
+    display: flex;
+  }
+  &-title {
+    flex-basis: 50%;
+  }
+  &-contact {
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+      border-right: none;
+    }
+
+    th {
+      border: 1px solid #dddddd;
+      border-left: none;
+      padding: 8px;
+    }
+  }
+}
