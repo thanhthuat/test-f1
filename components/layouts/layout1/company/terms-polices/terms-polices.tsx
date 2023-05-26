@@ -3,6 +3,12 @@ import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import { arrTerms } from "./data";
+import TermsOfUse from "./terms-of-use";
+import TermsPrivacy from "./terms-privacy";
+import TermsProtection from "./terms-protection";
+import TermsEthics from "./terms-ethics";
+import TermsCoppyright from "./terms-coppyright";
+import TermsPremission from "./terms-premission";
 type Props = {};
 interface ProfilePageProps {}
 interface TabPanelProps {
@@ -12,16 +18,16 @@ interface TabPanelProps {
 }
 const styles = {
   tab: {
-    color: "#D97D54",
-    border: "1px solid #D97D54",
+    color: "#000",
+    border: "1px solid #efefef",
     transition: "all 0.3s ease",
   },
   tabactive: {
-    color: "#fff",
-    background: "#D97D54",
+    color: "#000",
+    background: "#ffd966",
   },
   tabItemContainer: {
-    background: "#D97D54",
+    background: "#efefef",
   },
 };
 function TabPanel(props: TabPanelProps) {
@@ -54,6 +60,9 @@ const TermsPolices = (props: Props) => {
   return (
     <div className="clstermspolices">
       <div className="clstermspolices-content containerlayout1">
+        <div className="clstermspolices-title">
+          <h1 className="clstermspolices-title__h1">이메일무단수집거부</h1>
+        </div>
         <Box sx={{ width: "100%" }}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <Tabs
@@ -63,8 +72,8 @@ const TermsPolices = (props: Props) => {
               aria-label="basic tabs example"
               TabIndicatorProps={{
                 style: {
-                  backgroundColor: "#D97D54",
-                  color: "#D97D54 ",
+                  backgroundColor: "#ffd966",
+                  color: "#ffd966 ",
                 },
               }}
             >
@@ -84,13 +93,23 @@ const TermsPolices = (props: Props) => {
             </Tabs>
           </Box>
           <TabPanel value={value} index={0}>
-            1213
+            <TermsOfUse />
           </TabPanel>
           <TabPanel value={value} index={1}>
-            21212121
+            <TermsPrivacy />
           </TabPanel>
           <TabPanel value={value} index={2}>
-            131313
+            <TermsProtection />
+          </TabPanel>
+          <TabPanel value={value} index={3}>
+            <TermsCoppyright />
+          </TabPanel>
+          <TabPanel value={value} index={4}>
+            <TermsPremission />
+          </TabPanel>
+
+          <TabPanel value={value} index={5}>
+            <TermsEthics />
           </TabPanel>
         </Box>
       </div>

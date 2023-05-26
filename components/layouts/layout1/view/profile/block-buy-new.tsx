@@ -33,7 +33,6 @@ const BlockBuyNew = (props: Props) => {
           22/12/1999 /Male
         </Grid>
         <Grid xs={12} tablet={6} laptop={3}>
-        
         </Grid>
         <Grid xs={12} tablet={6} laptop={9}>
           <p>

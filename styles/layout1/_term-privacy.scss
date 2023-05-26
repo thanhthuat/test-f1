@@ -1,0 +1,55 @@
+.clstermsprivacy {
+  &-content {
+  }
+  &-privacy {
+    width: 100%;
+    border: 2px solid #eeeeee;
+    &__title {
+      padding: 10px;
+      text-align: center;
+    }
+  }
+  &-overview {
+    width: 100%;
+    // border: 2px solid #eeeeee;
+    display: flex;
+    padding: 10px 50px;
+    ul {
+      flex-basis: 50%;
+    }
+    ul > li {
+      cursor: pointer;
+      &:hover {
+        color: rgb(217, 125, 84);
+      }
+    }
+  }
+  &-detail {
+    margin-top: 50px;
+    &__item {
+      margin: 15px 0px;
+      padding: 10px 0px;
+    }
+  }
+  &-table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+      border-right: none;
+      ul > li {
+        list-style: disc inside;
+      }
+    }
+
+    th {
+      border: 1px solid #dddddd;
+      border-left: none;
+      padding: 8px;
+      width: 300px;
+    }
+  }
+}

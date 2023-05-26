@@ -1,6 +1,10 @@
 .clsfootercompany {
   width: 100%;
   border: 1px solid #eeeeee;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
   &-content {
     padding: 20px 0px;
     display: flex;
