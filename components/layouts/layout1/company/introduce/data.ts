@@ -1,29 +1,35 @@
 export const data = [
   {
-    title: "Giới thiệu truyền thông",
-    submenu: [{ title: "chào hỏi" }, { title: "contact/ địa chỉ" }],
+    title: "매체소개",
+    submenu: [
+      { title: "인사말(hello) ", url: "" },
+      { title: "연락처/주소(contact)", url: "contact" },
+    ],
   },
 
   {
-    title: "Báo tin - Câu hỏi",
+    title: "제보·문의(quesstion)",
     submenu: [
-      { title: "Báo tin bài báo" },
-      { title: "Quảng cáo - Câu hỏi hợp tác" },
-      { title: "Internet  - Thông tin" },
+      { title: "기사제보(news)", url: "" },
+      { title: "광고·제휴문의", url: "" },
     ],
   },
   {
-    title: "Customer center",
-    submenu: [{ title: "Đăng kí mua báo" }, { title: "Chế độ xử lý tình huống khó khăn" }],
+    title: " 고객센터 Customer center",
+    submenu: [
+      { title: "구독신청 (Signup-buy)", url: "customer" },
+      { title: "고충처리인제도", url: "customer" },
+    ],
   },
   {
-    title: "Chính sách và điều khoản",
+    title: "약관 및 정책",
     submenu: [
-      { title: "Điều khoản sử dụng" },
-      { title: "Chính sách bảo mật" },
-      { title: "Chính sách bảo vệ thiếu niên" },
-      { title: "Email ko cho phép" },
-      { title: "Phương châm đạo đức" },
+      { title: "이용약관", url: "terms-polices/0" },
+      { title: "개인정보처리방침", url: "terms-polices/1" },
+      { title: "청소년보호정책", url: "terms-polices/2" },
+      { title: "저작권보호정책", url: "terms-polices/3" },
+      { title: "이메일무단수집거부", url: "terms-polices/4" },
+      { title: "윤리강령", url: "terms-polices/5" },
     ],
   },
 ];

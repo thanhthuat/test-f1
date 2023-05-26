@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -9,6 +9,7 @@ import TermsProtection from "./terms-protection";
 import TermsEthics from "./terms-ethics";
 import TermsCoppyright from "./terms-coppyright";
 import TermsPremission from "./terms-premission";
+import { useRouter } from "next/router";
 type Props = {};
 interface ProfilePageProps {}
 interface TabPanelProps {
@@ -54,9 +55,18 @@ function a11yProps(index: number) {
 }
 const TermsPolices = (props: Props) => {
   const [value, setValue] = React.useState(0);
+  const router = useRouter();
+
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
+  useEffect(() => {
+    if (typeof Number(router?.query?.index) == "number" && Number(router?.query?.index) > 0) {
+      setValue(Number(router?.query?.index));
+    } else {
+      setValue(0);
+    }
+  }, [router?.query?.index]);
   return (
     <div className="clstermspolices">
       <div className="clstermspolices-content containerlayout1">
