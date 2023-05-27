@@ -27,6 +27,7 @@ const mockResponsePopular: IComponent = {
           image: {
             url: "https://i.stack.imgur.com/y9DpT.jpg",
           },
+         
           listNew: [
             {
               adult: false,
@@ -395,7 +396,7 @@ const mockResponsePopular: IComponent = {
               data: {
                 id: "4400936b-6158-9087-9dc8-a04c57e1af46121x2121213",
                 className: "clslistcategory-item2",
-                // sx: { paddingTop: 0, paddingBottom: 0, position: "sticky", top: "66px" },
+                sx: { maxHeight: "620px" },
                 children: [
                   {
                     type: "TabContainer",
