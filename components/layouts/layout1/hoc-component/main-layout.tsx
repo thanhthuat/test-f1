@@ -52,7 +52,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, className = "", isFoo
         <HeaderLogo />
         <HeaderLayout1 />
         <main className={`${className} `}>
-          <div className={` containerlayout1 clsmain`}>{children}</div>
+          <div className={` containerlayout1 `}>{children}</div>
         </main>
         <ScrollTop />
         {isFooter && <FooterLayout1 />}

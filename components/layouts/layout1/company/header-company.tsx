@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { data } from "./introduce/data";
 import Link from "next/link";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -9,9 +9,11 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Drawer from "@mui/material/Drawer";
+import { useRouter } from "next/router";
 type Props = {};
 
 const HeaderCompany = (props: Props) => {
+  const router = useRouter();
   const [openMenu, setOpenMenu] = React.useState<boolean>(false);
   const handleOpenMenu = () => {
     setOpenMenu(!openMenu);
@@ -20,6 +22,9 @@ const HeaderCompany = (props: Props) => {
   const handleOpenDrawer = () => {
     setState(true);
   };
+  useEffect(() => {
+    if (state) setState(false);
+  }, [router.query]);
   return (
     <div className="clsheadercompany">
       <header className="clsheadercompany-content containerlayout1">

@@ -1,6 +1,6 @@
 import SearchBox from "@components/common/search/search";
 import Box from "@mui/material/Box";
-import React from "react";
+import React, { useEffect } from "react";
 import img from "public/layout1/small-logo.png";
 import Link from "next/link";
 import Image from "next/image";
@@ -66,6 +66,9 @@ const HeaderSearch: React.FC<HeaderSearchProps> = ({ className = "", sx = {} }) 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
   };
+  useEffect(() => {
+    if (openMenu) handleOpenMenu();
+  }, [router.query]);
 
   return (
     <div className={` clsheadersearch`}>
