@@ -10,13 +10,18 @@ const TermsPermission = (props: Props) => {
         <div className="clstermspermisson-detail">
           {listTermsAuthorized.map((item, index) => {
             return (
-              <div className="clstermspermisson-detail__item" id={item.id}>
+              <div className="clstermspermisson-detail__item" id={item.id} key={item.id}>
                 <b>
                   제&nbsp; {index + 1}
                   {item.title}
                 </b>
-                {item.content.map((item) => {
-                  return <p className="mt-1"> {item}</p>;
+                {item.content.map((item, index) => {
+                  return (
+                    <p className="mt-1" key={`${index}-detail`}>
+                      {" "}
+                      {item}
+                    </p>
+                  );
                 })}
               </div>
             );

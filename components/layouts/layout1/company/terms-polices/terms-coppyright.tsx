@@ -36,24 +36,28 @@ const TermsCoppyright = (props: Props) => {
         <div className="clstermscoppyright-detail">
           {listTermsProtectionCopyright1.slice(0, 11).map((item) => {
             return (
-              <div>
-                <div className="clstermscoppyright-detail__item" id={item.id}>
+              <div id={item.id} key={item.id}>
+                <div className="clstermscoppyright-detail__item">
                   <b>{item.title}</b>
-                  {item.content.map((item) => {
-                    return <p className="mt-1"> {item}</p>;
+                  {item.content.map((item, index) => {
+                    return (
+                      <p className="mt-1" key={`content-${index}`}>
+                        {item}
+                      </p>
+                    );
                   })}
                 </div>
                 <div>{item.table?.title}</div>
                 {item?.table && (
                   <table className="clstermscoppyright-table">
-                    {item?.table.data.map((item) => {
+                    {item?.table.data.map((item, index) => {
                       return (
-                        <tr>
+                        <tr key={`index-${index}`}>
                           <th>{item.title}</th>
                           <td>
                             <ul>
-                              {item.content.map((subitem) => {
-                                return <li> {subitem}</li>;
+                              {item.content.map((subitem, index) => {
+                                return <li key={`index-${index + 1}`}> {subitem}</li>;
                               })}
                             </ul>
                           </td>

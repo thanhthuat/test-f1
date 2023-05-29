@@ -92,6 +92,7 @@ const TermsPolices = (props: Props) => {
                   <Tab
                     style={value == index ? styles.tabactive : styles.tab}
                     // style={styles.tab}
+                    key={`index-${index}`}
                     label={item}
                     {...a11yProps(index)}
                   />

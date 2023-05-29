@@ -11,19 +11,27 @@ const PolicyCompany: React.FC<PolicyCompanyProps> = ({ isTwoColumn = true }) => 
       <div className="clspolicycompany-content containerlayout1">
         <h3 className="clspolicycompany-title">미디어소개</h3>
         {!isTwoColumn &&
-          dataTitle.map((item) => {
-            return <p className="mt-1">{item}</p>;
+          dataTitle.map((item, index) => {
+            return (
+              <p className="mt-1" key={index}>
+                {item}
+              </p>
+            );
           })}
         {isTwoColumn && (
           <div className="clspolicycompany-menu">
             <div className="clspolicycompany-left">
-              {dataTitle1[0].sub.map((item) => {
-                return <p className="mt-1">{item}</p>;
+              {dataTitle1[0].sub.map((item, index) => {
+                return (
+                  <p className="mt-1" key={index}>
+                    {item}
+                  </p>
+                );
               })}
             </div>
             <div className="clspolicycompany-right">
-              {dataTitle1[1].sub.map((item) => {
-                return <p className="mt-1">{item}</p>;
+              {dataTitle1[1].sub.map((item,index) => {
+                return <p className="mt-1" key={index}>{item}</p>;
               })}
             </div>
           </div>

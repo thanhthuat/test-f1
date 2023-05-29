@@ -50,13 +50,17 @@ const TermsOfUse = (props: Props) => {
         <div className="clstermsofuse-detail">
           {listTermsOfUse.map((item, index) => {
             return (
-              <div className="clstermsofuse-detail__item" id={item.id}>
+              <div className="clstermsofuse-detail__item" id={item.id} key={item.id}>
                 <b>
                   제&nbsp; {index + 1}
                   {item.title}
                 </b>
-                {item.content.map((item) => {
-                  return <p className="mt-1"> {item}</p>;
+                {item.content.map((item, index) => {
+                  return (
+                    <p className="mt-1" key={`item-${index}`}>
+                      {item}
+                    </p>
+                  );
                 })}
               </div>
             );

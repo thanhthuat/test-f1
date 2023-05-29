@@ -12,8 +12,12 @@ const RssPage = (props: Props) => {
           <h2 className="clsrsspage-title__title">PDF지면보기</h2>
         </div>
         <div className="clsrsspage-description">
-          {dataRss.map((item) => {
-            return <p className="mt-1">{item}</p>;
+          {dataRss.map((item,index) => {
+            return (
+              <p className="mt-1" key={index}>
+                {item}
+              </p>
+            );
           })}
         </div>
         <RssPageXml />

@@ -36,28 +36,33 @@ const TermsProtection = (props: Props) => {
         <div className="clstermsprotection-detail">
           {listTermsProtectionPolicy1.map((item, index) => {
             return (
-              <div>
+              <div key={`${item.id}-${index}`}>
                 <div className="clstermsprotection-detail__item" id={item.id}>
                   <b>
                     제&nbsp; {index + 1}
                     {item.title}
                   </b>
-                  {item.content.map((item) => {
-                    return <p className="mt-1"> {item}</p>;
+                  {item.content.map((item, index) => {
+                    return (
+                      <p className="mt-1" key={`${index}-protection`}>
+                        {" "}
+                        {item}
+                      </p>
+                    );
                   })}
                 </div>
 
                 <div className="m-1 ">{item.table?.title}</div>
                 {item?.table && (
                   <table className="clstermsprotection-table">
-                    {item?.table.data.map((item) => {
+                    {item?.table.data.map((item, index) => {
                       return (
-                        <tr>
+                        <tr key={`${index}-${item.title}`}>
                           <th>{item.title}</th>
                           <td>
                             <ul>
-                              {item.content.map((subitem) => {
-                                return <li> {subitem}</li>;
+                              {item.content.map((subitem, index) => {
+                                return <li key={`${index}-itemsub`}> {subitem}</li>;
                               })}
                             </ul>
                           </td>
