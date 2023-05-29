@@ -5,10 +5,14 @@
   bottom: 0;
   left: 0;
   background: #fff;
+  z-index: 99;
   &-content {
     padding: 20px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+}
+.padding-bottom {
+  padding-bottom: 130px;
 }

@@ -4,6 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import React from "react";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import { Pagination } from "@mui/material";
 
 type Props = {};
 const arr = [1, 2, 3, 4, 5];
@@ -37,7 +38,7 @@ const NewsScrap = (props: Props) => {
           </div>
         </>
       )}
-      {topmovie.length != 0 && (
+      {/* {topmovie.length != 0 && (
         <div className="content">
           <div className="paging">
             <ArrowBackIosIcon />
@@ -51,7 +52,8 @@ const NewsScrap = (props: Props) => {
             <ArrowForwardIosIcon className="right" />
           </div>
         </div>
-      )}
+      )} */}
+      <Pagination count={10} variant="outlined" shape="rounded" />
     </div>
   );
 };

@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 import img from "public/layout1/small-logo.png";
 import Link from "next/link";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TelegramIcon from "@mui/icons-material/Telegram";
+// import YouTubeIcon from "@mui/icons-material/YouTube";
+// import FacebookIcon from "@mui/icons-material/Facebook";
+// import TelegramIcon from "@mui/icons-material/Telegram";
 import { data } from "../header/data";
 interface FooterLayout1Props {
   className?: string;
@@ -23,7 +23,10 @@ const FooterLayout1: React.FC<FooterLayout1Props> = ({ className }) => {
               <p>
                 사이트 설명글 회사소개 <br /> 페이지에서 텍스트 출력 4줄까지
                 <br /> 출력 / 4줄 이상은 …으로 표시 … 끝에 <br />
-                <Link href={"/company"}>[더보기] 클릭하면 페이지 이동</Link>
+                <Link href={"/company"}>
+                  <b>[더보기] </b>
+                </Link>
+                클릭하면 페이지 이동
               </p>
             </div>
             <div className="clsfooterlayout1-logo__contact mt-1">
@@ -50,15 +53,29 @@ const FooterLayout1: React.FC<FooterLayout1Props> = ({ className }) => {
             </div>
 
             <ul className="clsfooterlayout1-other__policy mt-2">
-              <li>Giới thiệu tòa soạn báo </li>
-              <li>
-                <b>Chính sách bảo mật thông tin cá nhân</b>
-              </li>
-              <li> Chính sách bảo hộ thanh thiếu niên </li>
-              <li> Từ chối thu thập email </li>
-              <li> Quảng cáo, hợp tác</li>
-              <li>Cung cấp tin </li>
-              <li>Hỏi đáp</li>
+              <Link href={"/company"}>
+                <li>Giới thiệu tòa soạn báo </li>
+              </Link>
+              <Link href={"/company/terms-polices/1"}>
+                <li>
+                  <b>Chính sách bảo mật thông tin cá nhân</b>
+                </li>
+              </Link>
+              <Link href={"/company/terms-polices/2"}>
+                <li> Chính sách bảo hộ thanh thiếu niên </li>
+              </Link>
+              <Link href={"/company/terms-polices/3"}>
+                <li> Từ chối thu thập email </li>
+              </Link>
+              <Link href={"/company/terms-polices/3"}>
+                <li> Quảng cáo, hợp tác</li>
+              </Link>
+              <Link href={"/company/terms-polices/4"}>
+                <li>Cung cấp tin </li>
+              </Link>
+              <Link href={"/company/terms-polices/5"}>
+                <li>Hỏi đáp</li>
+              </Link>
             </ul>
           </div>
           <div className="clsfooterlayout1-category">

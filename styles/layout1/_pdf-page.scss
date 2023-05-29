@@ -1,0 +1,20 @@
+.clspdfpage {
+  &-header {
+    &__title {
+      font-size: 24px;
+      font-weight: 300;
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    &__content {
+      background: #efefef;
+      padding: 10px;
+      font-size: 24px;
+      margin-bottom: 15px;
+      li {
+        list-style: disc inside;
+        font-weight: 300;
+      }
+    }
+  }
+}

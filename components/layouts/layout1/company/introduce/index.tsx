@@ -14,8 +14,8 @@ const Company = (props: Props) => {
     <MainlayoutCompany>
       <IntroducceCompany />
       <PolicyCompany />
-      <ContactCompany />
-      <TransportCompany />
+      {/* <ContactCompany /> */}
+     
     </MainlayoutCompany>
   );
 };

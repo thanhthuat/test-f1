@@ -70,7 +70,6 @@ const mockResponse: IComponent = {
               vote_average: 6.5,
               vote_count: 25,
             },
-           
           ],
           children: [
             {
@@ -108,6 +107,7 @@ const mockResponse: IComponent = {
                 image: {
                   url: "https://i.stack.imgur.com/y9DpT.jpg",
                 },
+                sx: { maxHeight: "470px" },
                 tabTitle: ["LastNews", "News"],
                 datanew: {
                   LastNews: [

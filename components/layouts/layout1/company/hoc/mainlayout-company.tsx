@@ -10,7 +10,7 @@ const MainlayoutCompany: React.FC<MainlayoutCompanyProps> = ({ children }) => {
   return (
     <main>
       <HeaderCompany />
-      {children}
+      <div className="padding-bottom">{children}</div>
       <FooterCompany />
     </main>
   );

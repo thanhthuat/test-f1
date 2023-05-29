@@ -32,7 +32,11 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   background: #fff;
 }
-
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
 .has_border {
   margin-top: 20px;
   padding-top: 20px;
@@ -90,6 +94,6 @@ span#text-link {
   background: #fcfaf6;
 }
 
-.m-1{
+.m-1 {
   margin: 10px 0px;
 }
