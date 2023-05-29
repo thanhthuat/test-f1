@@ -14,6 +14,15 @@
     @include res(1200px) {
       padding: 20px;
     }
+    @include res(768px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  @include res(768px) {
+    &-coppyright {
+      margin-top: 15px;
+    }
   }
 }
 .padding-bottom {

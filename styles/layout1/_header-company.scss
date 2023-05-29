@@ -135,3 +135,19 @@
     }
   }
 }
+.clsismobile {
+  padding-top: 15px;
+  &-header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    img {
+      width: 150px;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+  &-close {
+    cursor: pointer;
+  }
+}

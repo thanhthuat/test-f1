@@ -12,6 +12,7 @@ import { getListTop } from "lib/redux/get-list-top-menu/get-list-top.action";
 import Grid from "@mui/system/Unstable_Grid";
 import DetailNewSekeleton from "./detail-new-sekeleton";
 import ClientComment from "@components/layouts/detail-new/client-comment/client-comment";
+import HeaderCommon from "@components/common/header-common/header-common";
 interface DetailNewProps {
   className?: string;
 }
@@ -111,7 +112,8 @@ const DetailNew: React.FC<DetailNewProps> = ({ className }) => {
             </div>
           </div>
           <div className="has_border"></div>
-          <Grid container spacing={1}>
+          <HeaderCommon title="Heading" />
+          <Grid container spacing={1} sx={{paddingBottom:2}}>
             {topmovie.slice(9, 13).map((item, index) => (
               <Grid tablet={6} tablet1={3} key={index}>
                 <CardColumn item={item} key={item.id} />

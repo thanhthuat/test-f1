@@ -78,11 +78,11 @@ const HeaderCompany = (props: Props) => {
               },
             }}
           >
-            <ul className={openMenu ? "ismobile active" : "ismobile "}>
-              <div>
+            <ul className={openMenu ? "ismobile active" : "clsismobile "}>
+              <div className="clsismobile-header">
                 <img src="/layout1/small-logo.png" alt="logo"></img>
                 <div
-                  className="icon-burger"
+                  className="clsismobile-close"
                   onClick={() => {
                     setState(false);
                   }}

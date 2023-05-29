@@ -12,7 +12,7 @@ interface FooterLayout1Props {
 
 const FooterLayout1: React.FC<FooterLayout1Props> = ({ className }) => {
   return (
-    <footer className={`${className} clsfooterlayout1  mt-40`}>
+    <footer className={`${className} clsfooterlayout1  `}>
       <div className="clsfooterlayout1-content">
         <div className="clsfooterlayout1-body">
           <div className="clsfooterlayout1-logo">
