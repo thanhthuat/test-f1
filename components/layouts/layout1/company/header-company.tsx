@@ -78,7 +78,7 @@ const HeaderCompany = (props: Props) => {
               },
             }}
           >
-            <ul className={openMenu ? "ismobile active" : "ismobile"}>
+            <ul className={openMenu ? "ismobile active" : "ismobile "}>
               <div>
                 <img src="/layout1/small-logo.png" alt="logo"></img>
                 <div

@@ -2,22 +2,22 @@ export const data = [
   {
     title: "매체소개",
     submenu: [
-      { title: "인사말(hello) ", url: "" },
+      { title: "인사말", url: "" },
       { title: "연락처/주소(contact)", url: "contact" },
     ],
   },
 
   {
-    title: "제보·문의(quesstion)",
+    title: "제보·문의",
     submenu: [
-      { title: "기사제보(news)", url: "" },
+      { title: "기사제보(news)", url: "news-report" },
       { title: "광고·제휴문의", url: "" },
     ],
   },
   {
     title: " 고객센터 Customer center",
     submenu: [
-      { title: "구독신청 (Signup-buy)", url: "customer" },
+      { title: "구독신청", url: "customer" },
       { title: "고충처리인제도", url: "customer" },
     ],
   },

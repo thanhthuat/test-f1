@@ -26,7 +26,6 @@ import CarouselWeather from "./common/carousel-weather/carousel-weather";
 import DetailArticle from "./common/detail-article/detail-article";
 import ImgItem from "./common/img-item/img-item";
 import ItemView from "./common/Item-view/item-view";
-import Container from "./component/Container";
 import BlockContent from "./layouts/layout1/tab/content/block-content";
 import React from "react";
 import { IComponent } from "./dynamic-rendering.interfaces";
@@ -65,7 +64,6 @@ export const Components = {
   DetailArticle,
   ImgItem,
   ItemView,
-  Container,
   MainLayout,
   TabContainer,
   BlockMainWithTab,

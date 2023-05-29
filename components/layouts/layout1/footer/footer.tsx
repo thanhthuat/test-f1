@@ -67,10 +67,10 @@ const FooterLayout1: React.FC<FooterLayout1Props> = ({ className }) => {
               <Link href={"/company/terms-polices/3"}>
                 <li> Từ chối thu thập email </li>
               </Link>
-              <Link href={"/company/terms-polices/3"}>
+              <Link href={"/company/news-report"}>
                 <li> Quảng cáo, hợp tác</li>
               </Link>
-              <Link href={"/company/terms-polices/4"}>
+              <Link href={"/company/news-report"}>
                 <li>Cung cấp tin </li>
               </Link>
               <Link href={"/company/terms-polices/5"}>

@@ -23,7 +23,6 @@ type ComponentList =
   | "CarouselWeather"
   | "DetailArticle"
   | "ImgItem"
-  | "Container"
   | "BlockContent"
   | "MainLayout"
   | "TabContainer"
