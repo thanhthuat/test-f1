@@ -11,13 +11,13 @@ export const data = [
     title: "제보·문의",
     submenu: [
       { title: "기사제보", url: "news-report" },
-      { title: "광고·제휴문의", url: "" },
+      { title: "광고·제휴문의", url: "news-report/question" },
     ],
   },
   {
     title: " 고객센터",
     submenu: [
-      { title: "구독신청", url: "customer" },
+      { title: "구독신청", url: "customer/sign-up-news" },
       { title: "고충처리인제도", url: "customer" },
     ],
   },

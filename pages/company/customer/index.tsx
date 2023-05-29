@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import CustomerCompany from "@components/layouts/layout1/company/customer";
+import HandleInformationView from "@components/layouts/layout1/view/company/handle-information-view";
 
 type Props = {};
 
@@ -13,7 +14,7 @@ const Index = (props: Props) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/icon.svg" />
       </Head>
-      <CustomerCompany />
+      <HandleInformationView />
     </>
   );
 };

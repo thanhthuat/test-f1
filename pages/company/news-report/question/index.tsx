@@ -1,9 +1,8 @@
+import AdvertisContactView from "@components/layouts/layout1/view/company/advertis-contact-view";
 import React from "react";
 
-type Props = {};
-
-const index = (props: Props) => {
-  return <div>index</div>;
+const Index = () => {
+  return <AdvertisContactView />;
 };
 
-export default index;
+export default Index;

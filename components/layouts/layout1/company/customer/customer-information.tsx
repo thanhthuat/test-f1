@@ -8,10 +8,15 @@ const CustomerInformation = (props: Props) => {
     <div className="clscustomerinformation">
       <div className="clscustomerinformation-content  containerlayout1">
         <div className="clscustomerinformation-title">
-          <h3>구독신청 및 문의사항은 편하게 말씀해주세요.</h3>
+          <h3>구독신청</h3>
         </div>
-        <div className="clscustomerinformation-form">
-          <FormSigin />
+        <div className="clscustomerinformation-body">
+          <div className="clscustomerinformation-description">
+            <h3>구독신청 및 문의사항은 편하게 말씀해주세요.</h3>
+          </div>
+          <div className="clscustomerinformation-form">
+            <FormSigin />
+          </div>
         </div>
       </div>
     </div>
