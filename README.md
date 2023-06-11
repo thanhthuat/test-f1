@@ -11,13 +11,11 @@ yarn dev
 # or
 
 pnpm dev
-
+## require node >16.0.0
 ```
-# require node >16.0.0
-
 [component]  contain all component for feature in forder container .
 [api] use axios and (https://ergast.com/mrd/), offer APIs that provide historical Formula 1 data.
-[git] use command git in terminal .
+[git] use command git in terminal . use two branch f/fix and branch main .
 
 ## Deploy on Vercel
 
