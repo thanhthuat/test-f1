@@ -10,6 +10,7 @@ import Loading from "./loading";
 import ChartTeam from "./chart-team";
 import Grid from "@mui/material/Grid";
 import ChartDriver from "./chart-driver";
+import ChartFast from "./chart-fast";
 type Props = {};
 
 interface IbasicTable {
@@ -193,11 +194,9 @@ const MainLayout = (props: Props) => {
     try {
       Setloading(true);
       const data: any = await tmdbApi.getRaceList(payload);
-      console.log("🚀 ~ file: index.tsx:29 ~ handleGetData ~ data:", data);
       Setloading(false);
       Settitle(payload);
       const { type } = payload;
-      console.log("🚀 ~ file: index.tsx:29 ~ handleGetData ~ type:", type);
       switch (type) {
         case "drivers":
           Setdata(data.data?.MRData?.StandingsTable?.StandingsLists[0]?.DriverStandings || []);
@@ -215,7 +214,7 @@ const MainLayout = (props: Props) => {
           Setdata(data.data?.MRData?.RaceTable?.Races || []);
           Setcolumn(columnFastest);
           break;
-        //
+
         default:
           break;
       }
@@ -228,7 +227,22 @@ const MainLayout = (props: Props) => {
   useEffect(() => {
     handleGetData({ type: "circuits", year: "2023" });
   }, []);
+  const handleRenderChart = (value: string) => {
+    switch (value) {
+      case "constructors":
+        return <ChartTeam data={data} />;
 
+      case "drivers":
+        return <ChartDriver data={data} />;
+
+      case "fastest":
+        return <ChartFast data={data} />;
+
+      default:
+        return null
+        break;
+    }
+  };
   return (
     <>
       <HeaderContainer />
@@ -236,15 +250,17 @@ const MainLayout = (props: Props) => {
         <FormSearch handleGetData={handleGetData} />
         {/* <Box sx={{ bgcolor: "#cfe8fc", height: "100vh" }} /> */}
         <Box sx={{ marginTop: "50px", padding: 1 }}>
-          <Grid container spacing={2} sx={{marginBottom:3}}>
+          <Grid container spacing={2} sx={{ marginBottom: 3 }}>
             <Grid item xs={4}>
               <Typography variant="h5" gutterBottom style={{ textTransform: "uppercase" }}>
                 {title.year}&nbsp;{title.type}&nbsp;RESULT
               </Typography>
             </Grid>
             <Grid item xs={8}>
-              {title.type === "constructors" && <ChartTeam data={data} />}
-              {title.type === "drivers" &&<ChartDriver data={data}/>}
+              {handleRenderChart(title.type)}
+
+              {/* {title.type === "constructors" && <ChartTeam data={data} />}
+              {title.type === "drivers" && <ChartDriver data={data} />} */}
             </Grid>
           </Grid>
 

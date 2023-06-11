@@ -19,7 +19,7 @@ const BasicTable: React.FC<IbasicTable> = ({ column, data }) => {
         <TableHead>
           <TableRow>
             {column.map((item) => {
-              return <TableCell key={Math.floor(Math.random() * 1000)}>{item.title}</TableCell>;
+              return <TableCell key={Math.floor(Math.random() * 1000) +"index"}>{item.title}</TableCell>;
             })}
           </TableRow>
         </TableHead>
@@ -27,7 +27,7 @@ const BasicTable: React.FC<IbasicTable> = ({ column, data }) => {
           {data.map((row: any) => (
             <TableRow key={row.name} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
               {column.map((item) => {
-                return <TableCell key={Math.floor(Math.random() * 1010)}>{item?.render(row) ?? null}</TableCell>;
+                return <TableCell key={Math.floor(Math.random() * 1010) +"indexCell"}>{item?.render(row) ?? null}</TableCell>;
               })}
             </TableRow>
           ))}
