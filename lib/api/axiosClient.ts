@@ -8,11 +8,10 @@ const axiosClient = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-  timeout:3000
+  timeout:10000
 });
 axiosClient.interceptors.request.use(async (config) => {
   config.params = {
-   api_key: apiConfig.apiKey,
     ...config.params,
   }
   return config;

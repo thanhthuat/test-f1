@@ -1,16 +1,29 @@
 import { IresponeMovieDetail, responeHttp } from 'lib/models/interface';
 import axiosClient from './axiosClient';
-
+//http://ergast.com/api/f1/current/last/results
+//https://ergast.com/api/f1/constructors/red_bull/results.json
+// /circuits/<circuitId>
+// /constructors/<constructorId>
+// /drivers/<driverId>
+// /grid/<position>
+// /fastest/<rank>
+// /status/<statusId>
+interface typePayload {
+  type : keyof typeof  raceType;
+  year:string;
+}
 export const category = {
   movie: 'movie',
   tv: 'tv',
 };
 
-export const movieType = {
-  upcoming: 'upcoming',
-  popular: 'popular',
-  top_rated: 'top_rated',
-  now_playing:"now_playing"
+export const raceType = {
+  circuits: 'circuits',
+  constructors: 'constructor',
+  drivers: 'driver',
+  grid:"grid",
+  fastest:"fastest",
+  status:"status"
   
 };
 
@@ -19,13 +32,27 @@ export const tvType = {
   top_rated: 'top_rated',
   on_the_air: 'on_the_air',
 };
-
+// https://ergast.com/api/f1/2023/circuits.json
+// https://ergast.com/api/f1/2023/fastest/2/results.json
 const tmdbApi = {
-  getMoviesList: (type : keyof typeof  movieType  ,page=1 , params:any) => {
-    const url = 'movie/' + movieType[type ]  
+  getRaceList: (   payload:typePayload) => {
+    const {year,type } = payload
+    let url = `/${year ? year:"2023"}/`  + raceType[type ] 
+    switch (type) {
+      case 'constructors': url = url +'Standings.json'  
+        break;
+        case 'drivers': url = url +'Standings.json'  
+        break;
+        case 'circuits': url = url +'.json'  
+        break;
+        case 'fastest': url = url +'/1/results.json'  
+        break;
+      default:
+        break;
+    }
     return axiosClient?.get<responeHttp>(url, {
       params: {
-        page
+       
       }
     });
   },

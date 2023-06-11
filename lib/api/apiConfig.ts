@@ -1,8 +1,8 @@
+//http://ergast.com/api/f1/2008/5/results
+
 const apiConfig = {
-    baseUrl: 'https://api.themoviedb.org/3/',
-    apiKey: 'f2db6f4bb7de9fb016be7720040c6c2a',
-    originalImage: (imgPath:string) => `https://image.tmdb.org/t/p/original/${imgPath}`,
-    w500Image: (imgPath:string) => `https://image.tmdb.org/t/p/w500/${imgPath}`
+    baseUrl: 'http://ergast.com/api/f1/',
+  
 }
 
 export default apiConfig;

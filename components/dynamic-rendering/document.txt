@@ -1,3 +1,0 @@
-type: ComponentList; enum  Make each react key unique  fe ,be disus,
- key: id -> string unique ,
- className -> enum

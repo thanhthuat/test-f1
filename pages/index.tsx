@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import HomeLayout1 from "@components/layouts/layout1/view/home/home";
+import MainLayout from "@components/container";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/avatar.svg" />
       </Head>
       <main>
-        <HomeLayout1 />
+        <MainLayout />
       </main>
     </>
   );
